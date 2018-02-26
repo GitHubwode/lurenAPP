@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180F8855200EE71B002A9B0C /* LRRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8854200EE71B002A9B0C /* LRRConst.m */; };
+		180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8858200EF855002A9B0C /* UIColor+DLExtension.m */; };
+		180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F885B200EF97A002A9B0C /* NSString+XCExtension.m */; };
+		180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F885E200F2E08002A9B0C /* LRRHomeViewController.m */; };
+		180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8861200F2E1B002A9B0C /* LRRFriendViewController.m */; };
+		180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8864200F2E2A002A9B0C /* LRRLookViewController.m */; };
+		180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8867200F2E34002A9B0C /* LRRMeViewController.m */; };
+		180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F886A200F2E88002A9B0C /* LRRFoundViewController.m */; };
+		180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F886D200F3708002A9B0C /* AppDelegate+LRRGuide.m */; };
+		180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8871200F378A002A9B0C /* NSBundle+LRRExtension.m */; };
+		180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8874200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m */; };
+		180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8877200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m */; };
+		180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F887A200F46AD002A9B0C /* LRRMeHeaderView.m */; };
+		180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F887D200F4C08002A9B0C /* LRRMeTableViewCell.m */; };
+		180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180F887E200F4C08002A9B0C /* LRRMeTableViewCell.xib */; };
+		180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */; };
+		180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180F8884200F5044002A9B0C /* MeMessageList.plist */; };
+		1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18319209201088D30032B8C7 /* FoundMessageList.plist */; };
+		1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */; };
+		1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1831920E20108D7B0032B8C7 /* SettingList.plist */; };
+		18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18319211201092810032B8C7 /* LRRSettingViewCell.m */; };
+		18319214201092810032B8C7 /* LRRSettingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18319212201092810032B8C7 /* LRRSettingViewCell.xib */; };
+		18319217201197BE0032B8C7 /* LRRHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18319216201197BE0032B8C7 /* LRRHomeHeaderView.m */; };
+		1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183192192011A3630032B8C7 /* LRRHomeCollectionViewCell.m */; };
+		1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831921A2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib */; };
+		1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831921E2011AE840032B8C7 /* LRRHomeCollectionReusableView.m */; };
+		18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18319227201444700032B8C7 /* LRRTabBarBigButton.m */; };
+		1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831922A2014465E0032B8C7 /* UIView+LRRExtension.m */; };
+		1831922E201448940032B8C7 /* LRRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831922D201448940032B8C7 /* LRRTabBar.m */; };
+		1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923020144BA70032B8C7 /* LRRTabBarButton.m */; };
+		1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */; };
+		1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */; };
+		188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9120159A430012855E /* LRRSegmentBar.m */; };
+		188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9220159A430012855E /* LRRSegmentBarVC.m */; };
+		188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9620159A430012855E /* LRRSegmentBarConfig.m */; };
+		188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9C2016E7250012855E /* LRROrderDetailViewController.m */; };
+		188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9F2016E9460012855E /* LRROrderDetailTableViewCell.m */; };
+		188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */; };
+		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
+		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
+		18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.m */; };
+		18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FC200C5F7000269FAB /* Assets.xcassets */; };
+		18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */; };
+		18FC9403200C5F7000269FAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC9402200C5F7000269FAB /* main.m */; };
+		18FC940D200C5F7000269FAB /* LuRenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC940C200C5F7000269FAB /* LuRenTests.m */; };
+		18FC9418200C5F7000269FAB /* LuRenUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC9417200C5F7000269FAB /* LuRenUITests.m */; };
+		18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC9426200C62D800269FAB /* LRRBaseViewController.m */; };
+		18FC942A200C631000269FAB /* LRRBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC9429200C631000269FAB /* LRRBaseNavigationController.m */; };
+		18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC942C200C634E00269FAB /* LRRBaseTabBarController.m */; };
+		469A9E1D8CF6D83F13AF0176 /* libPods-LuRen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAAC25AE59C58DE8E53894E /* libPods-LuRen.a */; settings = {ATTRIBUTES = (Required, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18FC9409200C5F7000269FAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18FC93E8200C5F7000269FAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18FC93EF200C5F7000269FAB;
+			remoteInfo = LuRen;
+		};
+		18FC9414200C5F7000269FAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18FC93E8200C5F7000269FAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18FC93EF200C5F7000269FAB;
+			remoteInfo = LuRen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		180F8853200EE71B002A9B0C /* LRRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRConst.h; sourceTree = "<group>"; };
+		180F8854200EE71B002A9B0C /* LRRConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRConst.m; sourceTree = "<group>"; };
+		180F8857200EF855002A9B0C /* UIColor+DLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLExtension.h"; sourceTree = "<group>"; };
+		180F8858200EF855002A9B0C /* UIColor+DLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DLExtension.m"; sourceTree = "<group>"; };
+		180F885A200EF97A002A9B0C /* NSString+XCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XCExtension.h"; sourceTree = "<group>"; };
+		180F885B200EF97A002A9B0C /* NSString+XCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XCExtension.m"; sourceTree = "<group>"; };
+		180F885D200F2E08002A9B0C /* LRRHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeViewController.h; sourceTree = "<group>"; };
+		180F885E200F2E08002A9B0C /* LRRHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeViewController.m; sourceTree = "<group>"; };
+		180F8860200F2E1B002A9B0C /* LRRFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRFriendViewController.h; sourceTree = "<group>"; };
+		180F8861200F2E1B002A9B0C /* LRRFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRFriendViewController.m; sourceTree = "<group>"; };
+		180F8863200F2E2A002A9B0C /* LRRLookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLookViewController.h; sourceTree = "<group>"; };
+		180F8864200F2E2A002A9B0C /* LRRLookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLookViewController.m; sourceTree = "<group>"; };
+		180F8866200F2E34002A9B0C /* LRRMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMeViewController.h; sourceTree = "<group>"; };
+		180F8867200F2E34002A9B0C /* LRRMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMeViewController.m; sourceTree = "<group>"; };
+		180F8869200F2E88002A9B0C /* LRRFoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRFoundViewController.h; sourceTree = "<group>"; };
+		180F886A200F2E88002A9B0C /* LRRFoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRFoundViewController.m; sourceTree = "<group>"; };
+		180F886C200F3708002A9B0C /* AppDelegate+LRRGuide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LRRGuide.h"; sourceTree = "<group>"; };
+		180F886D200F3708002A9B0C /* AppDelegate+LRRGuide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LRRGuide.m"; sourceTree = "<group>"; };
+		180F8870200F378A002A9B0C /* NSBundle+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+LRRExtension.h"; sourceTree = "<group>"; };
+		180F8871200F378A002A9B0C /* NSBundle+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+LRRExtension.m"; sourceTree = "<group>"; };
+		180F8873200F38B7002A9B0C /* NSUserDefaults+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+LRRExtension.h"; sourceTree = "<group>"; };
+		180F8874200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+LRRExtension.m"; sourceTree = "<group>"; };
+		180F8876200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LRRExtension.h"; sourceTree = "<group>"; };
+		180F8877200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LRRExtension.m"; sourceTree = "<group>"; };
+		180F8879200F46AD002A9B0C /* LRRMeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMeHeaderView.h; sourceTree = "<group>"; };
+		180F887A200F46AD002A9B0C /* LRRMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMeHeaderView.m; sourceTree = "<group>"; };
+		180F887C200F4C08002A9B0C /* LRRMeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMeTableViewCell.h; sourceTree = "<group>"; };
+		180F887D200F4C08002A9B0C /* LRRMeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMeTableViewCell.m; sourceTree = "<group>"; };
+		180F887E200F4C08002A9B0C /* LRRMeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRMeTableViewCell.xib; sourceTree = "<group>"; };
+		180F8881200F4FB4002A9B0C /* LRRMeMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMeMessageModel.h; sourceTree = "<group>"; };
+		180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMeMessageModel.m; sourceTree = "<group>"; };
+		180F8884200F5044002A9B0C /* MeMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MeMessageList.plist; sourceTree = "<group>"; };
+		18319209201088D30032B8C7 /* FoundMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FoundMessageList.plist; sourceTree = "<group>"; };
+		1831920B20108CDC0032B8C7 /* LRRSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSettingViewController.h; sourceTree = "<group>"; };
+		1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSettingViewController.m; sourceTree = "<group>"; };
+		1831920E20108D7B0032B8C7 /* SettingList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SettingList.plist; sourceTree = "<group>"; };
+		18319210201092810032B8C7 /* LRRSettingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSettingViewCell.h; sourceTree = "<group>"; };
+		18319211201092810032B8C7 /* LRRSettingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSettingViewCell.m; sourceTree = "<group>"; };
+		18319212201092810032B8C7 /* LRRSettingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRSettingViewCell.xib; sourceTree = "<group>"; };
+		18319215201197BE0032B8C7 /* LRRHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeHeaderView.h; sourceTree = "<group>"; };
+		18319216201197BE0032B8C7 /* LRRHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeHeaderView.m; sourceTree = "<group>"; };
+		183192182011A3630032B8C7 /* LRRHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		183192192011A3630032B8C7 /* LRRHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		1831921A2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		1831921D2011AE830032B8C7 /* LRRHomeCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeCollectionReusableView.h; sourceTree = "<group>"; };
+		1831921E2011AE840032B8C7 /* LRRHomeCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeCollectionReusableView.m; sourceTree = "<group>"; };
+		18319226201444700032B8C7 /* LRRTabBarBigButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRTabBarBigButton.h; sourceTree = "<group>"; };
+		18319227201444700032B8C7 /* LRRTabBarBigButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRTabBarBigButton.m; sourceTree = "<group>"; };
+		183192292014465E0032B8C7 /* UIView+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LRRExtension.h"; sourceTree = "<group>"; };
+		1831922A2014465E0032B8C7 /* UIView+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LRRExtension.m"; sourceTree = "<group>"; };
+		1831922C201448940032B8C7 /* LRRTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRTabBar.h; sourceTree = "<group>"; };
+		1831922D201448940032B8C7 /* LRRTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRTabBar.m; sourceTree = "<group>"; };
+		1831922F20144BA70032B8C7 /* LRRTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRTabBarButton.h; sourceTree = "<group>"; };
+		1831923020144BA70032B8C7 /* LRRTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRTabBarButton.m; sourceTree = "<group>"; };
+		1831923220145EFF0032B8C7 /* LRRLookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLookTableViewCell.h; sourceTree = "<group>"; };
+		1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLookTableViewCell.m; sourceTree = "<group>"; };
+		1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLookTableViewCell.xib; sourceTree = "<group>"; };
+		188EAF9120159A430012855E /* LRRSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBar.m; sourceTree = "<group>"; };
+		188EAF9220159A430012855E /* LRRSegmentBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBarVC.m; sourceTree = "<group>"; };
+		188EAF9320159A430012855E /* LRRSegmentBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSegmentBarConfig.h; sourceTree = "<group>"; };
+		188EAF9420159A430012855E /* LRRSegmentBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSegmentBarVC.h; sourceTree = "<group>"; };
+		188EAF9520159A430012855E /* LRRSegmentBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSegmentBar.h; sourceTree = "<group>"; };
+		188EAF9620159A430012855E /* LRRSegmentBarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBarConfig.m; sourceTree = "<group>"; };
+		188EAF9B2016E7250012855E /* LRROrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRROrderDetailViewController.h; sourceTree = "<group>"; };
+		188EAF9C2016E7250012855E /* LRROrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRROrderDetailViewController.m; sourceTree = "<group>"; };
+		188EAF9E2016E9460012855E /* LRROrderDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRROrderDetailTableViewCell.h; sourceTree = "<group>"; };
+		188EAF9F2016E9460012855E /* LRROrderDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRROrderDetailTableViewCell.m; sourceTree = "<group>"; };
+		188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRROrderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPointWorkViewController.h; sourceTree = "<group>"; };
+		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
+		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
+		18CA4C542015953700F6774A /* LRRPackWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPackWorkViewController.m; sourceTree = "<group>"; };
+		18FC93F0200C5F7000269FAB /* LuRen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuRen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FC93F3200C5F7000269FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18FC93F4200C5F7000269FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18FC93FC200C5F7000269FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18FC93FF200C5F7000269FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18FC9401200C5F7000269FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FC9402200C5F7000269FAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18FC9408200C5F7000269FAB /* LuRenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuRenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FC940C200C5F7000269FAB /* LuRenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuRenTests.m; sourceTree = "<group>"; };
+		18FC940E200C5F7000269FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FC9413200C5F7000269FAB /* LuRenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuRenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FC9417200C5F7000269FAB /* LuRenUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LuRenUITests.m; sourceTree = "<group>"; };
+		18FC9419200C5F7000269FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FC9425200C62D800269FAB /* LRRBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBaseViewController.h; sourceTree = "<group>"; };
+		18FC9426200C62D800269FAB /* LRRBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBaseViewController.m; sourceTree = "<group>"; };
+		18FC9428200C631000269FAB /* LRRBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBaseNavigationController.h; sourceTree = "<group>"; };
+		18FC9429200C631000269FAB /* LRRBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBaseNavigationController.m; sourceTree = "<group>"; };
+		18FC942B200C634E00269FAB /* LRRBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBaseTabBarController.h; sourceTree = "<group>"; };
+		18FC942C200C634E00269FAB /* LRRBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBaseTabBarController.m; sourceTree = "<group>"; };
+		18FC942E200C664700269FAB /* LuRen.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuRen.pch; sourceTree = "<group>"; };
+		64493AF8506E4B24CC320C01 /* Pods-LuRen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuRen.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuRen/Pods-LuRen.release.xcconfig"; sourceTree = "<group>"; };
+		7BAAC25AE59C58DE8E53894E /* libPods-LuRen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LuRen.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52D7D4CB749EEBE340AB23C /* Pods-LuRen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuRen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuRen/Pods-LuRen.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18FC93ED200C5F7000269FAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469A9E1D8CF6D83F13AF0176 /* libPods-LuRen.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC9405200C5F7000269FAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC9410200C5F7000269FAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180642B7200DF48800B20130 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		180642B8200DF5F100B20130 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				180642BD200DF5F100B20130 /* 首页 */,
+				180642C9200DF5F100B20130 /* 朋友 */,
+				180642C2200DF5F100B20130 /* 找活 */,
+				180642D1200DF5F100B20130 /* 发现 */,
+				180642B9200DF5F100B20130 /* 我的 */,
+				180642C1200DF5F100B20130 /* Common-公用 */,
+				180642C6200DF5F100B20130 /* Other-其它 */,
+				180642CD200DF5F100B20130 /* Login-登录 */,
+				180642D5200DF5F100B20130 /* Network-网络 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		180642B9200DF5F100B20130 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				180642BA200DF5F100B20130 /* Controller */,
+				180642BB200DF5F100B20130 /* Model */,
+				180642BC200DF5F100B20130 /* View */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		180642BA200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F8866200F2E34002A9B0C /* LRRMeViewController.h */,
+				180F8867200F2E34002A9B0C /* LRRMeViewController.m */,
+				1831920B20108CDC0032B8C7 /* LRRSettingViewController.h */,
+				1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642BB200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				180F8881200F4FB4002A9B0C /* LRRMeMessageModel.h */,
+				180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642BC200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				180F8879200F46AD002A9B0C /* LRRMeHeaderView.h */,
+				180F887A200F46AD002A9B0C /* LRRMeHeaderView.m */,
+				180F887C200F4C08002A9B0C /* LRRMeTableViewCell.h */,
+				180F887D200F4C08002A9B0C /* LRRMeTableViewCell.m */,
+				180F887E200F4C08002A9B0C /* LRRMeTableViewCell.xib */,
+				18319210201092810032B8C7 /* LRRSettingViewCell.h */,
+				18319211201092810032B8C7 /* LRRSettingViewCell.m */,
+				18319212201092810032B8C7 /* LRRSettingViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642BD200DF5F100B20130 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				180642BE200DF5F100B20130 /* Controller */,
+				180642BF200DF5F100B20130 /* Model */,
+				180642C0200DF5F100B20130 /* View */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		180642BE200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F885D200F2E08002A9B0C /* LRRHomeViewController.h */,
+				180F885E200F2E08002A9B0C /* LRRHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642BF200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642C0200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18319215201197BE0032B8C7 /* LRRHomeHeaderView.h */,
+				18319216201197BE0032B8C7 /* LRRHomeHeaderView.m */,
+				1831921D2011AE830032B8C7 /* LRRHomeCollectionReusableView.h */,
+				1831921E2011AE840032B8C7 /* LRRHomeCollectionReusableView.m */,
+				183192182011A3630032B8C7 /* LRRHomeCollectionViewCell.h */,
+				183192192011A3630032B8C7 /* LRRHomeCollectionViewCell.m */,
+				1831921A2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642C1200DF5F100B20130 /* Common-公用 */ = {
+			isa = PBXGroup;
+			children = (
+				180F8856200EF7D3002A9B0C /* Category */,
+			);
+			path = "Common-公用";
+			sourceTree = "<group>";
+		};
+		180642C2200DF5F100B20130 /* 找活 */ = {
+			isa = PBXGroup;
+			children = (
+				188EAF9020159A430012855E /* LRRSegment */,
+				180642C3200DF5F100B20130 /* Controller */,
+				180642C4200DF5F100B20130 /* Model */,
+				180642C5200DF5F100B20130 /* View */,
+			);
+			path = "找活";
+			sourceTree = "<group>";
+		};
+		180642C3200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F8863200F2E2A002A9B0C /* LRRLookViewController.h */,
+				180F8864200F2E2A002A9B0C /* LRRLookViewController.m */,
+				18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */,
+				18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */,
+				18CA4C532015953700F6774A /* LRRPackWorkViewController.h */,
+				18CA4C542015953700F6774A /* LRRPackWorkViewController.m */,
+				188EAF9B2016E7250012855E /* LRROrderDetailViewController.h */,
+				188EAF9C2016E7250012855E /* LRROrderDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642C4200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642C5200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1831923220145EFF0032B8C7 /* LRRLookTableViewCell.h */,
+				1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */,
+				1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */,
+				188EAF9E2016E9460012855E /* LRROrderDetailTableViewCell.h */,
+				188EAF9F2016E9460012855E /* LRROrderDetailTableViewCell.m */,
+				188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642C6200DF5F100B20130 /* Other-其它 */ = {
+			isa = PBXGroup;
+			children = (
+				18FC93F3200C5F7000269FAB /* AppDelegate.h */,
+				18FC93F4200C5F7000269FAB /* AppDelegate.m */,
+				180F886C200F3708002A9B0C /* AppDelegate+LRRGuide.h */,
+				180F886D200F3708002A9B0C /* AppDelegate+LRRGuide.m */,
+				180F8853200EE71B002A9B0C /* LRRConst.h */,
+				180F8854200EE71B002A9B0C /* LRRConst.m */,
+				18FC942E200C664700269FAB /* LuRen.pch */,
+				18FC9402200C5F7000269FAB /* main.m */,
+				180642C7200DF5F100B20130 /* Controller */,
+				180642C8200DF5F100B20130 /* View */,
+			);
+			path = "Other-其它";
+			sourceTree = "<group>";
+		};
+		180642C7200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18FC9425200C62D800269FAB /* LRRBaseViewController.h */,
+				18FC9426200C62D800269FAB /* LRRBaseViewController.m */,
+				18FC9428200C631000269FAB /* LRRBaseNavigationController.h */,
+				18FC9429200C631000269FAB /* LRRBaseNavigationController.m */,
+				18FC942B200C634E00269FAB /* LRRBaseTabBarController.h */,
+				18FC942C200C634E00269FAB /* LRRBaseTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642C8200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18319226201444700032B8C7 /* LRRTabBarBigButton.h */,
+				18319227201444700032B8C7 /* LRRTabBarBigButton.m */,
+				1831922F20144BA70032B8C7 /* LRRTabBarButton.h */,
+				1831923020144BA70032B8C7 /* LRRTabBarButton.m */,
+				1831922C201448940032B8C7 /* LRRTabBar.h */,
+				1831922D201448940032B8C7 /* LRRTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642C9200DF5F100B20130 /* 朋友 */ = {
+			isa = PBXGroup;
+			children = (
+				180642CA200DF5F100B20130 /* Controller */,
+				180642CB200DF5F100B20130 /* Model */,
+				180642CC200DF5F100B20130 /* View */,
+			);
+			path = "朋友";
+			sourceTree = "<group>";
+		};
+		180642CA200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F8860200F2E1B002A9B0C /* LRRFriendViewController.h */,
+				180F8861200F2E1B002A9B0C /* LRRFriendViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642CB200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642CC200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642CD200DF5F100B20130 /* Login-登录 */ = {
+			isa = PBXGroup;
+			children = (
+				180642CE200DF5F100B20130 /* Controller */,
+				180642CF200DF5F100B20130 /* Model */,
+				180642D0200DF5F100B20130 /* View */,
+			);
+			path = "Login-登录";
+			sourceTree = "<group>";
+		};
+		180642CE200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642CF200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642D0200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642D1200DF5F100B20130 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				180642D2200DF5F100B20130 /* Controller */,
+				180642D3200DF5F100B20130 /* Model */,
+				180642D4200DF5F100B20130 /* View */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		180642D2200DF5F100B20130 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180F8869200F2E88002A9B0C /* LRRFoundViewController.h */,
+				180F886A200F2E88002A9B0C /* LRRFoundViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180642D3200DF5F100B20130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180642D4200DF5F100B20130 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		180642D5200DF5F100B20130 /* Network-网络 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network-网络";
+			sourceTree = "<group>";
+		};
+		180F8856200EF7D3002A9B0C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				180F885A200EF97A002A9B0C /* NSString+XCExtension.h */,
+				180F885B200EF97A002A9B0C /* NSString+XCExtension.m */,
+				180F8857200EF855002A9B0C /* UIColor+DLExtension.h */,
+				180F8858200EF855002A9B0C /* UIColor+DLExtension.m */,
+				180F8870200F378A002A9B0C /* NSBundle+LRRExtension.h */,
+				180F8871200F378A002A9B0C /* NSBundle+LRRExtension.m */,
+				180F8873200F38B7002A9B0C /* NSUserDefaults+LRRExtension.h */,
+				180F8874200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m */,
+				180F8876200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.h */,
+				180F8877200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m */,
+				183192292014465E0032B8C7 /* UIView+LRRExtension.h */,
+				1831922A2014465E0032B8C7 /* UIView+LRRExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		188EAF9020159A430012855E /* LRRSegment */ = {
+			isa = PBXGroup;
+			children = (
+				188EAF9520159A430012855E /* LRRSegmentBar.h */,
+				188EAF9120159A430012855E /* LRRSegmentBar.m */,
+				188EAF9420159A430012855E /* LRRSegmentBarVC.h */,
+				188EAF9220159A430012855E /* LRRSegmentBarVC.m */,
+				188EAF9320159A430012855E /* LRRSegmentBarConfig.h */,
+				188EAF9620159A430012855E /* LRRSegmentBarConfig.m */,
+			);
+			path = LRRSegment;
+			sourceTree = "<group>";
+		};
+		18FC93E7200C5F7000269FAB = {
+			isa = PBXGroup;
+			children = (
+				18FC93F2200C5F7000269FAB /* LuRen */,
+				18FC940B200C5F7000269FAB /* LuRenTests */,
+				18FC9416200C5F7000269FAB /* LuRenUITests */,
+				18FC93F1200C5F7000269FAB /* Products */,
+				EA9D227FF11B95B3D1B2BC81 /* Pods */,
+				9E850A85D3E648F3805F6EE3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18FC93F1200C5F7000269FAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18FC93F0200C5F7000269FAB /* LuRen.app */,
+				18FC9408200C5F7000269FAB /* LuRenTests.xctest */,
+				18FC9413200C5F7000269FAB /* LuRenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18FC93F2200C5F7000269FAB /* LuRen */ = {
+			isa = PBXGroup;
+			children = (
+				180642B8200DF5F100B20130 /* Classes */,
+				18FC93FC200C5F7000269FAB /* Assets.xcassets */,
+				180642B7200DF48800B20130 /* images */,
+				18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */,
+				18FC9401200C5F7000269FAB /* Info.plist */,
+				180F8884200F5044002A9B0C /* MeMessageList.plist */,
+				18319209201088D30032B8C7 /* FoundMessageList.plist */,
+				1831920E20108D7B0032B8C7 /* SettingList.plist */,
+			);
+			path = LuRen;
+			sourceTree = "<group>";
+		};
+		18FC940B200C5F7000269FAB /* LuRenTests */ = {
+			isa = PBXGroup;
+			children = (
+				18FC940C200C5F7000269FAB /* LuRenTests.m */,
+				18FC940E200C5F7000269FAB /* Info.plist */,
+			);
+			path = LuRenTests;
+			sourceTree = "<group>";
+		};
+		18FC9416200C5F7000269FAB /* LuRenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18FC9417200C5F7000269FAB /* LuRenUITests.m */,
+				18FC9419200C5F7000269FAB /* Info.plist */,
+			);
+			path = LuRenUITests;
+			sourceTree = "<group>";
+		};
+		9E850A85D3E648F3805F6EE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BAAC25AE59C58DE8E53894E /* libPods-LuRen.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA9D227FF11B95B3D1B2BC81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C52D7D4CB749EEBE340AB23C /* Pods-LuRen.debug.xcconfig */,
+				64493AF8506E4B24CC320C01 /* Pods-LuRen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18FC93EF200C5F7000269FAB /* LuRen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FC941C200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRen" */;
+			buildPhases = (
+				2F64093399B0EC3A4C8B0D6A /* [CP] Check Pods Manifest.lock */,
+				18FC93EC200C5F7000269FAB /* Sources */,
+				18FC93ED200C5F7000269FAB /* Frameworks */,
+				18FC93EE200C5F7000269FAB /* Resources */,
+				773CC25DA76C5592549A1FE0 /* [CP] Embed Pods Frameworks */,
+				087246208E8659FA9146D19A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuRen;
+			productName = LuRen;
+			productReference = 18FC93F0200C5F7000269FAB /* LuRen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18FC9407200C5F7000269FAB /* LuRenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FC941F200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRenTests" */;
+			buildPhases = (
+				18FC9404200C5F7000269FAB /* Sources */,
+				18FC9405200C5F7000269FAB /* Frameworks */,
+				18FC9406200C5F7000269FAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18FC940A200C5F7000269FAB /* PBXTargetDependency */,
+			);
+			name = LuRenTests;
+			productName = LuRenTests;
+			productReference = 18FC9408200C5F7000269FAB /* LuRenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18FC9412200C5F7000269FAB /* LuRenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18FC9422200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRenUITests" */;
+			buildPhases = (
+				18FC940F200C5F7000269FAB /* Sources */,
+				18FC9410200C5F7000269FAB /* Frameworks */,
+				18FC9411200C5F7000269FAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18FC9415200C5F7000269FAB /* PBXTargetDependency */,
+			);
+			name = LuRenUITests;
+			productName = LuRenUITests;
+			productReference = 18FC9413200C5F7000269FAB /* LuRenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18FC93E8200C5F7000269FAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LRR;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = supconit;
+				TargetAttributes = {
+					18FC93EF200C5F7000269FAB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					18FC9407200C5F7000269FAB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18FC93EF200C5F7000269FAB;
+					};
+					18FC9412200C5F7000269FAB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 18FC93EF200C5F7000269FAB;
+					};
+				};
+			};
+			buildConfigurationList = 18FC93EB200C5F7000269FAB /* Build configuration list for PBXProject "LuRen" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18FC93E7200C5F7000269FAB;
+			productRefGroup = 18FC93F1200C5F7000269FAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18FC93EF200C5F7000269FAB /* LuRen */,
+				18FC9407200C5F7000269FAB /* LuRenTests */,
+				18FC9412200C5F7000269FAB /* LuRenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18FC93EE200C5F7000269FAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18319214201092810032B8C7 /* LRRSettingViewCell.xib in Resources */,
+				180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */,
+				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
+				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
+				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
+				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
+				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
+				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
+				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
+				1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC9406200C5F7000269FAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC9411200C5F7000269FAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		087246208E8659FA9146D19A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuRen/Pods-LuRen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F64093399B0EC3A4C8B0D6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		773CC25DA76C5592549A1FE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuRen/Pods-LuRen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18FC93EC200C5F7000269FAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
+				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
+				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
+				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
+				18FC9403200C5F7000269FAB /* main.m in Sources */,
+				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
+				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
+				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
+				18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */,
+				180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */,
+				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
+				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
+				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
+				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
+				1831922E201448940032B8C7 /* LRRTabBar.m in Sources */,
+				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
+				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
+				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
+				180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */,
+				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
+				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
+				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
+				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
+				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
+				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
+				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
+				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,
+				18319217201197BE0032B8C7 /* LRRHomeHeaderView.m in Sources */,
+				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
+				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
+				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
+				1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */,
+				18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */,
+				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
+				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
+				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,
+				18FC942A200C631000269FAB /* LRRBaseNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC9404200C5F7000269FAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FC940D200C5F7000269FAB /* LuRenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18FC940F200C5F7000269FAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18FC9418200C5F7000269FAB /* LuRenUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18FC940A200C5F7000269FAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18FC93EF200C5F7000269FAB /* LuRen */;
+			targetProxy = 18FC9409200C5F7000269FAB /* PBXContainerItemProxy */;
+		};
+		18FC9415200C5F7000269FAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18FC93EF200C5F7000269FAB /* LuRen */;
+			targetProxy = 18FC9414200C5F7000269FAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18FC93FF200C5F7000269FAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18FC941A200C5F7000269FAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18FC941B200C5F7000269FAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18FC941D200C5F7000269FAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C52D7D4CB749EEBE340AB23C /* Pods-LuRen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC7R7ETD35;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络/LuRen/LuRen/Classes/Other-其它/LuRen.pch";
+				INFOPLIST_FILE = LuRen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		18FC941E200C5F7000269FAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64493AF8506E4B24CC320C01 /* Pods-LuRen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC7R7ETD35;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络/LuRen/LuRen/Classes/Other-其它/LuRen.pch";
+				INFOPLIST_FILE = LuRen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		18FC9420200C5F7000269FAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LuRenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuRen.app/LuRen";
+			};
+			name = Debug;
+		};
+		18FC9421200C5F7000269FAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LuRenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuRen.app/LuRen";
+			};
+			name = Release;
+		};
+		18FC9423200C5F7000269FAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LuRenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuRen;
+			};
+			name = Debug;
+		};
+		18FC9424200C5F7000269FAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LuRenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LuRen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18FC93EB200C5F7000269FAB /* Build configuration list for PBXProject "LuRen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FC941A200C5F7000269FAB /* Debug */,
+				18FC941B200C5F7000269FAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18FC941C200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FC941D200C5F7000269FAB /* Debug */,
+				18FC941E200C5F7000269FAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18FC941F200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FC9420200C5F7000269FAB /* Debug */,
+				18FC9421200C5F7000269FAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18FC9422200C5F7000269FAB /* Build configuration list for PBXNativeTarget "LuRenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18FC9423200C5F7000269FAB /* Debug */,
+				18FC9424200C5F7000269FAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18FC93E8200C5F7000269FAB /* Project object */;
+}
