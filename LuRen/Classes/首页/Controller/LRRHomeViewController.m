@@ -11,6 +11,9 @@
 #import "LRRHomeCollectionViewCell.h"
 #import "LRRHomeCollectionReusableView.h"
 
+//测试
+#import "LRRLoginViewController.h"
+
 static CGFloat headerHeight = 182.f;
 
 @interface LRRHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,LRRHomeCollectionReusableViewDelegate>
@@ -98,6 +101,8 @@ static CGFloat headerHeight = 182.f;
 - (void)messageAction
 {
     LRRLog(@"点击信息");
+    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 - (void)locationAction
 {

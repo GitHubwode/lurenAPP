@@ -25,6 +25,7 @@
 #import "NSUserDefaults+LRRExtension.h"
 #import "UIBarButtonItem+LRRExtension.h"
 #import "UIView+LRRExtension.h"
+#import "UIImage+LRRExtension.h"
 
 
 #define     LRRNotificationCenter  [NSNotificationCenter defaultCenter]

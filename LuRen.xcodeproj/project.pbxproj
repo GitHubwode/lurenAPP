@@ -45,6 +45,10 @@
 		188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9C2016E7250012855E /* LRROrderDetailViewController.m */; };
 		188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9F2016E9460012855E /* LRROrderDetailTableViewCell.m */; };
 		188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */; };
+		18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A123612043E53800C6F9E2 /* LRRLoginViewController.m */; };
+		18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */; };
+		18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A123652043E63000C6F9E2 /* 启动页.jpg */; };
+		18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */; };
 		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
 		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
 		18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.m */; };
@@ -145,6 +149,12 @@
 		188EAF9E2016E9460012855E /* LRROrderDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRROrderDetailTableViewCell.h; sourceTree = "<group>"; };
 		188EAF9F2016E9460012855E /* LRROrderDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRROrderDetailTableViewCell.m; sourceTree = "<group>"; };
 		188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRROrderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		18A123602043E53800C6F9E2 /* LRRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLoginViewController.h; sourceTree = "<group>"; };
+		18A123612043E53800C6F9E2 /* LRRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLoginViewController.m; sourceTree = "<group>"; };
+		18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLoginViewController.xib; sourceTree = "<group>"; };
+		18A123652043E63000C6F9E2 /* 启动页.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "启动页.jpg"; sourceTree = "<group>"; };
+		18A123672044021000C6F9E2 /* UIImage+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LRRExtension.h"; sourceTree = "<group>"; };
+		18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LRRExtension.m"; sourceTree = "<group>"; };
 		18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPointWorkViewController.h; sourceTree = "<group>"; };
 		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
 		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
@@ -203,6 +213,7 @@
 		180642B7200DF48800B20130 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18A123652043E63000C6F9E2 /* 启动页.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -451,6 +462,9 @@
 		180642CE200DF5F100B20130 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18A123602043E53800C6F9E2 /* LRRLoginViewController.h */,
+				18A123612043E53800C6F9E2 /* LRRLoginViewController.m */,
+				18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +538,8 @@
 				180F8877200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m */,
 				183192292014465E0032B8C7 /* UIView+LRRExtension.h */,
 				1831922A2014465E0032B8C7 /* UIView+LRRExtension.m */,
+				18A123672044021000C6F9E2 /* UIImage+LRRExtension.h */,
+				18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -729,9 +745,11 @@
 				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
+				18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */,
 				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
 				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
+				18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */,
 				1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,12 +850,14 @@
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
 				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
 				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,
+				18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */,
 				18319217201197BE0032B8C7 /* LRRHomeHeaderView.m in Sources */,
 				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
 				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
 				1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */,
 				18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */,
+				18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */,
 				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
 				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,
@@ -1001,7 +1021,7 @@
 				DEVELOPMENT_TEAM = UC7R7ETD35;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络/LuRen/LuRen/Classes/Other-其它/LuRen.pch";
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1020,7 +1040,7 @@
 				DEVELOPMENT_TEAM = UC7R7ETD35;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络/LuRen/LuRen/Classes/Other-其它/LuRen.pch";
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
