@@ -24,6 +24,7 @@
 #import "NSString+XCExtension.h"
 #import "NSUserDefaults+LRRExtension.h"
 #import "UIBarButtonItem+LRRExtension.h"
+#import "UIViewController+DismissKeyboard.h"
 #import "UIView+LRRExtension.h"
 #import "UIImage+LRRExtension.h"
 

@@ -21,16 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
-    // Do any additional setup after loading the view from its nib.
-//    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    UIVisualEffectView *effe = [[UIVisualEffectView alloc]initWithEffect:blur];
-//    effe.frame = self.bgView.frame;
-//    effe.alpha = 0.6;
-//    effe.layer.masksToBounds = YES;
-//    effe.layer.cornerRadius = 15.f;
-//    [self.bgImageView addSubview:effe];
-    
     UIImage *image = [UIImage imageNamed:@"启动页.jpg"];
     self.bgImageView.image=[UIImage LRR_boxblurImage:image withBlurNumber:0.5];
     self.bgImageView.clipsToBounds=YES;

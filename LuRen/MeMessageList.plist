@@ -14,7 +14,7 @@
 				<key>statusString</key>
 				<string></string>
 				<key>linkVC</key>
-				<string></string>
+				<string>LRRMyBaseOrderViewController</string>
 				<key>isTitle</key>
 				<false/>
 				<key>isStatus</key>
@@ -48,7 +48,7 @@
 				<key>statusString</key>
 				<string>icon_weirenzheng</string>
 				<key>linkVC</key>
-				<string></string>
+				<string>LRRRealNameViewController</string>
 				<key>isTitle</key>
 				<true/>
 				<key>isStatus</key>

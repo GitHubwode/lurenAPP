@@ -39,6 +39,12 @@
 		1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923020144BA70032B8C7 /* LRRTabBarButton.m */; };
 		1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */; };
 		1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */; };
+		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
+		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
+		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
+		1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EACC204D2DBF0039405B /* SUNSlideSwitchView.m */; };
+		1855EAD7204D357C0039405B /* LRRMyBaseOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */; };
+		1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */; };
 		188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9120159A430012855E /* LRRSegmentBar.m */; };
 		188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9220159A430012855E /* LRRSegmentBarVC.m */; };
 		188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9620159A430012855E /* LRRSegmentBarConfig.m */; };
@@ -138,6 +144,17 @@
 		1831923220145EFF0032B8C7 /* LRRLookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLookTableViewCell.h; sourceTree = "<group>"; };
 		1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLookTableViewCell.m; sourceTree = "<group>"; };
 		1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLookTableViewCell.xib; sourceTree = "<group>"; };
+		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
+		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
+		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
+		1855EAC4204D17990039405B /* UIViewController+DismissKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DismissKeyboard.h"; sourceTree = "<group>"; };
+		1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DismissKeyboard.m"; sourceTree = "<group>"; };
+		1855EACC204D2DBF0039405B /* SUNSlideSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUNSlideSwitchView.m; sourceTree = "<group>"; };
+		1855EACD204D2DBF0039405B /* SUNSlideSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUNSlideSwitchView.h; sourceTree = "<group>"; };
+		1855EAD5204D357C0039405B /* LRRMyBaseOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMyBaseOrderViewController.h; sourceTree = "<group>"; };
+		1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyBaseOrderViewController.m; sourceTree = "<group>"; };
+		1855EAD8204D360C0039405B /* LRRMyOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMyOrderListViewController.h; sourceTree = "<group>"; };
+		1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyOrderListViewController.m; sourceTree = "<group>"; };
 		188EAF9120159A430012855E /* LRRSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBar.m; sourceTree = "<group>"; };
 		188EAF9220159A430012855E /* LRRSegmentBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBarVC.m; sourceTree = "<group>"; };
 		188EAF9320159A430012855E /* LRRSegmentBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSegmentBarConfig.h; sourceTree = "<group>"; };
@@ -249,8 +266,15 @@
 			children = (
 				180F8866200F2E34002A9B0C /* LRRMeViewController.h */,
 				180F8867200F2E34002A9B0C /* LRRMeViewController.m */,
+				1855EABF204CE2010039405B /* LRRRealNameViewController.h */,
+				1855EAC0204CE2010039405B /* LRRRealNameViewController.m */,
+				1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */,
 				1831920B20108CDC0032B8C7 /* LRRSettingViewController.h */,
 				1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */,
+				1855EAD5204D357C0039405B /* LRRMyBaseOrderViewController.h */,
+				1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */,
+				1855EAD8204D360C0039405B /* LRRMyOrderListViewController.h */,
+				1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -322,6 +346,7 @@
 		180642C1200DF5F100B20130 /* Common-公用 */ = {
 			isa = PBXGroup;
 			children = (
+				1855EACA204D2DA40039405B /* Lib */,
 				180F8856200EF7D3002A9B0C /* Category */,
 			);
 			path = "Common-公用";
@@ -540,8 +565,27 @@
 				1831922A2014465E0032B8C7 /* UIView+LRRExtension.m */,
 				18A123672044021000C6F9E2 /* UIImage+LRRExtension.h */,
 				18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */,
+				1855EAC4204D17990039405B /* UIViewController+DismissKeyboard.h */,
+				1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1855EACA204D2DA40039405B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				1855EACB204D2DA40039405B /* SUNSlideSwitch */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		1855EACB204D2DA40039405B /* SUNSlideSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				1855EACD204D2DBF0039405B /* SUNSlideSwitchView.h */,
+				1855EACC204D2DBF0039405B /* SUNSlideSwitchView.m */,
+			);
+			path = SUNSlideSwitch;
 			sourceTree = "<group>";
 		};
 		188EAF9020159A430012855E /* LRRSegment */ = {
@@ -743,6 +787,7 @@
 				180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
 				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
+				1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
 				18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */,
@@ -836,8 +881,10 @@
 				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
+				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
 				1831922E201448940032B8C7 /* LRRTabBar.m in Sources */,
+				1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */,
 				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
 				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
@@ -857,6 +904,9 @@
 				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
 				1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */,
 				18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */,
+				1855EAD7204D357C0039405B /* LRRMyBaseOrderViewController.m in Sources */,
+				1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */,
+				1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */,
 				18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */,
 				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
@@ -1025,7 +1075,7 @@
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hz6r.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1044,7 +1094,7 @@
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.supconit.LuRen;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hz6r.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
