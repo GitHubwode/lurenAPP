@@ -18,6 +18,9 @@
     [super viewDidLoad];
     self.popDelegate = self.interactivePopGestureRecognizer.delegate;
     self.delegate = self;
+    [self setUpBarButtonItem];
+
+    [self setUpNavigationBar];
     // Do any additional setup after loading the view.
 }
 

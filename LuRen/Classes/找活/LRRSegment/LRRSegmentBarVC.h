@@ -6,10 +6,10 @@
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRBaseViewController.h"
+#import <UIKit/UIKit.h>
 #import "LRRSegmentBar.h"
 
-@interface LRRSegmentBarVC : LRRBaseViewController
+@interface LRRSegmentBarVC : UIViewController
 
 @property (nonatomic, weak) LRRSegmentBar *segmentBar;
 - (void)setUpWithItems: (NSArray <NSString *>*)items childVCs: (NSArray <UIViewController *>*)childVCs;

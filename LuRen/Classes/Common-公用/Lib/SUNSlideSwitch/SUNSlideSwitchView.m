@@ -43,7 +43,7 @@
     _topScrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     _bottomLineView = [[UIView alloc]init];
-    _bottomLineView.backgroundColor = LRRTitleTextColor;
+    _bottomLineView.backgroundColor = LRRViewBackgroundColor;
     _bottomLineView.dl_height = LRROnePixelHeight;
     _bottomLineView.dl_width = _topScrollView.dl_width;
     _bottomLineView.dl_y = _kHeightOfTopScrollView - _bottomLineView.dl_height;
@@ -95,7 +95,6 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    LRRLog(@"%f",frame.size.height);
     if (self) {
         [self setupWithSelectedChannelID:0];
     }

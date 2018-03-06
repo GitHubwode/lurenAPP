@@ -6,8 +6,8 @@
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRBaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface LRRPointWorkViewController : LRRBaseViewController
+@interface LRRPointWorkViewController : UIViewController
 
 @end

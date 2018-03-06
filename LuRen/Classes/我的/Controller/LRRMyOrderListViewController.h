@@ -6,8 +6,8 @@
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LRRBaseViewController.h"
 
-@interface LRRMyOrderListViewController : UIViewController
+@interface LRRMyOrderListViewController : LRRBaseViewController
 
 @end

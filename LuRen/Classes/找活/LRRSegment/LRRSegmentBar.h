@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LRRSegmentBarConfig.h"
 
+
 @class LRRSegmentBar;
 
 @protocol LRRSegmentBarDelegate <NSObject>
