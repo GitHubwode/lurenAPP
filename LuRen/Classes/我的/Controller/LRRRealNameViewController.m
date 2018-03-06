@@ -57,12 +57,14 @@
          LRRLog(@"打开摄像头");       
         UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
         _ipc.sourceType = sourceType;
+        [self presentViewController:_ipc animated:YES completion:nil];
     }else if (buttonIndex == 2){
          LRRLog(@"打开相册");
         UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         _ipc.sourceType = sourceType;
+        [self presentViewController:_ipc animated:YES completion:nil];
     }
-    [self presentViewController:_ipc animated:YES completion:nil];
+    
 }
 
 #pragma mark - UIImagePickerControllerDelegate

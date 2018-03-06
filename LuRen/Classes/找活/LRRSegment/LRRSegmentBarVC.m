@@ -65,7 +65,7 @@
     vc.view.frame = CGRectMake(index * self.contentView.dl_width, 0, self.contentView.dl_width, self.contentView.dl_height);
     [self.contentView addSubview:vc.view];
     // 滑动到对应位置
-    [self.contentView setContentOffset:CGPointMake(index * self.contentView.dl_width, 0) animated:YES];
+    [self.contentView setContentOffset:CGPointMake(index * self.contentView.dl_width, 0) animated:NO];
 }
 
 - (void)viewWillLayoutSubviews{
