@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupForDismissKeyboard];
-    UIImage *image = [UIImage imageNamed:@"启动页.jpg"];
+    UIImage *image = [UIImage imageNamed:@"启动页"];
     self.bgImageView.image=[UIImage LRR_boxblurImage:image withBlurNumber:0.5];
     self.bgImageView.clipsToBounds=YES;
     [self.view addSubview:self.bgImageView];

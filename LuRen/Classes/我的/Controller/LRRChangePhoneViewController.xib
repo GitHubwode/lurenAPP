@@ -52,7 +52,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" red="0.50917825453472043" green="1" blue="0.39347489120359058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="wrm-gb-lmn" firstAttribute="height" secondItem="5Ea-9c-YOf" secondAttribute="height" id="0G0-xf-a8r"/>
                         <constraint firstAttribute="trailing" secondItem="rdk-AL-zne" secondAttribute="trailing" constant="15" id="EDQ-d5-WLi"/>
@@ -72,7 +72,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <color key="backgroundColor" red="0.50917825449999998" green="1" blue="0.39347489120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="naI-Za-Z1w" firstAttribute="leading" secondItem="heo-6F-1yn" secondAttribute="leading" constant="15" id="0ek-k7-Lio"/>
                         <constraint firstItem="naI-Za-Z1w" firstAttribute="centerY" secondItem="heo-6F-1yn" secondAttribute="centerY" id="7fo-68-vnk"/>

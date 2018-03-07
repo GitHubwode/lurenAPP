@@ -8,7 +8,8 @@
 
 #import "LRRChangePhoneViewController.h"
 
-@interface LRRChangePhoneViewController ()
+@interface LRRChangePhoneViewController ()<UITextFieldDelegate>
+    
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *codeTextField;
 @property (weak, nonatomic) IBOutlet UIButton *downButton;
@@ -19,9 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"修改手机号";
+    [self setupForDismissKeyboard];
 }
 - (IBAction)sureButtonClick:(UIButton *)sender {
+    
 }
 - (IBAction)downTimeButtonClick:(UIButton *)sender {
     [sender startWithTime:60 title:@"获取验证码" subTitle:@"秒后重发" normalBackgroundColor:LRROrangeThemeColor coundownBackgroundColor:LRRAlertTextColor completion:nil];

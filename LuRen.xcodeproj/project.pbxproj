@@ -63,7 +63,6 @@
 		188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EAFA02016E9460012855E /* LRROrderDetailTableViewCell.xib */; };
 		18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A123612043E53800C6F9E2 /* LRRLoginViewController.m */; };
 		18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */; };
-		18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A123652043E63000C6F9E2 /* 启动页.jpg */; };
 		18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */; };
 		18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7664A204FA5D300F2F063 /* LRRAboutMeViewController.m */; };
 		18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7664B204FA5D300F2F063 /* LRRAboutMeViewController.xib */; };
@@ -206,7 +205,6 @@
 		18A123602043E53800C6F9E2 /* LRRLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLoginViewController.h; sourceTree = "<group>"; };
 		18A123612043E53800C6F9E2 /* LRRLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLoginViewController.m; sourceTree = "<group>"; };
 		18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLoginViewController.xib; sourceTree = "<group>"; };
-		18A123652043E63000C6F9E2 /* 启动页.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "启动页.jpg"; sourceTree = "<group>"; };
 		18A123672044021000C6F9E2 /* UIImage+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LRRExtension.h"; sourceTree = "<group>"; };
 		18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LRRExtension.m"; sourceTree = "<group>"; };
 		18A76649204FA5D300F2F063 /* LRRAboutMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRAboutMeViewController.h; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 		180642B7200DF48800B20130 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				18A123652043E63000C6F9E2 /* 启动页.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -881,7 +878,6 @@
 				1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */,
 				18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */,
 				18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */,
-				18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */,
 				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
 				1832AD63204F7D3B006BB3BD /* LRRChooseIDViewController.xib in Resources */,
 				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
