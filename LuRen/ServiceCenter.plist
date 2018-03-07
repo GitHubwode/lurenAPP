@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>电话</string>
+			<key>subTitle</key>
+			<string>0571-88730997</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>微信</string>
+			<key>subTitle</key>
+			<string>17764552586</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>邮箱</string>
+			<key>subTitle</key>
+			<string>sixpeople@aliyun.com</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>官网</string>
+			<key>subTitle</key>
+			<string>http://www.hz6r.com</string>
+		</dict>
+	</array>
+</array>
+</plist>

@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupForDismissKeyboard];
     UIImage *image = [UIImage imageNamed:@"启动页.jpg"];
     self.bgImageView.image=[UIImage LRR_boxblurImage:image withBlurNumber:0.5];
     self.bgImageView.clipsToBounds=YES;
@@ -31,6 +32,8 @@
 
 - (IBAction)downTimeButtonClick:(UIButton *)sender {
     LRRLog(@"倒计时");
+    [sender startWithTime:60 title:@"获取验证码" subTitle:@"秒后重发" normalBackgroundColor:LRROrangeThemeColor coundownBackgroundColor:LRRAlertTextColor completion:nil];
+    
 }
 - (IBAction)loginButtonClick:(UIButton *)sender {
     LRRLog(@"登录");

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LRRChooseIDViewController">
+            <connections>
+                <outlet property="cancelButton" destination="jnR-vQ-PFB" id="zlv-kn-vbS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2md-wo-VB3" userLabel="cancelView">
+                    <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请根据您的需要选择对应的身份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9C-I9-BPl">
+                            <rect key="frame" x="87" y="0.0" width="200" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnR-vQ-PFB">
+                            <rect key="frame" x="167.5" y="45.5" width="39" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="39" id="MXn-v9-xES"/>
+                                <constraint firstAttribute="height" constant="39" id="XTv-4u-Lyw"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="choose_icon_back"/>
+                            <connections>
+                                <action selector="cancelButtonClick:" destination="-1" eventType="touchUpInside" id="Nz6-b5-Qu8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="jnR-vQ-PFB" firstAttribute="centerY" secondItem="2md-wo-VB3" secondAttribute="centerY" id="T8e-iZ-KIP"/>
+                        <constraint firstItem="y9C-I9-BPl" firstAttribute="top" secondItem="2md-wo-VB3" secondAttribute="top" id="nmE-7O-0df"/>
+                        <constraint firstItem="y9C-I9-BPl" firstAttribute="centerX" secondItem="2md-wo-VB3" secondAttribute="centerX" id="qTP-4m-0DI"/>
+                        <constraint firstItem="jnR-vQ-PFB" firstAttribute="centerX" secondItem="2md-wo-VB3" secondAttribute="centerX" id="sFT-dY-4dE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SN-rU-cIL" userLabel="peopleView">
+                    <rect key="frame" x="111.5" y="94" width="151" height="443"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-Al-NgU" userLabel="bossButton">
+                            <rect key="frame" x="0.5" y="360" width="151" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="老板" backgroundImage="choose_bth_bg_pressed"/>
+                            <connections>
+                                <action selector="chooseBossButtonClick:" destination="-1" eventType="touchUpInside" id="U6z-Gf-XSQ"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose_pic_boss" translatesAutoresizingMaskIntoConstraints="NO" id="v2E-nC-nmp">
+                            <rect key="frame" x="32.5" y="249" width="87" height="111"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lki-mE-bN8" userLabel="workerButton">
+                            <rect key="frame" x="0.5" y="154" width="151" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="av4-3s-fXC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="带班" backgroundImage="choose_bth_bg"/>
+                            <connections>
+                                <action selector="chooseWorkerButtonClick:" destination="-1" eventType="touchUpInside" id="cE7-Fb-INa"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose_pic_worker" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-7U-VmN">
+                            <rect key="frame" x="29" y="35" width="94" height="119"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpg-mt-ye8">
+                            <rect key="frame" x="0.0" y="405" width="151" height="38"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="v2E-nC-nmp" firstAttribute="centerX" secondItem="2SN-rU-cIL" secondAttribute="centerX" id="8tH-GZ-guC"/>
+                        <constraint firstItem="jpg-mt-ye8" firstAttribute="centerX" secondItem="2SN-rU-cIL" secondAttribute="centerX" id="AD4-Oa-Xbe"/>
+                        <constraint firstAttribute="bottom" secondItem="jpg-mt-ye8" secondAttribute="bottom" id="G8S-9F-apX"/>
+                        <constraint firstItem="Lki-mE-bN8" firstAttribute="centerX" secondItem="2SN-rU-cIL" secondAttribute="centerX" id="GJ5-1Y-3Dx"/>
+                        <constraint firstItem="1oa-Al-NgU" firstAttribute="centerX" secondItem="2SN-rU-cIL" secondAttribute="centerX" id="Im2-Cg-tfp"/>
+                        <constraint firstItem="1oa-Al-NgU" firstAttribute="width" secondItem="Lki-mE-bN8" secondAttribute="width" id="Qb7-8a-4ze"/>
+                        <constraint firstItem="1oa-Al-NgU" firstAttribute="height" secondItem="Lki-mE-bN8" secondAttribute="height" id="RzU-vS-hBm"/>
+                        <constraint firstAttribute="width" constant="151" id="WH0-PY-TBD"/>
+                        <constraint firstItem="Lki-mE-bN8" firstAttribute="top" secondItem="9uQ-7U-VmN" secondAttribute="bottom" id="WYW-lM-bWY"/>
+                        <constraint firstItem="v2E-nC-nmp" firstAttribute="top" secondItem="Lki-mE-bN8" secondAttribute="bottom" constant="50" id="X3A-Wk-B76"/>
+                        <constraint firstItem="jpg-mt-ye8" firstAttribute="height" secondItem="2SN-rU-cIL" secondAttribute="height" multiplier="57:667" id="a16-8d-RhX"/>
+                        <constraint firstItem="jpg-mt-ye8" firstAttribute="width" secondItem="2SN-rU-cIL" secondAttribute="width" id="b1C-C4-hBz"/>
+                        <constraint firstItem="9uQ-7U-VmN" firstAttribute="centerX" secondItem="2SN-rU-cIL" secondAttribute="centerX" id="g6W-iK-Ddp"/>
+                        <constraint firstItem="jpg-mt-ye8" firstAttribute="top" secondItem="1oa-Al-NgU" secondAttribute="bottom" id="hVP-TD-0uT"/>
+                        <constraint firstItem="1oa-Al-NgU" firstAttribute="top" secondItem="v2E-nC-nmp" secondAttribute="bottom" id="jnu-Dp-mcq"/>
+                        <constraint firstItem="Lki-mE-bN8" firstAttribute="width" secondItem="2SN-rU-cIL" secondAttribute="width" id="mti-9G-28X"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="2SN-rU-cIL" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="443:667" id="3j0-fB-C5g"/>
+                <constraint firstItem="2SN-rU-cIL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" priority="750" constant="112" id="9D8-zZ-jN5"/>
+                <constraint firstItem="2md-wo-VB3" firstAttribute="top" secondItem="2SN-rU-cIL" secondAttribute="bottom" id="Nau-tG-ebf"/>
+                <constraint firstItem="2md-wo-VB3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="130:667" id="SX4-FT-Dkz"/>
+                <constraint firstItem="2SN-rU-cIL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UI4-HS-crJ"/>
+                <constraint firstAttribute="bottom" secondItem="2md-wo-VB3" secondAttribute="bottom" id="bQu-rL-vhh"/>
+                <constraint firstItem="2md-wo-VB3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gft-zn-OJF"/>
+                <constraint firstAttribute="trailing" secondItem="2md-wo-VB3" secondAttribute="trailing" id="upJ-Vg-6h1"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="133.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="choose_bth_bg" width="10" height="10"/>
+        <image name="choose_bth_bg_pressed" width="10" height="10"/>
+        <image name="choose_icon_back" width="39" height="39"/>
+        <image name="choose_pic_boss" width="87" height="111"/>
+        <image name="choose_pic_worker" width="94" height="119"/>
+    </resources>
+</document>

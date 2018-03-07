@@ -122,7 +122,7 @@ static CGFloat headerHeight = 182.f;
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
         flowLayout.headerReferenceSize = CGSizeMake(kMainScreenWidth, 50);
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight) collectionViewLayout:flowLayout];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight-kNaviHeight) collectionViewLayout:flowLayout];
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 10;
         flowLayout.itemSize = CGSizeMake((kMainScreenWidth - 40-72)/4, LRRAdaptedHeight(130));
@@ -134,6 +134,7 @@ static CGFloat headerHeight = 182.f;
         [_collectionView addSubview:self.headerView];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+        _collectionView.showsVerticalScrollIndicator = NO;
     }
     return _collectionView;
 }

@@ -9,7 +9,8 @@
 #import "LRRSettingViewController.h"
 #import "LRRSettingViewCell.h"
 #import "LRRMeMessageModel.h"
-
+#import "LRRChooseIDViewController.h"
+#import "LRRChangePhoneViewController.h"
 
 @interface LRRSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -95,9 +96,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
-    Class class = NSClassFromString(item.linkVC);
-    [self.navigationController pushViewController:[class new] animated:YES];
+    if (indexPath.section == 0) {
+        LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
+        [self presentViewController:newFeatureVc animated:YES completion:nil];
+
+    }else if(indexPath.section == 1) {
+        LRRChangePhoneViewController *changeVC = [[LRRChangePhoneViewController alloc]initWithNibName:NSStringFromClass([LRRChangePhoneViewController class]) bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:changeVC animated:YES];
+    } else{
+        LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
+        Class class = NSClassFromString(item.linkVC);
+        [self.navigationController pushViewController:[class new] animated:YES];
+    }
 }
 
 - (void)dealloc

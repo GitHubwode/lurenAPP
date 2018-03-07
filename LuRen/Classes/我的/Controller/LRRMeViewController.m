@@ -11,8 +11,9 @@
 #import "LRRMeMessageModel.h"
 #import "LRRMeTableViewCell.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import "LRRUserDetailedViewController.h"
 
-@interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate,LRRHeaderViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
@@ -34,6 +35,13 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return  UIStatusBarStyleLightContent;
+}
+
+- (void)headerViewTapMessage
+{
+    LRRLog(@"跳转用户信息");
+    LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+    [self.navigationController pushViewController:userVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource
@@ -122,6 +130,7 @@
 {
     if (!_headerView) {
         _headerView = [[LRRMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kHeaderHeight)];
+        _headerView.delegate = self;
     }
     return _headerView;
 }

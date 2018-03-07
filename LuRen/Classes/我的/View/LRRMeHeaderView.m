@@ -51,6 +51,16 @@
         make.centerY.equalTo(weakself.avatarImageView.mas_centerY);
         make.left.equalTo(weakself.avatarImageView.mas_right).offset(20);
     }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleSingleTap:)];
+    [self.headerImageView addGestureRecognizer:tap];
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)tap
+{
+    if ([self.delegate respondsToSelector:@selector(headerViewTapMessage)]) {
+        [self.delegate headerViewTapMessage];
+    }
 }
 
 #pragma mark - 懒加载
@@ -59,6 +69,7 @@
     if (!_headerImageView) {
         _headerImageView = [[UIImageView alloc]initWithFrame:self.bounds];
         _headerImageView.image = [UIImage imageNamed:@"bg"];
+        _headerImageView.userInteractionEnabled = YES;
     }
     return _headerImageView;
 }

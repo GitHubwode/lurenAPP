@@ -32,7 +32,7 @@
 				<key>statusString</key>
 				<string></string>
 				<key>linkVC</key>
-				<string></string>
+				<string>LRRChangePhoneViewController</string>
 				<key>isTitle</key>
 				<true/>
 				<key>isStatus</key>
@@ -50,7 +50,7 @@
 				<key>statusString</key>
 				<string></string>
 				<key>linkVC</key>
-				<string></string>
+				<string>LRRAboutMeViewController</string>
 				<key>isTitle</key>
 				<true/>
 				<key>isStatus</key>

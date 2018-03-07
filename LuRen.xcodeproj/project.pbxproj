@@ -39,6 +39,16 @@
 		1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923020144BA70032B8C7 /* LRRTabBarButton.m */; };
 		1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */; };
 		1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */; };
+		1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD60204F7D3B006BB3BD /* LRRChooseIDViewController.m */; };
+		1832AD63204F7D3B006BB3BD /* LRRChooseIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832AD61204F7D3B006BB3BD /* LRRChooseIDViewController.xib */; };
+		1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD64204F8FD9006BB3BD /* UITextView+Placeholder.m */; };
+		1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD68204F9024006BB3BD /* LRRFeedbackViewController.m */; };
+		1832AD6C204F93D7006BB3BD /* LRRServiceCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD6B204F93D7006BB3BD /* LRRServiceCenterViewController.m */; };
+		1832AD6F204F9712006BB3BD /* LRRServiceCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD6E204F9712006BB3BD /* LRRServiceCenterModel.m */; };
+		1832AD71204F9787006BB3BD /* ServiceCenter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1832AD70204F9787006BB3BD /* ServiceCenter.plist */; };
+		1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD73204F993D006BB3BD /* LRRServiceCenterHeaderView.m */; };
+		1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD76204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m */; };
+		1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832AD77204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib */; };
 		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
 		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
 		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
@@ -55,6 +65,16 @@
 		18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */; };
 		18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18A123652043E63000C6F9E2 /* 启动页.jpg */; };
 		18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */; };
+		18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7664A204FA5D300F2F063 /* LRRAboutMeViewController.m */; };
+		18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7664B204FA5D300F2F063 /* LRRAboutMeViewController.xib */; };
+		18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7664F204FB41400F2F063 /* LRRUserDetailedViewController.m */; };
+		18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76652204FB44A00F2F063 /* LRRUserDetailedView.m */; };
+		18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76655204FBE5D00F2F063 /* LRRUserDetailedViewCell.m */; };
+		18A76658204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A76656204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib */; };
+		18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7665A204FC93400F2F063 /* UILabel+LRRExtension.m */; };
+		18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7665D204FCB5C00F2F063 /* LRRChangePhoneViewController.m */; };
+		18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */; };
+		18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */; };
 		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
 		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
 		18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.m */; };
@@ -144,6 +164,23 @@
 		1831923220145EFF0032B8C7 /* LRRLookTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLookTableViewCell.h; sourceTree = "<group>"; };
 		1831923320145EFF0032B8C7 /* LRRLookTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLookTableViewCell.m; sourceTree = "<group>"; };
 		1831923420145EFF0032B8C7 /* LRRLookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLookTableViewCell.xib; sourceTree = "<group>"; };
+		1832AD5F204F7D3B006BB3BD /* LRRChooseIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRChooseIDViewController.h; sourceTree = "<group>"; };
+		1832AD60204F7D3B006BB3BD /* LRRChooseIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRChooseIDViewController.m; sourceTree = "<group>"; };
+		1832AD61204F7D3B006BB3BD /* LRRChooseIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRChooseIDViewController.xib; sourceTree = "<group>"; };
+		1832AD64204F8FD9006BB3BD /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		1832AD65204F8FD9006BB3BD /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		1832AD67204F9024006BB3BD /* LRRFeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRFeedbackViewController.h; sourceTree = "<group>"; };
+		1832AD68204F9024006BB3BD /* LRRFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRFeedbackViewController.m; sourceTree = "<group>"; };
+		1832AD6A204F93D7006BB3BD /* LRRServiceCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRServiceCenterViewController.h; sourceTree = "<group>"; };
+		1832AD6B204F93D7006BB3BD /* LRRServiceCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRServiceCenterViewController.m; sourceTree = "<group>"; };
+		1832AD6D204F9712006BB3BD /* LRRServiceCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRServiceCenterModel.h; sourceTree = "<group>"; };
+		1832AD6E204F9712006BB3BD /* LRRServiceCenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRServiceCenterModel.m; sourceTree = "<group>"; };
+		1832AD70204F9787006BB3BD /* ServiceCenter.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ServiceCenter.plist; sourceTree = "<group>"; };
+		1832AD72204F993D006BB3BD /* LRRServiceCenterHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRServiceCenterHeaderView.h; sourceTree = "<group>"; };
+		1832AD73204F993D006BB3BD /* LRRServiceCenterHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRServiceCenterHeaderView.m; sourceTree = "<group>"; };
+		1832AD75204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLRRServiceCenterHeaderCell.h; sourceTree = "<group>"; };
+		1832AD76204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLRRServiceCenterHeaderCell.m; sourceTree = "<group>"; };
+		1832AD77204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLRRServiceCenterHeaderCell.xib; sourceTree = "<group>"; };
 		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
 		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
 		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
@@ -172,6 +209,23 @@
 		18A123652043E63000C6F9E2 /* 启动页.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "启动页.jpg"; sourceTree = "<group>"; };
 		18A123672044021000C6F9E2 /* UIImage+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LRRExtension.h"; sourceTree = "<group>"; };
 		18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LRRExtension.m"; sourceTree = "<group>"; };
+		18A76649204FA5D300F2F063 /* LRRAboutMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRAboutMeViewController.h; sourceTree = "<group>"; };
+		18A7664A204FA5D300F2F063 /* LRRAboutMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRAboutMeViewController.m; sourceTree = "<group>"; };
+		18A7664B204FA5D300F2F063 /* LRRAboutMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRAboutMeViewController.xib; sourceTree = "<group>"; };
+		18A7664E204FB41400F2F063 /* LRRUserDetailedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserDetailedViewController.h; sourceTree = "<group>"; };
+		18A7664F204FB41400F2F063 /* LRRUserDetailedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserDetailedViewController.m; sourceTree = "<group>"; };
+		18A76651204FB44A00F2F063 /* LRRUserDetailedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserDetailedView.h; sourceTree = "<group>"; };
+		18A76652204FB44A00F2F063 /* LRRUserDetailedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserDetailedView.m; sourceTree = "<group>"; };
+		18A76654204FBE5D00F2F063 /* LRRUserDetailedViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserDetailedViewCell.h; sourceTree = "<group>"; };
+		18A76655204FBE5D00F2F063 /* LRRUserDetailedViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserDetailedViewCell.m; sourceTree = "<group>"; };
+		18A76656204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRUserDetailedViewCell.xib; sourceTree = "<group>"; };
+		18A76659204FC93400F2F063 /* UILabel+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+LRRExtension.h"; sourceTree = "<group>"; };
+		18A7665A204FC93400F2F063 /* UILabel+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LRRExtension.m"; sourceTree = "<group>"; };
+		18A7665C204FCB5C00F2F063 /* LRRChangePhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRChangePhoneViewController.h; sourceTree = "<group>"; };
+		18A7665D204FCB5C00F2F063 /* LRRChangePhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRChangePhoneViewController.m; sourceTree = "<group>"; };
+		18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRChangePhoneViewController.xib; sourceTree = "<group>"; };
+		18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
+		18A76662204FCF2E00F2F063 /* UIButton+Countdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
 		18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPointWorkViewController.h; sourceTree = "<group>"; };
 		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
 		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
@@ -275,6 +329,18 @@
 				1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */,
 				1855EAD8204D360C0039405B /* LRRMyOrderListViewController.h */,
 				1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */,
+				1832AD67204F9024006BB3BD /* LRRFeedbackViewController.h */,
+				1832AD68204F9024006BB3BD /* LRRFeedbackViewController.m */,
+				1832AD6A204F93D7006BB3BD /* LRRServiceCenterViewController.h */,
+				1832AD6B204F93D7006BB3BD /* LRRServiceCenterViewController.m */,
+				18A76649204FA5D300F2F063 /* LRRAboutMeViewController.h */,
+				18A7664A204FA5D300F2F063 /* LRRAboutMeViewController.m */,
+				18A7664B204FA5D300F2F063 /* LRRAboutMeViewController.xib */,
+				18A7664E204FB41400F2F063 /* LRRUserDetailedViewController.h */,
+				18A7664F204FB41400F2F063 /* LRRUserDetailedViewController.m */,
+				18A7665C204FCB5C00F2F063 /* LRRChangePhoneViewController.h */,
+				18A7665D204FCB5C00F2F063 /* LRRChangePhoneViewController.m */,
+				18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,6 +350,8 @@
 			children = (
 				180F8881200F4FB4002A9B0C /* LRRMeMessageModel.h */,
 				180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */,
+				1832AD6D204F9712006BB3BD /* LRRServiceCenterModel.h */,
+				1832AD6E204F9712006BB3BD /* LRRServiceCenterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +367,16 @@
 				18319210201092810032B8C7 /* LRRSettingViewCell.h */,
 				18319211201092810032B8C7 /* LRRSettingViewCell.m */,
 				18319212201092810032B8C7 /* LRRSettingViewCell.xib */,
+				1832AD72204F993D006BB3BD /* LRRServiceCenterHeaderView.h */,
+				1832AD73204F993D006BB3BD /* LRRServiceCenterHeaderView.m */,
+				1832AD75204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.h */,
+				1832AD76204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m */,
+				1832AD77204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib */,
+				18A76651204FB44A00F2F063 /* LRRUserDetailedView.h */,
+				18A76652204FB44A00F2F063 /* LRRUserDetailedView.m */,
+				18A76654204FBE5D00F2F063 /* LRRUserDetailedViewCell.h */,
+				18A76655204FBE5D00F2F063 /* LRRUserDetailedViewCell.m */,
+				18A76656204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +568,9 @@
 				18A123602043E53800C6F9E2 /* LRRLoginViewController.h */,
 				18A123612043E53800C6F9E2 /* LRRLoginViewController.m */,
 				18A123622043E53800C6F9E2 /* LRRLoginViewController.xib */,
+				1832AD5F204F7D3B006BB3BD /* LRRChooseIDViewController.h */,
+				1832AD60204F7D3B006BB3BD /* LRRChooseIDViewController.m */,
+				1832AD61204F7D3B006BB3BD /* LRRChooseIDViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -551,6 +632,10 @@
 		180F8856200EF7D3002A9B0C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1832AD65204F8FD9006BB3BD /* UITextView+Placeholder.h */,
+				1832AD64204F8FD9006BB3BD /* UITextView+Placeholder.m */,
+				18A76662204FCF2E00F2F063 /* UIButton+Countdown.h */,
+				18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */,
 				180F885A200EF97A002A9B0C /* NSString+XCExtension.h */,
 				180F885B200EF97A002A9B0C /* NSString+XCExtension.m */,
 				180F8857200EF855002A9B0C /* UIColor+DLExtension.h */,
@@ -567,6 +652,8 @@
 				18A123682044021000C6F9E2 /* UIImage+LRRExtension.m */,
 				1855EAC4204D17990039405B /* UIViewController+DismissKeyboard.h */,
 				1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */,
+				18A76659204FC93400F2F063 /* UILabel+LRRExtension.h */,
+				18A7665A204FC93400F2F063 /* UILabel+LRRExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -634,6 +721,7 @@
 				180F8884200F5044002A9B0C /* MeMessageList.plist */,
 				18319209201088D30032B8C7 /* FoundMessageList.plist */,
 				1831920E20108D7B0032B8C7 /* SettingList.plist */,
+				1832AD70204F9787006BB3BD /* ServiceCenter.plist */,
 			);
 			path = LuRen;
 			sourceTree = "<group>";
@@ -790,11 +878,17 @@
 				1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
+				1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */,
+				18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */,
+				18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */,
 				18A123662043E63000C6F9E2 /* 启动页.jpg in Resources */,
 				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
+				1832AD63204F7D3B006BB3BD /* LRRChooseIDViewController.xib in Resources */,
 				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
+				1832AD71204F9787006BB3BD /* ServiceCenter.plist in Resources */,
 				18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */,
+				18A76658204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib in Resources */,
 				1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,10 +965,12 @@
 				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
 				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
+				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
 				18FC9403200C5F7000269FAB /* main.m in Sources */,
 				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
+				1832AD6C204F93D7006BB3BD /* LRRServiceCenterViewController.m in Sources */,
 				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
 				18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */,
 				180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */,
@@ -882,23 +978,32 @@
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
+				18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
 				1831922E201448940032B8C7 /* LRRTabBar.m in Sources */,
+				18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */,
 				1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */,
 				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
 				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
+				18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */,
+				1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
 				180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */,
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
+				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
+				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
+				18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */,
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
 				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
+				1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */,
 				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,
 				18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */,
 				18319217201197BE0032B8C7 /* LRRHomeHeaderView.m in Sources */,
+				18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */,
 				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
 				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
@@ -908,8 +1013,11 @@
 				1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */,
 				1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */,
 				18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */,
+				1832AD6F204F9712006BB3BD /* LRRServiceCenterModel.m in Sources */,
 				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
+				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
+				18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */,
 				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,
 				18FC942A200C631000269FAB /* LRRBaseNavigationController.m in Sources */,
 			);
@@ -1073,7 +1181,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hz6r.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1092,7 +1200,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hz6r.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,6 +9,7 @@
 #import "AppDelegate+LRRGuide.h"
 #import "NSBundle+LRRExtension.h"
 #import "LRRBaseTabBarController.h"
+#import "LRRChooseIDViewController.h"
 
 static NSString * const LRRLastVersionKey = @"LRRLastVersion";
 
@@ -17,7 +18,7 @@ static NSString * const LRRLastVersionKey = @"LRRLastVersion";
 - (void)setUpRootViewControllver
 {
     //定义一个窗口
-    UIViewController *rootVC = [[LRRBaseTabBarController alloc]init];
+    UIViewController *rootVC = [[UITabBarController alloc]init];
     self.window.rootViewController = rootVC;
     
     //获取当前的版本号
@@ -25,10 +26,19 @@ static NSString * const LRRLastVersionKey = @"LRRLastVersion";
     
     //获取上一次版本号
     NSString *oldVersion = [NSUserDefaults objectForKey:LRRLastVersionKey];
-    
+
     if ([curVersion isEqualToString:oldVersion] == NO) {
         [NSUserDefaults setObject:curVersion forKey:LRRLastVersionKey];
-        
+    
+        LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
+        newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
+        [rootVC.view addSubview:newFeatureVc.view];
+        [rootVC addChildViewController:newFeatureVc];
+    }else{
+        LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
+        newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
+        [rootVC.view addSubview:newFeatureVc.view];
+        [rootVC addChildViewController:newFeatureVc];
     }
 
 }
@@ -36,17 +46,4 @@ static NSString * const LRRLastVersionKey = @"LRRLastVersion";
 
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
 

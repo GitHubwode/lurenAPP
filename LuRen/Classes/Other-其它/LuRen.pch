@@ -22,6 +22,8 @@
 #import "MJRefresh.h"
 #import "UIColor+DLExtension.h"
 #import "NSString+XCExtension.h"
+#import "UILabel+LRRExtension.h"
+#import "UIButton+Countdown.h"
 #import "NSUserDefaults+LRRExtension.h"
 #import "UIBarButtonItem+LRRExtension.h"
 #import "UIViewController+DismissKeyboard.h"
@@ -88,8 +90,11 @@
 #define LRRContentTextColor UIColorHex(444444)
 /** 时间、地点文字颜色 */
 #define LRRTimeTextColor UIColorHex(777777)
+/** 倒计时白色 */
+#define LRRDownTimeColor UIColorHex(ffffff)
+
 /** 提示文字颜色 */
-//#define LRRAlertTextColor UIColorHex(bbbbbb)
+#define LRRAlertTextColor UIColorHex(bbbbbb)
 
 
 #define ThreeScreenLater (kMainScreenHeight >= 667.f)

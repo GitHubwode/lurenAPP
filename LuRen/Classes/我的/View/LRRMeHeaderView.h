@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LRRHeaderViewDelegate <NSObject>
+
+- (void)headerViewTapMessage;
+
+@end
+
 @interface LRRMeHeaderView : UIView
+
+@property (nonatomic, weak) id<LRRHeaderViewDelegate> delegate;
+
 
 @end
