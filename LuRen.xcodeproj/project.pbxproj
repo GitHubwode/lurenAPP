@@ -76,6 +76,15 @@
 		18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */; };
 		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
 		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
+		18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC287B2050DBE500D4B451 /* LRRSexField.m */; };
+		18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC28822050DE5B00D4B451 /* LRRMyEditViewController.m */; };
+		18DC28872050DE9500D4B451 /* LRRSexViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC28852050DE9500D4B451 /* LRRSexViewCell.m */; };
+		18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28862050DE9500D4B451 /* LRRSexViewCell.xib */; };
+		18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC288A2050E2BA00D4B451 /* UITextField+LRRExtension.m */; };
+		18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */; };
+		18DC28962050E68600D4B451 /* LRREditMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28952050E68600D4B451 /* LRREditMessageList.plist */; };
+		18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */; };
+		18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */; };
 		18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.m */; };
 		18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FC200C5F7000269FAB /* Assets.xcassets */; };
 		18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */; };
@@ -228,6 +237,21 @@
 		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
 		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
 		18CA4C542015953700F6774A /* LRRPackWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPackWorkViewController.m; sourceTree = "<group>"; };
+		18DC287A2050DBE500D4B451 /* LRRSexField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSexField.h; sourceTree = "<group>"; };
+		18DC287B2050DBE500D4B451 /* LRRSexField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSexField.m; sourceTree = "<group>"; };
+		18DC28812050DE5B00D4B451 /* LRRMyEditViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMyEditViewController.h; sourceTree = "<group>"; };
+		18DC28822050DE5B00D4B451 /* LRRMyEditViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyEditViewController.m; sourceTree = "<group>"; };
+		18DC28842050DE9500D4B451 /* LRRSexViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSexViewCell.h; sourceTree = "<group>"; };
+		18DC28852050DE9500D4B451 /* LRRSexViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSexViewCell.m; sourceTree = "<group>"; };
+		18DC28862050DE9500D4B451 /* LRRSexViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRSexViewCell.xib; sourceTree = "<group>"; };
+		18DC28892050E2BA00D4B451 /* UITextField+LRRExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+LRRExtension.h"; sourceTree = "<group>"; };
+		18DC288A2050E2BA00D4B451 /* UITextField+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LRRExtension.m"; sourceTree = "<group>"; };
+		18DC288C2050E39A00D4B451 /* LRRCustomInfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRCustomInfoItem.h; sourceTree = "<group>"; };
+		18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRCustomInfoItem.m; sourceTree = "<group>"; };
+		18DC28952050E68600D4B451 /* LRREditMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRREditMessageList.plist; sourceTree = "<group>"; };
+		18DC28972050F6AB00D4B451 /* LRRIntroduceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRIntroduceViewCell.h; sourceTree = "<group>"; };
+		18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRIntroduceViewCell.m; sourceTree = "<group>"; };
+		18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRIntroduceViewCell.xib; sourceTree = "<group>"; };
 		18FC93F0200C5F7000269FAB /* LuRen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuRen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC93F3200C5F7000269FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18FC93F4200C5F7000269FAB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -279,13 +303,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		180642B7200DF48800B20130 /* images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		180642B8200DF5F100B20130 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +322,7 @@
 		180642B9200DF5F100B20130 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
+				18DC287D2050DE2E00D4B451 /* 我的资料编辑 */,
 				180642BA200DF5F100B20130 /* Controller */,
 				180642BB200DF5F100B20130 /* Model */,
 				180642BC200DF5F100B20130 /* View */,
@@ -421,6 +439,7 @@
 		180642C1200DF5F100B20130 /* Common-公用 */ = {
 			isa = PBXGroup;
 			children = (
+				18DC28792050DBA100D4B451 /* View */,
 				1855EACA204D2DA40039405B /* Lib */,
 				180F8856200EF7D3002A9B0C /* Category */,
 			);
@@ -631,6 +650,8 @@
 			children = (
 				1832AD65204F8FD9006BB3BD /* UITextView+Placeholder.h */,
 				1832AD64204F8FD9006BB3BD /* UITextView+Placeholder.m */,
+				18DC28892050E2BA00D4B451 /* UITextField+LRRExtension.h */,
+				18DC288A2050E2BA00D4B451 /* UITextField+LRRExtension.m */,
 				18A76662204FCF2E00F2F063 /* UIButton+Countdown.h */,
 				18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */,
 				180F885A200EF97A002A9B0C /* NSString+XCExtension.h */,
@@ -685,6 +706,56 @@
 			path = LRRSegment;
 			sourceTree = "<group>";
 		};
+		18DC28792050DBA100D4B451 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18DC287A2050DBE500D4B451 /* LRRSexField.h */,
+				18DC287B2050DBE500D4B451 /* LRRSexField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18DC287D2050DE2E00D4B451 /* 我的资料编辑 */ = {
+			isa = PBXGroup;
+			children = (
+				18DC287E2050DE2E00D4B451 /* Controller */,
+				18DC287F2050DE2E00D4B451 /* Model */,
+				18DC28802050DE2E00D4B451 /* View */,
+			);
+			path = "我的资料编辑";
+			sourceTree = "<group>";
+		};
+		18DC287E2050DE2E00D4B451 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18DC28812050DE5B00D4B451 /* LRRMyEditViewController.h */,
+				18DC28822050DE5B00D4B451 /* LRRMyEditViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18DC287F2050DE2E00D4B451 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18DC288C2050E39A00D4B451 /* LRRCustomInfoItem.h */,
+				18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18DC28802050DE2E00D4B451 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18DC28842050DE9500D4B451 /* LRRSexViewCell.h */,
+				18DC28852050DE9500D4B451 /* LRRSexViewCell.m */,
+				18DC28862050DE9500D4B451 /* LRRSexViewCell.xib */,
+				18DC28972050F6AB00D4B451 /* LRRIntroduceViewCell.h */,
+				18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */,
+				18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18FC93E7200C5F7000269FAB = {
 			isa = PBXGroup;
 			children = (
@@ -712,13 +783,13 @@
 			children = (
 				180642B8200DF5F100B20130 /* Classes */,
 				18FC93FC200C5F7000269FAB /* Assets.xcassets */,
-				180642B7200DF48800B20130 /* images */,
 				18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */,
 				18FC9401200C5F7000269FAB /* Info.plist */,
 				180F8884200F5044002A9B0C /* MeMessageList.plist */,
 				18319209201088D30032B8C7 /* FoundMessageList.plist */,
 				1831920E20108D7B0032B8C7 /* SettingList.plist */,
 				1832AD70204F9787006BB3BD /* ServiceCenter.plist */,
+				18DC28952050E68600D4B451 /* LRREditMessageList.plist */,
 			);
 			path = LuRen;
 			sourceTree = "<group>";
@@ -870,8 +941,11 @@
 			files = (
 				18319214201092810032B8C7 /* LRRSettingViewCell.xib in Resources */,
 				180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */,
+				18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
+				18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */,
 				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
+				18DC28962050E68600D4B451 /* LRREditMessageList.plist in Resources */,
 				1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
@@ -960,6 +1034,9 @@
 			files = (
 				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
 				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
+				18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */,
+				18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */,
+				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
 				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
@@ -968,6 +1045,7 @@
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
 				1832AD6C204F93D7006BB3BD /* LRRServiceCenterViewController.m in Sources */,
 				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
+				18DC28872050DE9500D4B451 /* LRRSexViewCell.m in Sources */,
 				18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */,
 				180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */,
 				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
@@ -985,6 +1063,7 @@
 				1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
 				180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */,
+				18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */,
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
@@ -994,6 +1073,7 @@
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
+				18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */,
 				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
 				1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */,
 				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,

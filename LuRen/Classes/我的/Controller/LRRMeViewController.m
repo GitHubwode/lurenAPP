@@ -12,6 +12,7 @@
 #import "LRRMeTableViewCell.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "LRRUserDetailedViewController.h"
+#import "LRRMyEditViewController.h"
 
 @interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate,LRRHeaderViewDelegate>
 
@@ -40,8 +41,12 @@
 - (void)headerViewTapMessage
 {
     LRRLog(@"跳转用户信息");
-    LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
-    [self.navigationController pushViewController:userVC animated:YES];
+//    LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+//    [self.navigationController pushViewController:userVC animated:YES];
+    
+    LRRMyEditViewController *editVC = [[LRRMyEditViewController alloc]init];
+    [self.navigationController pushViewController:editVC animated:YES];
+    
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

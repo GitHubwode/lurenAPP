@@ -26,6 +26,7 @@
 #import "UIButton+Countdown.h"
 #import "NSUserDefaults+LRRExtension.h"
 #import "UIBarButtonItem+LRRExtension.h"
+#import "UITextField+LRRExtension.h"
 #import "UIViewController+DismissKeyboard.h"
 #import "UIView+LRRExtension.h"
 #import "UIImage+LRRExtension.h"
@@ -89,10 +90,14 @@
 /** 内容文字颜色 */
 #define LRRContentTextColor UIColorHex(444444)
 /** 时间、地点文字颜色 */
+#define LRRSexTimeTextColor UIColorHex(999999)
+
+/** 时间、地点文字颜色 */
 #define LRRTimeTextColor UIColorHex(777777)
 /** 倒计时白色 */
 #define LRRDownTimeColor UIColorHex(ffffff)
-
+/** 分割线颜色 */
+#define LRRSeparatorColor UIColorHex(dddddd)
 /** 提示文字颜色 */
 #define LRRAlertTextColor UIColorHex(bbbbbb)
 

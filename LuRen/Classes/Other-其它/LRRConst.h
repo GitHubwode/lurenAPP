@@ -44,4 +44,7 @@ extern CGFloat const LRRLeftPadding;
 /** 通用的右间距值 */
 extern CGFloat const LRRRightPadding;
 
+/** 通用的Item高度 */
+extern CGFloat const LRRItemHeight;
+
 @end
