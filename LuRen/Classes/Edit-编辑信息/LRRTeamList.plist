@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>少于5人</string>
+	<string>7人</string>
+	<string>8人</string>
+	<string>9人</string>
+	<string>10人</string>
+	<string>11人</string>
+	<string>12人</string>
+	<string>13人</string>
+	<string>14人</string>
+	<string>15人</string>
+	<string>20人</string>
+	<string>25人</string>
+	<string>30人</string>
+	<string>35人</string>
+	<string>40人</string>
+	<string>45人</string>
+	<string>50人</string>
+	<string>55人</string>
+	<string>60人</string>
+</array>
+</plist>

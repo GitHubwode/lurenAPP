@@ -137,24 +137,6 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>专业</string>
-			<key>subtitle</key>
-			<string></string>
-			<key>keyboardType</key>
-			<integer>0</integer>
-			<key>maxTextLength</key>
-			<integer>0</integer>
-			<key>placeholder</key>
-			<string>请选择专业</string>
-			<key>propertyKey</key>
-			<string>special</string>
-			<key>enabled</key>
-			<true/>
-			<key>required</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>title</key>
 			<string>工龄</string>
 			<key>subtitle</key>
 			<string></string>

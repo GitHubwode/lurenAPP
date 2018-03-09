@@ -1,38 +1,36 @@
 //
-//  LRRCityViewCell.m
+//  LRRNationalViewCell.m
 //  LuRen
 //
-//  Created by Ding on 2018/3/8.
+//  Created by Ding on 2018/3/9.
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRCityViewCell.h"
+#import "LRRNationalViewCell.h"
 #import "LRRCustomInfoItem.h"
 
-static NSString *LRRCityCellIdfy = @"LRRCityCellIdfy";
+static NSString *LRRNationalCellIdfy = @"LRRNationalCellIdfy";
 
-@interface LRRCityViewCell ()<LRRCityFieldDelegate>
+@interface LRRNationalViewCell ()<LRRNationalFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *indicatorImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineViewHeight;
 @property (weak, nonatomic) IBOutlet UIView *lineView;
 
-
 @end
 
-@implementation LRRCityViewCell
+@implementation LRRNationalViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    
     self.lineViewHeight.constant = LRROnePixelHeight;
     self.textField.borderStyle = UITextBorderStyleNone;
     self.textField.tintColor = LRROrangeThemeColor;
     self.textField.placeholderColor = LRRTimeTextColor;
     self.textField.textColor = LRRContentTextColor;
     self.textField.font = LRRFont(12);
-    self.textField.cityDelegate = self;
+    self.textField.nationalDelegate = self;
 }
 
 - (void)setInfoItem:(LRRCustomInfoItem *)infoItem
@@ -50,11 +48,10 @@ static NSString *LRRCityCellIdfy = @"LRRCityCellIdfy";
 }
 
 + (NSString *)cellIdentifier{
-    return LRRCityCellIdfy;
+    return LRRNationalCellIdfy;
 }
 
-
-#pragma mark - LRRSexFieldDelegate
+#pragma mark - SNHSexFieldDelegate
 - (void)ensureButtonClicked{
     if (self.infoItem.editabled) {
         self.infoItem.subtitle = self.textField.text;

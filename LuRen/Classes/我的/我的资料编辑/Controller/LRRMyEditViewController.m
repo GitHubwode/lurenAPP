@@ -13,6 +13,12 @@
 #import "LRRBirthdayCell.h"
 #import "LRRIntroduceViewCell.h"
 #import "LRRCityViewCell.h"
+#import "LRRNationalViewCell.h"
+#import "LRRAvatarViewCell.h"
+#import "LRRWorkViewCell.h"
+#import "LRRAgeViewCell.h"
+#import "LRRTeamViewCell.h"
+#import "LRRNameViewCell.h"
 
 
 @interface LRRMyEditViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -77,21 +83,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     LRRCustomInfoItem *item = self.dataArray[indexPath.section][indexPath.row];
-    
-//    if (indexPath.section == 3) {
-//        LRRIntroduceViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRIntroduceViewCell cellIdentifier]];
-//        cell.infoItem = item;
-//        return cell;
-//    }else{
-//        LRRSexViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSexViewCell cellIdentifier]];
-//        cell.infoItem = item;
-//        return cell;
-//    }
+
     if (indexPath.section == 0) {
         
+        LRRAvatarViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRAvatarViewCell cellIdentifier]];
+//        cell.infoItem = item;
+        return cell;
+        
     }else if (indexPath.section == 1){
+        if ([item.title isEqualToString:@"姓名"]) {
+            LRRNameViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRNameViewCell cellIdentifier]];
+            cell.infoItem = item;
+            return cell;
+        }
+        
         if ([item.title isEqualToString:@"性别"]) {
             LRRSexViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSexViewCell cellIdentifier]];
+            cell.infoItem = item;
+            return cell;
+        }
+        
+        if ([item.title isEqualToString:@"民族"]) {
+            LRRNationalViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRNationalViewCell cellIdentifier]];
             cell.infoItem = item;
             return cell;
         }
@@ -109,51 +122,29 @@
         }
         
     }else if (indexPath.section == 2){
+        if ([item.title isEqualToString:@"工种"]) {
+            LRRWorkViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRWorkViewCell cellIdentifier]];
+            cell.infoItem = item;
+            return cell;
+        }
+        if ([item.title isEqualToString:@"工龄"]) {
+            LRRAgeViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRAgeViewCell cellIdentifier]];
+            cell.infoItem = item;
+            return cell;
+        }
+        if ([item.title isEqualToString:@"团队规模"]) {
+            LRRTeamViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRTeamViewCell cellIdentifier]];
+            cell.infoItem = item;
+            return cell;
+        }
+        
         
     }
     LRRIntroduceViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRIntroduceViewCell cellIdentifier]];
     cell.infoItem = item;
     return cell;
     
-    
-   
-    
 
-    
-    
-
-//    if ([item.title isEqualToString:@"头像"]) { // 头像
-//        SNHAvatarInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:[SNHAvatarInfoCell cellIdentifier]];
-//        cell.infoItem = item;
-//        return cell;
-//    }
-    
-//    if ([item.title isEqualToString:@"所在城市"]) {
-//        SNHCityCell *cell = [tableView dequeueReusableCellWithIdentifier:[SNHCityCell cellIdentifier]];
-//        if(!cell.delegate) cell.delegate = self;
-//        cell.infoItem = item;
-//        return cell;
-//    }
-    
-//    if ([item.title isEqualToString:@"生日"]) {
-//        SNHBirthdayCell *cell = [tableView dequeueReusableCellWithIdentifier:[SNHBirthdayCell cellIdentifier]];
-//        if(!cell.delegate) cell.delegate = self;
-//        cell.infoItem = item;
-//        return cell;
-//    }
-    
-//    if ([item.title isEqualToString:@"个人简介"]) {
-//        SNHlongTextCell *cell = [tableView dequeueReusableCellWithIdentifier:[SNHlongTextCell cellIdentifier]];
-//        cell.infoItem = item;
-//        return cell;
-//    }
-    
-//    if ([item.title isEqualToString:@"生活照"]) {
-//        SNHLifePhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:[SNHLifePhotoCell cellIdentifier]];
-//        if(!cell.delegate) cell.delegate = self;
-//        cell.infoItem = item;
-//        return cell;
-//    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -203,10 +194,27 @@
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.backgroundColor = LRRViewBackgroundColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+         [_tableView registerNib:[UINib nibWithNibName:@"LRRNameViewCell" bundle:nil] forCellReuseIdentifier:[LRRNameViewCell cellIdentifier]];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRAvatarViewCell" bundle:nil] forCellReuseIdentifier:[LRRAvatarViewCell cellIdentifier]];
+        
         [_tableView registerNib:[UINib nibWithNibName:@"LRRSexViewCell" bundle:nil] forCellReuseIdentifier:[LRRSexViewCell cellIdentifier]];
+        
         [_tableView registerNib:[UINib nibWithNibName:@"LRRBirthdayCell" bundle:nil] forCellReuseIdentifier:[LRRBirthdayCell cellIdentifier]];
+        
         [_tableView registerNib:[UINib nibWithNibName:@"LRRIntroduceViewCell" bundle:nil] forCellReuseIdentifier:[LRRIntroduceViewCell cellIdentifier]];
+        
         [_tableView registerNib:[UINib nibWithNibName:@"LRRCityViewCell" bundle:nil] forCellReuseIdentifier:[LRRCityViewCell cellIdentifier]];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRNationalViewCell" bundle:nil] forCellReuseIdentifier:[LRRNationalViewCell cellIdentifier]];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRWorkViewCell" bundle:nil] forCellReuseIdentifier:[LRRWorkViewCell cellIdentifier]];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRAgeViewCell" bundle:nil] forCellReuseIdentifier:[LRRAgeViewCell cellIdentifier]];
+        
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRTeamViewCell" bundle:nil] forCellReuseIdentifier:[LRRTeamViewCell cellIdentifier]];
+        
         _tableView.delegate = self;
         _tableView.dataSource = self;
     }

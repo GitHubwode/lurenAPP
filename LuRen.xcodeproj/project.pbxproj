@@ -52,11 +52,32 @@
 		1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851582C2051216E0006E863 /* LRRBirthdayField.m */; };
 		18515831205122640006E863 /* LRRBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851582F205122640006E863 /* LRRBirthdayCell.m */; };
 		18515832205122640006E863 /* LRRBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515830205122640006E863 /* LRRBirthdayCell.xib */; };
-		18515834205129B80006E863 /* NationalList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18515833205129B80006E863 /* NationalList.plist */; };
-		1851583620512BEF0006E863 /* CityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1851583520512BEF0006E863 /* CityList.plist */; };
 		1851583920512F4E0006E863 /* LRRCityField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851583820512F4E0006E863 /* LRRCityField.m */; };
 		1851583D2051310E0006E863 /* LRRCityViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851583B2051310E0006E863 /* LRRCityViewCell.m */; };
 		1851583E2051310E0006E863 /* LRRCityViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851583C2051310E0006E863 /* LRRCityViewCell.xib */; };
+		18515841205228100006E863 /* LRRNationalField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515840205228100006E863 /* LRRNationalField.m */; };
+		18515845205228BE0006E863 /* LRRNationalViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515843205228BE0006E863 /* LRRNationalViewCell.m */; };
+		18515846205228BE0006E863 /* LRRNationalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515844205228BE0006E863 /* LRRNationalViewCell.xib */; };
+		1851584A20522CAD0006E863 /* LRRAvatarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851584820522CAD0006E863 /* LRRAvatarViewCell.m */; };
+		1851584B20522CAD0006E863 /* LRRAvatarViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851584920522CAD0006E863 /* LRRAvatarViewCell.xib */; };
+		1851585020522FCD0006E863 /* NationalList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1851584D20522FCD0006E863 /* NationalList.plist */; };
+		1851585120522FCD0006E863 /* CityList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1851584E20522FCD0006E863 /* CityList.plist */; };
+		1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1851584F20522FCD0006E863 /* LRREditMessageList.plist */; };
+		18515854205230290006E863 /* LRRWorkList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18515853205230290006E863 /* LRRWorkList.plist */; };
+		185158562052305C0006E863 /* LRRSpecialList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185158552052305C0006E863 /* LRRSpecialList.plist */; };
+		18515858205230750006E863 /* LRRAgeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18515857205230750006E863 /* LRRAgeList.plist */; };
+		1851585A205230870006E863 /* LRRTeamList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18515859205230870006E863 /* LRRTeamList.plist */; };
+		1851585D2052343D0006E863 /* LRRWorkField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851585C2052343D0006E863 /* LRRWorkField.m */; };
+		18515860205234C60006E863 /* LRRAgeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851585F205234C60006E863 /* LRRAgeField.m */; };
+		18515863205235270006E863 /* LRRTeamField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515862205235270006E863 /* LRRTeamField.m */; };
+		185158672052359A0006E863 /* LRRWorkViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158652052359A0006E863 /* LRRWorkViewCell.m */; };
+		185158682052359A0006E863 /* LRRWorkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185158662052359A0006E863 /* LRRWorkViewCell.xib */; };
+		1851586C205235AB0006E863 /* LRRAgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851586A205235AB0006E863 /* LRRAgeViewCell.m */; };
+		1851586D205235AB0006E863 /* LRRAgeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851586B205235AB0006E863 /* LRRAgeViewCell.xib */; };
+		18515871205235BD0006E863 /* LRRTeamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851586F205235BD0006E863 /* LRRTeamViewCell.m */; };
+		18515872205235BD0006E863 /* LRRTeamViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515870205235BD0006E863 /* LRRTeamViewCell.xib */; };
+		1851587620523F170006E863 /* LRRNameViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851587420523F170006E863 /* LRRNameViewCell.m */; };
+		1851587720523F170006E863 /* LRRNameViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851587520523F170006E863 /* LRRNameViewCell.xib */; };
 		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
 		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
 		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
@@ -90,7 +111,6 @@
 		18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28862050DE9500D4B451 /* LRRSexViewCell.xib */; };
 		18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC288A2050E2BA00D4B451 /* UITextField+LRRExtension.m */; };
 		18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */; };
-		18DC28962050E68600D4B451 /* LRREditMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28952050E68600D4B451 /* LRREditMessageList.plist */; };
 		18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */; };
 		18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */; };
 		18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.m */; };
@@ -202,13 +222,44 @@
 		1851582E205122640006E863 /* LRRBirthdayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBirthdayCell.h; sourceTree = "<group>"; };
 		1851582F205122640006E863 /* LRRBirthdayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBirthdayCell.m; sourceTree = "<group>"; };
 		18515830205122640006E863 /* LRRBirthdayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRBirthdayCell.xib; sourceTree = "<group>"; };
-		18515833205129B80006E863 /* NationalList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NationalList.plist; sourceTree = "<group>"; };
-		1851583520512BEF0006E863 /* CityList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CityList.plist; sourceTree = "<group>"; };
 		1851583720512F4E0006E863 /* LRRCityField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRCityField.h; sourceTree = "<group>"; };
 		1851583820512F4E0006E863 /* LRRCityField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRCityField.m; sourceTree = "<group>"; };
 		1851583A2051310E0006E863 /* LRRCityViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRCityViewCell.h; sourceTree = "<group>"; };
 		1851583B2051310E0006E863 /* LRRCityViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRCityViewCell.m; sourceTree = "<group>"; };
 		1851583C2051310E0006E863 /* LRRCityViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRCityViewCell.xib; sourceTree = "<group>"; };
+		1851583F205228100006E863 /* LRRNationalField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRNationalField.h; sourceTree = "<group>"; };
+		18515840205228100006E863 /* LRRNationalField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRNationalField.m; sourceTree = "<group>"; };
+		18515842205228BD0006E863 /* LRRNationalViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRNationalViewCell.h; sourceTree = "<group>"; };
+		18515843205228BE0006E863 /* LRRNationalViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRNationalViewCell.m; sourceTree = "<group>"; };
+		18515844205228BE0006E863 /* LRRNationalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRNationalViewCell.xib; sourceTree = "<group>"; };
+		1851584720522CAD0006E863 /* LRRAvatarViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRAvatarViewCell.h; sourceTree = "<group>"; };
+		1851584820522CAD0006E863 /* LRRAvatarViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRAvatarViewCell.m; sourceTree = "<group>"; };
+		1851584920522CAD0006E863 /* LRRAvatarViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRAvatarViewCell.xib; sourceTree = "<group>"; };
+		1851584D20522FCD0006E863 /* NationalList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NationalList.plist; sourceTree = "<group>"; };
+		1851584E20522FCD0006E863 /* CityList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CityList.plist; sourceTree = "<group>"; };
+		1851584F20522FCD0006E863 /* LRREditMessageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LRREditMessageList.plist; sourceTree = "<group>"; };
+		18515853205230290006E863 /* LRRWorkList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRWorkList.plist; sourceTree = "<group>"; };
+		185158552052305C0006E863 /* LRRSpecialList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRSpecialList.plist; sourceTree = "<group>"; };
+		18515857205230750006E863 /* LRRAgeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRAgeList.plist; sourceTree = "<group>"; };
+		18515859205230870006E863 /* LRRTeamList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRTeamList.plist; sourceTree = "<group>"; };
+		1851585B2052343D0006E863 /* LRRWorkField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRWorkField.h; sourceTree = "<group>"; };
+		1851585C2052343D0006E863 /* LRRWorkField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRWorkField.m; sourceTree = "<group>"; };
+		1851585E205234C60006E863 /* LRRAgeField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRAgeField.h; sourceTree = "<group>"; };
+		1851585F205234C60006E863 /* LRRAgeField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRAgeField.m; sourceTree = "<group>"; };
+		18515861205235270006E863 /* LRRTeamField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRTeamField.h; sourceTree = "<group>"; };
+		18515862205235270006E863 /* LRRTeamField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRTeamField.m; sourceTree = "<group>"; };
+		185158642052359A0006E863 /* LRRWorkViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRWorkViewCell.h; sourceTree = "<group>"; };
+		185158652052359A0006E863 /* LRRWorkViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRWorkViewCell.m; sourceTree = "<group>"; };
+		185158662052359A0006E863 /* LRRWorkViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRWorkViewCell.xib; sourceTree = "<group>"; };
+		18515869205235AB0006E863 /* LRRAgeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRAgeViewCell.h; sourceTree = "<group>"; };
+		1851586A205235AB0006E863 /* LRRAgeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRAgeViewCell.m; sourceTree = "<group>"; };
+		1851586B205235AB0006E863 /* LRRAgeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRAgeViewCell.xib; sourceTree = "<group>"; };
+		1851586E205235BD0006E863 /* LRRTeamViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRTeamViewCell.h; sourceTree = "<group>"; };
+		1851586F205235BD0006E863 /* LRRTeamViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRTeamViewCell.m; sourceTree = "<group>"; };
+		18515870205235BD0006E863 /* LRRTeamViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRTeamViewCell.xib; sourceTree = "<group>"; };
+		1851587320523F170006E863 /* LRRNameViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRNameViewCell.h; sourceTree = "<group>"; };
+		1851587420523F170006E863 /* LRRNameViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRNameViewCell.m; sourceTree = "<group>"; };
+		1851587520523F170006E863 /* LRRNameViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRNameViewCell.xib; sourceTree = "<group>"; };
 		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
 		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
 		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
@@ -268,7 +319,6 @@
 		18DC288A2050E2BA00D4B451 /* UITextField+LRRExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LRRExtension.m"; sourceTree = "<group>"; };
 		18DC288C2050E39A00D4B451 /* LRRCustomInfoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRCustomInfoItem.h; sourceTree = "<group>"; };
 		18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRCustomInfoItem.m; sourceTree = "<group>"; };
-		18DC28952050E68600D4B451 /* LRREditMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRREditMessageList.plist; sourceTree = "<group>"; };
 		18DC28972050F6AB00D4B451 /* LRRIntroduceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRIntroduceViewCell.h; sourceTree = "<group>"; };
 		18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRIntroduceViewCell.m; sourceTree = "<group>"; };
 		18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRIntroduceViewCell.xib; sourceTree = "<group>"; };
@@ -335,6 +385,7 @@
 				180642C6200DF5F100B20130 /* Other-其它 */,
 				180642CD200DF5F100B20130 /* Login-登录 */,
 				180642D5200DF5F100B20130 /* Network-网络 */,
+				1851584C20522F890006E863 /* Edit-编辑信息 */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -696,6 +747,20 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		1851584C20522F890006E863 /* Edit-编辑信息 */ = {
+			isa = PBXGroup;
+			children = (
+				1851584E20522FCD0006E863 /* CityList.plist */,
+				1851584F20522FCD0006E863 /* LRREditMessageList.plist */,
+				1851584D20522FCD0006E863 /* NationalList.plist */,
+				18515853205230290006E863 /* LRRWorkList.plist */,
+				185158552052305C0006E863 /* LRRSpecialList.plist */,
+				18515857205230750006E863 /* LRRAgeList.plist */,
+				18515859205230870006E863 /* LRRTeamList.plist */,
+			);
+			path = "Edit-编辑信息";
+			sourceTree = "<group>";
+		};
 		1855EACA204D2DA40039405B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +800,14 @@
 				1851582C2051216E0006E863 /* LRRBirthdayField.m */,
 				1851583720512F4E0006E863 /* LRRCityField.h */,
 				1851583820512F4E0006E863 /* LRRCityField.m */,
+				1851583F205228100006E863 /* LRRNationalField.h */,
+				18515840205228100006E863 /* LRRNationalField.m */,
+				1851585B2052343D0006E863 /* LRRWorkField.h */,
+				1851585C2052343D0006E863 /* LRRWorkField.m */,
+				1851585E205234C60006E863 /* LRRAgeField.h */,
+				1851585F205234C60006E863 /* LRRAgeField.m */,
+				18515861205235270006E863 /* LRRTeamField.h */,
+				18515862205235270006E863 /* LRRTeamField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -770,6 +843,9 @@
 		18DC28802050DE2E00D4B451 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1851584720522CAD0006E863 /* LRRAvatarViewCell.h */,
+				1851584820522CAD0006E863 /* LRRAvatarViewCell.m */,
+				1851584920522CAD0006E863 /* LRRAvatarViewCell.xib */,
 				18DC28842050DE9500D4B451 /* LRRSexViewCell.h */,
 				18DC28852050DE9500D4B451 /* LRRSexViewCell.m */,
 				18DC28862050DE9500D4B451 /* LRRSexViewCell.xib */,
@@ -779,9 +855,24 @@
 				1851583A2051310E0006E863 /* LRRCityViewCell.h */,
 				1851583B2051310E0006E863 /* LRRCityViewCell.m */,
 				1851583C2051310E0006E863 /* LRRCityViewCell.xib */,
+				18515842205228BD0006E863 /* LRRNationalViewCell.h */,
+				18515843205228BE0006E863 /* LRRNationalViewCell.m */,
+				18515844205228BE0006E863 /* LRRNationalViewCell.xib */,
+				185158642052359A0006E863 /* LRRWorkViewCell.h */,
+				185158652052359A0006E863 /* LRRWorkViewCell.m */,
+				185158662052359A0006E863 /* LRRWorkViewCell.xib */,
+				18515869205235AB0006E863 /* LRRAgeViewCell.h */,
+				1851586A205235AB0006E863 /* LRRAgeViewCell.m */,
+				1851586B205235AB0006E863 /* LRRAgeViewCell.xib */,
+				1851586E205235BD0006E863 /* LRRTeamViewCell.h */,
+				1851586F205235BD0006E863 /* LRRTeamViewCell.m */,
+				18515870205235BD0006E863 /* LRRTeamViewCell.xib */,
 				18DC28972050F6AB00D4B451 /* LRRIntroduceViewCell.h */,
 				18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */,
 				18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */,
+				1851587320523F170006E863 /* LRRNameViewCell.h */,
+				1851587420523F170006E863 /* LRRNameViewCell.m */,
+				1851587520523F170006E863 /* LRRNameViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -819,9 +910,6 @@
 				18319209201088D30032B8C7 /* FoundMessageList.plist */,
 				1831920E20108D7B0032B8C7 /* SettingList.plist */,
 				1832AD70204F9787006BB3BD /* ServiceCenter.plist */,
-				18DC28952050E68600D4B451 /* LRREditMessageList.plist */,
-				18515833205129B80006E863 /* NationalList.plist */,
-				1851583520512BEF0006E863 /* CityList.plist */,
 			);
 			path = LuRen;
 			sourceTree = "<group>";
@@ -976,26 +1064,36 @@
 				18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
 				18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */,
+				1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */,
+				18515872205235BD0006E863 /* LRRTeamViewCell.xib in Resources */,
+				18515854205230290006E863 /* LRRWorkList.plist in Resources */,
 				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
-				18515834205129B80006E863 /* NationalList.plist in Resources */,
-				18DC28962050E68600D4B451 /* LRREditMessageList.plist in Resources */,
 				1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
+				1851585020522FCD0006E863 /* NationalList.plist in Resources */,
+				1851585120522FCD0006E863 /* CityList.plist in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
 				1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */,
 				18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */,
+				1851586D205235AB0006E863 /* LRRAgeViewCell.xib in Resources */,
 				18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */,
 				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
 				1832AD63204F7D3B006BB3BD /* LRRChooseIDViewController.xib in Resources */,
+				185158682052359A0006E863 /* LRRWorkViewCell.xib in Resources */,
 				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
+				185158562052305C0006E863 /* LRRSpecialList.plist in Resources */,
+				1851585A205230870006E863 /* LRRTeamList.plist in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
+				1851584B20522CAD0006E863 /* LRRAvatarViewCell.xib in Resources */,
 				1851583E2051310E0006E863 /* LRRCityViewCell.xib in Resources */,
+				1851587720523F170006E863 /* LRRNameViewCell.xib in Resources */,
 				18515832205122640006E863 /* LRRBirthdayCell.xib in Resources */,
 				1832AD71204F9787006BB3BD /* ServiceCenter.plist in Resources */,
 				18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */,
-				1851583620512BEF0006E863 /* CityList.plist in Resources */,
 				18A76658204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib in Resources */,
 				1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */,
+				18515846205228BE0006E863 /* LRRNationalViewCell.xib in Resources */,
+				18515858205230750006E863 /* LRRAgeList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,23 +1167,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
+				18515845205228BE0006E863 /* LRRNationalViewCell.m in Sources */,
 				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
 				18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */,
 				18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */,
+				185158672052359A0006E863 /* LRRWorkViewCell.m in Sources */,
+				1851587620523F170006E863 /* LRRNameViewCell.m in Sources */,
 				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
 				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
 				18FC9403200C5F7000269FAB /* main.m in Sources */,
+				18515863205235270006E863 /* LRRTeamField.m in Sources */,
 				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
+				1851584A20522CAD0006E863 /* LRRAvatarViewCell.m in Sources */,
 				1832AD6C204F93D7006BB3BD /* LRRServiceCenterViewController.m in Sources */,
 				1851583D2051310E0006E863 /* LRRCityViewCell.m in Sources */,
+				18515860205234C60006E863 /* LRRAgeField.m in Sources */,
 				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
+				1851585D2052343D0006E863 /* LRRWorkField.m in Sources */,
 				18DC28872050DE9500D4B451 /* LRRSexViewCell.m in Sources */,
 				18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */,
 				180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */,
 				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
+				18515871205235BD0006E863 /* LRRTeamViewCell.m in Sources */,
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
@@ -1106,8 +1212,10 @@
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				1851583920512F4E0006E863 /* LRRCityField.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
+				18515841205228100006E863 /* LRRNationalField.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
 				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
+				1851586C205235AB0006E863 /* LRRAgeViewCell.m in Sources */,
 				18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */,
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,

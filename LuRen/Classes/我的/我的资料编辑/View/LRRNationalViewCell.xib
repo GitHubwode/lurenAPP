@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="LRRNationalViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="105.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0e-wZ-ntj">
+                        <rect key="frame" x="30" y="104" width="298" height="1"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="IVA-mt-Xal"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="民族" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOS-0e-izO">
+                        <rect key="frame" x="15" y="43.5" width="85" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="UmS-VY-j7w"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="wnX-o0-Pwj">
+                        <rect key="frame" x="306" y="46" width="7" height="12"/>
+                    </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eq6-Hz-Rge" customClass="LRRNationalField">
+                        <rect key="frame" x="100" y="0.0" width="189" height="104"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eq6-Hz-Rge" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3hE-my-L6L"/>
+                    <constraint firstItem="wnX-o0-Pwj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ckb-Ic-xX5"/>
+                    <constraint firstItem="tOS-0e-izO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EEh-3Y-eKJ"/>
+                    <constraint firstItem="i0e-wZ-ntj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="GIb-j7-K6V"/>
+                    <constraint firstItem="eq6-Hz-Rge" firstAttribute="leading" secondItem="tOS-0e-izO" secondAttribute="trailing" id="TXD-oz-7dZ"/>
+                    <constraint firstItem="i0e-wZ-ntj" firstAttribute="top" secondItem="eq6-Hz-Rge" secondAttribute="bottom" id="bGm-js-iQs"/>
+                    <constraint firstAttribute="trailing" secondItem="wnX-o0-Pwj" secondAttribute="trailing" constant="15" id="f9l-32-lFg"/>
+                    <constraint firstAttribute="trailing" secondItem="i0e-wZ-ntj" secondAttribute="trailing" id="gzS-bM-hAp"/>
+                    <constraint firstAttribute="bottom" secondItem="i0e-wZ-ntj" secondAttribute="bottom" id="i4s-we-eB1"/>
+                    <constraint firstItem="tOS-0e-izO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lXW-v4-b8q"/>
+                    <constraint firstItem="wnX-o0-Pwj" firstAttribute="leading" secondItem="eq6-Hz-Rge" secondAttribute="trailing" constant="17" id="mfX-Tf-Bq8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="indicatorImageView" destination="wnX-o0-Pwj" id="wFK-2j-hZc"/>
+                <outlet property="lineView" destination="i0e-wZ-ntj" id="nZs-Fl-I7G"/>
+                <outlet property="lineViewHeight" destination="IVA-mt-Xal" id="0U5-Kc-wwV"/>
+                <outlet property="textField" destination="eq6-Hz-Rge" id="Afy-qq-dXj"/>
+                <outlet property="titleLabel" destination="tOS-0e-izO" id="KIz-W2-PHd"/>
+            </connections>
+            <point key="canvasLocation" x="85" y="120"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_arrow" width="7" height="12"/>
+    </resources>
+</document>
