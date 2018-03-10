@@ -22,6 +22,7 @@
 @property (nonatomic, strong) UILabel *workAgeNumLabel;
 @property (nonatomic, strong) UILabel *cityNameLabel;
 @property (nonatomic, strong) UILabel *teamNumLabel;
+@property (nonatomic, strong) UIButton *focusButton;
 
 @end
 
@@ -84,12 +85,20 @@
     [self addSubview:self.cityNameLabel];
     [self addSubview:self.teamLabel];
     [self addSubview:self.teamNumLabel];
+    [self addSubview:self.focusButton];
     
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(topView.mas_bottom).offset(20);
         make.left.equalTo(weakself.mas_left).offset(LRRLeftPadding);
         make.width.equalTo(@(49));
         make.height.equalTo(@(49));
+    }];
+    
+    [self.focusButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(weakself.avatarImageView.mas_centerY);
+        make.right.equalTo(weakself.mas_right).offset(-LRRRightPadding);
+        make.width.equalTo(@(46));
+        make.height.equalTo(@(29));
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -147,6 +156,12 @@
     
 }
 
+- (void)forusOnButtonClick:(UIButton *)sender
+{
+    sender.selected = !sender.selected;
+    LRRLog(@"关注");
+}
+
 - (UILabel *)creatUserDetailedMessageText:(NSString *)text Font:( CGFloat )font TextColor:(UIColor *)color
 {
     UILabel *label = [UILabel new];
@@ -175,6 +190,18 @@
         _typeImageView.image = [UIImage imageNamed:@"information_bth_realname"];
     }
     return _typeImageView;
+}
+
+- (UIButton *)focusButton
+{
+    if (!_focusButton) {
+        _focusButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _focusButton.adjustsImageWhenHighlighted = NO;
+        [_focusButton setBackgroundImage:[UIImage imageNamed:@"use_icon_heart"] forState:UIControlStateNormal];
+        [_focusButton setBackgroundImage:[UIImage imageNamed:@"use_icon_heart_pressed"] forState:UIControlStateSelected];
+        [_focusButton addTarget:self action:@selector(forusOnButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _focusButton;
 }
 
 

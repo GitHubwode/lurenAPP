@@ -78,6 +78,13 @@
 		18515872205235BD0006E863 /* LRRTeamViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515870205235BD0006E863 /* LRRTeamViewCell.xib */; };
 		1851587620523F170006E863 /* LRRNameViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851587420523F170006E863 /* LRRNameViewCell.m */; };
 		1851587720523F170006E863 /* LRRNameViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851587520523F170006E863 /* LRRNameViewCell.xib */; };
+		185158822052444D0006E863 /* LRREmployingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158812052444D0006E863 /* LRREmployingViewController.m */; };
+		18515885205282F00006E863 /* LRRPublishedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515884205282F00006E863 /* LRRPublishedWorkViewController.m */; };
+		18515889205283F10006E863 /* WMTabControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515888205283F10006E863 /* WMTabControl.m */; };
+		1851588C205283FC0006E863 /* WMDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851588A205283FC0006E863 /* WMDropDownView.m */; };
+		1851588F20528D020006E863 /* WMMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851588E20528D020006E863 /* WMMenuCell.m */; };
+		1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851589120539EC50006E863 /* LRREmployingViewCell.m */; };
+		1851589420539EC50006E863 /* LRREmployingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851589220539EC50006E863 /* LRREmployingViewCell.xib */; };
 		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
 		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
 		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
@@ -260,6 +267,19 @@
 		1851587320523F170006E863 /* LRRNameViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRNameViewCell.h; sourceTree = "<group>"; };
 		1851587420523F170006E863 /* LRRNameViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRNameViewCell.m; sourceTree = "<group>"; };
 		1851587520523F170006E863 /* LRRNameViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRNameViewCell.xib; sourceTree = "<group>"; };
+		185158802052444D0006E863 /* LRREmployingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRREmployingViewController.h; sourceTree = "<group>"; };
+		185158812052444D0006E863 /* LRREmployingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRREmployingViewController.m; sourceTree = "<group>"; };
+		18515883205282F00006E863 /* LRRPublishedWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishedWorkViewController.h; sourceTree = "<group>"; };
+		18515884205282F00006E863 /* LRRPublishedWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishedWorkViewController.m; sourceTree = "<group>"; };
+		18515887205283F00006E863 /* WMTabControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTabControl.h; sourceTree = "<group>"; };
+		18515888205283F10006E863 /* WMTabControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTabControl.m; sourceTree = "<group>"; };
+		1851588A205283FC0006E863 /* WMDropDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDropDownView.m; sourceTree = "<group>"; };
+		1851588B205283FC0006E863 /* WMDropDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDropDownView.h; sourceTree = "<group>"; };
+		1851588D20528D020006E863 /* WMMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuCell.h; sourceTree = "<group>"; };
+		1851588E20528D020006E863 /* WMMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuCell.m; sourceTree = "<group>"; };
+		1851589020539EC50006E863 /* LRREmployingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRREmployingViewCell.h; sourceTree = "<group>"; };
+		1851589120539EC50006E863 /* LRREmployingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRREmployingViewCell.m; sourceTree = "<group>"; };
+		1851589220539EC50006E863 /* LRREmployingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRREmployingViewCell.xib; sourceTree = "<group>"; };
 		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
 		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
 		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
@@ -378,6 +398,8 @@
 			children = (
 				180642BD200DF5F100B20130 /* 首页 */,
 				180642C9200DF5F100B20130 /* 朋友 */,
+				18515878205243170006E863 /* 发布 */,
+				1851587C2052435E0006E863 /* 用工 */,
 				180642C2200DF5F100B20130 /* 找活 */,
 				180642D1200DF5F100B20130 /* 发现 */,
 				180642B9200DF5F100B20130 /* 我的 */,
@@ -761,6 +783,89 @@
 			path = "Edit-编辑信息";
 			sourceTree = "<group>";
 		};
+		18515878205243170006E863 /* 发布 */ = {
+			isa = PBXGroup;
+			children = (
+				18515879205243170006E863 /* Controller */,
+				1851587A205243170006E863 /* Model */,
+				1851587B205243170006E863 /* View */,
+			);
+			path = "发布";
+			sourceTree = "<group>";
+		};
+		18515879205243170006E863 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18515883205282F00006E863 /* LRRPublishedWorkViewController.h */,
+				18515884205282F00006E863 /* LRRPublishedWorkViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1851587A205243170006E863 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1851587B205243170006E863 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1851587C2052435E0006E863 /* 用工 */ = {
+			isa = PBXGroup;
+			children = (
+				18515886205283DF0006E863 /* Lib */,
+				1851587D2052435E0006E863 /* Controller */,
+				1851587E2052435E0006E863 /* Model */,
+				1851587F2052435E0006E863 /* View */,
+			);
+			path = "用工";
+			sourceTree = "<group>";
+		};
+		1851587D2052435E0006E863 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				185158802052444D0006E863 /* LRREmployingViewController.h */,
+				185158812052444D0006E863 /* LRREmployingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1851587E2052435E0006E863 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1851587F2052435E0006E863 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1851589020539EC50006E863 /* LRREmployingViewCell.h */,
+				1851589120539EC50006E863 /* LRREmployingViewCell.m */,
+				1851589220539EC50006E863 /* LRREmployingViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18515886205283DF0006E863 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18515887205283F00006E863 /* WMTabControl.h */,
+				18515888205283F10006E863 /* WMTabControl.m */,
+				1851588B205283FC0006E863 /* WMDropDownView.h */,
+				1851588A205283FC0006E863 /* WMDropDownView.m */,
+				1851588D20528D020006E863 /* WMMenuCell.h */,
+				1851588E20528D020006E863 /* WMMenuCell.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		1855EACA204D2DA40039405B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1067,6 +1172,7 @@
 				1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */,
 				18515872205235BD0006E863 /* LRRTeamViewCell.xib in Resources */,
 				18515854205230290006E863 /* LRRWorkList.plist in Resources */,
+				1851589420539EC50006E863 /* LRREmployingViewCell.xib in Resources */,
 				18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */,
 				1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */,
 				180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */,
@@ -1176,6 +1282,7 @@
 				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
 				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
+				18515885205282F00006E863 /* LRRPublishedWorkViewController.m in Sources */,
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
 				18FC9403200C5F7000269FAB /* main.m in Sources */,
 				18515863205235270006E863 /* LRRTeamField.m in Sources */,
@@ -1196,6 +1303,7 @@
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
+				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
 				18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
 				1831922E201448940032B8C7 /* LRRTabBar.m in Sources */,
@@ -1208,6 +1316,7 @@
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
 				180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */,
 				18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */,
+				1851588C205283FC0006E863 /* WMDropDownView.m in Sources */,
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				1851583920512F4E0006E863 /* LRRCityField.m in Sources */,
@@ -1215,6 +1324,7 @@
 				18515841205228100006E863 /* LRRNationalField.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
 				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
+				1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */,
 				1851586C205235AB0006E863 /* LRRAgeViewCell.m in Sources */,
 				18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */,
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
@@ -1225,8 +1335,10 @@
 				1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */,
 				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,
 				18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */,
+				18515889205283F10006E863 /* WMTabControl.m in Sources */,
 				18319217201197BE0032B8C7 /* LRRHomeHeaderView.m in Sources */,
 				18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */,
+				185158822052444D0006E863 /* LRREmployingViewController.m in Sources */,
 				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
 				18515831205122640006E863 /* LRRBirthdayCell.m in Sources */,

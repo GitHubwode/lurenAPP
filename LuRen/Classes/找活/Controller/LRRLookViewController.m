@@ -42,36 +42,7 @@
     self.view.backgroundColor = LRRViewBackgroundColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self customNavItem];
-//    self.navigationItem.titleView = self.segmentedControl;
-//    [self.view addSubview:self.scrollView];
-//    [self setupChildViewControllers];
 }
-
-//#pragma mark - 创建控制器
-//- (void)setupChildViewControllers
-//{
-//    LRRPointWorkViewController *pointVC = [[LRRPointWorkViewController alloc] init];
-//    LRRPackWorkViewController *packVC = [[LRRPackWorkViewController alloc] init];
-//    [self addChildViewController:pointVC];
-//    [self addChildViewController:packVC];
-//    pointVC.view.frame = CGRectMake(0, 0, kMainScreenWidth,kMainScreenHeight-kNaviHeight);
-//    packVC.view.frame = CGRectMake(kMainScreenWidth, 0, kMainScreenWidth,kMainScreenHeight-kNaviHeight);
-//    [self.scrollView addSubview:pointVC.view];
-//    [self.scrollView addSubview:packVC.view];
-//    
-//}
-
-//- (void)segmentedControlAction:(UISegmentedControl *)sender
-//{
-//    [self.scrollView setContentOffset:CGPointMake(sender.selectedSegmentIndex * kMainScreenWidth, 0) animated:NO];
-//}
-//
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-//{
-//    NSInteger n = scrollView.contentOffset.x / scrollView.frame.size.width;
-//    self.segmentedControl.selectedSegmentIndex = n;
-//}
-
 
 - (void) customNavItem {
 //     1 设置segmentBar的frame
@@ -92,36 +63,6 @@
 }
 
 #pragma makr -蓝记载
-//- (UIScrollView *)scrollView
-//{
-//    if (!_scrollView) {
-//        _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight)];
-//        _scrollView.delegate = self;
-//        _scrollView.contentSize = CGSizeMake(2*kMainScreenWidth, kMainScreenHeight);
-//        _scrollView.pagingEnabled = YES;
-//        _scrollView.bounces = NO;
-//    }
-//
-//    return _scrollView;
-//}
-
-//- (UISegmentedControl *)segmentedControl
-//{
-//    if (!_segmentedControl) {
-//        _segmentedControl = [[UISegmentedControl alloc]initWithItems:@[@"点工",@"点包"]];
-//        _segmentedControl.frame = CGRectMake(0, 0, 110, 35);
-//        _segmentedControl.momentary = NO;
-//        _segmentedControl.selectedSegmentIndex = 0;
-//        _segmentedControl.tintColor = LRROrangeThemeColor;
-//        //通过Attribute字符串属性字典设置Segment标签属性(正常状态下)
-//        [_segmentedControl setTitleTextAttributes:@{NSFontAttributeName:LRRFont(17),NSForegroundColorAttributeName:UIColorHex(0x444444)} forState:UIControlStateNormal];
-////        通过Attribute字符串属性字典设置Segment标签属性(选中状态下)
-//        [_segmentedControl setTitleTextAttributes:@{NSFontAttributeName:LRRFont(17),NSForegroundColorAttributeName:UIColorHex(0xffffff)} forState:UIControlStateSelected];
-//
-//        [_segmentedControl addTarget:self action:@selector(segmentedControlAction:) forControlEvents:UIControlEventValueChanged];
-//    }
-//    return _segmentedControl;
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

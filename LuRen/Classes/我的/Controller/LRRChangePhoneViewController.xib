@@ -83,7 +83,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQb-qF-ckJ">
                     <rect key="frame" x="64" y="128" width="247" height="45"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="确认修改" backgroundImage="exitButtonBg"/>
+                    <state key="normal" title="确认修改" backgroundImage="icon_btn"/>
                     <connections>
                         <action selector="sureButtonClick:" destination="-1" eventType="touchUpInside" id="BLP-sK-RhA"/>
                     </connections>
@@ -106,6 +106,6 @@
         </view>
     </objects>
     <resources>
-        <image name="exitButtonBg" width="20" height="29"/>
+        <image name="icon_btn" width="10" height="10"/>
     </resources>
 </document>

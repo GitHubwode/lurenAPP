@@ -152,7 +152,7 @@
         [_exitButton setTitleColor:UIColorHex(0xffffff) forState:UIControlStateNormal];
         [_exitButton setTitle:@"退出登录" forState:UIControlStateNormal];
         _exitButton.titleLabel.font = LRRFont(15);
-        [_exitButton setBackgroundImage:[UIImage imageNamed:@"exitButtonBg"] forState:UIControlStateNormal];
+        [_exitButton setBackgroundImage:[UIImage imageNamed:@"icon_btn"] forState:UIControlStateNormal];
         [_exitButton addTarget:self action:@selector(loginOutButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _exitButton;

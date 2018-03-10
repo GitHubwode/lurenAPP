@@ -89,7 +89,7 @@
         [_submitButton setTitleColor:UIColorHex(0xffffff) forState:UIControlStateNormal];
         [_submitButton setTitle:@"提交" forState:UIControlStateNormal];
         _submitButton.titleLabel.font = LRRFont(15);
-        [_submitButton setBackgroundImage:[UIImage imageNamed:@"exitButtonBg"] forState:UIControlStateNormal];
+        [_submitButton setBackgroundImage:[UIImage imageNamed:@"icon_btn"] forState:UIControlStateNormal];
         [_submitButton addTarget:self action:@selector(submitButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _submitButton;
