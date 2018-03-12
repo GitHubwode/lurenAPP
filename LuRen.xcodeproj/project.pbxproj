@@ -85,6 +85,24 @@
 		1851588F20528D020006E863 /* WMMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851588E20528D020006E863 /* WMMenuCell.m */; };
 		1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851589120539EC50006E863 /* LRREmployingViewCell.m */; };
 		1851589420539EC50006E863 /* LRREmployingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851589220539EC50006E863 /* LRREmployingViewCell.xib */; };
+		18515898205625370006E863 /* LRRSlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515897205625370006E863 /* LRRSlideSwitchView.m */; };
+		1851589B2056277A0006E863 /* LRRDefineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851589A2056277A0006E863 /* LRRDefineButton.m */; };
+		185158DF2056386A0006E863 /* LRRPublishPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158DE2056386A0006E863 /* LRRPublishPointViewController.m */; };
+		185158E22056387C0006E863 /* LRRPublishPackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158E12056387C0006E863 /* LRRPublishPackViewController.m */; };
+		185158E4205639D80006E863 /* LRRPublishPointList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185158E3205639D80006E863 /* LRRPublishPointList.plist */; };
+		185158E6205639EB0006E863 /* LRRPublishPackList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185158E5205639EB0006E863 /* LRRPublishPackList.plist */; };
+		185158EA2056460A0006E863 /* LRRPublishWorkViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158E82056460A0006E863 /* LRRPublishWorkViewCell.m */; };
+		185158EB2056460A0006E863 /* LRRPublishWorkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185158E92056460A0006E863 /* LRRPublishWorkViewCell.xib */; };
+		185158EF20565E080006E863 /* LRRPublishTeamViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158ED20565E080006E863 /* LRRPublishTeamViewCell.m */; };
+		185158F020565E080006E863 /* LRRPublishTeamViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185158EE20565E080006E863 /* LRRPublishTeamViewCell.xib */; };
+		185158F4205660290006E863 /* LRRPublishWriteViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158F2205660290006E863 /* LRRPublishWriteViewCell.m */; };
+		185158F5205660290006E863 /* LRRPublishWriteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185158F3205660290006E863 /* LRRPublishWriteViewCell.xib */; };
+		185158F8205663750006E863 /* LRRChooseTimeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158F7205663750006E863 /* LRRChooseTimeField.m */; };
+		185158FC205665630006E863 /* LRRPublishTimeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158FA205665630006E863 /* LRRPublishTimeViewCell.m */; };
+		185158FD205665630006E863 /* LRRPublishTimeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185158FB205665630006E863 /* LRRPublishTimeViewCell.xib */; };
+		18515901205667AB0006E863 /* LRRPublishLiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185158FF205667AB0006E863 /* LRRPublishLiveViewCell.m */; };
+		18515902205667AB0006E863 /* LRRPublishLiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515900205667AB0006E863 /* LRRPublishLiveViewCell.xib */; };
+		1851590520566E690006E863 /* LRRPublishFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851590420566E690006E863 /* LRRPublishFooterView.m */; };
 		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
 		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
 		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
@@ -280,6 +298,35 @@
 		1851589020539EC50006E863 /* LRREmployingViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRREmployingViewCell.h; sourceTree = "<group>"; };
 		1851589120539EC50006E863 /* LRREmployingViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRREmployingViewCell.m; sourceTree = "<group>"; };
 		1851589220539EC50006E863 /* LRREmployingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRREmployingViewCell.xib; sourceTree = "<group>"; };
+		18515896205625360006E863 /* LRRSlideSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSlideSwitchView.h; sourceTree = "<group>"; };
+		18515897205625370006E863 /* LRRSlideSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSlideSwitchView.m; sourceTree = "<group>"; };
+		185158992056277A0006E863 /* LRRDefineButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRDefineButton.h; sourceTree = "<group>"; };
+		1851589A2056277A0006E863 /* LRRDefineButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRDefineButton.m; sourceTree = "<group>"; };
+		185158DD2056386A0006E863 /* LRRPublishPointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishPointViewController.h; sourceTree = "<group>"; };
+		185158DE2056386A0006E863 /* LRRPublishPointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishPointViewController.m; sourceTree = "<group>"; };
+		185158E02056387C0006E863 /* LRRPublishPackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishPackViewController.h; sourceTree = "<group>"; };
+		185158E12056387C0006E863 /* LRRPublishPackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishPackViewController.m; sourceTree = "<group>"; };
+		185158E3205639D80006E863 /* LRRPublishPointList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRPublishPointList.plist; sourceTree = "<group>"; };
+		185158E5205639EB0006E863 /* LRRPublishPackList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LRRPublishPackList.plist; sourceTree = "<group>"; };
+		185158E72056460A0006E863 /* LRRPublishWorkViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishWorkViewCell.h; sourceTree = "<group>"; };
+		185158E82056460A0006E863 /* LRRPublishWorkViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishWorkViewCell.m; sourceTree = "<group>"; };
+		185158E92056460A0006E863 /* LRRPublishWorkViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRPublishWorkViewCell.xib; sourceTree = "<group>"; };
+		185158EC20565E080006E863 /* LRRPublishTeamViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishTeamViewCell.h; sourceTree = "<group>"; };
+		185158ED20565E080006E863 /* LRRPublishTeamViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishTeamViewCell.m; sourceTree = "<group>"; };
+		185158EE20565E080006E863 /* LRRPublishTeamViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRPublishTeamViewCell.xib; sourceTree = "<group>"; };
+		185158F1205660290006E863 /* LRRPublishWriteViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishWriteViewCell.h; sourceTree = "<group>"; };
+		185158F2205660290006E863 /* LRRPublishWriteViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishWriteViewCell.m; sourceTree = "<group>"; };
+		185158F3205660290006E863 /* LRRPublishWriteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRPublishWriteViewCell.xib; sourceTree = "<group>"; };
+		185158F6205663750006E863 /* LRRChooseTimeField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRChooseTimeField.h; sourceTree = "<group>"; };
+		185158F7205663750006E863 /* LRRChooseTimeField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRChooseTimeField.m; sourceTree = "<group>"; };
+		185158F9205665630006E863 /* LRRPublishTimeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishTimeViewCell.h; sourceTree = "<group>"; };
+		185158FA205665630006E863 /* LRRPublishTimeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishTimeViewCell.m; sourceTree = "<group>"; };
+		185158FB205665630006E863 /* LRRPublishTimeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRPublishTimeViewCell.xib; sourceTree = "<group>"; };
+		185158FE205667AB0006E863 /* LRRPublishLiveViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishLiveViewCell.h; sourceTree = "<group>"; };
+		185158FF205667AB0006E863 /* LRRPublishLiveViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishLiveViewCell.m; sourceTree = "<group>"; };
+		18515900205667AB0006E863 /* LRRPublishLiveViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRPublishLiveViewCell.xib; sourceTree = "<group>"; };
+		1851590320566E690006E863 /* LRRPublishFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPublishFooterView.h; sourceTree = "<group>"; };
+		1851590420566E690006E863 /* LRRPublishFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPublishFooterView.m; sourceTree = "<group>"; };
 		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
 		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
 		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
@@ -779,6 +826,8 @@
 				185158552052305C0006E863 /* LRRSpecialList.plist */,
 				18515857205230750006E863 /* LRRAgeList.plist */,
 				18515859205230870006E863 /* LRRTeamList.plist */,
+				185158E3205639D80006E863 /* LRRPublishPointList.plist */,
+				185158E5205639EB0006E863 /* LRRPublishPackList.plist */,
 			);
 			path = "Edit-编辑信息";
 			sourceTree = "<group>";
@@ -786,6 +835,7 @@
 		18515878205243170006E863 /* 发布 */ = {
 			isa = PBXGroup;
 			children = (
+				185158952056230D0006E863 /* Lib */,
 				18515879205243170006E863 /* Controller */,
 				1851587A205243170006E863 /* Model */,
 				1851587B205243170006E863 /* View */,
@@ -798,6 +848,10 @@
 			children = (
 				18515883205282F00006E863 /* LRRPublishedWorkViewController.h */,
 				18515884205282F00006E863 /* LRRPublishedWorkViewController.m */,
+				185158DD2056386A0006E863 /* LRRPublishPointViewController.h */,
+				185158DE2056386A0006E863 /* LRRPublishPointViewController.m */,
+				185158E02056387C0006E863 /* LRRPublishPackViewController.h */,
+				185158E12056387C0006E863 /* LRRPublishPackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -812,6 +866,23 @@
 		1851587B205243170006E863 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				185158E72056460A0006E863 /* LRRPublishWorkViewCell.h */,
+				185158E82056460A0006E863 /* LRRPublishWorkViewCell.m */,
+				185158E92056460A0006E863 /* LRRPublishWorkViewCell.xib */,
+				185158EC20565E080006E863 /* LRRPublishTeamViewCell.h */,
+				185158ED20565E080006E863 /* LRRPublishTeamViewCell.m */,
+				185158EE20565E080006E863 /* LRRPublishTeamViewCell.xib */,
+				185158F1205660290006E863 /* LRRPublishWriteViewCell.h */,
+				185158F2205660290006E863 /* LRRPublishWriteViewCell.m */,
+				185158F3205660290006E863 /* LRRPublishWriteViewCell.xib */,
+				185158F9205665630006E863 /* LRRPublishTimeViewCell.h */,
+				185158FA205665630006E863 /* LRRPublishTimeViewCell.m */,
+				185158FB205665630006E863 /* LRRPublishTimeViewCell.xib */,
+				185158FE205667AB0006E863 /* LRRPublishLiveViewCell.h */,
+				185158FF205667AB0006E863 /* LRRPublishLiveViewCell.m */,
+				18515900205667AB0006E863 /* LRRPublishLiveViewCell.xib */,
+				1851590320566E690006E863 /* LRRPublishFooterView.h */,
+				1851590420566E690006E863 /* LRRPublishFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -866,6 +937,17 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		185158952056230D0006E863 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18515896205625360006E863 /* LRRSlideSwitchView.h */,
+				18515897205625370006E863 /* LRRSlideSwitchView.m */,
+				185158992056277A0006E863 /* LRRDefineButton.h */,
+				1851589A2056277A0006E863 /* LRRDefineButton.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		1855EACA204D2DA40039405B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +995,8 @@
 				1851585F205234C60006E863 /* LRRAgeField.m */,
 				18515861205235270006E863 /* LRRTeamField.h */,
 				18515862205235270006E863 /* LRRTeamField.m */,
+				185158F6205663750006E863 /* LRRChooseTimeField.h */,
+				185158F7205663750006E863 /* LRRChooseTimeField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1164,9 +1248,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185158FD205665630006E863 /* LRRPublishTimeViewCell.xib in Resources */,
 				18319214201092810032B8C7 /* LRRSettingViewCell.xib in Resources */,
+				185158F5205660290006E863 /* LRRPublishWriteViewCell.xib in Resources */,
+				185158E4205639D80006E863 /* LRRPublishPointList.plist in Resources */,
 				180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */,
 				18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */,
+				18515902205667AB0006E863 /* LRRPublishLiveViewCell.xib in Resources */,
+				185158F020565E080006E863 /* LRRPublishTeamViewCell.xib in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
 				18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */,
 				1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */,
@@ -1181,12 +1270,14 @@
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
 				1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */,
 				18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */,
+				185158E6205639EB0006E863 /* LRRPublishPackList.plist in Resources */,
 				1851586D205235AB0006E863 /* LRRAgeViewCell.xib in Resources */,
 				18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */,
 				188EAFA22016E9460012855E /* LRROrderDetailTableViewCell.xib in Resources */,
 				1832AD63204F7D3B006BB3BD /* LRRChooseIDViewController.xib in Resources */,
 				185158682052359A0006E863 /* LRRWorkViewCell.xib in Resources */,
 				1831921C2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib in Resources */,
+				185158EB2056460A0006E863 /* LRRPublishWorkViewCell.xib in Resources */,
 				185158562052305C0006E863 /* LRRSpecialList.plist in Resources */,
 				1851585A205230870006E863 /* LRRTeamList.plist in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
@@ -1275,6 +1366,7 @@
 				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
 				18515845205228BE0006E863 /* LRRNationalViewCell.m in Sources */,
 				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
+				185158FC205665630006E863 /* LRRPublishTimeViewCell.m in Sources */,
 				18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */,
 				18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */,
 				185158672052359A0006E863 /* LRRWorkViewCell.m in Sources */,
@@ -1288,11 +1380,13 @@
 				18515863205235270006E863 /* LRRTeamField.m in Sources */,
 				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
+				18515898205625370006E863 /* LRRSlideSwitchView.m in Sources */,
 				1851584A20522CAD0006E863 /* LRRAvatarViewCell.m in Sources */,
 				1832AD6C204F93D7006BB3BD /* LRRServiceCenterViewController.m in Sources */,
 				1851583D2051310E0006E863 /* LRRCityViewCell.m in Sources */,
 				18515860205234C60006E863 /* LRRAgeField.m in Sources */,
 				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
+				185158E22056387C0006E863 /* LRRPublishPackViewController.m in Sources */,
 				1851585D2052343D0006E863 /* LRRWorkField.m in Sources */,
 				18DC28872050DE9500D4B451 /* LRRSexViewCell.m in Sources */,
 				18FC93F5200C5F7000269FAB /* AppDelegate.m in Sources */,
@@ -1304,13 +1398,16 @@
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
 				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
+				1851589B2056277A0006E863 /* LRRDefineButton.m in Sources */,
 				18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
+				185158DF2056386A0006E863 /* LRRPublishPointViewController.m in Sources */,
 				1831922E201448940032B8C7 /* LRRTabBar.m in Sources */,
 				18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */,
 				1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */,
 				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
 				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
+				185158EA2056460A0006E863 /* LRRPublishWorkViewCell.m in Sources */,
 				18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */,
 				1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
@@ -1320,11 +1417,14 @@
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				1851583920512F4E0006E863 /* LRRCityField.m in Sources */,
+				1851590520566E690006E863 /* LRRPublishFooterView.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
 				18515841205228100006E863 /* LRRNationalField.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
 				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
 				1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */,
+				185158F4205660290006E863 /* LRRPublishWriteViewCell.m in Sources */,
+				185158EF20565E080006E863 /* LRRPublishTeamViewCell.m in Sources */,
 				1851586C205235AB0006E863 /* LRRAgeViewCell.m in Sources */,
 				18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */,
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
@@ -1340,6 +1440,7 @@
 				18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */,
 				185158822052444D0006E863 /* LRREmployingViewController.m in Sources */,
 				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
+				185158F8205663750006E863 /* LRRChooseTimeField.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
 				18515831205122640006E863 /* LRRBirthdayCell.m in Sources */,
 				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
@@ -1354,6 +1455,7 @@
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
 				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
 				18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */,
+				18515901205667AB0006E863 /* LRRPublishLiveViewCell.m in Sources */,
 				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,
 				18FC942A200C631000269FAB /* LRRBaseNavigationController.m in Sources */,
 			);

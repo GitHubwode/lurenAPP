@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="KGk-i7-Jjw" customClass="LRRPublishWriteViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="95.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-a8-Fhy">
+                        <rect key="frame" x="30" y="94.5" width="301" height="1"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="nFJ-Ds-SCd"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工资:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-LF-PJb">
+                        <rect key="frame" x="15" y="38.5" width="35" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="元/天" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lF-wp-yl2">
+                        <rect key="frame" x="287" y="40.5" width="29" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.92549019610000005" green="0.41960784309999999" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfD-RX-1uU">
+                        <rect key="frame" x="60" y="0.0" width="227" height="94.5"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WeW-LF-PJb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8hm-Wy-XRc"/>
+                    <constraint firstItem="pfD-RX-1uU" firstAttribute="leading" secondItem="WeW-LF-PJb" secondAttribute="trailing" constant="10" id="Cts-B0-Umf"/>
+                    <constraint firstAttribute="trailing" secondItem="6lF-wp-yl2" secondAttribute="trailing" constant="15" id="Kis-Zt-jmX"/>
+                    <constraint firstItem="6lF-wp-yl2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LLr-m8-fKK"/>
+                    <constraint firstAttribute="trailing" secondItem="heZ-a8-Fhy" secondAttribute="trailing" id="UHA-2C-rxo"/>
+                    <constraint firstItem="heZ-a8-Fhy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Yut-Lx-ErI"/>
+                    <constraint firstAttribute="bottom" secondItem="heZ-a8-Fhy" secondAttribute="bottom" id="aTJ-qU-pBr"/>
+                    <constraint firstItem="6lF-wp-yl2" firstAttribute="leading" secondItem="pfD-RX-1uU" secondAttribute="trailing" id="p3C-PX-5hl"/>
+                    <constraint firstItem="pfD-RX-1uU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="phE-go-TlH"/>
+                    <constraint firstItem="heZ-a8-Fhy" firstAttribute="top" secondItem="pfD-RX-1uU" secondAttribute="bottom" id="vDt-JM-Sil"/>
+                    <constraint firstItem="WeW-LF-PJb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="z1Y-CK-YYM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lineView" destination="heZ-a8-Fhy" id="UFz-rS-doe"/>
+                <outlet property="lineViewHeight" destination="nFJ-Ds-SCd" id="8cN-OB-2Kt"/>
+                <outlet property="textField" destination="pfD-RX-1uU" id="OXE-JF-S1A"/>
+                <outlet property="titleLabel" destination="WeW-LF-PJb" id="TbY-83-OS6"/>
+                <outlet property="unitTitleLabel" destination="6lF-wp-yl2" id="aB9-Wz-jqc"/>
+            </connections>
+            <point key="canvasLocation" x="86.5" y="104"/>
+        </tableViewCell>
+    </objects>
+</document>

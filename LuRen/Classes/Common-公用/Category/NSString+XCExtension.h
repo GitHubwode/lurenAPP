@@ -47,6 +47,8 @@
 +(NSString *)TimeStamp:(NSString *)strTime;
 //计算预约时间距离现在还剩多久
 +(NSString *)getNowTimeWithString:(NSString *)aTimeString;
+//计算当前月的总后一天是几号
++ (NSString *)getMonthBeginAndEndWith:(NSString *)dateStr;
 
 - (NSString*)encodeString;
 -(NSString *)decodeString;

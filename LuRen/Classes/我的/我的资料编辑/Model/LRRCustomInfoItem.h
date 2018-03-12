@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *subtitle;
+/** 单位名称 */
+@property (nonatomic, strong) NSString *unitTitle;
 /** 能输入的文字的最多个数 */
 @property (nonatomic, assign) NSUInteger maxTextLength;
 /** 键盘类型 */
