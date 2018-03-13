@@ -40,11 +40,29 @@ static NSString *LRRPublishLiveCellIdfy = @"LRRPublishLiveCellIdfy";
 - (IBAction)liveButtonClick:(LRRDefineButton *)sender {
     sender.selected = !sender.selected;
     LRRLog(@"住");
+    if (sender.selected) {
+        self.liveNotButton.selected = NO;
+    }else{
+        self.liveNotButton.selected = YES;
+    }
+    [self publishLiveMessageString:@"住"];
+
 }
 - (IBAction)LiveNotButtonClick:(LRRDefineButton *)sender {
     sender.selected = !sender.selected;
     LRRLog(@"不住");
+    if (sender.selected) {
+        self.liveButton.selected = NO;
+    }else{
+        self.liveButton.selected = YES;
+    }
+    [self publishLiveMessageString:@"不住"];
+}
 
+- (void)publishLiveMessageString:(NSString *)string{
+    if (self.infoItem.editabled) {
+        self.infoItem.subtitle =string ;
+    }
 }
 
 - (void)dealloc{

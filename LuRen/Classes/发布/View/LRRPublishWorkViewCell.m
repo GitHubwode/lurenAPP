@@ -48,8 +48,11 @@ static NSString *LRRPublishWorkCellIdfy = @"LRRPublishWorkCellIdfy";
 
 #pragma mark - LRRWorkFieldDelegate
 - (void)ensureButtonClicked{
+    LRRLog(@"%@",self.textField.text);
+    
     if (self.infoItem.editabled) {
         self.infoItem.subtitle = self.textField.text;
+        LRRLog(@"%@",self.infoItem.subtitle);
     }
 }
 

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LRRPublishFooterDelegate <NSObject>
+@optional
+- (void)ensurePublshButtonClicked;
+@end
+
 @interface LRRPublishFooterView : UIView
+
+@property (nonatomic, weak) id<LRRPublishFooterDelegate> footerDelegate;
 
 @end

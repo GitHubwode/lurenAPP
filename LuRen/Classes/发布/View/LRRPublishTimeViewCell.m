@@ -45,6 +45,13 @@ static NSString *LRRPublishTimeCellIdfy = @"LRRPublishTimeCellIdfy";
 + (NSString *)cellIdentifier{
     return LRRPublishTimeCellIdfy;
 }
+
+#pragma mark - LRRChooseTimeFieldDelegate
+- (void)ensureButtonClicked{
+    if (self.infoItem.editabled) {
+        self.infoItem.subtitle = self.textField.text;
+    }
+}
 - (void)dealloc{
     LRRLogFunc
 }

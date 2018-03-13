@@ -8,16 +8,20 @@
 
 #import "LRRPublishPointViewController.h"
 #import "LRRCustomInfoItem.h"
+#import "LRRPublishFooterView.h"
 #import "LRRPublishWorkViewCell.h"
 #import "LRRPublishTimeViewCell.h"
 #import "LRRPublishTeamViewCell.h"
 #import "LRRPublishWriteViewCell.h"
 #import "LRRPublishLiveViewCell.h"
+#import "LRRPublishMarkViewCell.h"
+#import "LRRPublishintroductionViewCell.h"
 
-@interface LRRPublishPointViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LRRPublishPointViewController ()<UITableViewDelegate,UITableViewDataSource,LRRPublishFooterDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
+@property (nonatomic, strong) LRRPublishFooterView *footerView;
 
 @end
 
@@ -26,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+    self.tableView.tableFooterView = self.footerView;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -95,7 +100,14 @@
         }
     }else if (indexPath.section == 2){
         
+        LRRPublishMarkViewCell*cell = [tableView dequeueReusableCellWithIdentifier:[LRRPublishMarkViewCell cellIdentifier] forIndexPath:indexPath];
+        cell.infoItem = item;
+        return cell;
+        
     }else if (indexPath.section == 3){
+        LRRPublishintroductionViewCell*cell = [tableView dequeueReusableCellWithIdentifier:[LRRPublishintroductionViewCell cellIdentifier] forIndexPath:indexPath];
+        cell.infoItem = item;
+        return cell;
         
     }else if (indexPath.section == 4){
         LRRPublishWriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRPublishWriteViewCell cellIdentifier] forIndexPath:indexPath];
@@ -120,6 +132,12 @@
     [[cell textField] becomeFirstResponder];
 }
 
+#pragma mark -LRRPublishFooterDelegate
+- (void)ensurePublshButtonClicked
+{
+    LRRLog(@"发布");
+}
+
 
 #pragma mark - 懒加载
 - (UITableView *)tableView
@@ -141,6 +159,9 @@
         
         [_tableView registerNib:[UINib nibWithNibName:@"LRRPublishLiveViewCell" bundle:nil] forCellReuseIdentifier:[LRRPublishLiveViewCell cellIdentifier]];
         
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRPublishMarkViewCell" bundle:nil] forCellReuseIdentifier:[LRRPublishMarkViewCell cellIdentifier]];
+         [_tableView registerNib:[UINib nibWithNibName:@"LRRPublishintroductionViewCell" bundle:nil] forCellReuseIdentifier:[LRRPublishintroductionViewCell cellIdentifier]];
+        
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -153,6 +174,15 @@
     if (!_datasource) {
         _datasource = [LRRCustomInfoItem mj_objectArrayWithFilename:@"LRRPublishPointList.plist"];    }
     return _datasource;
+}
+
+- (LRRPublishFooterView *)footerView
+{
+    if (!_footerView) {
+        _footerView = [[LRRPublishFooterView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 179)];
+        _footerView.footerDelegate = self;
+    }
+    return _footerView;
 }
 
 - (void)dealloc

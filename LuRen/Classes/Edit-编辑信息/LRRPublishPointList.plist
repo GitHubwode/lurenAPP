@@ -22,6 +22,8 @@
 			<true/>
 			<key>unitTitle</key>
 			<string></string>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -42,6 +44,8 @@
 			<true/>
 			<key>unitTitle</key>
 			<string>/人</string>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -62,6 +66,8 @@
 			<true/>
 			<key>unitTitle</key>
 			<string>元/天</string>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -82,6 +88,8 @@
 			<true/>
 			<key>unitTitle</key>
 			<string>元/辆/天</string>
+			<key>editabled</key>
+			<true/>
 		</dict>
 	</array>
 	<array>
@@ -102,6 +110,8 @@
 			<true/>
 			<key>required</key>
 			<true/>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -119,6 +129,8 @@
 			<key>enabled</key>
 			<true/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 		<dict>
@@ -138,6 +150,8 @@
 			<true/>
 			<key>required</key>
 			<true/>
+			<key>editabled</key>
+			<true/>
 		</dict>
 	</array>
 	<array>
@@ -155,8 +169,10 @@
 			<key>propertyKey</key>
 			<string>note</string>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 	</array>
@@ -175,8 +191,10 @@
 			<key>propertyKey</key>
 			<string>introduction</string>
 			<key>enabled</key>
-			<true/>
+			<false/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 	</array>
@@ -198,6 +216,8 @@
 			<true/>
 			<key>required</key>
 			<true/>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -205,9 +225,9 @@
 			<key>subtitle</key>
 			<string></string>
 			<key>keyboardType</key>
-			<integer>0</integer>
+			<integer>5</integer>
 			<key>maxTextLength</key>
-			<integer>0</integer>
+			<integer>11</integer>
 			<key>placeholder</key>
 			<string>请输入联系人电话</string>
 			<key>propertyKey</key>
@@ -215,6 +235,8 @@
 			<key>enabled</key>
 			<true/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 		<dict>
@@ -233,6 +255,8 @@
 			<key>enabled</key>
 			<true/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 	</array>
@@ -254,6 +278,8 @@
 			<true/>
 			<key>required</key>
 			<true/>
+			<key>editabled</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>title</key>
@@ -271,6 +297,8 @@
 			<key>enabled</key>
 			<true/>
 			<key>required</key>
+			<true/>
+			<key>editabled</key>
 			<true/>
 		</dict>
 	</array>
