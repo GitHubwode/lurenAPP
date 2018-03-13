@@ -111,6 +111,7 @@
 		1851591A2057A9880006E863 /* MBProgressHUD+LRRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185159192057A9880006E863 /* MBProgressHUD+LRRExtension.m */; };
 		1851591D2057AC7E0006E863 /* LRRRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851591C2057AC7E0006E863 /* LRRRefreshHeader.m */; };
 		185159202057ACB40006E863 /* LRRRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851591F2057ACB40006E863 /* LRRRefreshFooter.m */; };
+		185159232057CBF20006E863 /* LRRBasePublishTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185159222057CBF20006E863 /* LRRBasePublishTabBarController.m */; };
 		1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC0204CE2010039405B /* LRRRealNameViewController.m */; };
 		1855EAC3204CE2010039405B /* LRRRealNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */; };
 		1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAC5204D17990039405B /* UIViewController+DismissKeyboard.m */; };
@@ -349,6 +350,8 @@
 		1851591C2057AC7E0006E863 /* LRRRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRefreshHeader.m; sourceTree = "<group>"; };
 		1851591E2057ACB40006E863 /* LRRRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRefreshFooter.h; sourceTree = "<group>"; };
 		1851591F2057ACB40006E863 /* LRRRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRefreshFooter.m; sourceTree = "<group>"; };
+		185159212057CBF20006E863 /* LRRBasePublishTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBasePublishTabBarController.h; sourceTree = "<group>"; };
+		185159222057CBF20006E863 /* LRRBasePublishTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBasePublishTabBarController.m; sourceTree = "<group>"; };
 		1855EABF204CE2010039405B /* LRRRealNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRealNameViewController.h; sourceTree = "<group>"; };
 		1855EAC0204CE2010039405B /* LRRRealNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRRealNameViewController.m; sourceTree = "<group>"; };
 		1855EAC1204CE2010039405B /* LRRRealNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRRealNameViewController.xib; sourceTree = "<group>"; };
@@ -680,6 +683,8 @@
 				18FC9429200C631000269FAB /* LRRBaseNavigationController.m */,
 				18FC942B200C634E00269FAB /* LRRBaseTabBarController.h */,
 				18FC942C200C634E00269FAB /* LRRBaseTabBarController.m */,
+				185159212057CBF20006E863 /* LRRBasePublishTabBarController.h */,
+				185159222057CBF20006E863 /* LRRBasePublishTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1433,6 +1438,7 @@
 				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
 				18515871205235BD0006E863 /* LRRTeamViewCell.m in Sources */,
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
+				185159232057CBF20006E863 /* LRRBasePublishTabBarController.m in Sources */,
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,

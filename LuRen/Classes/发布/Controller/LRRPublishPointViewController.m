@@ -33,6 +33,8 @@
     self.tableView.tableFooterView = self.footerView;
 }
 
+#pragma mark - UITableViewDelegate  UITableViewDatasource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return self.datasource.count;

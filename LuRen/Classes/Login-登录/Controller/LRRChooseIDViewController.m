@@ -8,6 +8,7 @@
 
 #import "LRRChooseIDViewController.h"
 #import "LRRBaseTabBarController.h"
+#import "LRRBasePublishTabBarController.h"
 
 @interface LRRChooseIDViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
@@ -24,15 +25,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 - (IBAction)chooseWorkerButtonClick:(UIButton *)sender {
-    
     LRRBaseTabBarController *rootVC = [[LRRBaseTabBarController alloc]init];
     self.view.window.rootViewController = rootVC;
 }
 - (IBAction)chooseBossButtonClick:(UIButton *)sender {
-    LRRBaseTabBarController *rootVC = [[LRRBaseTabBarController alloc]init];
+    LRRBasePublishTabBarController *rootVC = [[LRRBasePublishTabBarController alloc]init];
     self.view.window.rootViewController = rootVC;
 }
 - (IBAction)cancelButtonClick:(UIButton *)sender {

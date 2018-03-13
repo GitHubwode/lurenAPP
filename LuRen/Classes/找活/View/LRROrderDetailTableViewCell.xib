@@ -563,16 +563,23 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_edge" translatesAutoresizingMaskIntoConstraints="NO" id="6tn-bI-azs">
+                                <rect key="frame" x="0.0" y="0.0" width="368" height="84"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="YKX-lC-2HA" firstAttribute="centerY" secondItem="V2V-jj-yAM" secondAttribute="centerY" id="Fmm-uN-FBx"/>
                             <constraint firstItem="V2V-jj-yAM" firstAttribute="top" secondItem="cv8-sC-8RA" secondAttribute="top" constant="10" id="FoD-hu-twI"/>
                             <constraint firstAttribute="height" constant="84" id="NVM-uG-cAD"/>
                             <constraint firstItem="JmS-MD-aVs" firstAttribute="top" secondItem="YKX-lC-2HA" secondAttribute="bottom" constant="15" id="QDH-nv-fdX"/>
+                            <constraint firstItem="6tn-bI-azs" firstAttribute="centerX" secondItem="cv8-sC-8RA" secondAttribute="centerX" id="Tmw-V2-IWG"/>
+                            <constraint firstItem="6tn-bI-azs" firstAttribute="centerY" secondItem="cv8-sC-8RA" secondAttribute="centerY" id="ezv-ZK-KqZ"/>
+                            <constraint firstItem="6tn-bI-azs" firstAttribute="width" secondItem="cv8-sC-8RA" secondAttribute="width" id="fgc-LQ-IQG"/>
                             <constraint firstAttribute="trailing" secondItem="JmS-MD-aVs" secondAttribute="trailing" constant="13" id="jkE-FN-VOq"/>
                             <constraint firstItem="YKX-lC-2HA" firstAttribute="leading" secondItem="V2V-jj-yAM" secondAttribute="trailing" constant="12" id="kdE-V5-qnK"/>
                             <constraint firstItem="V2V-jj-yAM" firstAttribute="leading" secondItem="cv8-sC-8RA" secondAttribute="leading" constant="13" id="nvI-uj-A2v"/>
                             <constraint firstItem="JmS-MD-aVs" firstAttribute="leading" secondItem="cv8-sC-8RA" secondAttribute="leading" constant="13" id="oDL-Qk-HCM"/>
+                            <constraint firstItem="6tn-bI-azs" firstAttribute="height" secondItem="cv8-sC-8RA" secondAttribute="height" id="syG-Al-e07"/>
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-YF-hWq">
@@ -643,5 +650,6 @@ Cg
     <resources>
         <image name="icon_btn" width="10" height="10"/>
         <image name="icon_renpin" width="16" height="15"/>
+        <image name="pic_edge" width="10" height="83"/>
     </resources>
 </document>

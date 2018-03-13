@@ -39,6 +39,9 @@ extern CGFloat const LRRLoginButtonHeight;
 /** 设备在别处登录 */
 extern NSString *const LRRConnectionStatusOffLine;
 
+/** 身份的选择 */
+extern NSString *const LRRChooseIdentityNotifacation;
+
 /** 通用的左间距值 */
 extern CGFloat const LRRLeftPadding;
 /** 通用的右间距值 */

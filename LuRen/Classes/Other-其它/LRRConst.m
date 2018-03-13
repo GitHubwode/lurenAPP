@@ -43,7 +43,8 @@ NSString * const LRRUserLogoutNotifacation = @"LRRUserLogoutNotifacation";
 CGFloat const LRRLoginButtonHeight = 49;
 /** 设备在别处登录 */
 NSString *const LRRConnectionStatusOffLine = @"LRR_KICKED_OFFLINE_BY_OTHER_CLIENT";
-
+/** 身份的选择 */
+NSString *const LRRChooseIdentityNotifacation = @"LRRChooseIdentityNotifacation";
 /** 通用的左间距值 */
 CGFloat const LRRLeftPadding = 15.f;
 /** 通用的右间距值 */

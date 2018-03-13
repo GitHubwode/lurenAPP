@@ -36,23 +36,24 @@
 
 - (void)setUp
 {
-    UIView *bgView = [UIView new];
-    bgView.backgroundColor = UIColorHex(0xf1f1f1);
-    [self addSubview:bgView];
-    [bgView addSubview:self.titleLabel];
-    [bgView addSubview:self.subTitleLabel];
-    [bgView addSubview:self.imageView];
+    UIImageView *bgImageView = [[UIImageView alloc]init];
+    bgImageView.image = [UIImage imageNamed:@"pic_edge"];
+    [self addSubview:bgImageView];
+
+    [bgImageView addSubview:self.titleLabel];
+    [bgImageView addSubview:self.subTitleLabel];
+    [bgImageView addSubview:self.imageView];
     [self addSubview:self.publishButton];
     weakSelf(self);
-    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(weakself.mas_centerX);
         make.top.equalTo(weakself.mas_top).offset(5);
         make.width.equalTo(@(kMainScreenWidth-2*LRRLeftPadding));
         make.height.equalTo(@(84));
     }];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(bgView.mas_left).offset(13);
-        make.top.equalTo(bgView.mas_top).offset(10);
+        make.left.equalTo(bgImageView.mas_left).offset(13);
+        make.top.equalTo(bgImageView.mas_top).offset(10);
     }];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,9 +64,9 @@
     [UILabel changeLineSpaceForLabel:self.subTitleLabel WithSpace:5.f];
     [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(weakself.imageView.mas_leading);
-        make.top.equalTo(weakself.imageView.mas_bottom).offset(15);
-        make.right.equalTo(bgView.mas_right).offset(-13);
-//        make.height.equalTo(@(30));
+        make.top.equalTo(weakself.imageView.mas_bottom).offset(LRRAdaptedHeight(10));
+        make.right.equalTo(bgImageView.mas_right).offset(-13);
+        make.bottom.equalTo(bgImageView.mas_bottom).offset(-5);
     }];
     
     [self.publishButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,7 +112,7 @@
 {
     if (!_subTitleLabel) {
         _subTitleLabel = [UILabel new];
-        _subTitleLabel.text = @"如接单后跑单对用工方造成损失的，将追究法律责任，并赔偿用工方损失。若信息不实请举报，举报电话:0571-88730997";
+        _subTitleLabel.text = @"如发假单对出工方造成损失，将追究其法律责任，并需要赔付出工方损失。拒不支付工人工资的行为公司将采取法律武器维护工人合法利益";
         _subTitleLabel.numberOfLines = 0;
         _subTitleLabel.font = LRRFont(10);
         _subTitleLabel.textColor = UIColorHex(0x777777);

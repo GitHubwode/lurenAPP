@@ -56,7 +56,6 @@
     //    checked.requestType = 1;
     [self addChildViewController:secondVC];
     
-    
     _titles = @[@"点工", @"点包",];
 }
 

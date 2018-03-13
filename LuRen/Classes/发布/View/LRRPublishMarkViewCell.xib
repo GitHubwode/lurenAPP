@@ -40,7 +40,7 @@
                                         <state key="normal" title="风雨无阻" backgroundImage="btn_edge">
                                             <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" title="风雨无阻" backgroundImage="exitButtonBg">
+                                        <state key="selected" title="风雨无阻" backgroundImage="icon_btn">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -53,7 +53,7 @@
                                         <state key="normal" title="自带工具" backgroundImage="btn_edge">
                                             <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" title="自带工具" backgroundImage="exitButtonBg">
+                                        <state key="selected" title="自带工具" backgroundImage="icon_btn">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -66,7 +66,7 @@
                                         <state key="normal" title="不要女工" backgroundImage="btn_edge">
                                             <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <state key="selected" title="不要女工" backgroundImage="exitButtonBg">
+                                        <state key="selected" title="不要女工" backgroundImage="icon_btn">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -138,6 +138,6 @@
     </objects>
     <resources>
         <image name="btn_edge" width="10" height="10"/>
-        <image name="exitButtonBg" width="20" height="29"/>
+        <image name="icon_btn" width="10" height="10"/>
     </resources>
 </document>

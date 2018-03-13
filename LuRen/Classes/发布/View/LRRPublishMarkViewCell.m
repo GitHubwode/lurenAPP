@@ -26,7 +26,7 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
     [super awakeFromNib];
     // Initialization code
     self.textView.layer.masksToBounds = YES;
-    self.textView.layer.cornerRadius = 10.f;
+    self.textView.layer.cornerRadius = 5.f;
     self.textView.delegate = self;
 }
 

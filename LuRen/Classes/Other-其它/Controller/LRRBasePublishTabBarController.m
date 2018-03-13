@@ -1,12 +1,12 @@
 //
-//  LRRBaseTabBarController.m
+//  LRRBasePublishTabBarController.m
 //  LuRen
 //
-//  Created by Ding on 2018/1/15.
+//  Created by Ding on 2018/3/13.
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRBaseTabBarController.h"
+#import "LRRBasePublishTabBarController.h"
 #import "LRRBaseNavigationController.h"
 #import "LRRHomeViewController.h"
 #import "LRRFriendViewController.h"
@@ -19,8 +19,8 @@
 
 #define kTabbarHeight ([UIScreen mainScreen].bounds.size.height == 812 ? (LRRDangerousAreaH + 49) : 49)
 
-@interface LRRBaseTabBarController ()<LRRTabBarDelegate,UITabBarControllerDelegate,UINavigationControllerDelegate>
 
+@interface LRRBasePublishTabBarController ()<LRRTabBarDelegate,UITabBarControllerDelegate,UINavigationControllerDelegate>
 @property (nonatomic, assign) NSInteger lastSelectIndex;
 @property (nonatomic, strong) UIView *redPoint;
 /** view */
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation LRRBaseTabBarController
+@implementation LRRBasePublishTabBarController
 
 + (void)initialize
 {
@@ -40,11 +40,11 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = UIColorHex(666666);
     textAttrs[NSFontAttributeName] = LRRFont(10);
-
+    
     //设置tabBarItem的选中文字颜色
     NSMutableDictionary *selectedTextAttrs = [NSMutableDictionary dictionary];
     selectedTextAttrs[NSForegroundColorAttributeName] = LRROrangeThemeColor;
-
+    
     UITabBarItem *item = [UITabBarItem appearance];
     [item setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
@@ -83,7 +83,7 @@
     
     // Do any additional setup after loading the view.
     /**** 设置所有UITabBarItem的文字属性 ****/
-//    [self setupItemTitleTextAttributes];
+    //    [self setupItemTitleTextAttributes];
 }
 
 #pragma mark - 自定义tabBar
@@ -131,8 +131,9 @@
     [self setupOneChildViewController:[[LRRHomeViewController alloc]init] title:@"优工派" image:@"icon_zhuye" selectedImage:@"icon_zhuye_pressed"];
     
     [self setupOneChildViewController:[[LRRFriendViewController alloc]init] title:@"朋友" image:@"tabbar_icon_chat" selectedImage:@"tabbar_icon_chat_pressed"];
-    //带班
-    [self setupOneChildViewController:[[LRRLookViewController alloc]init] title:@"找活" image:@"icon_zhaohuo" selectedImage:@"icon_zhaohuo_pressed"];
+    
+    //老板
+    [self setupOneChildViewController:[[LRREmployingViewController alloc]init] title:@"用工" image:@"icon_zhaohuo" selectedImage:@"icon_zhaohuo_pressed"];
     
     [self setupOneChildViewController:[[LRRFoundViewController alloc]init] title:@"发现" image:@"icon_faxian" selectedImage:@"icon_faxian_pressed"];
     
@@ -225,5 +226,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
