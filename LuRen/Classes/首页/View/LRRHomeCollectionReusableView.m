@@ -10,6 +10,9 @@
 
 static NSString *HomeCollectionReusableViewIdfy = @"HomeCollectionReusableViewIdfy";
 
+static CGFloat homePadding = 30.f;
+
+
 @interface LRRHomeCollectionReusableView ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -58,7 +61,7 @@ static NSString *HomeCollectionReusableViewIdfy = @"HomeCollectionReusableViewId
     [bottomView addSubview:lineView];
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(bottomView.mas_centerY);
-        make.left.equalTo(bottomView.mas_left).offset(15);
+        make.left.equalTo(bottomView.mas_left).offset(LRRLeftPadding);
         make.width.equalTo(@(7));
         make.height.equalTo(@(20));
     }];
@@ -72,9 +75,9 @@ static NSString *HomeCollectionReusableViewIdfy = @"HomeCollectionReusableViewId
     
     [self.moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(bottomView.mas_centerY);
-        make.right.equalTo(bottomView.mas_right).offset(-15);
-        make.width.equalTo(@(30));
-        make.height.equalTo(@(30));
+        make.right.equalTo(bottomView.mas_right).offset(-LRRRightPadding);
+        make.width.equalTo(@(homePadding));
+        make.height.equalTo(@(homePadding));
     }];
 }
 
@@ -95,7 +98,7 @@ static NSString *HomeCollectionReusableViewIdfy = @"HomeCollectionReusableViewId
 {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.text = @"优秀老板/工头展示";
+        _titleLabel.text = @"优秀带班/工人展示";
         _titleLabel.font = LRRFont(14);
         _titleLabel.textColor = UIColorHex(0x444444);
         _titleLabel.textAlignment = NSTextAlignmentLeft;

@@ -79,16 +79,6 @@
     if (view == nil) view = [UIApplication sharedApplication].windows.firstObject;
     
     [view showHint:message];
-    
-    //    // 快速显示一个提示信息
-    //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    //    hud.mode = MBProgressHUDModeText;
-    //    hud.label.text = message;
-    //    hud.animationType = MBProgressHUDAnimationZoomIn | MBProgressHUDAnimationZoomOut;
-    //    // 隐藏时候从父控件中移除
-    //    hud.removeFromSuperViewOnHide = YES;
-    //    // 1秒后隐藏
-    //    [hud hideAnimated:YES afterDelay:1.0f];
 }
 
 /**

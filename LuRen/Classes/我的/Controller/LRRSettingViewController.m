@@ -8,6 +8,7 @@
 
 #import "LRRSettingViewController.h"
 #import "LRRSettingViewCell.h"
+#import "LRRSettingClearCacheViewCell.h"
 #import "LRRMeMessageModel.h"
 #import "LRRChooseIDViewController.h"
 #import "LRRChangePhoneViewController.h"
@@ -64,13 +65,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.01f;
+    return 0.001f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView *footView = [[UIView alloc]init];
-    //    footView.backgroundColor = LRRViewBackgroundColor;
     return footView;
 }
 
@@ -89,9 +89,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
-    LRRSettingViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSettingViewCell settingIdenfier] forIndexPath:indexPath];
-    cell.nameLabel.text = item.titleString;
-    return cell;
+    if (indexPath.section == 3) {
+        LRRSettingClearCacheViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSettingClearCacheViewCell settingIdenfier]];
+        if (!cell) {
+            cell = [[LRRSettingClearCacheViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[LRRSettingClearCacheViewCell settingIdenfier]];
+        }
+        cell.nameLabel.text = item.titleString;
+        return cell;
+    }
+        LRRSettingViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSettingViewCell settingIdenfier] forIndexPath:indexPath];
+        cell.nameLabel.text = item.titleString;
+        return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,10 +108,7 @@
         LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
         [self presentViewController:newFeatureVc animated:YES completion:nil];
 
-    }else if(indexPath.section == 1) {
-        LRRChangePhoneViewController *changeVC = [[LRRChangePhoneViewController alloc]initWithNibName:NSStringFromClass([LRRChangePhoneViewController class]) bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:changeVC animated:YES];
-    } else{
+    }else{
         LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
         Class class = NSClassFromString(item.linkVC);
         [self.navigationController pushViewController:[class new] animated:YES];
@@ -128,6 +133,8 @@
         _tableView.backgroundColor = LRRViewBackgroundColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"LRRSettingViewCell" bundle:nil] forCellReuseIdentifier:[LRRSettingViewCell settingIdenfier]];
+        [_tableView registerClass:[LRRSettingClearCacheViewCell class] forCellReuseIdentifier:[LRRSettingClearCacheViewCell settingIdenfier]];
+        
         _tableView.scrollEnabled = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;

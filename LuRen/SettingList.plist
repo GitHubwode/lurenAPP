@@ -14,7 +14,7 @@
 				<key>statusString</key>
 				<string></string>
 				<key>linkVC</key>
-				<string></string>
+				<string>LRRChooseIDViewController</string>
 				<key>isTitle</key>
 				<true/>
 				<key>isStatus</key>

@@ -9,6 +9,9 @@
 #import "LRRHomeHeaderView.h"
 #import "SDCycleScrollView.h"
 
+static NSString *HomeFirstCollectionReusableViewIdfy = @"HomeFirstCollectionReusableViewIdfy";
+
+static CGFloat headerBtnHeight = 30.f;
 
 @interface LRRHomeHeaderView ()<SDCycleScrollViewDelegate>
 
@@ -20,6 +23,8 @@
 @property (nonatomic, strong) UILabel *messageLabel;
 @property (nonatomic, strong) UIButton *moreButton;
 @property (nonatomic, strong) UIImageView *lineImageView;
+@property (nonatomic, strong) UILabel *titleLabel1;
+@property (nonatomic, strong) UIButton *moreButton1;
 
 @end
 
@@ -33,6 +38,11 @@
         self.backgroundColor = LRRViewBackgroundColor;
     }
     return self;
+}
+
++ (NSString *)identifier
+{
+    return HomeFirstCollectionReusableViewIdfy;
 }
 
 - (void)setUp
@@ -61,8 +71,56 @@
         make.left.equalTo(weakself.mas_left).offset(10);
         make.right.equalTo(weakself.mas_right).offset(-10);
         make.top.equalTo(weakself.topView.mas_bottom).offset(10);
-        make.bottom.equalTo(weakself.mas_bottom);
+        make.height.equalTo(@(headerBtnHeight));
     }];
+    
+    
+    UIView *topView1 = [UIView new];
+    topView1.backgroundColor = LRRViewBackgroundColor;
+    [self addSubview:topView1];
+    
+    [topView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakself.bottomView.mas_bottom);
+        make.left.equalTo(weakself.mas_left);
+        make.width.equalTo(@(kMainScreenWidth));
+        make.height.equalTo(@(10));
+    }];
+    
+    UIView *bottomView1 = [UIView new];
+    bottomView1.backgroundColor = [UIColor whiteColor];
+    [self addSubview:bottomView1];
+    
+    [bottomView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(topView1.mas_bottom);
+        make.left.equalTo(topView1.mas_left);
+        make.width.equalTo(@(kMainScreenWidth));
+        make.height.equalTo(@(40));
+    }];
+    
+    UIView *lineView1 = [UIView new];
+    lineView1.backgroundColor = UIColorHex(0xf34b00);
+    [bottomView1 addSubview:lineView1];
+    [lineView1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(bottomView1.mas_centerY);
+        make.left.equalTo(bottomView1.mas_left).offset(LRRLeftPadding);
+        make.width.equalTo(@(7));
+        make.height.equalTo(@(20));
+    }];
+    
+    [bottomView1 addSubview:self.titleLabel1];
+    [bottomView1 addSubview:self.moreButton1];
+    [self.titleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(bottomView1.mas_centerY);
+        make.left.equalTo(lineView1.mas_right).offset(11);
+    }];
+    
+    [self.moreButton1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(bottomView1.mas_centerY);
+        make.right.equalTo(bottomView1.mas_right).offset(-LRRRightPadding);
+        make.width.equalTo(@(headerBtnHeight));
+        make.height.equalTo(@(headerBtnHeight));
+    }];
+    
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.bottomView.mas_centerY);
@@ -99,6 +157,8 @@
         make.right.equalTo(lineView.mas_left).offset(-8);
     }];
     
+    
+    
     NSArray *imagesURLStrings = @[
                                   @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
                                   @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
@@ -109,9 +169,12 @@
 }
 
 #pragma mark - 按钮的点击事件
-- (void)moreButtonAction:(UIButton *)sender
+
+- (void)moreFirstButtonAction:(UIButton *)sender
 {
-    LRRLog(@"按钮的更多");
+    if ([self.firstDelegate respondsToSelector:@selector(selectedFirstButtonClick:)]) {
+        [self.firstDelegate selectedFirstButtonClick:sender];
+    }
 }
 
 /** 点击图片回调 */
@@ -188,9 +251,10 @@
     if (!_moreButton) {
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _moreButton.titleLabel.font = LRRFont(12);
+        _moreButton.tag = 1000;
         [_moreButton setTitle:@"更多" forState:UIControlStateNormal];
         [_moreButton setTitleColor:UIColorHex(0X333333) forState:UIControlStateNormal];
-        [_moreButton addTarget:self action:@selector(moreButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+        [_moreButton addTarget:self action:@selector(moreFirstButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _moreButton;
 }
@@ -206,6 +270,29 @@
     return _cycleView;
 }
 
+- (UILabel *)titleLabel1
+{
+    if (!_titleLabel1) {
+        _titleLabel1 = [UILabel new];
+        _titleLabel1.text = @"优秀老板/工头展示";
+        _titleLabel1.font = LRRFont(14);
+        _titleLabel1.textColor = UIColorHex(0x444444);
+        _titleLabel1.textAlignment = NSTextAlignmentLeft;
+    }
+    return _titleLabel1;
+}
+- (UIButton *)moreButton1
+{
+    if (!_moreButton1) {
+        _moreButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        _moreButton1.titleLabel.font = LRRFont(12);
+        _moreButton1.tag = 1001;
+        [_moreButton1 setTitle:@"更多" forState:UIControlStateNormal];
+        [_moreButton1 setTitleColor:UIColorHex(0X333333) forState:UIControlStateNormal];
+        [_moreButton1 addTarget:self action:@selector(moreFirstButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _moreButton1;
+}
 
 
 @end

@@ -27,7 +27,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
-
+@property (nonatomic, assign) NSUInteger pageNum;
 @end
 
 @implementation LRREmployingViewController
@@ -46,7 +46,7 @@
     [super viewDidLoad];
     [self addNavi];
     self.navigationItem.title = @"用工";
-    self.tabControl = [[WMTabControl alloc]initWithFrame:CGRectMake(0, 1, kMainScreenWidth, 45)];
+    self.tabControl = [[WMTabControl alloc]initWithFrame:CGRectMake(0, 1, kMainScreenWidth, LRRDropDownHeight)];
     self.tabControl.backgroundColor = UIColorHex(0xffffff);
     [self.view addSubview:self.tabControl];
     // 1.设置数据和初始索引
@@ -61,7 +61,26 @@
                               [weakSelf openList:index];
                           }];
     [self.view addSubview:self.tableView];
+    self.tableView.mj_header = [LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(orderListRefreshRequest)];
+    self.tableView.mj_footer = [LRRRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(orderListLoadRequest)];
+    [self.tableView.mj_header beginRefreshing];
+}
 
+#pragma mark - 获取数据
+- (void)orderListRefreshRequest
+{
+    self.pageNum = 1;
+    [self orderListRequest:YES];
+}
+
+- (void)orderListLoadRequest
+{
+    [self orderListRequest:NO];
+}
+
+- (void)orderListRequest:(BOOL)refresh
+{
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -194,7 +213,7 @@
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, kMainScreenWidth, kMainScreenHeight-kNaviHeight-45) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, LRRDropDownHeight, kMainScreenWidth, kMainScreenHeight-kNaviHeight-LRRDropDownHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = LRRViewBackgroundColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView registerNib:[UINib nibWithNibName:@"LRREmployingViewCell" bundle:nil] forCellReuseIdentifier:[LRREmployingViewCell employIdentifier]];

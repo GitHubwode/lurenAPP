@@ -10,9 +10,18 @@
 
 @class SDCycleScrollView;
 
-@interface LRRHomeHeaderView : UIView
+@protocol LRRHomeFirstCollectionReusableViewDelegate <NSObject>
+
+- (void)selectedFirstButtonClick:(UIButton *)sender;
+
+@end
+
+@interface LRRHomeHeaderView : UICollectionReusableView
 
 @property (nonatomic, strong) SDCycleScrollView *cycleView;
+@property (nonatomic, weak) id <LRRHomeFirstCollectionReusableViewDelegate> firstDelegate;
 
+
++ (NSString *)identifier;
 
 @end

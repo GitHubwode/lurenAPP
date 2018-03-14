@@ -11,8 +11,7 @@
 @interface LRRLookTableViewCell ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *line1View;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *line2View;
-
-@property (weak, nonatomic) IBOutlet UIButton *statusButton;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *singleLabel;
@@ -31,8 +30,6 @@ static NSString *lookTableViewCell = @"lookTableViewCell";
     
     self.line1View.constant = LRROnePixelHeight;
     self.line2View.constant = LRROnePixelHeight;
-    self.statusButton.layer.masksToBounds = YES;
-    self.statusButton.layer.cornerRadius = 5.f;
 }
 
 + (NSString *)lookIdentifier

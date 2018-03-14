@@ -218,5 +218,34 @@
     return endString;
 }
 
+/** 计算缓存大小 */
+- (unsigned long long)fileSize
+{
+    unsigned long long size = 0;
+    
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    BOOL isDirectory = NO;
+    
+    BOOL isExist = [mgr fileExistsAtPath:self isDirectory:&isDirectory];
+    
+    if(!isExist) return size;
+    
+    if (isExist) {
+        NSDirectoryEnumerator *enumerator = [mgr enumeratorAtPath:self];
+        for (NSString *subPath in enumerator) {
+            
+            NSString *fullPath = [self stringByAppendingPathComponent:subPath];
+            
+            size +=[mgr attributesOfItemAtPath:fullPath error:nil].fileSize;
+            
+        }
+    }else
+    {
+        size = [mgr attributesOfItemAtPath:self error:nil].fileSize;
+    }
+    
+    return size;
+}
+
 
 @end

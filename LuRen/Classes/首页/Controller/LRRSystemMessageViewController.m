@@ -1,16 +1,16 @@
 //
-//  LRRMyOrderListViewController.m
+//  LRRSystemMessageViewController.m
 //  LuRen
 //
-//  Created by Ding on 2018/3/5.
+//  Created by Ding on 2018/3/14.
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRMyOrderListViewController.h"
-#import "LRRLookTableViewCell.h"
+#import "LRRSystemMessageViewController.h"
+#import "LRRSystemMessageViewCell.h"
+#import "LRRHomeReportViewController.h"
 
-
-@interface LRRMyOrderListViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LRRSystemMessageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
@@ -18,15 +18,15 @@
 
 @end
 
-@implementation LRRMyOrderListViewController
+@implementation LRRSystemMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"系统消息";
     [self.view addSubview:self.tableView];
-
     self.tableView.mj_header = [LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(orderListRefreshRequest)];
     self.tableView.mj_footer = [LRRRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(orderListLoadRequest)];
-    [self.tableView.mj_header beginRefreshing];
+//    [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - 获取数据
@@ -46,21 +46,14 @@
     
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *view = [UIView new];
-    view.backgroundColor = LRRViewBackgroundColor;
-    return view;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10.f;
+    return 0.001f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.001f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -69,13 +62,16 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LRRLookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRLookTableViewCell lookIdentifier] forIndexPath:indexPath];
+    LRRSystemMessageViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRSystemMessageViewCell systemIdentifier] forIndexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRLog(@"点击");
+    LRRHomeReportViewController *reportVC = [[LRRHomeReportViewController alloc]init];
+    [self.navigationController pushViewController:reportVC animated:YES];
+   
 }
 
 #pragma mark - 懒加载
@@ -84,9 +80,11 @@
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight-kNaviHeight) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = LRRViewBackgroundColor;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNib:[UINib nibWithNibName:@"LRRLookTableViewCell" bundle:nil] forCellReuseIdentifier:[LRRLookTableViewCell lookIdentifier]];
-        _tableView.rowHeight = 130.f;
+        [_tableView registerNib:[UINib nibWithNibName:@"LRRSystemMessageViewCell" bundle:nil] forCellReuseIdentifier:[LRRSystemMessageViewCell systemIdentifier]];
+        _tableView.rowHeight = 143.f;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -98,19 +96,13 @@
 {
     LRRLogFunc;
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

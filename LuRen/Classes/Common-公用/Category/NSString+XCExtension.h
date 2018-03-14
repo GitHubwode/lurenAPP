@@ -52,4 +52,6 @@
 
 - (NSString*)encodeString;
 -(NSString *)decodeString;
+/** 计算缓存大小 */
+- (unsigned long long)fileSize;
 @end

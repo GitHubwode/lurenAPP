@@ -46,6 +46,8 @@ extern NSString *const LRRChooseIdentityNotifacation;
 extern CGFloat const LRRLeftPadding;
 /** 通用的右间距值 */
 extern CGFloat const LRRRightPadding;
+/** 通用的标签栏选择的高度 */
+extern CGFloat const LRRDropDownHeight;
 
 /** 通用的Item高度 */
 extern CGFloat const LRRItemHeight;

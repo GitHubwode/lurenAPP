@@ -49,6 +49,14 @@
 		1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD73204F993D006BB3BD /* LRRServiceCenterHeaderView.m */; };
 		1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1832AD76204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m */; };
 		1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1832AD77204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib */; };
+		18486C282058CE260009519E /* LRRSettingClearCacheViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C272058CE260009519E /* LRRSettingClearCacheViewCell.m */; };
+		18486C2B2058E44E0009519E /* LRROrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C2A2058E44E0009519E /* LRROrderModel.m */; };
+		18486C2E2058FDF80009519E /* LRRSystemMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C2D2058FDF80009519E /* LRRSystemMessageViewController.m */; };
+		18486C322058FEA00009519E /* LRRSystemMessageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C302058FEA00009519E /* LRRSystemMessageViewCell.m */; };
+		18486C332058FEA00009519E /* LRRSystemMessageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18486C312058FEA00009519E /* LRRSystemMessageViewCell.xib */; };
+		18486C36205908560009519E /* LRRHomeReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C35205908560009519E /* LRRHomeReportViewController.m */; };
+		18486C3A205908980009519E /* LRRHomeReportViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18486C38205908980009519E /* LRRHomeReportViewCell.m */; };
+		18486C3B205908980009519E /* LRRHomeReportViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18486C39205908980009519E /* LRRHomeReportViewCell.xib */; };
 		1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851582C2051216E0006E863 /* LRRBirthdayField.m */; };
 		18515831205122640006E863 /* LRRBirthdayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851582F205122640006E863 /* LRRBirthdayCell.m */; };
 		18515832205122640006E863 /* LRRBirthdayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18515830205122640006E863 /* LRRBirthdayCell.xib */; };
@@ -251,6 +259,20 @@
 		1832AD75204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLRRServiceCenterHeaderCell.h; sourceTree = "<group>"; };
 		1832AD76204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLRRServiceCenterHeaderCell.m; sourceTree = "<group>"; };
 		1832AD77204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRLRRServiceCenterHeaderCell.xib; sourceTree = "<group>"; };
+		18486C262058CE260009519E /* LRRSettingClearCacheViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSettingClearCacheViewCell.h; sourceTree = "<group>"; };
+		18486C272058CE260009519E /* LRRSettingClearCacheViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSettingClearCacheViewCell.m; sourceTree = "<group>"; };
+		18486C292058E44E0009519E /* LRROrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRROrderModel.h; sourceTree = "<group>"; };
+		18486C2A2058E44E0009519E /* LRROrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRROrderModel.m; sourceTree = "<group>"; };
+		18486C2C2058FDF80009519E /* LRRSystemMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSystemMessageViewController.h; sourceTree = "<group>"; };
+		18486C2D2058FDF80009519E /* LRRSystemMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSystemMessageViewController.m; sourceTree = "<group>"; };
+		18486C2F2058FEA00009519E /* LRRSystemMessageViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSystemMessageViewCell.h; sourceTree = "<group>"; };
+		18486C302058FEA00009519E /* LRRSystemMessageViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSystemMessageViewCell.m; sourceTree = "<group>"; };
+		18486C312058FEA00009519E /* LRRSystemMessageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRSystemMessageViewCell.xib; sourceTree = "<group>"; };
+		18486C34205908560009519E /* LRRHomeReportViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeReportViewController.h; sourceTree = "<group>"; };
+		18486C35205908560009519E /* LRRHomeReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeReportViewController.m; sourceTree = "<group>"; };
+		18486C37205908980009519E /* LRRHomeReportViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeReportViewCell.h; sourceTree = "<group>"; };
+		18486C38205908980009519E /* LRRHomeReportViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeReportViewCell.m; sourceTree = "<group>"; };
+		18486C39205908980009519E /* LRRHomeReportViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRHomeReportViewCell.xib; sourceTree = "<group>"; };
 		1851582B2051216E0006E863 /* LRRBirthdayField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBirthdayField.h; sourceTree = "<group>"; };
 		1851582C2051216E0006E863 /* LRRBirthdayField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRBirthdayField.m; sourceTree = "<group>"; };
 		1851582E205122640006E863 /* LRRBirthdayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRBirthdayCell.h; sourceTree = "<group>"; };
@@ -557,6 +579,8 @@
 				18A76654204FBE5D00F2F063 /* LRRUserDetailedViewCell.h */,
 				18A76655204FBE5D00F2F063 /* LRRUserDetailedViewCell.m */,
 				18A76656204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib */,
+				18486C262058CE260009519E /* LRRSettingClearCacheViewCell.h */,
+				18486C272058CE260009519E /* LRRSettingClearCacheViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +600,10 @@
 			children = (
 				180F885D200F2E08002A9B0C /* LRRHomeViewController.h */,
 				180F885E200F2E08002A9B0C /* LRRHomeViewController.m */,
+				18486C2C2058FDF80009519E /* LRRSystemMessageViewController.h */,
+				18486C2D2058FDF80009519E /* LRRSystemMessageViewController.m */,
+				18486C34205908560009519E /* LRRHomeReportViewController.h */,
+				18486C35205908560009519E /* LRRHomeReportViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,6 +625,12 @@
 				183192182011A3630032B8C7 /* LRRHomeCollectionViewCell.h */,
 				183192192011A3630032B8C7 /* LRRHomeCollectionViewCell.m */,
 				1831921A2011A3630032B8C7 /* LRRHomeCollectionViewCell.xib */,
+				18486C2F2058FEA00009519E /* LRRSystemMessageViewCell.h */,
+				18486C302058FEA00009519E /* LRRSystemMessageViewCell.m */,
+				18486C312058FEA00009519E /* LRRSystemMessageViewCell.xib */,
+				18486C37205908980009519E /* LRRHomeReportViewCell.h */,
+				18486C38205908980009519E /* LRRHomeReportViewCell.m */,
+				18486C39205908980009519E /* LRRHomeReportViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -640,6 +674,8 @@
 		180642C4200DF5F100B20130 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18486C292058E44E0009519E /* LRROrderModel.h */,
+				18486C2A2058E44E0009519E /* LRROrderModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1310,6 +1346,7 @@
 				1851585020522FCD0006E863 /* NationalList.plist in Resources */,
 				1851585120522FCD0006E863 /* CityList.plist in Resources */,
 				1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */,
+				18486C3B205908980009519E /* LRRHomeReportViewCell.xib in Resources */,
 				1832AD79204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.xib in Resources */,
 				18A7664D204FA5D300F2F063 /* LRRAboutMeViewController.xib in Resources */,
 				185158E6205639EB0006E863 /* LRRPublishPackList.plist in Resources */,
@@ -1327,6 +1364,7 @@
 				1851583E2051310E0006E863 /* LRRCityViewCell.xib in Resources */,
 				1851587720523F170006E863 /* LRRNameViewCell.xib in Resources */,
 				18515832205122640006E863 /* LRRBirthdayCell.xib in Resources */,
+				18486C332058FEA00009519E /* LRRSystemMessageViewCell.xib in Resources */,
 				1832AD71204F9787006BB3BD /* ServiceCenter.plist in Resources */,
 				18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */,
 				18A76658204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib in Resources */,
@@ -1441,6 +1479,7 @@
 				185159232057CBF20006E863 /* LRRBasePublishTabBarController.m in Sources */,
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
+				18486C2E2058FDF80009519E /* LRRSystemMessageViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
 				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
 				1851589B2056277A0006E863 /* LRRDefineButton.m in Sources */,
@@ -1463,6 +1502,7 @@
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				1851583920512F4E0006E863 /* LRRCityField.m in Sources */,
+				18486C282058CE260009519E /* LRRSettingClearCacheViewCell.m in Sources */,
 				1851590520566E690006E863 /* LRRPublishFooterView.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
 				18515841205228100006E863 /* LRRNationalField.m in Sources */,
@@ -1474,6 +1514,7 @@
 				1851586C205235AB0006E863 /* LRRAgeViewCell.m in Sources */,
 				18A7665B204FC93400F2F063 /* UILabel+LRRExtension.m in Sources */,
 				1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */,
+				18486C3A205908980009519E /* LRRHomeReportViewCell.m in Sources */,
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
 				18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */,
@@ -1498,11 +1539,14 @@
 				1855EAD7204D357C0039405B /* LRRMyBaseOrderViewController.m in Sources */,
 				1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */,
 				1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */,
+				18486C322058FEA00009519E /* LRRSystemMessageViewCell.m in Sources */,
 				18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */,
 				1832AD6F204F9712006BB3BD /* LRRServiceCenterModel.m in Sources */,
+				18486C2B2058E44E0009519E /* LRROrderModel.m in Sources */,
 				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
 				1851591A2057A9880006E863 /* MBProgressHUD+LRRExtension.m in Sources */,
+				18486C36205908560009519E /* LRRHomeReportViewController.m in Sources */,
 				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
 				18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */,
 				18515901205667AB0006E863 /* LRRPublishLiveViewCell.m in Sources */,

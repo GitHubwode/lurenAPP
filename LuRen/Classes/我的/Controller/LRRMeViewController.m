@@ -13,6 +13,7 @@
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "LRRUserDetailedViewController.h"
 #import "LRRMyEditViewController.h"
+#import "LRRRealNameViewController.h"
 
 @interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate,LRRHeaderViewDelegate>
 

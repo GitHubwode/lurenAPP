@@ -10,17 +10,17 @@
 #import "LRRHomeHeaderView.h"
 #import "LRRHomeCollectionViewCell.h"
 #import "LRRHomeCollectionReusableView.h"
-
+#import "LRRUserDetailedViewController.h"
+#import "LRRSystemMessageViewController.h"
 //测试
 #import "LRRLoginViewController.h"
 
-static CGFloat headerHeight = 182.f;
+static CGFloat headerHeight = 232.f;
 
-@interface LRRHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,LRRHomeCollectionReusableViewDelegate>
+@interface LRRHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,LRRHomeCollectionReusableViewDelegate,LRRHomeFirstCollectionReusableViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *datasource;
-@property (nonatomic, strong) LRRHomeHeaderView *headerView;
 
 @end
 
@@ -32,7 +32,16 @@ static CGFloat headerHeight = 182.f;
     [self addMiddleNaviView];
     //创建导航栏按钮
     [self addNavi];
+    
+    self.collectionView.mj_header =[LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(dropDownRefreshRequest)];
+    [self.collectionView.mj_header beginRefreshing];
 }
+
+- (void)dropDownRefreshRequest
+{
+    
+}
+
 
 - (void)addMiddleNaviView
 {
@@ -55,6 +64,18 @@ static CGFloat headerHeight = 182.f;
     return 2;
 }
 
+// 设置section头视图的参考大小，与tableheaderview类似
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
+referenceSizeForHeaderInSection:(NSInteger)section {
+    if(section == 0){
+        return CGSizeMake(kMainScreenWidth, headerHeight);
+    }else if(section == 1){
+        return CGSizeMake(kMainScreenWidth, 50);
+    }else{
+        return CGSizeZero;
+    }
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[LRRHomeCollectionViewCell homeCollectionIdentifier] forIndexPath:indexPath];
@@ -64,27 +85,36 @@ static CGFloat headerHeight = 182.f;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRLog(@"%ld",indexPath.item);
+    LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+    [self.navigationController pushViewController:userVC animated:YES];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     if (kind == UICollectionElementKindSectionHeader) {
         
-        LRRHomeCollectionReusableView *headerSection = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeCollectionReusableView identifier] forIndexPath:indexPath];
-        
-//        NSMutableArray *imgUrl = [NSMutableArray array];
-//        [self.imageArray enumerateObjectsUsingBlock:^(SNHStudyCycleModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            [imgUrl addObject:obj.imgUrl];
-//        }];
-        
-        headerSection.delegate = self;
-//        header.cycleScrollView.imageURLStringsGroup = nil;
-//        header.cycleScrollView.imageURLStringsGroup = imgUrl;
-//
-//        if (self.goodsName.length) header.titleLabel.text = self.goodsName;
-//        if (self.categoryDescription.length) header.subTitleLabel.text = self.categoryDescription;
-        
-        return headerSection;
+        if (indexPath.section == 1) {
+            LRRHomeCollectionReusableView *headerSection = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeCollectionReusableView identifier] forIndexPath:indexPath];
+            
+            //        NSMutableArray *imgUrl = [NSMutableArray array];
+            //        [self.imageArray enumerateObjectsUsingBlock:^(SNHStudyCycleModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            //            [imgUrl addObject:obj.imgUrl];
+            //        }];
+            
+            headerSection.delegate = self;
+            //        header.cycleScrollView.imageURLStringsGroup = nil;
+            //        header.cycleScrollView.imageURLStringsGroup = imgUrl;
+            //
+            //        if (self.goodsName.length) header.titleLabel.text = self.goodsName;
+            //        if (self.categoryDescription.length) header.subTitleLabel.text = self.categoryDescription;
+            
+            return headerSection;
+        }else{
+            LRRHomeHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeHeaderView identifier] forIndexPath:indexPath];
+            headerView.firstDelegate = self;
+            return headerView;
+        }
+
     }else{
         return nil;
     }
@@ -101,8 +131,10 @@ static CGFloat headerHeight = 182.f;
 - (void)messageAction
 {
     LRRLog(@"点击信息");
-    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
-    [self presentViewController:loginVC animated:YES completion:nil];
+//    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
+//    [self presentViewController:loginVC animated:YES completion:nil];
+    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
+    [self.navigationController pushViewController:systemVC animated:YES];
 }
 - (void)locationAction
 {
@@ -112,6 +144,16 @@ static CGFloat headerHeight = 182.f;
 - (void)selectedButtonClick:(UIButton *)sender
 {
     LRRLog(@"%@",sender);
+     LRRLog(@"优秀工人更多");
+}
+
+- (void)selectedFirstButtonClick:(UIButton *)sender
+{
+    if (sender.tag == 1000) {
+        LRRLog(@"新闻更多");
+    }else{
+        LRRLog(@"优秀老板更多");
+    }
 }
 
 
@@ -121,30 +163,24 @@ static CGFloat headerHeight = 182.f;
 {
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-        flowLayout.headerReferenceSize = CGSizeMake(kMainScreenWidth, 50);
+//        flowLayout.headerReferenceSize = CGSizeMake(kMainScreenWidth, 50);
         _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, kMainScreenHeight-kNaviHeight) collectionViewLayout:flowLayout];
+        _collectionView.alwaysBounceVertical = YES;
         flowLayout.minimumLineSpacing = 20;
         flowLayout.minimumInteritemSpacing = 10;
         flowLayout.itemSize = CGSizeMake((kMainScreenWidth - 40-72)/4, LRRAdaptedHeight(130));
         flowLayout.sectionInset = UIEdgeInsetsMake(5, 20, 5, 20);
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LRRHomeCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:[LRRHomeCollectionViewCell homeCollectionIdentifier]];
          [_collectionView registerClass:[LRRHomeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeCollectionReusableView identifier]];
-        _collectionView.contentInset = UIEdgeInsetsMake(headerHeight, 0, 0, 0);
+        
+        [_collectionView registerClass:[LRRHomeHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeHeaderView identifier]];
+        _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _collectionView.backgroundColor = [UIColor whiteColor];
-        [_collectionView addSubview:self.headerView];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.showsVerticalScrollIndicator = NO;
     }
     return _collectionView;
-}
-
-- (LRRHomeHeaderView *)headerView
-{
-    if (!_headerView) {
-        _headerView = [[LRRHomeHeaderView alloc]initWithFrame:CGRectMake(0, -headerHeight, kMainScreenWidth,headerHeight)];
-    }
-    return _headerView;
 }
 
 - (void)dealloc
