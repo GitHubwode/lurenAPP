@@ -144,7 +144,7 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 - (void)selectedButtonClick:(UIButton *)sender
 {
     LRRLog(@"%@",sender);
-     LRRLog(@"优秀工人更多");
+    LRRLog(@"优秀工人更多");
 }
 
 - (void)selectedFirstButtonClick:(UIButton *)sender
@@ -172,7 +172,6 @@ referenceSizeForHeaderInSection:(NSInteger)section {
         flowLayout.sectionInset = UIEdgeInsetsMake(5, 20, 5, 20);
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([LRRHomeCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:[LRRHomeCollectionViewCell homeCollectionIdentifier]];
          [_collectionView registerClass:[LRRHomeCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeCollectionReusableView identifier]];
-        
         [_collectionView registerClass:[LRRHomeHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeHeaderView identifier]];
         _collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         _collectionView.backgroundColor = [UIColor whiteColor];

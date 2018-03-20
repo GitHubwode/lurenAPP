@@ -10,6 +10,7 @@
 #import "LRRUserDetailedView.h"
 #import "LRRUserDetailedViewCell.h"
 #import "LRRFeedbackViewController.h"
+#import "LRRMyEditViewController.h"
 
 @interface LRRUserDetailedViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -40,8 +41,11 @@
 - (void)messageAction
 {
     LRRLog(@"举报");
-    LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
-    [self.navigationController pushViewController:feedVC animated:YES];
+//    LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
+//    [self.navigationController pushViewController:feedVC animated:YES];
+    
+    LRRMyEditViewController *editVC = [[LRRMyEditViewController alloc]init];
+    [self.navigationController pushViewController:editVC animated:YES];
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

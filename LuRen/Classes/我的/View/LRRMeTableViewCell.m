@@ -11,9 +11,9 @@
 
 @interface LRRMeTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *statusImageVIew;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lineHeight;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end
 
@@ -35,8 +35,8 @@ NSString *meTableViewCell = @"meTableViewCell";
     if (item.isTitle == NO) {
         self.subTitleLabel.text = item.subTitleString;
     }
-    if (item.isStatus == NO) {
-       self.statusImageVIew.image = [UIImage imageNamed:item.statusString];
+    if (item.isStatus == YES) {
+        self.statusLabel.hidden = YES;
     }
 }
 

@@ -39,6 +39,18 @@
 
 - (void)setUpSubViws{
     
+    UIView *bgView = [UIView new];
+    bgView.backgroundColor = UIColorHex(0xffffff);
+    [self.view addSubview:bgView];
+    
+    weakSelf(self);
+    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakself.view).with.offset(15.f);
+        make.left.equalTo(weakself.view).with.offset(LRRLeftPadding);
+        make.right.equalTo(weakself.view).with.offset(-LRRRightPadding);
+        make.height.mas_equalTo(200.f);
+    }];
+    
     _textView = [[UITextView alloc] init];
     _textView.textColor = LRRTimeTextColor;
     _textView.tintColor = LRROrangeThemeColor;
@@ -48,18 +60,17 @@
     _textView.showsVerticalScrollIndicator = NO;
     _textView.showsHorizontalScrollIndicator = NO;
     _textView.returnKeyType = UIReturnKeyDone;
-    _textView.placeholder = @"您的意见对我们很重要";
+    _textView.placeholder = @" 您的意见对我们很重要";
     _textView.placeholderColor = LRRTimeTextColor;
     _textView.textContainer.lineFragmentPadding = 0.f;
     _textView.textContainerInset = UIEdgeInsetsZero;
-    [self.view addSubview:_textView];
+    [bgView addSubview:_textView];
     
-    weakSelf(self);
     [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakself.view).with.offset(15.f);
-        make.left.equalTo(weakself.view).with.offset(LRRLeftPadding);
-        make.right.equalTo(weakself.view).with.offset(-LRRRightPadding);
-        make.height.mas_equalTo(200.f);
+        make.top.equalTo(bgView.mas_top).offset(5);
+        make.left.equalTo(bgView.mas_left).offset(5);
+        make.right.equalTo(bgView.mas_right).offset(-5);
+        make.height.mas_equalTo(190.f);
     }];
     
     [self.view addSubview:self.submitButton];
