@@ -15,7 +15,8 @@ extern NSString * const LRRH5BasicURL;
 
 extern NSString * const LRRBasicURL;
 
-
+/** 测试环境环境储存后台分配的aesKey的key */
+extern NSString * const LRRAesKey;
 /** Itunes上的地址 */
 extern NSString * const LRRAppItunesURL;
 /** 储存后台分配的deviced的key */

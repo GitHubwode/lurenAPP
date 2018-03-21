@@ -22,6 +22,7 @@
 #import "MJRefresh.h"
 #import "LRRRefreshHeader.h"
 #import "LRRRefreshFooter.h"
+#import "LRRUserManager.h"
 
 #import "UIColor+DLExtension.h"
 #import "NSString+XCExtension.h"

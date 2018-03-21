@@ -51,6 +51,14 @@
              ] lowercaseString];
 }
 
+//获取当前时间戳
++ (NSString *)publishSetUpNowTime
+{
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[dat timeIntervalSince1970]*1000;
+    NSString *timeString = [NSString stringWithFormat:@"%f", a];//转为字符型
+    return timeString;
+}
 
 
 - (NSString *)base64_encode {
@@ -245,6 +253,17 @@
     }
     
     return size;
+}
+
+/** 隐藏电话号码中间的位数 */
++ (NSString *)numberSuitScanf:(NSString *)number
+{
+    if (number.length == 0 || number == nil) {
+        return @"";
+    }else{
+        NSString *numberString = [number stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
+        return numberString;
+    }
 }
 
 

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804327E206226CC006AE7ED /* LRRHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */; };
+		1804328220622990006AE7ED /* LRRUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804328120622990006AE7ED /* LRRUserManager.m */; };
+		1804328520622B69006AE7ED /* LRRUserObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804328420622B69006AE7ED /* LRRUserObj.m */; };
+		1804328A20622E7A006AE7ED /* LRRLoginRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804328920622E7A006AE7ED /* LRRLoginRequestManager.m */; };
+		1804328D20622EAD006AE7ED /* LRRLoginParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1804328C20622EAD006AE7ED /* LRRLoginParam.m */; };
 		180F8855200EE71B002A9B0C /* LRRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8854200EE71B002A9B0C /* LRRConst.m */; };
 		180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8858200EF855002A9B0C /* UIColor+DLExtension.m */; };
 		180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F885B200EF97A002A9B0C /* NSString+XCExtension.m */; };
@@ -185,6 +190,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1804327C206226CC006AE7ED /* LRRHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHTTPSessionManager.h; sourceTree = "<group>"; };
+		1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHTTPSessionManager.m; sourceTree = "<group>"; };
+		1804328020622990006AE7ED /* LRRUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserManager.h; sourceTree = "<group>"; };
+		1804328120622990006AE7ED /* LRRUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserManager.m; sourceTree = "<group>"; };
+		1804328320622B69006AE7ED /* LRRUserObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserObj.h; sourceTree = "<group>"; };
+		1804328420622B69006AE7ED /* LRRUserObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserObj.m; sourceTree = "<group>"; };
+		1804328820622E7A006AE7ED /* LRRLoginRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLoginRequestManager.h; sourceTree = "<group>"; };
+		1804328920622E7A006AE7ED /* LRRLoginRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLoginRequestManager.m; sourceTree = "<group>"; };
+		1804328B20622EAD006AE7ED /* LRRLoginParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRLoginParam.h; sourceTree = "<group>"; };
+		1804328C20622EAD006AE7ED /* LRRLoginParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRLoginParam.m; sourceTree = "<group>"; };
 		180F8853200EE71B002A9B0C /* LRRConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRConst.h; sourceTree = "<group>"; };
 		180F8854200EE71B002A9B0C /* LRRConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRConst.m; sourceTree = "<group>"; };
 		180F8857200EF855002A9B0C /* UIColor+DLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DLExtension.h"; sourceTree = "<group>"; };
@@ -487,6 +502,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1804327F2062297C006AE7ED /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1804328020622990006AE7ED /* LRRUserManager.h */,
+				1804328120622990006AE7ED /* LRRUserManager.m */,
+				1804328320622B69006AE7ED /* LRRUserObj.h */,
+				1804328420622B69006AE7ED /* LRRUserObj.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		1804328620622E56006AE7ED /* Login-登录网络 */ = {
+			isa = PBXGroup;
+			children = (
+				1804328720622E56006AE7ED /* Model */,
+				1804328820622E7A006AE7ED /* LRRLoginRequestManager.h */,
+				1804328920622E7A006AE7ED /* LRRLoginRequestManager.m */,
+			);
+			path = "Login-登录网络";
+			sourceTree = "<group>";
+		};
+		1804328720622E56006AE7ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1804328B20622EAD006AE7ED /* LRRLoginParam.h */,
+				1804328C20622EAD006AE7ED /* LRRLoginParam.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		180642B8200DF5F100B20130 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,6 +683,7 @@
 		180642C1200DF5F100B20130 /* Common-公用 */ = {
 			isa = PBXGroup;
 			children = (
+				1804327F2062297C006AE7ED /* Tool */,
 				18DC28792050DBA100D4B451 /* View */,
 				1855EACA204D2DA40039405B /* Lib */,
 				180F8856200EF7D3002A9B0C /* Category */,
@@ -844,6 +890,9 @@
 		180642D5200DF5F100B20130 /* Network-网络 */ = {
 			isa = PBXGroup;
 			children = (
+				1804327C206226CC006AE7ED /* LRRHTTPSessionManager.h */,
+				1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */,
+				1804328620622E56006AE7ED /* Login-登录网络 */,
 			);
 			path = "Network-网络";
 			sourceTree = "<group>";
@@ -1460,6 +1509,7 @@
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
 				18FC9403200C5F7000269FAB /* main.m in Sources */,
 				18515863205235270006E863 /* LRRTeamField.m in Sources */,
+				1804328A20622E7A006AE7ED /* LRRLoginRequestManager.m in Sources */,
 				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
 				18515898205625370006E863 /* LRRSlideSwitchView.m in Sources */,
@@ -1482,6 +1532,7 @@
 				18486C2E2058FDF80009519E /* LRRSystemMessageViewController.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
 				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
+				1804327E206226CC006AE7ED /* LRRHTTPSessionManager.m in Sources */,
 				1851589B2056277A0006E863 /* LRRDefineButton.m in Sources */,
 				18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
@@ -1491,6 +1542,7 @@
 				18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */,
 				1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */,
 				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
+				1804328D20622EAD006AE7ED /* LRRLoginParam.m in Sources */,
 				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
 				185158EA2056460A0006E863 /* LRRPublishWorkViewCell.m in Sources */,
 				18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */,
@@ -1518,6 +1570,7 @@
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
 				18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */,
+				1804328220622990006AE7ED /* LRRUserManager.m in Sources */,
 				1851591D2057AC7E0006E863 /* LRRRefreshHeader.m in Sources */,
 				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
 				1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */,
@@ -1548,6 +1601,7 @@
 				1851591A2057A9880006E863 /* MBProgressHUD+LRRExtension.m in Sources */,
 				18486C36205908560009519E /* LRRHomeReportViewController.m in Sources */,
 				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
+				1804328520622B69006AE7ED /* LRRUserObj.m in Sources */,
 				18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */,
 				18515901205667AB0006E863 /* LRRPublishLiveViewCell.m in Sources */,
 				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,

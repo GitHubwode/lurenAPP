@@ -21,10 +21,18 @@ NSString * const LRRBasicURL = @"https://service.sunvhui.net";
 NSString * const LRRH5BasicURL = @"https://h5.sunvhui.net/h5";
 #endif
 //
+
+/** 正式环境储存后台分配的aesKey的key */
+//NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
+
+/** 测试环境环境储存后台分配的aesKey的key */
+NSString * const LRRAesKey = @"I0*!TwulnX0f1pyd#Kbw$2Pe4AUerBXlylQPl5^RBG0wITGBC#VN5fZZ8n@3D#I9";
+
 /** Itunes上的地址 */
 NSString * const LRRAppItunesURL = @"https://itunes.apple.com/app/id1176374492";
 /** 储存后台分配的deviced的key */
-NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";;
+NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";
+
 /** 手机号码最大长度 */
 NSUInteger const LRRCellphoneMaxLength = 11;
 /** 验证码最大长度 */

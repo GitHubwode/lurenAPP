@@ -19,7 +19,9 @@
                 <outlet property="bgImageView" destination="JFo-jA-63m" id="p6g-83-536"/>
                 <outlet property="bgView" destination="cZG-G9-aZA" id="IRZ-03-6mE"/>
                 <outlet property="codeTextField" destination="gHD-xA-pVn" id="IEd-BD-JLd"/>
+                <outlet property="downTimeBtn" destination="JZA-gV-Nmk" id="L70-y3-DRc"/>
                 <outlet property="downTimeButton" destination="JZA-gV-Nmk" id="gOj-cF-KKF"/>
+                <outlet property="loginButton" destination="p66-hr-Wxy" id="V0K-5g-1zX"/>
                 <outlet property="phoneTextFiled" destination="n2m-Re-oXS" id="rQK-LM-IeI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -132,7 +134,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkf-L8-hTA">
                                     <rect key="frame" x="0.0" y="142" width="265" height="49"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p66-hr-Wxy">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p66-hr-Wxy">
                                             <rect key="frame" x="0.0" y="0.0" width="265" height="49"/>
                                             <state key="normal" title="登录">
                                                 <color key="titleColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

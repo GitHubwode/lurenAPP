@@ -35,6 +35,11 @@
 
 /** 判断是不是手机号码 */
 - (BOOL)isPhoneNumer;
+//获取当前时间戳
++ (NSString *)publishSetUpNowTime;
+
+/** 隐藏电话号码中间的位数 */
++ (NSString *)numberSuitScanf:(NSString *)number;
 
 - (NSString *)stringByTrim;
 + (NSString *)stringWithUTF32Char:(UTF32Char)char32;

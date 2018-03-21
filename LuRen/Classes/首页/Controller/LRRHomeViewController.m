@@ -131,10 +131,10 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 - (void)messageAction
 {
     LRRLog(@"点击信息");
-//    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
-//    [self presentViewController:loginVC animated:YES completion:nil];
-    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
-    [self.navigationController pushViewController:systemVC animated:YES];
+    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
+    [self presentViewController:loginVC animated:YES completion:nil];
+//    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
+//    [self.navigationController pushViewController:systemVC animated:YES];
 }
 - (void)locationAction
 {
