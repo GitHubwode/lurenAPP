@@ -59,3 +59,16 @@ typedef NS_ENUM(NSUInteger, CodeType) {
                           Mode:(NSString *)model;
 
 @end
+
+@interface LRRRegisterParam : NSObject
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *type; //用户类型
+
+- (instancetype)initWithPhone:(NSString *)phone
+                         Type:(NSString *)type;
+
++ (instancetype)paramWithPhone:(NSString *)phone
+                          Type:(NSString *)type;
+
+@end
+

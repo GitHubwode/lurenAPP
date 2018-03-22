@@ -10,6 +10,8 @@
 #import "NSBundle+LRRExtension.h"
 #import "LRRBaseTabBarController.h"
 #import "LRRChooseIDViewController.h"
+#import "LRRBaseTabBarController.h"
+#import "LRRBasePublishTabBarController.h"
 
 static NSString * const LRRLastVersionKey = @"LRRLastVersion";
 
@@ -17,30 +19,44 @@ static NSString * const LRRLastVersionKey = @"LRRLastVersion";
 
 - (void)setUpRootViewControllver
 {
-    //定义一个窗口
-    UIViewController *rootVC = [[UITabBarController alloc]init];
-    self.window.rootViewController = rootVC;
-    
-    //获取当前的版本号
-    NSString *curVersion = [NSBundle currentVersion];
-    
-    //获取上一次版本号
-    NSString *oldVersion = [NSUserDefaults objectForKey:LRRLastVersionKey];
+    if ([LRRUserManager sharedUserManager].logined) {
+        //首次存取角色
+        LRRLog(@"角色:%@",[NSUserDefaults objectForKey:LRRUserType]);
+        NSString *IdString = [NSUserDefaults objectForKey:LRRUserType];
+        if ([IdString isEqualToString:@"WORKER"]) {
+            LRRBaseTabBarController *rootVC = [[LRRBaseTabBarController alloc]init];
+            self.window.rootViewController = rootVC;
+        }else{
+            LRRBasePublishTabBarController *rootVC = [[LRRBasePublishTabBarController alloc]init];
+            self.window.rootViewController = rootVC;
+        }
 
-    if ([curVersion isEqualToString:oldVersion] == NO) {
-        [NSUserDefaults setObject:curVersion forKey:LRRLastVersionKey];
-    
-        LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
-        newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
-        [rootVC.view addSubview:newFeatureVc.view];
-        [rootVC addChildViewController:newFeatureVc];
     }else{
-        LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
-        newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
-        [rootVC.view addSubview:newFeatureVc.view];
-        [rootVC addChildViewController:newFeatureVc];
+    
+        //定义一个窗口
+        UIViewController *rootVC = [[UITabBarController alloc]init];
+        self.window.rootViewController = rootVC;
+        
+        //获取当前的版本号
+        NSString *curVersion = [NSBundle currentVersion];
+        
+        //获取上一次版本号
+        NSString *oldVersion = [NSUserDefaults objectForKey:LRRLastVersionKey];
+        
+        if ([curVersion isEqualToString:oldVersion] == NO) {
+            [NSUserDefaults setObject:curVersion forKey:LRRLastVersionKey];
+            
+            LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
+            newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
+            [rootVC.view addSubview:newFeatureVc.view];
+            [rootVC addChildViewController:newFeatureVc];
+        }else{
+            LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
+            newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
+            [rootVC.view addSubview:newFeatureVc.view];
+            [rootVC addChildViewController:newFeatureVc];
+        }
     }
-
 }
 
 

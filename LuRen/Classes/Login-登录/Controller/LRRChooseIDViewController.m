@@ -28,16 +28,37 @@
     
 }
 - (IBAction)chooseWorkerButtonClick:(UIButton *)sender {
-    LRRBaseTabBarController *rootVC = [[LRRBaseTabBarController alloc]init];
-    self.view.window.rootViewController = rootVC;
+
+    [self jumpLoginViewIdentity:@"WORKER"];
 }
 - (IBAction)chooseBossButtonClick:(UIButton *)sender {
-    LRRBasePublishTabBarController *rootVC = [[LRRBasePublishTabBarController alloc]init];
-    self.view.window.rootViewController = rootVC;
+
+    [self jumpLoginViewIdentity:@"BOSS"];
+
 }
-- (IBAction)cancelButtonClick:(UIButton *)sender {
+
+- (void)jumpLoginViewIdentity:(NSString *)IdString
+{
+    [NSUserDefaults removeObjectForKey:LRRUserType];
+    //首次存取角色
+    [NSUserDefaults setObject:IdString forKey:LRRUserType];
+    LRRLog(@"角色:%@",[NSUserDefaults objectForKey:LRRUserType]);
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([IdString isEqualToString:@"WORKER"]) {
+        LRRBaseTabBarController *rootVC = [[LRRBaseTabBarController alloc]init];
+        self.view.window.rootViewController = rootVC;
+    }else{
+        LRRBasePublishTabBarController *rootVC = [[LRRBasePublishTabBarController alloc]init];
+        self.view.window.rootViewController = rootVC;
+    }
+    [self.view removeFromSuperview];
+    [self removeFromParentViewController];
+}
+
+
+
+- (IBAction)cancelButtonClick:(UIButton *)sender {
+    [self jumpLoginViewIdentity:@"WORKER"];
 }
 
 - (void)didReceiveMemoryWarning {

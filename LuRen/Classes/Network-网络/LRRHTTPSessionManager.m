@@ -50,7 +50,7 @@
     //版本号
     //    headerFieldValueDictionary[@"appVersion"] = [NSBundle currentVersion];
     //token
-    NSString *token = [LRRUserManager shareUserManager].currentUser.token;
+    NSString *token = [LRRUserManager sharedUserManager].currentUser.token;
     if (token.length) {
         headerFieldValueDictionary[@"x-token"] = token;
     }

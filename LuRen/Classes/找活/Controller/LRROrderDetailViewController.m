@@ -8,6 +8,7 @@
 
 #import "LRROrderDetailViewController.h"
 #import "LRROrderDetailTableViewCell.h"
+#import "LRRFeedbackViewController.h"
 
 @interface LRROrderDetailViewController ()<UITableViewDataSource,UITableViewDelegate,LRROrderDetailTableViewCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -20,8 +21,22 @@
     [super viewDidLoad];
     self.navigationItem.title = @"详情";
     [self.view addSubview:self.tableView];
+    [self addNavi];
 }
 
+#pragma mark - 添加导航栏按钮
+- (void)addNavi
+{
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTitle:@"举报" target:self action:@selector(messageAction)];
+}
+
+#pragma mark - 点击事件
+- (void)messageAction
+{
+    LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
+    feedVC.titleString = @"举报";
+    [self.navigationController pushViewController:feedVC animated:YES];
+}
 
 #pragma mark -LRROrderDetailTableViewCellDelegate
 - (void)moreChargeStandardButtonClick:(UIButton *)sender

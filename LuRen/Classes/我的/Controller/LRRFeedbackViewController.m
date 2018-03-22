@@ -31,8 +31,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.navigationItem.title = @"意见反馈";
+    if ([self.titleString isEqualToString:@"举报"]) {
+        
+    }else{
+        self.titleString = @"意见反馈";
+    }
+    self.navigationItem.title = self.titleString;
     [self setUpSubViws];
     
 }

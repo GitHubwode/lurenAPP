@@ -113,6 +113,8 @@
 #define kNaviHeight ([UIScreen mainScreen].bounds.size.height == 812 ? 88 : 64)
 
 #define iPhoneX ([UIScreen mainScreen].bounds.size.height == 812)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+
 #define LRRDangerousAreaH 34
 
 

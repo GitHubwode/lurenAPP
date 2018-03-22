@@ -29,7 +29,18 @@
  @param view HUD要添加的地方
  @param caller 方法调用者
  */
-+ (void)loginWithParam:(LRRLoginParam *)param completion:(void(^)(LRRUserInfo *user))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
++ (void)loginWithParam:(LRRLoginParam *)param completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
+
+/**
+ 注册用户
+ 
+ @param param 请求对象，请求参数封装为对象的属性
+ @param completionHandler 请求完成的回调 responseObj 为SNHUserObj
+ @param view HUD要添加的地方
+ @param caller 方法调用者
+ */
++ (void)registerWithParam:(LRRRegisterParam *)param completion:(void(^)(LRRUserInfo *user))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
+
 
 
 @end

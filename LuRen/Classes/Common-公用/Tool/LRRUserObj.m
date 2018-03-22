@@ -16,7 +16,7 @@ MJCodingImplementation
  *  @return 字典中的key是属性名，value是从字典中取值用的key
  */
 + (NSDictionary *)mj_replacedKeyFromPropertyName{
-    return @{@"userId": @"id"};
+    return @{@"userId": @"id",@"relayName":@"name"};
 }
 
 /**
@@ -34,15 +34,16 @@ MJCodingImplementation
     
     _isLocked = [_isLock isEqualToString:@"N"] ? NO : YES;
     _isDeleted = [_isDelete isEqualToString:@"N"] ? NO : YES;
-    
+    _isRealnameed = _isRealname == nil ?NO : YES;
     //隐藏电话点好
     _hidePhone = [NSString numberSuitScanf:_phone];
-    
 }
 
 @end
 
 @implementation LRRUserInfo
+MJCodingImplementation
+
 
 
 @end

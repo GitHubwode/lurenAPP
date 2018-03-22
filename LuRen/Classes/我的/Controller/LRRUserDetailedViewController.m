@@ -34,18 +34,22 @@
 #pragma mark - 添加导航栏按钮
 - (void)addNavi
 {
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTitle:@"举报" target:self action:@selector(messageAction)];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTitle:self.navTitle target:self action:@selector(messageAction)];
 }
 
 #pragma mark - 点击事件
 - (void)messageAction
 {
     LRRLog(@"举报");
-//    LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
-//    [self.navigationController pushViewController:feedVC animated:YES];
     
-    LRRMyEditViewController *editVC = [[LRRMyEditViewController alloc]init];
-    [self.navigationController pushViewController:editVC animated:YES];
+    if ([self.navTitle isEqualToString:@"举报"]) {
+//        LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
+//        feedVC.titleString = self.navTitle;
+//        [self.navigationController pushViewController:feedVC animated:YES];
+    }else{
+        LRRMyEditViewController *editVC = [[LRRMyEditViewController alloc]init];
+        [self.navigationController pushViewController:editVC animated:YES];
+    }
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

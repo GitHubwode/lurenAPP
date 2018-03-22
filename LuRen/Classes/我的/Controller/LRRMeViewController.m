@@ -42,6 +42,7 @@
 {
     LRRLog(@"跳转用户信息");
     LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+    userVC.navTitle = @"编辑";
     [self.navigationController pushViewController:userVC animated:YES];
 }
 

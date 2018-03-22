@@ -36,6 +36,41 @@
     [self.bgImageView addSubview:self.bgView];
     self.phoneTextFiled.delegate = self;
     self.codeTextField.delegate = self;
+    if (iPhone5) {
+//        [self addNotificationMessage];
+    }
+}
+
+- (void)addNotificationMessage
+{
+    [LRRNotificationCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [LRRNotificationCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+#pragma mark - 键盘显示隐藏
+- (void)keyboardWillShow:(NSNotification *)notification{
+    
+    //取出键盘最后的 frame
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey]CGRectValue];
+    CGFloat height = keyboardFrame.origin.y;
+    //计算控制器 view 需要移动的距离
+    CGFloat textField_maxY = -30;
+    CGFloat space = textField_maxY+kMainScreenHeight;
+    //得出键盘输入框的间距
+    CGFloat transformY = height- space;
+    if (transformY < 0) {
+        CGRect frame = self.view.frame;
+        frame.origin.y = transformY;
+        self.view.frame = frame;
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification{
+    //恢复到默认y为0的状态，有时候要考虑导航栏要+64
+    CGRect frame = self.view.frame;
+    frame.origin.y = 0;
+    self.view.frame = frame;
+    
 }
 
 - (IBAction)downTimeButtonClick:(UIButton *)sender {
@@ -57,7 +92,7 @@
 {
     [self.view showHUD];
     long time1 = [[NSString publishSetUpNowTime] longLongValue];
-    NSString *codeType = @"DRAW_BANK_PWD";
+    NSString *codeType = @"LOGIN";
     NSString *sig = [NSString stringWithFormat:@"%@%@%ld%@",self.phoneTextFiled.text,codeType,time1,LRRAesKey];
     NSString *sig1 = [sig md5String];
     
@@ -87,16 +122,36 @@
         return;
     };
     
-    LRRLoginParam *loginParam = [[LRRLoginParam alloc]initWithPhone:self.phoneTextFiled.text password:nil SmsCode:self.codeTextField.text Mode:@""];
+    LRRLoginParam *loginParam = [[LRRLoginParam alloc]initWithPhone:self.phoneTextFiled.text password:nil SmsCode:self.codeTextField.text Mode:@"SMS"];
     
-    [LRRLoginRequestManager loginWithParam:loginParam completion:^(LRRUserInfo *user) {
+    [LRRLoginRequestManager loginWithParam:loginParam completion:^(LRRResponseObj *responseObj) {
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        LRRLog(@"%@",responseObj);
         
+        if (responseObj.code == LRRRegisterUserCode) {
+            [self setUpRegisterManager];
+        }else if (responseObj.code == LRRSMSFailureCode){
+            [self.view showHint:responseObj.message];
+        } else{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
         
     } aboveView:self.view inCaller:self];
-
 }
+
+- (void)setUpRegisterManager
+{
+    LRRLog(@"角色:%@",[NSUserDefaults objectForKey:LRRUserType]);
+
+    LRRRegisterParam *param = [[LRRRegisterParam alloc]initWithPhone:self.phoneTextFiled.text Type:[NSUserDefaults objectForKey:LRRUserType]];
+    [LRRLoginRequestManager registerWithParam:param completion:^(LRRUserInfo *user) {
+        LRRLog(@"%@",user);
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } aboveView:self.view inCaller:self];
+}
+
+/** 注册用户 */
+
 - (IBAction)userAgreementButtonClick:(UIButton *)sender {
     LRRLog(@"用户协议");
 }
@@ -126,28 +181,25 @@
     if (textField == self.phoneTextFiled) {
         self.maxTextLength = 11;
     }else{
-        self.maxTextLength = 4;
+        self.maxTextLength = 6;
     }
     [LRRNotificationCenter addObserver:self selector:@selector(textFiledEditChanged:)name:UITextFieldTextDidChangeNotification object:textField];
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
-    
-    BOOL isMatch = [self isRealyPhone];
-    
-    if (isMatch) {
-        if ((textField == self.codeTextField && self.codeTextField.text.length == 4) ||self.codeTextField.text.length == 4 ) {
-            self.loginButton.enabled = YES;
-            [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
-            [self.loginButton setTitleColor:UIColorHex(0xffffff) forState:UIControlStateNormal];
-            [self.loginButton setBackgroundImage:[UIImage imageNamed:@"icon_btn"] forState:UIControlStateNormal];
-        }
-    }
     [LRRNotificationCenter removeObserver:self];
 }
 
 -(void)textFiledEditChanged:(NSNotification *)noti{
     
     UITextField *textField = (UITextField *)noti.object;
+    
+if ((textField == self.codeTextField && self.codeTextField.text.length == 6) ) {
+    self.loginButton.enabled = YES;
+    [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [self.loginButton setTitleColor:UIColorHex(0xffffff) forState:UIControlStateNormal];
+    [self.loginButton setBackgroundImage:[UIImage imageNamed:@"icon_btn"] forState:UIControlStateNormal];
+    }
+    
     
     NSInteger maxLength = self.maxTextLength;
     
@@ -194,6 +246,7 @@
 - (void)dealloc
 {
     LRRLogFunc
+    [LRRNotificationCenter removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {

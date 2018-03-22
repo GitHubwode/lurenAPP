@@ -32,9 +32,14 @@ static CGFloat headerHeight = 232.f;
     [self addMiddleNaviView];
     //创建导航栏按钮
     [self addNavi];
-    
     self.collectionView.mj_header =[LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(dropDownRefreshRequest)];
     [self.collectionView.mj_header beginRefreshing];
+    
+//    if (![LRRUserManager shareUserManager].logined) {
+//        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+//        [self presentViewController:loginVC animated:YES completion:nil];
+//    }
+    
 }
 
 - (void)dropDownRefreshRequest
@@ -131,14 +136,18 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 - (void)messageAction
 {
     LRRLog(@"点击信息");
-    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:[NSBundle mainBundle]];
-    [self presentViewController:loginVC animated:YES completion:nil];
-//    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
-//    [self.navigationController pushViewController:systemVC animated:YES];
+    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
+    [self.navigationController pushViewController:systemVC animated:YES];
 }
 - (void)locationAction
 {
     LRRLog(@"定位");
+    LRRLog(@"%@",[LRRUserManager sharedUserManager].currentUser.userId);
+    LRRLog(@"%@",[LRRUserManager sharedUserManager].currentUser);
+
+    
+    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 - (void)selectedButtonClick:(UIButton *)sender

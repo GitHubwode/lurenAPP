@@ -18,21 +18,20 @@
 
 @implementation LRRUserManager
 
-+ (instancetype)shareUserManager
-{
-    static id shareUserManager;
++ (instancetype)sharedUserManager{
+    static id sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shareUserManager = [[self alloc]init];
+        sharedInstance = [[self alloc] init];
     });
-    return shareUserManager;
+    return sharedInstance;
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        
+
     }
     return self;
 }
@@ -130,12 +129,55 @@
     [self saveAccount:_currentUser];
 }
 
-- (void)updateCurrentUserBossVIP:(BOOL)isVIP
+- (void)updateCurrentUserNation:(NSString *)nation
 {
     if (!_currentUser) return;
-    _currentUser.hasVIP = isVIP;
+    _currentUser.nation = nation;
     [self saveAccount:_currentUser];
 }
+- (void)updateCurrentUserRelayName:(NSString *)relayName
+{
+    if (!_currentUser) return;
+    _currentUser.relayName = relayName;
+    [self saveAccount:_currentUser];
+}
+- (void)updateCurrentUserBirthday:(NSString *)birthday
+{
+    if (!_currentUser) return;
+    _currentUser.birthday = birthday;
+    [self saveAccount:_currentUser];
+}
+- (void)updateCurrentUserHometown:(NSString *)hometown
+{
+    if (!_currentUser) return;
+    _currentUser.hometown = hometown;
+    [self saveAccount:_currentUser];
+}
+- (void)updateCurrentUserTeamGroup:(NSString *)teamGroup
+{
+    if (!_currentUser) return;
+    _currentUser.teamGroup = teamGroup;
+    [self saveAccount:_currentUser];
+}
+- (void)updateCurrentUserWorkAge:(NSString *)workAge
+{
+    if (!_currentUser) return;
+    _currentUser.workAge = workAge;
+    [self saveAccount:_currentUser];
+}
+- (void)updateCurrentUserWorkType:(NSString *)workType
+{
+    if (!_currentUser) return;
+    _currentUser.workType = workType;
+    [self saveAccount:_currentUser];
+}
+
+//- (void)updateCurrentUserBossVIP:(BOOL)isVIP
+//{
+//    if (!_currentUser) return;
+////    _currentUser.hasVIP = isVIP;
+//    [self saveAccount:_currentUser];
+//}
 
 /**
  同步用户信息到本地
@@ -150,6 +192,7 @@
 - (void)saveAccount:(LRRUserObj *)user
 {
     BOOL flag = [NSKeyedArchiver archiveRootObject:user toFile:LRRAccountSavePath];
+    LRRLog(@"%@",LRRAccountSavePath);
     LRRLog(@"flag = %zd",flag);
     if (flag) {
         LRRLog(@"成功");

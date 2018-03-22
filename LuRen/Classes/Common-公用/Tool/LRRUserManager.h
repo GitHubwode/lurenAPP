@@ -17,7 +17,7 @@
 
 @property (nonatomic, assign) BOOL canPay;
 
-+ (instancetype)shareUserManager;
++ (instancetype)sharedUserManager;
 
 /**
  登录，让登录操作和user产生依赖关系，持久化用户对象
@@ -51,8 +51,18 @@
 - (void)updateCurrentUserMobile:(NSString *)mobile;
 - (void)updateCurrentUserNewToken:(NSString *)token;
 - (void)updateCurrentUserNewType:(NSString *)userType;
-- (void)updateCurrentUserBossVIP:(BOOL)isVIP;
+//- (void)updateCurrentUserBossVIP:(BOOL)isVIP;
 - (void)updateCurrentUserSex:(NSString *)sex;
+- (void)updateCurrentUserNation:(NSString *)nation;
+- (void)updateCurrentUserBirthday:(NSString *)birthday;
+- (void)updateCurrentUserHometown:(NSString *)hometown;
+- (void)updateCurrentUserTeamGroup:(NSString *)teamGroup;
+- (void)updateCurrentUserWorkAge:(NSString *)workAge;
+- (void)updateCurrentUserWorkType:(NSString *)workType;
+- (void)updateCurrentUserRelayName:(NSString *)relayName;
+
+
+
 
 
 @end

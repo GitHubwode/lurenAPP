@@ -37,10 +37,48 @@
  @param view HUD要添加的地方
  @param caller 方法调用者
  */
-+ (void)loginWithParam:(LRRLoginParam *)param completion:(void(^)(LRRUserInfo *user))completionHandler aboveView:(UIView *)view inCaller:(id)caller
++ (void)loginWithParam:(LRRLoginParam *)param completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller
 {
     //拼接url
     NSString *url = LRRURL(@"/api/login/doLogin");
+    
+    [self postFormDataWithUrl:url form:[param mj_keyValues] completion:^(LRRResponseObj *responseObj) {
+        
+        LRRLog(@"%@",responseObj);
+        
+        if (!responseObj) return;
+        
+        if (responseObj.code == LRRSuccessCode) {
+            if (completionHandler) {
+                LRRUserInfo *userInfo = [LRRUserInfo mj_objectWithKeyValues:responseObj.data];
+                LRRLog(@"%@",userInfo);
+                userInfo.userInfo.token = userInfo.token;
+                [[LRRUserManager sharedUserManager]loginWithCurrentUser:userInfo.userInfo];
+                [[LRRUserManager sharedUserManager] autoLogin];
+                completionHandler(responseObj);
+            }
+            
+        }else if (responseObj.code != LRRSuccessCode){
+            if (completionHandler) {
+                completionHandler(responseObj);
+            }
+        }
+        
+    } aboveView:view inCaller:caller];
+}
+
+/**
+ 注册用户
+ 
+ @param param 请求对象，请求参数封装为对象的属性
+ @param completionHandler 请求完成的回调 responseObj 为SNHUserObj
+ @param view HUD要添加的地方
+ @param caller 方法调用者
+ */
++ (void)registerWithParam:(LRRRegisterParam *)param completion:(void(^)(LRRUserInfo *user))completionHandler aboveView:(UIView *)view inCaller:(id)caller
+{
+    //拼接url
+    NSString *url = LRRURL(@"/api/user/register");
     
     [self postFormDataWithUrl:url form:[param mj_keyValues] completion:^(LRRResponseObj *responseObj) {
         
@@ -53,21 +91,14 @@
             return;
         }
         
-        //        if (completionHandler) {
-        //            LRRUserInfo *userInfo = [LRRUserInfo mj_objectWithKeyValues:responseObj.data];
-        //            userInfo.userInfo.token = userInfo.token;
-        //            userInfo.userInfo.isRegister = [userInfo.nowPlaceRegisterVip isEqualToString:@"N"] ? NO : YES;
-        //            [[LRRUserManager shareUserManager]loginWithCurrentUser:userInfo.userInfo];
-        //
-        //            [LRRLoginVIPRequestManager loginWithRefeVIPcompletion:^(LRRResponseObj *responseObj) {
-        //
-        //                completionHandler(userInfo);
-        //                [LRRRongCloudModel LRR_initRongCloudLogin];
-        //                [LRRNotificationCenter postNotificationName:LRRUserLoginNotifacation object:nil];
-        //
-        //            } aboveView:view inCaller:self];
-        //
-        //        }
+        if (completionHandler) {
+            LRRUserInfo *userInfo = [LRRUserInfo mj_objectWithKeyValues:responseObj.data];
+            LRRLog(@"%@",userInfo);
+            userInfo.userInfo.token = userInfo.token;
+            [[LRRUserManager sharedUserManager]loginWithCurrentUser:userInfo.userInfo];
+            [[LRRUserManager sharedUserManager] autoLogin];
+            completionHandler(userInfo);
+        }
         
     } aboveView:view inCaller:caller];
 }

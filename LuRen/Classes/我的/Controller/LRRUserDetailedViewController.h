@@ -10,4 +10,6 @@
 
 @interface LRRUserDetailedViewController : LRRBaseViewController
 
+@property (nonatomic, strong) NSString *navTitle;
+
 @end

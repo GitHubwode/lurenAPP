@@ -10,4 +10,6 @@
 
 @interface LRRFeedbackViewController : LRRBaseViewController
 
+@property (nonatomic, strong) NSString *titleString;
+
 @end

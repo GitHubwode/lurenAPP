@@ -53,3 +53,26 @@
 }
 
 @end
+
+/**************************** 注册 ******************************/
+@implementation  LRRRegisterParam
+
+- (instancetype)initWithPhone:(NSString *)phone
+                         Type:(NSString *)type
+{
+    self = [super init];
+    if (self) {
+        self.phone = phone;
+        self.type = type;
+    }
+    return self;
+}
+
++ (instancetype)paramWithPhone:(NSString *)phone
+                          Type:(NSString *)type
+{
+    return [[self alloc]initWithPhone:phone Type:type];
+}
+
+
+@end

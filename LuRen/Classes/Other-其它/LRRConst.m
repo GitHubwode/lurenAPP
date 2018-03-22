@@ -11,7 +11,7 @@
 @implementation LRRConst
 
 #ifdef DEBUG
-NSString * const LRRBasicURL = @"https://service.sunvhui.net";
+NSString * const LRRBasicURL = @"http://192.168.1.101:8080";
 
 NSString * const LRRH5BasicURL = @"https://h5test.sunvhui.net/h5";
 
@@ -20,18 +20,20 @@ NSString * const LRRBasicURL = @"https://service.sunvhui.net";
 
 NSString * const LRRH5BasicURL = @"https://h5.sunvhui.net/h5";
 #endif
-//
+
 
 /** 正式环境储存后台分配的aesKey的key */
 //NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
 
 /** 测试环境环境储存后台分配的aesKey的key */
-NSString * const LRRAesKey = @"I0*!TwulnX0f1pyd#Kbw$2Pe4AUerBXlylQPl5^RBG0wITGBC#VN5fZZ8n@3D#I9";
+NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
 
 /** Itunes上的地址 */
 NSString * const LRRAppItunesURL = @"https://itunes.apple.com/app/id1176374492";
 /** 储存后台分配的deviced的key */
 NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";
+/** 保存用户的类型 */
+NSString * const LRRUserType = @"LRRUserType";
 
 /** 手机号码最大长度 */
 NSUInteger const LRRCellphoneMaxLength = 11;
