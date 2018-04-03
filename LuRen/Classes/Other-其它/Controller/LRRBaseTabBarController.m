@@ -128,7 +128,7 @@
  */
 - (void)setupChildViewControllers{
     
-    [self setupOneChildViewController:[[LRRHomeViewController alloc]init] title:@"优工派" image:@"icon_zhuye" selectedImage:@"icon_zhuye_pressed"];
+    [self setupOneChildViewController:[[LRRHomeViewController alloc]init] title:@"首页" image:@"icon_zhuye" selectedImage:@"icon_zhuye_pressed"];
     
     [self setupOneChildViewController:[[LRRFriendViewController alloc]init] title:@"朋友" image:@"tabbar_icon_chat" selectedImage:@"tabbar_icon_chat_pressed"];
     //带班

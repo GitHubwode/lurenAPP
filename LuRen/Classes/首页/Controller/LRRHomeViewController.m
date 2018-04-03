@@ -29,16 +29,17 @@ static CGFloat headerHeight = 232.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.collectionView];
-    [self addMiddleNaviView];
+//    [self addMiddleNaviView];
+    self.navigationItem.title = @"首页";
     //创建导航栏按钮
     [self addNavi];
     self.collectionView.mj_header =[LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(dropDownRefreshRequest)];
     [self.collectionView.mj_header beginRefreshing];
     
-//    if (![LRRUserManager shareUserManager].logined) {
-//        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
-//        [self presentViewController:loginVC animated:YES completion:nil];
-//    }
+    if (![LRRUserManager sharedUserManager].logined) {
+        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }
     
 }
 

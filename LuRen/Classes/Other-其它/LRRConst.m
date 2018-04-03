@@ -11,7 +11,7 @@
 @implementation LRRConst
 
 #ifdef DEBUG
-NSString * const LRRBasicURL = @"http://192.168.1.101:8080";
+NSString * const LRRBasicURL = @"http://10.205.47.135:8080";
 
 NSString * const LRRH5BasicURL = @"https://h5test.sunvhui.net/h5";
 

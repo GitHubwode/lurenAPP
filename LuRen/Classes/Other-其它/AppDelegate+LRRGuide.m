@@ -32,20 +32,20 @@ static NSString * const LRRLastVersionKey = @"LRRLastVersion";
         }
 
     }else{
-    
+
         //定义一个窗口
         UIViewController *rootVC = [[UITabBarController alloc]init];
         self.window.rootViewController = rootVC;
-        
+
         //获取当前的版本号
         NSString *curVersion = [NSBundle currentVersion];
-        
+
         //获取上一次版本号
         NSString *oldVersion = [NSUserDefaults objectForKey:LRRLastVersionKey];
-        
+
         if ([curVersion isEqualToString:oldVersion] == NO) {
             [NSUserDefaults setObject:curVersion forKey:LRRLastVersionKey];
-            
+
             LRRChooseIDViewController *newFeatureVc = [[LRRChooseIDViewController alloc] initWithNibName:NSStringFromClass([LRRChooseIDViewController class]) bundle:[NSBundle mainBundle]];
             newFeatureVc.view.frame = [UIScreen mainScreen].bounds;
             [rootVC.view addSubview:newFeatureVc.view];

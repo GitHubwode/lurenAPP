@@ -206,7 +206,7 @@ static CGFloat headerBtnHeight = 30.f;
 {
     if (!_titleLabel) {
         _titleLabel = [UILabel new];
-        _titleLabel.text = @"陆人";
+        _titleLabel.text = @"居工";
         _titleLabel.font = LRRFont(15);
         _titleLabel.textColor = UIColorHex(0x333333);
         _titleLabel.textAlignment = NSTextAlignmentLeft;
@@ -238,7 +238,7 @@ static CGFloat headerBtnHeight = 30.f;
 {
     if (!_messageLabel) {
         _messageLabel = [UILabel new];
-        _messageLabel.text = @"陆人老周又去大保健,结果被警察抓住了";
+        _messageLabel.text = @"居工老周又去大保健,结果被警察抓住了";
         _messageLabel.font = LRRFont(12);
         _messageLabel.textColor = LRRTimeTextColor;
         _messageLabel.textAlignment = NSTextAlignmentLeft;
