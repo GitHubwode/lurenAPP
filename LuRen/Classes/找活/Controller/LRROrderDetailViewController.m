@@ -9,10 +9,14 @@
 #import "LRROrderDetailViewController.h"
 #import "LRROrderDetailTableViewCell.h"
 #import "LRRFeedbackViewController.h"
+#import "LRRReceiveOrderRequestManager.h"
 
 @interface LRROrderDetailViewController ()<UITableViewDataSource,UITableViewDelegate,LRROrderDetailTableViewCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
+@property (nonatomic, strong) LRRLocationHelper *locationHelper;
+@property (nonatomic, strong) NSMutableDictionary *param;
+
 @end
 
 @implementation LRROrderDetailViewController
@@ -22,6 +26,27 @@
     self.navigationItem.title = @"详情";
     [self.view addSubview:self.tableView];
     [self addNavi];
+}
+
+#pragma mark - 获取经纬度
+- (void)requestLocation
+{
+    __block CGFloat longitude;
+    __block CGFloat latitude;
+    weakSelf(self);
+    [self.locationHelper getUserCurrentLocation:^(CLLocation *location) {
+        
+        [weakself.locationHelper clearLocationDelegate];
+        weakself.locationHelper = nil;
+        
+        CLLocationCoordinate2D coordinate = location.coordinate;
+        longitude = coordinate.longitude;
+        latitude = coordinate.latitude;
+//        param[@"id"] = @(self.orderDetails.orderId);//参数
+        self.param[@"acceptLongitude"] = @(longitude);
+        self.param[@"acceptLatitude"] = @(latitude);
+        self.param[@"phone"] = [LRRUserManager sharedUserManager].currentUser.phone;
+    }];
 }
 
 #pragma mark - 添加导航栏按钮
@@ -47,6 +72,14 @@
 - (void)orderDetailButtonClick:(UIButton *)sender
 {
     LRRLog(@"接单按钮");
+    [LRRReceiveOrderRequestManager searchReciveOrderParam:self.param completion:^(LRRResponseObj *responseObj) {
+        if (responseObj.code == LRRSuccessCode) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [self.view showHint:responseObj.message];
+        }
+        
+    } aboveView:self.view inCaller:self];
 }
 
 #pragma mark - UITableViewDelegate UITableViewDataSource
@@ -97,6 +130,21 @@
         _datasource = [NSMutableArray array];
     }
     return _datasource;
+}
+
+- (LRRLocationHelper *)locationHelper{
+    if (!_locationHelper) {
+        _locationHelper = [[LRRLocationHelper alloc] init];
+    }
+    return _locationHelper;
+}
+
+- (NSMutableDictionary *)param
+{
+    if (!_param) {
+        _param = [NSMutableDictionary dictionary];
+    }
+    return _param;
 }
 
 - (void)didReceiveMemoryWarning {

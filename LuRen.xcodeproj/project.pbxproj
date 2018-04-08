@@ -164,6 +164,9 @@
 		18783F97207A0B4A00D72AFF /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18783F96207A0B4A00D72AFF /* SafariServices.framework */; };
 		18783F9A207A0EAA00D72AFF /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18783F98207A0EA900D72AFF /* libssl.a */; };
 		18783F9B207A0EAA00D72AFF /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18783F99207A0EAA00D72AFF /* libcrypto.a */; };
+		18783F9F207A122200D72AFF /* LRRReportRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F9E207A122200D72AFF /* LRRReportRequestManager.m */; };
+		18783FA2207A124B00D72AFF /* LRRReportParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783FA1207A124B00D72AFF /* LRRReportParam.m */; };
+		18783FA7207A187B00D72AFF /* LRRReceiveOrderRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783FA6207A187B00D72AFF /* LRRReceiveOrderRequestManager.m */; };
 		188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9120159A430012855E /* LRRSegmentBar.m */; };
 		188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9220159A430012855E /* LRRSegmentBarVC.m */; };
 		188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EAF9620159A430012855E /* LRRSegmentBarConfig.m */; };
@@ -473,6 +476,12 @@
 		18783F96207A0B4A00D72AFF /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		18783F98207A0EA900D72AFF /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../Desktop/BaiduMap_IOSSDK_v3/thirdlibs/libssl.a; sourceTree = "<group>"; };
 		18783F99207A0EAA00D72AFF /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../Desktop/BaiduMap_IOSSDK_v3/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		18783F9D207A122200D72AFF /* LRRReportRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRReportRequestManager.h; sourceTree = "<group>"; };
+		18783F9E207A122200D72AFF /* LRRReportRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRReportRequestManager.m; sourceTree = "<group>"; };
+		18783FA0207A124B00D72AFF /* LRRReportParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRReportParam.h; sourceTree = "<group>"; };
+		18783FA1207A124B00D72AFF /* LRRReportParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRReportParam.m; sourceTree = "<group>"; };
+		18783FA5207A187B00D72AFF /* LRRReceiveOrderRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRReceiveOrderRequestManager.h; sourceTree = "<group>"; };
+		18783FA6207A187B00D72AFF /* LRRReceiveOrderRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRReceiveOrderRequestManager.m; sourceTree = "<group>"; };
 		188EAF9120159A430012855E /* LRRSegmentBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBar.m; sourceTree = "<group>"; };
 		188EAF9220159A430012855E /* LRRSegmentBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSegmentBarVC.m; sourceTree = "<group>"; };
 		188EAF9320159A430012855E /* LRRSegmentBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSegmentBarConfig.h; sourceTree = "<group>"; };
@@ -1000,8 +1009,9 @@
 			children = (
 				1804327C206226CC006AE7ED /* LRRHTTPSessionManager.h */,
 				1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */,
+				18783FA3207A182C00D72AFF /* Order-接单方订单 */,
+				18783F9C207A120300D72AFF /* report-举报 */,
 				18783F5A2079FB5B00D72AFF /* Publish-发布订单 */,
-				18783F522079F7DB00D72AFF /* Order-订单 */,
 				1804328620622E56006AE7ED /* Login-登录网络 */,
 			);
 			path = "Network-网络";
@@ -1206,21 +1216,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		18783F522079F7DB00D72AFF /* Order-订单 */ = {
-			isa = PBXGroup;
-			children = (
-				18783F532079F7DB00D72AFF /* Model */,
-			);
-			path = "Order-订单";
-			sourceTree = "<group>";
-		};
-		18783F532079F7DB00D72AFF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		18783F5A2079FB5B00D72AFF /* Publish-发布订单 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1236,6 +1231,34 @@
 			children = (
 				18783F5C2079FB7F00D72AFF /* LRRPublishOrderParam.h */,
 				18783F5D2079FB7F00D72AFF /* LRRPublishOrderParam.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18783F9C207A120300D72AFF /* report-举报 */ = {
+			isa = PBXGroup;
+			children = (
+				18783F9D207A122200D72AFF /* LRRReportRequestManager.h */,
+				18783F9E207A122200D72AFF /* LRRReportRequestManager.m */,
+				18783FA0207A124B00D72AFF /* LRRReportParam.h */,
+				18783FA1207A124B00D72AFF /* LRRReportParam.m */,
+			);
+			path = "report-举报";
+			sourceTree = "<group>";
+		};
+		18783FA3207A182C00D72AFF /* Order-接单方订单 */ = {
+			isa = PBXGroup;
+			children = (
+				18783FA4207A182C00D72AFF /* Model */,
+				18783FA5207A187B00D72AFF /* LRRReceiveOrderRequestManager.h */,
+				18783FA6207A187B00D72AFF /* LRRReceiveOrderRequestManager.m */,
+			);
+			path = "Order-接单方订单";
+			sourceTree = "<group>";
+		};
+		18783FA4207A182C00D72AFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1684,6 +1707,7 @@
 				185158672052359A0006E863 /* LRRWorkViewCell.m in Sources */,
 				1851587620523F170006E863 /* LRRNameViewCell.m in Sources */,
 				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
+				18783FA2207A124B00D72AFF /* LRRReportParam.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
 				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
 				18515885205282F00006E863 /* LRRPublishedWorkViewController.m in Sources */,
@@ -1710,8 +1734,10 @@
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
 				185159232057CBF20006E863 /* LRRBasePublishTabBarController.m in Sources */,
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
+				18783FA7207A187B00D72AFF /* LRRReceiveOrderRequestManager.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
 				18486C2E2058FDF80009519E /* LRRSystemMessageViewController.m in Sources */,
+				18783F9F207A122200D72AFF /* LRRReportRequestManager.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
 				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
 				1804327E206226CC006AE7ED /* LRRHTTPSessionManager.m in Sources */,
