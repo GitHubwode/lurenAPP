@@ -21,6 +21,12 @@ extern NSString * const LRRAesKey;
 extern NSString * const LRRUserType;
 /** Itunes上的地址 */
 extern NSString * const LRRAppItunesURL;
+/** 融云的appkey */
+extern NSString *const LRRRongCloudAppKey;
+/** 显示红点的通知 */
+extern NSString * const LRRShowAlertNotifacation;
+/** 隐藏红点的通知 */
+extern NSString * const LRRHidenAlertNotifacation;
 /** 储存后台分配的deviced的key */
 extern NSString * const LRRDeviceIdKey;
 /** 手机号码最大长度 */

@@ -58,12 +58,12 @@
     //    checked.requestType = 1;
     [self addChildViewController:threeVC];
     
-    LRRMyOrderListViewController *fourVC = [[LRRMyOrderListViewController alloc]init];
-    //    checked.requestType = 1;
-    [self addChildViewController:fourVC];
+//    LRRMyOrderListViewController *fourVC = [[LRRMyOrderListViewController alloc]init];
+//    //    checked.requestType = 1;
+//    [self addChildViewController:fourVC];
     
     
-    _titles = @[@"已接单", @"待付款",@"已付款",@"已取消"];
+    _titles = @[@"已接单",@"已付款",@"已取消"];
 }
 
 

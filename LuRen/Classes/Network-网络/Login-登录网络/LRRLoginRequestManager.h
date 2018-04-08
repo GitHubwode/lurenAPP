@@ -41,6 +41,24 @@
  */
 + (void)registerWithParam:(LRRRegisterParam *)param completion:(void(^)(LRRUserInfo *user))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
 
+/**
+ 退出登录
+ @param  用户登录token
+ @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param caller 方法调用者
+ */
++ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler inCaller:(id)caller;
+/**
+ 获取融云链接的Token
+ 
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
+ @param view HUD要添加的地方
+ @param caller 方法调用者
+ */
+
++ (void)setupUserRongTokencompletion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
+
++ (void)logout;
 
 
 @end

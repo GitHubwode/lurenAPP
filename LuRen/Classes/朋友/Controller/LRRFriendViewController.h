@@ -6,8 +6,8 @@
 //  Copyright © 2018年 supconit. All rights reserved.
 //
 
-#import "LRRBaseViewController.h"
+#import <RongIMKit/RongIMKit.h>
 
-@interface LRRFriendViewController : LRRBaseViewController
+@interface LRRFriendViewController : RCConversationListViewController
 
 @end

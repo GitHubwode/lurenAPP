@@ -7,7 +7,7 @@
 //
 
 #import "LRRFriendViewController.h"
-
+#import "LRRPrivateMessageViewController.h"
 @interface LRRFriendViewController ()
 
 @end
@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addNavi];
+    self.navigationItem.title = @"对话列表";
+    self.isShowNetworkIndicatorView = YES;
+    self.conversationListTableView.backgroundColor = LRRViewBackgroundColor;
+    self.conversationListTableView.tableFooterView = [UIView new];
+    self.emptyConversationView = [UIView new];
+    [self refreshConversationTableViewIfNeeded];
+    [self setDisplayConversationTypes:@[@(ConversationType_PRIVATE)]];
 }
 
 - (void)addFriendAction
@@ -28,6 +35,39 @@
 - (void)addNavi
 {
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"icon_jia" highImage:@"icon_jia" target:self action:@selector(addFriendAction)];
+}
+
+- (void)onSelectedTableRow:(RCConversationModelType)conversationModelType conversationModel:(RCConversationModel *)model atIndexPath:(NSIndexPath *)indexPath
+{
+    LRRPrivateMessageViewController *conversationVC = [[LRRPrivateMessageViewController alloc]init];
+    conversationVC.conversationType = ConversationType_PRIVATE;
+    conversationVC.targetId = model.targetId;
+    conversationVC.title = model.conversationTitle;
+    [self.navigationController pushViewController:conversationVC animated:YES];
+    
+    dispatch_after(
+                   dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)),
+                   dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                       [self refreshConversationTableViewIfNeeded];
+                   });
+}
+
+//左滑删除
+- (void)rcConversationListTableView:(UITableView *)tableView
+                 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+                  forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //可以从数据库删除数据
+    RCConversationModel *model = self.conversationListDataSource[indexPath.row];
+    [[RCIMClient sharedRCIMClient] removeConversation:ConversationType_PRIVATE
+                                             targetId:model.targetId];
+    [self.conversationListDataSource removeObjectAtIndex:indexPath.row];
+    [self.conversationListTableView reloadData];
+}
+
+//高度
+- (CGFloat)rcConversationListTableView:(UITableView *)tableView
+               heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 67.0f;
 }
 
 - (void)didReceiveMemoryWarning {

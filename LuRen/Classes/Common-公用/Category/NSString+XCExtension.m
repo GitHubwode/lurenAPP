@@ -171,6 +171,17 @@
     return currentDateStr;
 }
 
+//时间戳转换为所需要的样式
++(NSString *)OrderDetailsTimeStamp:(NSString *)strTime
+{
+    NSTimeInterval time = [strTime doubleValue]/1000;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM月dd日 HH:mm"];
+    NSString *currentDateStr = [dateFormatter stringFromDate:date];
+    return currentDateStr;
+}
+
 
 
 - (NSString*)encodeString{
@@ -265,6 +276,43 @@
         return numberString;
     }
 }
+
+/** 支付之间的时间戳 */
++ (NSString *)payTime:(NSString *)beginTime WorkTime:(NSString *)workTime PayTime:(NSString *)payTime
+{
+    int dayTime = [workTime intValue] *24*3600;//工作时间的秒数
+    int pay;
+    if ([payTime isEqualToString:@"帮工结束立即支付"]) {
+        //        24 *3600
+        pay = 86400;
+    }else if ([payTime isEqualToString:@"延后7天支付"]){
+        //        24 *3600*8
+        pay = 691200;
+    }else{
+        //        24 *3600*16
+        pay = 1382400;
+    }
+    
+    dayTime = dayTime+pay+[beginTime intValue];
+    NSString *totalTime;
+    totalTime = [NSString stringWithFormat:@"%d",dayTime];
+    return totalTime;
+}
+
+/** 米换算为Km */
++ (NSString *)getDistanceString:(NSString *)string
+{
+    NSString *distanceString;
+    int distance = 999;
+    int string1 = [string intValue];
+    if (distance > string1) {
+        return distanceString = [NSString stringWithFormat:@"%@m",string];
+    }else{
+        string1 = round(string1/1000);
+        return distanceString = [NSString stringWithFormat:@"%dkm",string1];
+    }
+}
+
 
 
 @end

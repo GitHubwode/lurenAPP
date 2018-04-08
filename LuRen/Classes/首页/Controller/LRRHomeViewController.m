@@ -21,6 +21,8 @@ static CGFloat headerHeight = 232.f;
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *datasource;
+@property (nonatomic, strong) LRRLocationHelper *locationHelper;
+
 
 @end
 
@@ -29,34 +31,45 @@ static CGFloat headerHeight = 232.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.collectionView];
-//    [self addMiddleNaviView];
     self.navigationItem.title = @"首页";
     //创建导航栏按钮
     [self addNavi];
     self.collectionView.mj_header =[LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(dropDownRefreshRequest)];
     [self.collectionView.mj_header beginRefreshing];
-    
-    if (![LRRUserManager sharedUserManager].logined) {
-        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
-        [self presentViewController:loginVC animated:YES completion:nil];
-    }
-    
 }
 
 - (void)dropDownRefreshRequest
 {
-    
+    [self lrr_hostLiveLocation:YES];
 }
 
-
-- (void)addMiddleNaviView
+- (void)lrr_hostLiveLocation:(BOOL)refresh
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 75, 12)];
-    UIImageView *img = [[UIImageView alloc] initWithFrame:view.frame];
-    img.image = [UIImage imageNamed:@"logo"];
-    img.contentMode = UIViewContentModeScaleAspectFit;
-    [view addSubview:img];
-    self.navigationItem.titleView = view;
+    __block CGFloat longitude;
+    __block CGFloat latitude;
+    weakSelf(self);
+    [self.locationHelper getUserCurrentLocation:^(CLLocation *location) {
+        
+        [weakself.locationHelper clearLocationDelegate];
+        weakself.locationHelper = nil;
+        
+        CLLocationCoordinate2D coordinate = location.coordinate;
+        longitude = coordinate.longitude;
+        latitude = coordinate.latitude;
+        [weakself setupUserLongitude:longitude Latitude:latitude Refresh:refresh];
+        
+        [self.locationHelper getUserNearbyPois:^(BMKReverseGeoCodeResult *result) {
+            LRRLog(@"城市信息:%@ 地址设计:%@",result.addressDetail.city,result.address);
+            self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"icon_dingwei" highImage:@"icon_dingwei" Title:result.addressDetail.city target:self action:@selector(locationAction)];
+        } location:location];
+    }];
+}
+
+#pragma mark - 获取经纬度
+- (void)setupUserLongitude:(CGFloat )longitude Latitude:(CGFloat)latitude Refresh:(BOOL)refresh
+{
+    
+    
 }
 
 #pragma mark - UICollectionViewDelegate or Datasource;
@@ -130,25 +143,25 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 - (void)addNavi
 {
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"icon_xiaoxi" highImage:@"icon_xiaoxi" target:self action:@selector(messageAction)];
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"icon_dingwei" highImage:@"icon_dingwei" Title:@" 杭州" target:self action:@selector(locationAction)];
 }
 
 #pragma mark - 点击事件
 - (void)messageAction
 {
     LRRLog(@"点击信息");
-    LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
-    [self.navigationController pushViewController:systemVC animated:YES];
+    if (![LRRUserManager sharedUserManager].logined) {
+        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }else{
+        LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
+        [self.navigationController pushViewController:systemVC animated:YES];
+    }
 }
 - (void)locationAction
 {
     LRRLog(@"定位");
     LRRLog(@"%@",[LRRUserManager sharedUserManager].currentUser.userId);
     LRRLog(@"%@",[LRRUserManager sharedUserManager].currentUser);
-
-    
-    LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
-    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 - (void)selectedButtonClick:(UIButton *)sender
@@ -195,6 +208,13 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 - (void)dealloc
 {
     LRRLogFunc;
+}
+
+- (LRRLocationHelper *)locationHelper{
+    if (!_locationHelper) {
+        _locationHelper = [[LRRLocationHelper alloc] init];
+    }
+    return _locationHelper;
 }
 
 - (void)didReceiveMemoryWarning {

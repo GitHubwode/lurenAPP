@@ -50,6 +50,8 @@
 
 //时间戳转换为所需要的样式
 +(NSString *)TimeStamp:(NSString *)strTime;
+//时间戳转换为所需要的样式
++(NSString *)OrderDetailsTimeStamp:(NSString *)strTime;
 //计算预约时间距离现在还剩多久
 +(NSString *)getNowTimeWithString:(NSString *)aTimeString;
 //计算当前月的总后一天是几号
@@ -59,4 +61,8 @@
 -(NSString *)decodeString;
 /** 计算缓存大小 */
 - (unsigned long long)fileSize;
+/** 支付之间的时间戳 */
++ (NSString *)payTime:(NSString *)beginTime WorkTime:(NSString *)workTime PayTime:(NSString *)payTime;
+/** 米换算为Km */
++ (NSString *)getDistanceString:(NSString *)string;
 @end

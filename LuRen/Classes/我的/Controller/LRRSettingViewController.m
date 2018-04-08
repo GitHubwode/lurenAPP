@@ -12,6 +12,7 @@
 #import "LRRMeMessageModel.h"
 #import "LRRChooseIDViewController.h"
 #import "LRRChangePhoneViewController.h"
+#import "LRRLoginRequestManager.h"
 
 @interface LRRSettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -45,6 +46,12 @@
 - (void)loginOutButton:(UIButton *)sender
 {
     LRRLog(@"退出登录");
+    [LRRLoginRequestManager loginOutWithcompletion:^(LRRResponseObj *responseObj) {
+        
+        [LRRLoginRequestManager logout];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } inCaller:self];
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

@@ -7,6 +7,8 @@
 //
 
 #import "LRRLoginRequestManager.h"
+#import "LRRRongCloudModel.h"
+#import <RongIMKit/RongIMKit.h>
 
 @implementation LRRLoginRequestManager
 
@@ -103,4 +105,60 @@
     } aboveView:view inCaller:caller];
 }
 
+/**
+ 退出登录
+ @ param  用户登录token
+ @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param caller 方法调用者
+ */
++ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler inCaller:(id)caller
+{
+    //拼接URL
+    NSString *url = LRRURL(@"/api/login/logOut");
+    //发送请求
+    [self postFormDataWithUrl:url form:nil completion:^(LRRResponseObj *responseObj) {
+        if (caller && responseObj) {
+            completionHandler(responseObj);
+        }
+    } aboveView:nil inCaller:caller];
+}
+
+/**
+ 获取融云链接的Token
+ 
+ @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param view HUD要添加的地方
+ @param caller 方法调用者
+ */
+
++ (void)setupUserRongTokencompletion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller
+{
+    NSString *url = LRRURL(@"/api/rong/getToken");
+    
+    [self requestWithURL:url httpMethod:GETHttpMethod params:nil progress:nil completion:^(LRRResponseObj *responseObj) {
+        if (!responseObj) {
+            return ;
+        }else if (responseObj.code != LRRSuccessCode){
+            [view showHint:responseObj.message];
+            return ;
+        }else{
+            LRRLog(@"获取融云Token:%@",responseObj);
+            if (completionHandler) {
+                completionHandler(responseObj);
+            }
+        }
+        
+    } aboveView:view inCaller:caller];
+}
+
+
++ (void)logout
+{
+    // 清除内存和本地保存的用户信息
+    [[LRRUserManager sharedUserManager] logout];
+    // 解除第三方的授权
+    [[RCIM sharedRCIM] disconnect:NO];
+    // 退出融云
+    [LRRNotificationCenter postNotificationName:LRRUserLogoutNotifacation object:nil];
+}
 @end

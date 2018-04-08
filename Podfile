@@ -10,4 +10,7 @@ pod 'MBProgressHUD'
 pod ‘Reachability’
 pod 'LCActionSheet'
 pod 'SDCycleScrollView'
+pod 'RongCloudIM/IMLib', '~> 2.8.3'
+pod 'RongCloudIM/IMKit', '~> 2.8.3'
+pod 'BaiduMapKit' 
 end

@@ -35,6 +35,11 @@ NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";
 /** 保存用户的类型 */
 NSString * const LRRUserType = @"LRRUserType";
 
+/** 测试 融云的appkey */
+NSString *const LRRRongCloudAppKey = @"bmdehs6pbrrbs";
+/** 正式 融云的appkey */
+//NSString *const LRRRongCloudAppKey = @"uwd1c0sxuvrc1";
+
 /** 手机号码最大长度 */
 NSUInteger const LRRCellphoneMaxLength = 11;
 /** 验证码最大长度 */
@@ -49,6 +54,10 @@ NSUInteger const LRRNicknameMaxLength = 8;
 NSString * const LRRUserLoginNotifacation = @"LRRUserLoginNotifacation";
 /** 用户登出的通知 */
 NSString * const LRRUserLogoutNotifacation = @"LRRUserLogoutNotifacation";
+/** 显示红点的通知 */
+NSString * const LRRShowAlertNotifacation = @"LRRShowAlertNotifacation";
+/** 隐藏红点的通知 */
+NSString * const LRRHidenAlertNotifacation = @"LRRHidenAlertNotifacation";
 /** 通用的登录流程按钮的高度 */
 CGFloat const LRRLoginButtonHeight = 49;
 /** 设备在别处登录 */
