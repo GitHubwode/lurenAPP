@@ -47,7 +47,7 @@
  @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
  @param caller 方法调用者
  */
-+ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler inCaller:(id)caller;
++ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
 /**
  获取融云链接的Token
  

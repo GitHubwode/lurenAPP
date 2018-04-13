@@ -111,16 +111,20 @@
  @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
  @param caller 方法调用者
  */
-+ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler inCaller:(id)caller
++ (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller
 {
     //拼接URL
     NSString *url = LRRURL(@"/api/login/logOut");
     //发送请求
-    [self postFormDataWithUrl:url form:nil completion:^(LRRResponseObj *responseObj) {
-        if (caller && responseObj) {
+    [self requestWithURL:url httpMethod:POSTHttpMethod params:nil progress:nil completion:^(LRRResponseObj *responseObj) {
+        if (!responseObj)  return ;
+        if (LRRSuccessCode != responseObj.code) {
+            [view showHint:responseObj.message];
+        }
+        if (LRRSuccessCode == responseObj.code) {
             completionHandler(responseObj);
         }
-    } aboveView:nil inCaller:caller];
+    } aboveView:view inCaller:caller];
 }
 
 /**

@@ -16,7 +16,9 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (nonatomic, assign) NSInteger maxLenght;
-
+@property (nonatomic, copy) NSString *title1;
+@property (nonatomic, copy) NSString *title2;
+@property (nonatomic, copy) NSString *title3;
 
 @end
 
@@ -25,6 +27,9 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.title1 = @"";
+    self.title2 = @"";
+    self.title3 = @"";
     self.textView.layer.masksToBounds = YES;
     self.textView.layer.cornerRadius = 5.f;
     self.textView.delegate = self;
@@ -54,7 +59,7 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     if (!self.infoItem.editabled) return;
-    self.infoItem.subtitle = textView.text;
+    self.infoItem.subtitle = [NSString stringWithFormat:@"%@%@%@%@",self.title1,self.title2,self.title3,textView.text];
     [LRRNotificationCenter removeObserver:self];
 }
 
@@ -118,13 +123,28 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
 
 - (IBAction)notWomanButtonClick:(UIButton *)sender {
     sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.title1 = @"不要女工，";
+    }else{
+        self.title1 = @"";
+    }
 }
 - (IBAction)goToWorkButtonClick:(UIButton *)sender {
     sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.title2 = @"风雨无阻，";
+    }else{
+        self.title2 = @"";
+    }
 
 }
 - (IBAction)bringToolsButtonClick:(UIButton *)sender {
     sender.selected = !sender.selected;
+    if (sender.selected) {
+        self.title3 = @"自带工具，";
+    }else{
+        self.title3 = @"";
+    }
 
 }
 

@@ -181,7 +181,35 @@
     NSString *currentDateStr = [dateFormatter stringFromDate:date];
     return currentDateStr;
 }
-
+//时间转换为所需要的样式
++(NSString *)PublishWorkTimeStamp:(NSString *)strTime
+{
+    NSDate *now = [NSDate date];
+    //    NSLog(@"now date is: %@", now);
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitYear;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    NSInteger year = [dateComponent year];
+    strTime = [NSString stringWithFormat:@"%ld年%@00秒",(long)year,strTime];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
+    [formatter setDateFormat:@"yyyy年MM月dd日 HH时mm分ss秒"];
+    NSDate *expireDate = [formatter dateFromString:strTime];
+    NSTimeInterval timeInter = [expireDate timeIntervalSince1970];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInter];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *currentDateStr = [dateFormatter stringFromDate:date];
+    return currentDateStr;
+    
+    
+//    NSString *timeString = [NSString stringWithFormat:@"%0.f",timeInter];//转为字符型
+//    return timeString;
+    
+    
+    
+}
 
 
 - (NSString*)encodeString{

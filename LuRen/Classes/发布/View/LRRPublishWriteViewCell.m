@@ -44,6 +44,9 @@ static NSString *LRRPublishWriteCellIdfy = @"LRRPublishWriteCellIdfy";
     self.unitTitleLabel.text = infoItem.unitTitle;
 }
 
+
+
+
 - (void)ensureButtonClicked{
     if (self.infoItem.editabled) {
         self.infoItem.subtitle = self.textField.text;

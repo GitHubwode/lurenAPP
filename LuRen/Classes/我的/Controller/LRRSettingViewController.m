@@ -51,7 +51,10 @@
         [LRRLoginRequestManager logout];
         [self.navigationController popViewControllerAnimated:YES];
         
-    } inCaller:self];
+    } aboveView:self.view inCaller:self];
+    
+    
+    
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

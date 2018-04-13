@@ -28,6 +28,15 @@
             completionHandler(responseObj);
         }
     } aboveView:view inCaller:caller];
+    
+    [self requestWithURL:url httpMethod:POSTHttpMethod params:[param mj_keyValues] progress:nil completion:^(LRRResponseObj *responseObj) {
+        if (!responseObj) {
+        }
+        if (completionHandler) {
+            completionHandler(responseObj);
+        }
+    } aboveView:view inCaller:caller];
+    
 }
 
 /**

@@ -13,14 +13,18 @@
 - (instancetype)initWithUserId:(NSUInteger )userid
                           Name:(NSString *)name
                           Type:(NSString *)type
+                      WorkType:(NSString *)workType
                         Number:(NSUInteger )number
                           Days:(NSUInteger )days
                      UnitPrice:(double )unitPrice
                           Fare:(double )fare
+                      IsSeting:(NSUInteger)isSeting
+                   ProjectDesc:(NSString *)projectDesc
+                   WorkEndTime:(NSString *)workEndTime
+                WorkDevingTime:(NSString *)workDevingTime
+                    WorkAmount:(NSString *)workAmount
                         Remark:(NSString *)remark
-                      OrderUrl:(NSString *)orderUrl
                  WorkStartTime:(NSString *)workStartTime
-                       PayTime:(NSString *)payTime
                    LastPayTime:(NSString *)lastPayTime
                      Longitude:(CGFloat )longitude
                       Latitude:(CGFloat )latitude
@@ -35,13 +39,18 @@
         self.userId = userid;
         self.name = name;
         self.type = type;
+        self.workType = workType;
         self.number = number;
         self.days = days;
         self.unitPrice = unitPrice;
         self.fare = fare;
+        self.isSeting = isSeting;
+        self.projectDesc = projectDesc;
+        self.workEndTime = workEndTime;
+        self.workDevingTime = workDevingTime;
+        self.workAmount = workAmount;
         self.remark = remark;
         self.workStartTime = workStartTime;
-        self.payTime = payTime;
         self.lastPayTime = lastPayTime;
         self.longitude = longitude;
         self.latitude = latitude;
@@ -57,14 +66,18 @@
 + (instancetype)paramWithUserId:(NSUInteger )userid
                            Name:(NSString *)name
                            Type:(NSString *)type
+                       WorkType:(NSString *)workType
                          Number:(NSUInteger )number
                            Days:(NSUInteger )days
                       UnitPrice:(double )unitPrice
                            Fare:(double )fare
+                       IsSeting:(NSUInteger)isSeting
+                    ProjectDesc:(NSString *)projectDesc
+                    WorkEndTime:(NSString *)workEndTime
+                 WorkDevingTime:(NSString *)workDevingTime
+                     WorkAmount:(NSString *)workAmount
                          Remark:(NSString *)remark
-                       OrderUrl:(NSString *)orderUrl
                   WorkStartTime:(NSString *)workStartTime
-                        PayTime:(NSString *)payTime
                     LastPayTime:(NSString *)lastPayTime
                       Longitude:(CGFloat )longitude
                        Latitude:(CGFloat )latitude
@@ -74,7 +87,28 @@
                        Contacts:(NSString *)contacts
                   ContactsPhone:(NSString *)contactsPhone
 {
-    return [[self alloc]initWithUserId:userid Name:name Type:type Number:number Days:days UnitPrice:unitPrice Fare:fare Remark:remark OrderUrl:orderUrl WorkStartTime:workStartTime PayTime:payTime LastPayTime:lastPayTime Longitude:longitude Latitude:latitude Address:address AvatarUrl:avatarUrl WhenLong:whenLong Contacts:contacts ContactsPhone:contactsPhone];
+    return [[self alloc]initWithUserId:userid Name:name
+                                  Type:type
+                              WorkType:workType
+                                Number:number
+                                  Days:days
+                             UnitPrice:unitPrice
+                                  Fare:fare
+                              IsSeting:isSeting
+                           ProjectDesc:projectDesc
+                           WorkEndTime:workEndTime
+                        WorkDevingTime:workDevingTime
+                            WorkAmount:workAmount
+                                Remark:remark
+                         WorkStartTime:workStartTime
+                           LastPayTime:lastPayTime
+                             Longitude:longitude
+                              Latitude:latitude
+                               Address:address
+                             AvatarUrl:avatarUrl
+                              WhenLong:whenLong
+                              Contacts:contacts
+                         ContactsPhone:contactsPhone];
 }
 
 

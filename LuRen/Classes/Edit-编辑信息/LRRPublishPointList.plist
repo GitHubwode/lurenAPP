@@ -263,7 +263,7 @@
 	<array>
 		<dict>
 			<key>title</key>
-			<string>招工时续时间:</string>
+			<string>招工持续时间:</string>
 			<key>subtitle</key>
 			<string></string>
 			<key>keyboardType</key>
