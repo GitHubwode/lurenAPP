@@ -31,4 +31,53 @@
     } aboveView:view inCaller:caller];
 }
 
+/**
+ 获取订单信息列表或者完成 进行中
+ @param type 接口类型
+ @param page 页数  userId 用户id
+ @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param caller 方法调用者
+ 
+ */
++ (void)searchOrderListType:(LRRReceiveOrderRequestType)type Page:(NSUInteger )page Longitude:(CGFloat )longitude Latitude:(CGFloat )latitude completion:(void(^)(NSArray<LRROrderDetailsModel *>*response))completionHandler aboveView:(UIView *)view inCaller:(id)caller
+{
+    NSString *url;
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    NSString * userId = [LRRUserManager sharedUserManager].currentUser.userId;
+    switch (type) {
+        case LRRReceiveALLOrderRequestType: // 所有未完成订单
+            url = LRRURL(@"/api/order/getAllOrder");
+            dic[@"page"] = @(page);
+            break;
+        case LRRReceiveCompleteOrderRequestType: // 我已完成的订单
+            url = LRRURL(@"/api/order/getMyAcceptComplete");
+            dic[@"page"] = @(page);
+            break;
+        case LRRReceiveRecivedOrderRequestType: //我已接的订单
+            url = LRRURL(@"/api/order/getMyAcceptUnComplete");
+            dic[@"page"] = @(page);
+            dic[@"acceptUser"] = userId;
+        default:
+            break;
+    }
+    
+    [self requestWithURL:url httpMethod:GETHttpMethod params:dic progress:nil completion:^(LRRResponseObj *responseObj) {
+        
+        NSArray *responseDatasource;
+        if (!responseObj) {
+            
+        }else if (responseObj.code != LRRSuccessCode){
+            [view showHint:responseObj.message];
+        }else{
+            NSArray *recordList = [responseObj.data objectForKey:@"recordList"];
+            responseDatasource = [LRROrderDetailsModel mj_objectArrayWithKeyValuesArray:recordList];
+            if (completionHandler) {
+                completionHandler(responseDatasource);
+            }
+        }
+        
+    } aboveView:nil inCaller:caller];
+    
+}
+
 @end

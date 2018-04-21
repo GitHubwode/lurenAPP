@@ -47,15 +47,15 @@
 - (void)setupChildViewControllers{
     
     LRRMyOrderListViewController *firstVC = [[LRRMyOrderListViewController alloc]init];
-//    waitting.requestType = 0;
+    firstVC.requestType = LRRReceiveRecivedOrderRequestType;
     [self addChildViewController:firstVC];
     
     LRRMyOrderListViewController *secondVC = [[LRRMyOrderListViewController alloc]init];
-//    checked.requestType = 1;
+    secondVC.requestType = LRRReceiveCompleteOrderRequestType;
     [self addChildViewController:secondVC];
     
     LRRMyOrderListViewController *threeVC = [[LRRMyOrderListViewController alloc]init];
-    //    checked.requestType = 1;
+//    threeVC.requestType = 1;//未写
     [self addChildViewController:threeVC];
     
 //    LRRMyOrderListViewController *fourVC = [[LRRMyOrderListViewController alloc]init];

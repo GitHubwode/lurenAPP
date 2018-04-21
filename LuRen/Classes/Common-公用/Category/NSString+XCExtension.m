@@ -163,7 +163,7 @@
 //时间戳转换为所需要的样式
 +(NSString *)TimeStamp:(NSString *)strTime
 {
-    NSTimeInterval time = [strTime doubleValue];
+    NSTimeInterval time = [strTime doubleValue]/1000;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];

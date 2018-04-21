@@ -11,6 +11,7 @@
 #import "LRROrderDetailViewController.h"
 #import "WMTabControl.h"
 #import "WMDropDownView.h"
+#import "LRRReceiveOrderRequestManager.h"
 
 @interface LRRPointWorkViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -53,7 +54,7 @@
     [self.view addSubview:self.tableView];
     self.tableView.mj_header = [LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(orderListRefreshRequest)];
     self.tableView.mj_footer = [LRRRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(orderListLoadRequest)];
-//    [self.tableView.mj_header beginRefreshing];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - 获取数据
@@ -70,7 +71,26 @@
 
 - (void)orderListRequest:(BOOL)refresh
 {
-    
+    [LRRReceiveOrderRequestManager searchOrderListType:LRRReceiveALLOrderRequestType Page:self.pageNum Longitude:0 Latitude:0 completion:^(NSArray<LRROrderDetailsModel *> *response) {
+        if (!response) {
+            if (refresh) {
+                [self.tableView.mj_header endRefreshing];
+            }else{
+                [self.tableView.mj_footer endRefreshing];
+            }
+        }else{ //有数据
+            self.pageNum ++;
+            if (refresh) {
+                [self.tableView.mj_header endRefreshing];
+                [self.datasource removeAllObjects];
+            }else{
+                [self.tableView.mj_footer endRefreshing];
+            }
+            [self.datasource addObjectsFromArray:response];
+        }
+        [self.tableView reloadData];
+        
+    } aboveView:self.view inCaller:self];
 }
 
 
@@ -93,11 +113,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.datasource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    LRROrderDetailsModel *model = self.datasource[indexPath.row];
     LRRLookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRLookTableViewCell lookIdentifier] forIndexPath:indexPath];
+    cell.orderModel = model;
     return cell;
 }
 
@@ -199,6 +221,14 @@
         _tableView.dataSource = self;
     }
     return _tableView;
+}
+
+- (NSMutableArray *)datasource
+{
+    if (!_datasource) {
+        _datasource = [NSMutableArray array];
+    }
+    return _datasource;
 }
 
 - (void)dealloc

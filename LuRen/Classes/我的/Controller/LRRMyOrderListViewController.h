@@ -7,7 +7,10 @@
 //
 
 #import "LRRBaseViewController.h"
+#import "LRRReceiveOrderRequestManager.h"
 
 @interface LRRMyOrderListViewController : LRRBaseViewController
+
+@property (nonatomic, assign) LRRReceiveOrderRequestType requestType;
 
 @end

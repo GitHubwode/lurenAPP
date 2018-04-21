@@ -563,32 +563,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18783F69207A0A7700D72AFF /* AssetsLibrary.framework in Frameworks */,
+				18783F6B207A0A8000D72AFF /* AudioToolbox.framework in Frameworks */,
+				18783F6D207A0A8800D72AFF /* AVFoundation.framework in Frameworks */,
+				18783F6F207A0A9100D72AFF /* CFNetwork.framework in Frameworks */,
+				18783F71207A0A9C00D72AFF /* CoreAudio.framework in Frameworks */,
+				18783F73207A0AA500D72AFF /* CoreGraphics.framework in Frameworks */,
+				18783F75207A0AAD00D72AFF /* CoreLocation.framework in Frameworks */,
+				18783F77207A0AB500D72AFF /* CoreMedia.framework in Frameworks */,
+				18783F79207A0ABE00D72AFF /* CoreTelephony.framework in Frameworks */,
+				18783F7B207A0AC900D72AFF /* CoreVideo.framework in Frameworks */,
+				18783F7D207A0AD100D72AFF /* ImageIO.framework in Frameworks */,
+				18783F81207A0AEA00D72AFF /* libc++abi.tbd in Frameworks */,
+				18783F83207A0AF300D72AFF /* libsqlite3.tbd in Frameworks */,
+				18783F85207A0AFC00D72AFF /* libstdc++.tbd in Frameworks */,
+				18783F87207A0B0500D72AFF /* libxml2.tbd in Frameworks */,
+				18783F89207A0B0F00D72AFF /* libz.tbd in Frameworks */,
+				18783F8B207A0B1A00D72AFF /* MapKit.framework in Frameworks */,
+				18783F8D207A0B2200D72AFF /* OpenGLES.framework in Frameworks */,
+				18783F8F207A0B2A00D72AFF /* QuartzCore.framework in Frameworks */,
+				18783F91207A0B3100D72AFF /* SystemConfiguration.framework in Frameworks */,
+				18783F93207A0B3A00D72AFF /* UIKit.framework in Frameworks */,
+				18783F95207A0B4200D72AFF /* Photos.framework in Frameworks */,
+				18783F97207A0B4A00D72AFF /* SafariServices.framework in Frameworks */,
 				18783F9A207A0EAA00D72AFF /* libssl.a in Frameworks */,
 				18783F9B207A0EAA00D72AFF /* libcrypto.a in Frameworks */,
-				18783F97207A0B4A00D72AFF /* SafariServices.framework in Frameworks */,
-				18783F95207A0B4200D72AFF /* Photos.framework in Frameworks */,
-				18783F93207A0B3A00D72AFF /* UIKit.framework in Frameworks */,
-				18783F91207A0B3100D72AFF /* SystemConfiguration.framework in Frameworks */,
-				18783F8F207A0B2A00D72AFF /* QuartzCore.framework in Frameworks */,
-				18783F8D207A0B2200D72AFF /* OpenGLES.framework in Frameworks */,
-				18783F8B207A0B1A00D72AFF /* MapKit.framework in Frameworks */,
-				18783F89207A0B0F00D72AFF /* libz.tbd in Frameworks */,
-				18783F87207A0B0500D72AFF /* libxml2.tbd in Frameworks */,
-				18783F85207A0AFC00D72AFF /* libstdc++.tbd in Frameworks */,
-				18783F83207A0AF300D72AFF /* libsqlite3.tbd in Frameworks */,
-				18783F81207A0AEA00D72AFF /* libc++abi.tbd in Frameworks */,
 				18783F7F207A0ADC00D72AFF /* libc++.tbd in Frameworks */,
-				18783F7D207A0AD100D72AFF /* ImageIO.framework in Frameworks */,
-				18783F7B207A0AC900D72AFF /* CoreVideo.framework in Frameworks */,
-				18783F79207A0ABE00D72AFF /* CoreTelephony.framework in Frameworks */,
-				18783F77207A0AB500D72AFF /* CoreMedia.framework in Frameworks */,
-				18783F75207A0AAD00D72AFF /* CoreLocation.framework in Frameworks */,
-				18783F73207A0AA500D72AFF /* CoreGraphics.framework in Frameworks */,
-				18783F71207A0A9C00D72AFF /* CoreAudio.framework in Frameworks */,
-				18783F6F207A0A9100D72AFF /* CFNetwork.framework in Frameworks */,
-				18783F6D207A0A8800D72AFF /* AVFoundation.framework in Frameworks */,
-				18783F6B207A0A8000D72AFF /* AudioToolbox.framework in Frameworks */,
-				18783F69207A0A7700D72AFF /* AssetsLibrary.framework in Frameworks */,
 				469A9E1D8CF6D83F13AF0176 /* libPods-LuRen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1477,7 +1477,6 @@
 				18FC93EC200C5F7000269FAB /* Sources */,
 				18FC93ED200C5F7000269FAB /* Frameworks */,
 				18FC93EE200C5F7000269FAB /* Resources */,
-				773CC25DA76C5592549A1FE0 /* [CP] Embed Pods Frameworks */,
 				087246208E8659FA9146D19A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1649,9 +1648,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LuRen/Pods-LuRen-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongCloud.bundle",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/en.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/zh-Hans.lproj",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/Emoji.plist",
+				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RCConfig.plist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongCloud.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Emoji.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1664,28 +1678,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuRen-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		773CC25DA76C5592549A1FE0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuRen/Pods-LuRen-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class LRROrderDetailsModel;
 @interface LRRLookTableViewCell : UITableViewCell
-
+@property (nonatomic, strong) LRROrderDetailsModel *orderModel;
 + (NSString *)lookIdentifier;
 
 @end

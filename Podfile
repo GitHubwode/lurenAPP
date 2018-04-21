@@ -1,6 +1,6 @@
 platform :ios,'8.0'
 target 'LuRen' do
-
+inhibit_all_warnings!
 pod 'MJRefresh'
 pod 'Masonry'
 pod 'FDFullscreenPopGesture'

@@ -17,11 +17,13 @@
 /** 订单名称 */
 @property (nonatomic,copy) NSString *name;
 /** 类型 */
-@property (nonatomic,assign) NSUInteger type;
+@property (nonatomic,copy) NSString* type;
 /** 用工人数 */
 @property (nonatomic,assign) NSUInteger  number;
 /** 用工天数 */
 @property (nonatomic,assign) NSUInteger  days;
+/** 车辆数 */
+@property (nonatomic, assign) NSUInteger carNum;
 /** 用工单价 */
 @property (nonatomic,assign) double  unitPrice;
 /** 车费 */
@@ -70,8 +72,6 @@
 @property (nonatomic,copy) NSString *payTime;
 /** 发布方头像 */
 @property (nonatomic,copy) NSString *avatarUrl;
-/** 工地图片 */
-@property (nonatomic,copy) NSString *orderUrl;
 /** 接单者的纬度 */
 @property (nonatomic,copy) NSString *acceptLatitude;
 /** 接单者的经度 */
@@ -93,6 +93,5 @@
 @property (nonatomic, copy) NSString *differentPrice;
 /** 隐藏电话号码 */
 @property (nonatomic, copy) NSString *hidePhone;
-@property (nonatomic, strong) NSMutableArray *imageArray;
 
 @end

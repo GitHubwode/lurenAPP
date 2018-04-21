@@ -43,7 +43,27 @@
 
 - (void)orderListRequest:(BOOL)refresh
 {
-    
+    [LRRReceiveOrderRequestManager searchOrderListType:self.requestType Page:self.pageNum Longitude:0 Latitude:0 completion:^(NSArray<LRROrderDetailsModel *> *response) {
+        if (!response) {
+            if (refresh) {
+                [self.tableView.mj_header endRefreshing];
+            }else{
+                [self.tableView.mj_footer endRefreshing];
+            }
+        }else{ //有数据
+            self.pageNum ++;
+            if (refresh) {
+                [self.tableView.mj_header endRefreshing];
+                [self.datasource removeAllObjects];
+            }else{
+                [self.tableView.mj_footer endRefreshing];
+            }
+            [self.datasource addObjectsFromArray:response];
+        }
+        [self.tableView reloadData];
+        
+    } aboveView:self.view inCaller:self];
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -65,11 +85,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.datasource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    LRROrderDetailsModel *model = self.datasource[indexPath.row];
     LRRLookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRLookTableViewCell lookIdentifier] forIndexPath:indexPath];
+    cell.orderModel = model;
     return cell;
 }
 
@@ -92,6 +114,14 @@
         _tableView.dataSource = self;
     }
     return _tableView;
+}
+
+- (NSMutableArray *)datasource
+{
+    if (!_datasource) {
+        _datasource = [NSMutableArray array];
+    }
+    return _datasource;
 }
 
 - (void)dealloc

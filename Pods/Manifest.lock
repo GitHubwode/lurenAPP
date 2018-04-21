@@ -46,6 +46,21 @@ DEPENDENCIES:
   - RongCloudIM/IMLib (~> 2.8.3)
   - SDCycleScrollView
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - BaiduMapKit
+    - FDFullscreenPopGesture
+    - LCActionSheet
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - Reachability
+    - RongCloudIM
+    - SDCycleScrollView
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BaiduMapKit: 6517f84bdca032170ee9da39985bb64eba8ed900
@@ -60,6 +75,6 @@ SPEC CHECKSUMS:
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 00edc6615b781843c18a1d2daff08547663d34a7
+PODFILE CHECKSUM: fadac9ccd5c0d37e4e3695cdfe2f07069f3a0f8c
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.0
