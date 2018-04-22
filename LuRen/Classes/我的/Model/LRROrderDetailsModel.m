@@ -36,6 +36,7 @@
     //    人数
     if (_fare == 0) {
         _totalAmount = _number *_unitPrice*_days;
+        _orderDetailsList = [NSString stringWithFormat:@"%lu人*%.f元*%lu天=%.f元",(unsigned long)_number,_unitPrice,(unsigned long)_days,_totalAmount];
     }else{
         if ((int)_number < 5) {
             _carNum = 0;
@@ -43,6 +44,12 @@
             _carNum =ceil(_number/7);
         }
         _totalAmount = _number *_unitPrice*_days + _fare*_days*_carNum;
+        _orderDetailsList = [NSString stringWithFormat:@"%lu人*%.f元*%lu天+%.f元*%lu辆*%lu天=%.f元",(unsigned long)_number,_unitPrice,(unsigned long)_days,_fare,(unsigned long)_days,(unsigned long)_carNum,_totalAmount];
+    }
+    if (_isSeting == 0) {
+        _isLive = @"不住";
+    }else{
+        _isLive = @"住";
     }
     
     LRRLog(@"价钱 %.f %.f  %@",_totalAmount,_fee,_differentPrice);
@@ -58,6 +65,8 @@
     }
     _accpetTime = [NSString TimeStamp:_accpetTime];
     _workStartTime = [NSString TimeStamp:_workStartTime];
+    _workEndTime = [NSString TimeStamp:_workEndTime];
+    _workDevingTime = [NSString TimeStamp:_workDevingTime];
 
     if (_instance.length > 0) {
         _instance = [NSString getDistanceString:_instance];
@@ -68,7 +77,7 @@
  *  这个数组中的属性名将会被忽略：不进行字典和模型的转换
  */
 + (NSArray *)mj_ignoredPropertyNames{
-    return @[@"orderDetails", @"workerType",@"searchOrderDetails",@"statusImage",@"differentPrice",@"hidePhone",@"imageArray",@"carNum;"];
+    return @[@"orderDetails", @"workerType",@"searchOrderDetails",@"statusImage",@"differentPrice",@"hidePhone",@"imageArray",@"carNum",@"isLive"];
 }
 
 

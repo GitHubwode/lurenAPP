@@ -13,7 +13,7 @@
 /**
  接单
  @param param 请求对象，请求参数封装为对象的属性
- @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
  @param caller 方法调用者
  */
 
@@ -35,7 +35,7 @@
  获取订单信息列表或者完成 进行中
  @param type 接口类型
  @param page 页数  userId 用户id
- @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
  @param caller 方法调用者
  
  */

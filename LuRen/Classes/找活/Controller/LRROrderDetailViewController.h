@@ -8,6 +8,10 @@
 
 #import "LRRBaseViewController.h"
 
+@class LRROrderDetailsModel;
+
 @interface LRROrderDetailViewController : LRRBaseViewController
+
+@property (nonatomic, strong) LRROrderDetailsModel *orderModel;
 
 @end

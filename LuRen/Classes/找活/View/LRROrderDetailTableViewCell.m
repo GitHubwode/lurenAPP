@@ -7,6 +7,7 @@
 //
 
 #import "LRROrderDetailTableViewCell.h"
+#import "LRROrderDetailsModel.h"
 
 @interface LRROrderDetailTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIButton *statusButton;
@@ -51,6 +52,44 @@ static  NSString *const orderDetailTableViewCell = @"orderDetailTableViewCell";
     self.statusButton.layer.masksToBounds = YES;
     self.statusButton.layer.cornerRadius = 5.f;
 }
+
+- (void)setOrderModel:(LRROrderDetailsModel *)orderModel
+{
+    _orderModel = orderModel;
+    LRRLog(@"%@",orderModel.type);
+    
+    self.titleLabel.text = orderModel.orderDetails;
+    self.peopleLabel.text = [NSString stringWithFormat:@"人数: %lu人",(unsigned long)orderModel.number];
+    
+    NSString *unitString = [NSString stringWithFormat:@"%.f",orderModel.unitPrice];
+    NSString *string1 = [NSString stringWithFormat:@"工价: %.f元/天",orderModel.unitPrice];
+    self.moneyLabel.attributedText = [self firstString:string1 SecondString:unitString];
+    
+    NSString *fareString = [NSString stringWithFormat:@"%.f",orderModel.fare];
+    NSString *string2 =  [NSString stringWithFormat:@"车费: %.f/辆/天",orderModel.fare];
+    
+    self.carLabel.attributedText = [self firstString:string2 SecondString:fareString];
+    self.orderTimeLabel.text = [NSString stringWithFormat:@"%@",orderModel.workStartTime];
+    self.distanceLabel.text = [NSString stringWithFormat:@"%@",orderModel.instance];
+    
+    self.startLabel.text = [NSString stringWithFormat:@"%@--%@",orderModel.workStartTime,orderModel.workEndTime];
+    
+    self.introduceLabel.text = orderModel.projectDesc;
+    self.markLabel.text = orderModel.remark;
+    self.liveLabel.text = orderModel.isLive;
+    self.nemaLabel.text = orderModel.contacts;
+    self.addressLabel.text = orderModel.address;
+    self.numberLabel.text = [NSString stringWithFormat:@"%lu人",(unsigned long)orderModel.number];
+    self.totalLabel.text =orderModel.orderDetailsList;
+}
+
+- (NSAttributedString *)firstString:(NSString *)string SecondString:(NSString *)secondString
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    [attributedString addAttribute:NSForegroundColorAttributeName value:LRRMoneyTitleColor range:NSMakeRange(3, secondString.length+1)];
+    return attributedString;
+}
+
 + (NSString *)orderDetailIdentifier
 {
     return orderDetailTableViewCell;

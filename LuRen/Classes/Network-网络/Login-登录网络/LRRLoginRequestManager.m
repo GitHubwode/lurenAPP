@@ -58,6 +58,7 @@
                 [[LRRUserManager sharedUserManager]loginWithCurrentUser:userInfo.userInfo];
                 [[LRRUserManager sharedUserManager] autoLogin];
                 completionHandler(responseObj);
+                [LRRRongCloudModel lrr_initRongCloudLogin];
             }
             
         }else if (responseObj.code != LRRSuccessCode){
@@ -108,7 +109,7 @@
 /**
  退出登录
  @ param  用户登录token
- @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
  @param caller 方法调用者
  */
 + (void)loginOutWithcompletion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller
@@ -130,7 +131,7 @@
 /**
  获取融云链接的Token
  
- @param completionHandler 请求完成的回调 responseObj 为KGGResponseObj
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
  @param view HUD要添加的地方
  @param caller 方法调用者
  */

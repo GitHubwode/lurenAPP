@@ -13,6 +13,7 @@
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "LRRRealNameViewController.h"
 #import "LRRUserDetailedViewController.h"
+#import "LRRLoginViewController.h"
 
 @interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate,LRRHeaderViewDelegate>
 
@@ -41,9 +42,15 @@
 - (void)headerViewTapMessage
 {
     LRRLog(@"跳转用户信息");
-    LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
-    userVC.navTitle = @"编辑";
-    [self.navigationController pushViewController:userVC animated:YES];
+    if (![LRRUserManager sharedUserManager].logined) {
+        [self.datasource removeAllObjects];
+        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }else{
+        LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+        userVC.navTitle = @"编辑";
+        [self.navigationController pushViewController:userVC animated:YES];
+    }
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource
@@ -100,9 +107,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
-    Class class = NSClassFromString(item.linkVC);
-    [self.navigationController pushViewController:[class new] animated:YES];
+    if (![LRRUserManager sharedUserManager].logined) {
+        [self.datasource removeAllObjects];
+        LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }else{
+        LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
+        Class class = NSClassFromString(item.linkVC);
+        [self.navigationController pushViewController:[class new] animated:YES];
+    }
 }
 
 #pragma mark - 懒加载

@@ -11,5 +11,7 @@
 @interface LRRFeedbackViewController : LRRBaseViewController
 
 @property (nonatomic, strong) NSString *titleString;
+/** 被举报人电话 */
+@property (nonatomic, copy) NSString *reportedPhone;
 
 @end

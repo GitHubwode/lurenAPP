@@ -151,7 +151,6 @@
 }
 
 /** 注册用户 */
-
 - (IBAction)userAgreementButtonClick:(UIButton *)sender {
     LRRLog(@"用户协议");
 }

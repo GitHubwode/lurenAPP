@@ -37,6 +37,8 @@
 #import "UIImage+LRRExtension.h"
 #import "MBProgressHUD+LRRExtension.h"
 #import "UIView+LRRHUD.h"
+#import "UIView+XCExtension.h"
+#import "LRRBaseNavigationController.h"
 
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
 

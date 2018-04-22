@@ -45,11 +45,11 @@
 /** 联系人电话 */
 @property (nonatomic,copy) NSString *contactsPhone;
 /** 绑卡订单信息 */
-@property (nonatomic,copy) NSString *orderMessage;
+//@property (nonatomic,copy) NSString *orderMessage;
 /** 订单详情 */
 @property (nonatomic,copy) NSString *orderContent;
-/** 是否优先派单 0为否 1为是 */
-@property (nonatomic,assign) NSUInteger  firstDispatch;
+///** 是否优先派单 0为否 1为是 */
+//@property (nonatomic,assign) NSUInteger  firstDispatch;
 /** 备注 */
 @property (nonatomic,copy) NSString *remark;
 /** 创建时间 */
@@ -68,8 +68,12 @@
 @property (nonatomic,copy) NSString * orderNo;
 /** 开始时间 */
 @property (nonatomic,copy) NSString *workStartTime;
+/** 用工结束时间 */
+@property (nonatomic, copy) NSString *workEndTime;
+/** 用工持续时间 */
+@property (nonatomic, copy) NSString *workDevingTime;
 /** 支付时间 */
-@property (nonatomic,copy) NSString *payTime;
+//@property (nonatomic,copy) NSString *payTime;
 /** 发布方头像 */
 @property (nonatomic,copy) NSString *avatarUrl;
 /** 接单者的纬度 */
@@ -78,11 +82,17 @@
 @property (nonatomic,copy) NSString *acceptLongitude;
 /** 两地距离 */
 @property (nonatomic,copy) NSString *instance;
+/** 工地简介 */
+@property (nonatomic, copy) NSString *projectDesc;
+/** 是否住工地 0否 1是 */
+@property (nonatomic, assign) NSUInteger isSeting;
+/** 工程量 包活的有用*/
+@property (nonatomic, copy) NSString *workAmount;
 /** 支付时间 */
-@property (nonatomic,copy) NSString *lastPayTime;
+//@property (nonatomic,copy) NSString *lastPayTime;
 /** 接单者已结单是否出工 */
-@property (nonatomic, copy)NSString *isStart;
-//增加的参数
+//@property (nonatomic, copy)NSString *isStart;
+/**********    增加的参数      ***********/
 @property (nonatomic, copy) NSString *orderDetails;
 //接单者的订单详情
 @property (nonatomic, copy) NSString *searchOrderDetails;
@@ -93,5 +103,9 @@
 @property (nonatomic, copy) NSString *differentPrice;
 /** 隐藏电话号码 */
 @property (nonatomic, copy) NSString *hidePhone;
+/** 订单详情显示的订单总额明细 */
+@property (nonatomic, copy) NSString *orderDetailsList;
+/** 是否住工地 */
+@property (nonatomic, copy) NSString *isLive;
 
 @end

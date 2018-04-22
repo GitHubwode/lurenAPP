@@ -83,14 +83,14 @@
     LRRLog(@"day is: %d日", day);
     LRRLog(@"小时:%d",hour);
     int endDay = [[NSString getMonthBeginAndEndWith:[NSString stringWithFormat:@"%d",_mouth]] intValue];
-    //    KGGLog(@"%d",endDay);
+    //    LRRLog(@"%d",endDay);
     for (int i = hour; i < 24; i++) {
         NSString *hourString = [NSString stringWithFormat:@"%d时",i+1];
         [self.hourArray addObject:hourString];
     }
     
     for (int i = day; i<endDay+1; i++) {
-        //            KGGLog(@"天是%d",i);
+        //            LRRLog(@"天是%d",i);
         NSString *dayString1 = [NSString stringWithFormat:@"%d月%d日",_mouth,i];
         [self.dayArray1 addObject:dayString1];
         if (i==day) {

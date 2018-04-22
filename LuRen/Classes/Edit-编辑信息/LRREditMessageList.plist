@@ -16,7 +16,7 @@
 			<string></string>
 			<key>propertyKey</key>
 			<string>avatar</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>hidenLine</key>
 			<true/>
@@ -36,7 +36,7 @@
 			<string>请填写姓名</string>
 			<key>propertyKey</key>
 			<string>name</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -54,7 +54,7 @@
 			<string>请选择性别</string>
 			<key>propertyKey</key>
 			<string>sex</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -72,7 +72,7 @@
 			<string>请选择民族</string>
 			<key>propertyKey</key>
 			<string>national</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -90,7 +90,7 @@
 			<string>请选择生日</string>
 			<key>propertyKey</key>
 			<string>birthday</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -108,7 +108,7 @@
 			<string>请选择籍贯</string>
 			<key>propertyKey</key>
 			<string>city</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -130,7 +130,7 @@
 			<string>请选择工种</string>
 			<key>propertyKey</key>
 			<string>work</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -148,7 +148,7 @@
 			<string>请选择工龄</string>
 			<key>propertyKey</key>
 			<string>age</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -166,7 +166,7 @@
 			<string>请选择团队规模</string>
 			<key>propertyKey</key>
 			<string>team</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<true/>
@@ -188,7 +188,7 @@
 			<string>请填写自我介绍</string>
 			<key>propertyKey</key>
 			<string>introduce</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<false/>
@@ -206,7 +206,7 @@
 			<string>请填写团队介绍</string>
 			<key>propertyKey</key>
 			<string>teamIntroduce</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<false/>
@@ -224,7 +224,7 @@
 			<string>请填写合作的工地</string>
 			<key>propertyKey</key>
 			<string>experience</string>
-			<key>enabled</key>
+			<key>editabled</key>
 			<true/>
 			<key>required</key>
 			<false/>

@@ -70,8 +70,8 @@ NSString *const LRRChooseIdentityNotifacation = @"LRRChooseIdentityNotifacation"
 CGFloat const LRRLeftPadding = 15.f;
 /** 通用的右间距值 */
 CGFloat const LRRRightPadding = 15.f;
-/** 通用的标签栏选择的高度 */
-CGFloat const LRRDropDownHeight = 45.f;
+/** 通用的标签栏选择的高度 前期不要选择地点与工种 后期需要再加高度45 */
+CGFloat const LRRDropDownHeight = 0.f;
 /** 通用的item高度 */
 CGFloat const LRRItemHeight = 44.f;
 

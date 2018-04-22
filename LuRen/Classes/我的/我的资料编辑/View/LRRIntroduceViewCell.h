@@ -12,6 +12,7 @@
 
 @interface LRRIntroduceViewCell : UITableViewCell
 @property (nonatomic, strong) LRRCustomInfoItem *infoItem;
+@property (weak, nonatomic) IBOutlet UITextView *subTitleTextView;
 + (NSString *)cellIdentifier;
 
 @end

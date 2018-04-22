@@ -7,6 +7,8 @@
 //
 
 #import "LRRAvatarViewCell.h"
+#import "LRRCustomInfoItem.h"
+#import "UIImageView+WebCache.h"
 
 static NSString *LRRAvatarCellIdfy = @"LRRAvatarCellIdfy";
 
@@ -22,6 +24,14 @@ static NSString *LRRAvatarCellIdfy = @"LRRAvatarCellIdfy";
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)setInfoItem:(LRRCustomInfoItem *)infoItem
+{
+    _infoItem = infoItem;
+    self.titleLabel.text = infoItem.title;
+    NSString *avatar = [LRRUserManager sharedUserManager].currentUser.avatarUrl;
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:@"logo_me"]];
 }
 
 + (NSString *)cellIdentifier

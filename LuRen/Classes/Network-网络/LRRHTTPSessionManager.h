@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, LRRErrorCode) {
 @end
 
 /** 请求成功的回调，以下说明仅仅值调用requestWithURL:httpMethod:params:progress:completion...方法
- * 1、responseObj类型为KGGResponseObj
+ * 1、responseObj类型为LRRResponseObj
  * 2、responseObj = nil 表示网络错误
  * 3、responseObj != nil,responseObj.code != SNHSuccessCode 表示业务错误
  */

@@ -10,6 +10,7 @@
 #import "LRROrderDetailTableViewCell.h"
 #import "LRRFeedbackViewController.h"
 #import "LRRReceiveOrderRequestManager.h"
+#import "LRROrderDetailsModel.h"
 
 @interface LRROrderDetailViewController ()<UITableViewDataSource,UITableViewDelegate,LRROrderDetailTableViewCellDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,6 +27,8 @@
     self.navigationItem.title = @"详情";
     [self.view addSubview:self.tableView];
     [self addNavi];
+    LRRLog(@"orderModel:%@",self.orderModel);
+    [self requestLocation];
 }
 
 #pragma mark - 获取经纬度
@@ -42,7 +45,7 @@
         CLLocationCoordinate2D coordinate = location.coordinate;
         longitude = coordinate.longitude;
         latitude = coordinate.latitude;
-//        param[@"id"] = @(self.orderDetails.orderId);//参数
+        self.param[@"id"] = @(self.orderModel.orderId);//参数
         self.param[@"acceptLongitude"] = @(longitude);
         self.param[@"acceptLatitude"] = @(latitude);
         self.param[@"phone"] = [LRRUserManager sharedUserManager].currentUser.phone;
@@ -60,6 +63,7 @@
 {
     LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
     feedVC.titleString = @"举报";
+    feedVC.reportedPhone = self.orderModel.contactsPhone;
     [self.navigationController pushViewController:feedVC animated:YES];
 }
 
@@ -104,9 +108,9 @@
 {
     LRROrderDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRROrderDetailTableViewCell orderDetailIdentifier] forIndexPath:indexPath];
     cell.delegate = self;
+    cell.orderModel = self.orderModel;
     return cell;
 }
-
 
 #pragma mark - 懒加载
 - (UITableView *)tableView

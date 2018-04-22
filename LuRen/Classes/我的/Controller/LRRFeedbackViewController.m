@@ -94,10 +94,26 @@
 - (void)submitButtonClick:(UIButton *)sender
 {
     LRRLog(@"提交");
-    LRRReportParam *param = [[LRRReportParam alloc]initWithReportId:1 OrderNo:@"" ReportContent:self.remarkString ReportedPhone:@"" ReportPhone:@""];
-    [LRRReportRequestManager reportOrderParam:param completion:^(LRRResponseObj *responseObj) {
-        LRRLog(@"举报信息");
-    } aboveView:self.view inCaller:self];
+    //举报人ID reportId
+    //举报人电话号码reportPhone
+    //被举报人电话 reportedPhone
+    //举报内容reportContent
+    NSString *userId = [LRRUserManager sharedUserManager].currentUser.userId;
+    NSString *phoneId = [LRRUserManager sharedUserManager].currentUser.phone;
+    
+    if ([self.titleString isEqualToString:@"举报"]) {
+        LRRReportParam *param = [[LRRReportParam alloc]initWithReportId:1 OrderNo:userId ReportContent:self.remarkString ReportedPhone:self.reportedPhone ReportPhone:phoneId];
+        [LRRReportRequestManager reportOrderParam:param completion:^(LRRResponseObj *responseObj) {
+            if (responseObj.code == LRRSuccessCode) {
+                [self.view showHint:@"您的举报对我们很重要谢谢"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
+            }
+            LRRLog(@"举报信息");
+        } aboveView:self.view inCaller:self];
+    }
+
 }
 
 

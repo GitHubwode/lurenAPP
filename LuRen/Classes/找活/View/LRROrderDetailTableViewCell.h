@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class LRROrderDetailsModel;
+
+
 @protocol LRROrderDetailTableViewCellDelegate <NSObject>
 
 - (void)moreChargeStandardButtonClick:(UIButton *)sender;
@@ -19,7 +22,7 @@
 
 @property (nonatomic, weak) id<LRROrderDetailTableViewCellDelegate> delegate;
 
-
+@property (nonatomic, strong) LRROrderDetailsModel *orderModel;
 + (NSString *)orderDetailIdentifier;
 
 @end

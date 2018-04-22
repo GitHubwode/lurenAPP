@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class LRRCustomInfoItem;
 @interface LRRAvatarViewCell : UITableViewCell
+@property (nonatomic, strong) LRRCustomInfoItem *infoItem;
 
 + (NSString *)cellIdentifier;
 

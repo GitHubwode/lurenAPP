@@ -131,6 +131,39 @@
 		1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EACC204D2DBF0039405B /* SUNSlideSwitchView.m */; };
 		1855EAD7204D357C0039405B /* LRRMyBaseOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */; };
 		1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */; };
+		1861D233208C5DEC002E11C5 /* LRREditMesssParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D232208C5DEC002E11C5 /* LRREditMesssParam.m */; };
+		1861D236208C62DB002E11C5 /* LRREditUserRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D235208C62DB002E11C5 /* LRREditUserRequestManager.m */; };
+		1861D24D208C759B002E11C5 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D23B208C759B002E11C5 /* TZAssetCell.m */; };
+		1861D24E208C759B002E11C5 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D23C208C759B002E11C5 /* TZVideoPlayerController.m */; };
+		1861D24F208C759B002E11C5 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D23D208C759B002E11C5 /* TZAssetModel.m */; };
+		1861D250208C759B002E11C5 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D23E208C759B002E11C5 /* NSBundle+TZImagePicker.m */; };
+		1861D251208C759B002E11C5 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D240208C759B002E11C5 /* UIView+Layout.m */; };
+		1861D252208C759B002E11C5 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D241208C759B002E11C5 /* TZPhotoPreviewController.m */; };
+		1861D253208C759B002E11C5 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1861D242208C759B002E11C5 /* TZImagePickerController.bundle */; };
+		1861D254208C759B002E11C5 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D244208C759B002E11C5 /* TZImageManager.m */; };
+		1861D255208C759B002E11C5 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D245208C759B002E11C5 /* TZPhotoPickerController.m */; };
+		1861D256208C759B002E11C5 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D246208C759B002E11C5 /* TZPhotoPreviewCell.m */; };
+		1861D257208C759B002E11C5 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D24C208C759B002E11C5 /* TZImagePickerController.m */; };
+		1861D282208C7AF9002E11C5 /* PKShortVideoSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D25D208C7AF8002E11C5 /* PKShortVideoSession.m */; };
+		1861D283208C7AF9002E11C5 /* PKRecordShortVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D25E208C7AF8002E11C5 /* PKRecordShortVideoViewController.m */; };
+		1861D284208C7AF9002E11C5 /* PKShortVideoProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D25F208C7AF8002E11C5 /* PKShortVideoProgressBar.m */; };
+		1861D285208C7AF9002E11C5 /* PKShortVideoRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D260208C7AF8002E11C5 /* PKShortVideoRecorder.m */; };
+		1861D286208C7AF9002E11C5 /* UIImage+PKShortVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D265208C7AF8002E11C5 /* UIImage+PKShortVideoPlayer.m */; };
+		1861D287208C7AF9002E11C5 /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D267208C7AF8002E11C5 /* GPUImageContext.m */; };
+		1861D288208C7AF9002E11C5 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D268208C7AF8002E11C5 /* GLProgram.m */; };
+		1861D289208C7AF9002E11C5 /* GPUImageFramebuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D269208C7AF8002E11C5 /* GPUImageFramebuffer.m */; };
+		1861D28A208C7AF9002E11C5 /* GPUImageFramebufferCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D26A208C7AF8002E11C5 /* GPUImageFramebufferCache.m */; };
+		1861D28B208C7AF9002E11C5 /* PKPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D270208C7AF8002E11C5 /* PKPlayerView.m */; };
+		1861D28C208C7AF9002E11C5 /* PKFullScreenPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D277208C7AF8002E11C5 /* PKFullScreenPlayerView.m */; };
+		1861D28D208C7AF9002E11C5 /* PKPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D279208C7AF8002E11C5 /* PKPlayerManager.m */; };
+		1861D28E208C7AF9002E11C5 /* PKFullScreenPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D27A208C7AF8002E11C5 /* PKFullScreenPlayerViewController.m */; };
+		1861D28F208C7AF9002E11C5 /* PKChatMessagePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D27B208C7AF8002E11C5 /* PKChatMessagePlayerView.m */; };
+		1861D290208C7AF9002E11C5 /* PKColorConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D27C208C7AF8002E11C5 /* PKColorConversion.m */; };
+		1861D291208C7AF9002E11C5 /* PKVideoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D27D208C7AF8002E11C5 /* PKVideoDecoder.m */; };
+		1861D292208C7AF9002E11C5 /* PK_Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861D27F208C7AF8002E11C5 /* PK_Delete@2x.png */; };
+		1861D293208C7AF9002E11C5 /* PK_Camera_Turn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861D280208C7AF8002E11C5 /* PK_Camera_Turn@2x.png */; };
+		1861D294208C7AF9002E11C5 /* PK_Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861D281208C7AF8002E11C5 /* PK_Play@2x.png */; };
+		1861D297208C7B86002E11C5 /* UIView+XCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D295208C7B85002E11C5 /* UIView+XCExtension.m */; };
 		18783F4D2079D40500D72AFF /* AppDelegate+LRRRongCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F4C2079D40500D72AFF /* AppDelegate+LRRRongCloud.m */; };
 		18783F512079D44600D72AFF /* LRRRongCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F502079D44600D72AFF /* LRRRongCloudModel.m */; };
 		18783F562079F8E900D72AFF /* LRROrderDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F552079F8E900D72AFF /* LRROrderDetailsModel.m */; };
@@ -436,6 +469,69 @@
 		1855EAD6204D357C0039405B /* LRRMyBaseOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyBaseOrderViewController.m; sourceTree = "<group>"; };
 		1855EAD8204D360C0039405B /* LRRMyOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMyOrderListViewController.h; sourceTree = "<group>"; };
 		1855EAD9204D360C0039405B /* LRRMyOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyOrderListViewController.m; sourceTree = "<group>"; };
+		1861D231208C5DEC002E11C5 /* LRREditMesssParam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRREditMesssParam.h; sourceTree = "<group>"; };
+		1861D232208C5DEC002E11C5 /* LRREditMesssParam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRREditMesssParam.m; sourceTree = "<group>"; };
+		1861D234208C62DB002E11C5 /* LRREditUserRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRREditUserRequestManager.h; sourceTree = "<group>"; };
+		1861D235208C62DB002E11C5 /* LRREditUserRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRREditUserRequestManager.m; sourceTree = "<group>"; };
+		1861D238208C759B002E11C5 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		1861D239208C759B002E11C5 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		1861D23A208C759B002E11C5 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		1861D23B208C759B002E11C5 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		1861D23C208C759B002E11C5 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		1861D23D208C759B002E11C5 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		1861D23E208C759B002E11C5 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		1861D23F208C759B002E11C5 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		1861D240208C759B002E11C5 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		1861D241208C759B002E11C5 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		1861D242208C759B002E11C5 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		1861D243208C759B002E11C5 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		1861D244208C759B002E11C5 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		1861D245208C759B002E11C5 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		1861D246208C759B002E11C5 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		1861D247208C759B002E11C5 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		1861D248208C759B002E11C5 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		1861D249208C759B002E11C5 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		1861D24A208C759B002E11C5 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		1861D24B208C759B002E11C5 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		1861D24C208C759B002E11C5 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		1861D25A208C7AF8002E11C5 /* PKRecordShortVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecordShortVideoViewController.h; sourceTree = "<group>"; };
+		1861D25B208C7AF8002E11C5 /* PKShortVideoRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKShortVideoRecorder.h; sourceTree = "<group>"; };
+		1861D25C208C7AF8002E11C5 /* PKShortVideoProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKShortVideoProgressBar.h; sourceTree = "<group>"; };
+		1861D25D208C7AF8002E11C5 /* PKShortVideoSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKShortVideoSession.m; sourceTree = "<group>"; };
+		1861D25E208C7AF8002E11C5 /* PKRecordShortVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRecordShortVideoViewController.m; sourceTree = "<group>"; };
+		1861D25F208C7AF8002E11C5 /* PKShortVideoProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKShortVideoProgressBar.m; sourceTree = "<group>"; };
+		1861D260208C7AF8002E11C5 /* PKShortVideoRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKShortVideoRecorder.m; sourceTree = "<group>"; };
+		1861D261208C7AF8002E11C5 /* PKShortVideoSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKShortVideoSession.h; sourceTree = "<group>"; };
+		1861D262208C7AF8002E11C5 /* PKShortVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKShortVideo.h; sourceTree = "<group>"; };
+		1861D264208C7AF8002E11C5 /* UIImage+PKShortVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PKShortVideoPlayer.h"; sourceTree = "<group>"; };
+		1861D265208C7AF8002E11C5 /* UIImage+PKShortVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PKShortVideoPlayer.m"; sourceTree = "<group>"; };
+		1861D267208C7AF8002E11C5 /* GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageContext.m; sourceTree = "<group>"; };
+		1861D268208C7AF8002E11C5 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		1861D269208C7AF8002E11C5 /* GPUImageFramebuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageFramebuffer.m; sourceTree = "<group>"; };
+		1861D26A208C7AF8002E11C5 /* GPUImageFramebufferCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageFramebufferCache.m; sourceTree = "<group>"; };
+		1861D26B208C7AF8002E11C5 /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
+		1861D26C208C7AF8002E11C5 /* GPUImageFramebufferCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFramebufferCache.h; sourceTree = "<group>"; };
+		1861D26D208C7AF8002E11C5 /* GPUImageFramebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFramebuffer.h; sourceTree = "<group>"; };
+		1861D26E208C7AF8002E11C5 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		1861D270208C7AF8002E11C5 /* PKPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKPlayerView.m; sourceTree = "<group>"; };
+		1861D271208C7AF8002E11C5 /* PKFullScreenPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKFullScreenPlayerView.h; sourceTree = "<group>"; };
+		1861D272208C7AF8002E11C5 /* PKChatMessagePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKChatMessagePlayerView.h; sourceTree = "<group>"; };
+		1861D273208C7AF8002E11C5 /* PKFullScreenPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKFullScreenPlayerViewController.h; sourceTree = "<group>"; };
+		1861D274208C7AF8002E11C5 /* PKPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPlayerManager.h; sourceTree = "<group>"; };
+		1861D275208C7AF8002E11C5 /* PKVideoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKVideoDecoder.h; sourceTree = "<group>"; };
+		1861D276208C7AF8002E11C5 /* PKColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKColorConversion.h; sourceTree = "<group>"; };
+		1861D277208C7AF8002E11C5 /* PKFullScreenPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKFullScreenPlayerView.m; sourceTree = "<group>"; };
+		1861D278208C7AF8002E11C5 /* PKPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKPlayerView.h; sourceTree = "<group>"; };
+		1861D279208C7AF8002E11C5 /* PKPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKPlayerManager.m; sourceTree = "<group>"; };
+		1861D27A208C7AF8002E11C5 /* PKFullScreenPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKFullScreenPlayerViewController.m; sourceTree = "<group>"; };
+		1861D27B208C7AF8002E11C5 /* PKChatMessagePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKChatMessagePlayerView.m; sourceTree = "<group>"; };
+		1861D27C208C7AF8002E11C5 /* PKColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKColorConversion.m; sourceTree = "<group>"; };
+		1861D27D208C7AF8002E11C5 /* PKVideoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKVideoDecoder.m; sourceTree = "<group>"; };
+		1861D27F208C7AF8002E11C5 /* PK_Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PK_Delete@2x.png"; sourceTree = "<group>"; };
+		1861D280208C7AF8002E11C5 /* PK_Camera_Turn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PK_Camera_Turn@2x.png"; sourceTree = "<group>"; };
+		1861D281208C7AF8002E11C5 /* PK_Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PK_Play@2x.png"; sourceTree = "<group>"; };
+		1861D295208C7B85002E11C5 /* UIView+XCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCExtension.m"; sourceTree = "<group>"; };
+		1861D296208C7B86002E11C5 /* UIView+XCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCExtension.h"; sourceTree = "<group>"; };
 		18783F4B2079D40500D72AFF /* AppDelegate+LRRRongCloud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LRRRongCloud.h"; sourceTree = "<group>"; };
 		18783F4C2079D40500D72AFF /* AppDelegate+LRRRongCloud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LRRRongCloud.m"; sourceTree = "<group>"; };
 		18783F4F2079D44600D72AFF /* LRRRongCloudModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRongCloudModel.h; sourceTree = "<group>"; };
@@ -1009,6 +1105,7 @@
 			children = (
 				1804327C206226CC006AE7ED /* LRRHTTPSessionManager.h */,
 				1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */,
+				1861D22F208C5DC1002E11C5 /* EditMessage-编辑我的信息 */,
 				18783FA3207A182C00D72AFF /* Order-接单方订单 */,
 				18783F9C207A120300D72AFF /* report-举报 */,
 				18783F5A2079FB5B00D72AFF /* Publish-发布订单 */,
@@ -1020,6 +1117,8 @@
 		180F8856200EF7D3002A9B0C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1861D296208C7B86002E11C5 /* UIView+XCExtension.h */,
+				1861D295208C7B85002E11C5 /* UIView+XCExtension.m */,
 				1832AD65204F8FD9006BB3BD /* UITextView+Placeholder.h */,
 				1832AD64204F8FD9006BB3BD /* UITextView+Placeholder.m */,
 				18DC28892050E2BA00D4B451 /* UITextField+LRRExtension.h */,
@@ -1193,6 +1292,8 @@
 		1855EACA204D2DA40039405B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1861D258208C7AF8002E11C5 /* PKShortVideo */,
+				1861D237208C759B002E11C5 /* TZImagePickerController */,
 				1855EACB204D2DA40039405B /* SUNSlideSwitch */,
 			);
 			path = Lib;
@@ -1205,6 +1306,137 @@
 				1855EACC204D2DBF0039405B /* SUNSlideSwitchView.m */,
 			);
 			path = SUNSlideSwitch;
+			sourceTree = "<group>";
+		};
+		1861D22F208C5DC1002E11C5 /* EditMessage-编辑我的信息 */ = {
+			isa = PBXGroup;
+			children = (
+				1861D230208C5DC1002E11C5 /* Model */,
+				1861D234208C62DB002E11C5 /* LRREditUserRequestManager.h */,
+				1861D235208C62DB002E11C5 /* LRREditUserRequestManager.m */,
+			);
+			path = "EditMessage-编辑我的信息";
+			sourceTree = "<group>";
+		};
+		1861D230208C5DC1002E11C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1861D231208C5DEC002E11C5 /* LRREditMesssParam.h */,
+				1861D232208C5DEC002E11C5 /* LRREditMesssParam.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1861D237208C759B002E11C5 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				1861D238208C759B002E11C5 /* TZPhotoPreviewCell.h */,
+				1861D239208C759B002E11C5 /* TZPhotoPickerController.h */,
+				1861D23A208C759B002E11C5 /* TZImageManager.h */,
+				1861D23B208C759B002E11C5 /* TZAssetCell.m */,
+				1861D23C208C759B002E11C5 /* TZVideoPlayerController.m */,
+				1861D23D208C759B002E11C5 /* TZAssetModel.m */,
+				1861D23E208C759B002E11C5 /* NSBundle+TZImagePicker.m */,
+				1861D23F208C759B002E11C5 /* TZImagePickerController.h */,
+				1861D240208C759B002E11C5 /* UIView+Layout.m */,
+				1861D241208C759B002E11C5 /* TZPhotoPreviewController.m */,
+				1861D242208C759B002E11C5 /* TZImagePickerController.bundle */,
+				1861D243208C759B002E11C5 /* TZAssetCell.h */,
+				1861D244208C759B002E11C5 /* TZImageManager.m */,
+				1861D245208C759B002E11C5 /* TZPhotoPickerController.m */,
+				1861D246208C759B002E11C5 /* TZPhotoPreviewCell.m */,
+				1861D247208C759B002E11C5 /* NSBundle+TZImagePicker.h */,
+				1861D248208C759B002E11C5 /* TZAssetModel.h */,
+				1861D249208C759B002E11C5 /* TZVideoPlayerController.h */,
+				1861D24A208C759B002E11C5 /* TZPhotoPreviewController.h */,
+				1861D24B208C759B002E11C5 /* UIView+Layout.h */,
+				1861D24C208C759B002E11C5 /* TZImagePickerController.m */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		1861D258208C7AF8002E11C5 /* PKShortVideo */ = {
+			isa = PBXGroup;
+			children = (
+				1861D259208C7AF8002E11C5 /* PKShortVideoWriter */,
+				1861D262208C7AF8002E11C5 /* PKShortVideo.h */,
+				1861D263208C7AF8002E11C5 /* Category */,
+				1861D266208C7AF8002E11C5 /* GPUImage */,
+				1861D26F208C7AF8002E11C5 /* PKShortVideoPlayer */,
+				1861D27E208C7AF8002E11C5 /* PKAsset */,
+			);
+			name = PKShortVideo;
+			path = "../../../../../kuaigongAPP/kuaigong/Classes/Comment-公用/Lib/PKShortVideo";
+			sourceTree = "<group>";
+		};
+		1861D259208C7AF8002E11C5 /* PKShortVideoWriter */ = {
+			isa = PBXGroup;
+			children = (
+				1861D25A208C7AF8002E11C5 /* PKRecordShortVideoViewController.h */,
+				1861D25B208C7AF8002E11C5 /* PKShortVideoRecorder.h */,
+				1861D25C208C7AF8002E11C5 /* PKShortVideoProgressBar.h */,
+				1861D25D208C7AF8002E11C5 /* PKShortVideoSession.m */,
+				1861D25E208C7AF8002E11C5 /* PKRecordShortVideoViewController.m */,
+				1861D25F208C7AF8002E11C5 /* PKShortVideoProgressBar.m */,
+				1861D260208C7AF8002E11C5 /* PKShortVideoRecorder.m */,
+				1861D261208C7AF8002E11C5 /* PKShortVideoSession.h */,
+			);
+			path = PKShortVideoWriter;
+			sourceTree = "<group>";
+		};
+		1861D263208C7AF8002E11C5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1861D264208C7AF8002E11C5 /* UIImage+PKShortVideoPlayer.h */,
+				1861D265208C7AF8002E11C5 /* UIImage+PKShortVideoPlayer.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1861D266208C7AF8002E11C5 /* GPUImage */ = {
+			isa = PBXGroup;
+			children = (
+				1861D267208C7AF8002E11C5 /* GPUImageContext.m */,
+				1861D268208C7AF8002E11C5 /* GLProgram.m */,
+				1861D269208C7AF8002E11C5 /* GPUImageFramebuffer.m */,
+				1861D26A208C7AF8002E11C5 /* GPUImageFramebufferCache.m */,
+				1861D26B208C7AF8002E11C5 /* GPUImageContext.h */,
+				1861D26C208C7AF8002E11C5 /* GPUImageFramebufferCache.h */,
+				1861D26D208C7AF8002E11C5 /* GPUImageFramebuffer.h */,
+				1861D26E208C7AF8002E11C5 /* GLProgram.h */,
+			);
+			path = GPUImage;
+			sourceTree = "<group>";
+		};
+		1861D26F208C7AF8002E11C5 /* PKShortVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1861D270208C7AF8002E11C5 /* PKPlayerView.m */,
+				1861D271208C7AF8002E11C5 /* PKFullScreenPlayerView.h */,
+				1861D272208C7AF8002E11C5 /* PKChatMessagePlayerView.h */,
+				1861D273208C7AF8002E11C5 /* PKFullScreenPlayerViewController.h */,
+				1861D274208C7AF8002E11C5 /* PKPlayerManager.h */,
+				1861D275208C7AF8002E11C5 /* PKVideoDecoder.h */,
+				1861D276208C7AF8002E11C5 /* PKColorConversion.h */,
+				1861D277208C7AF8002E11C5 /* PKFullScreenPlayerView.m */,
+				1861D278208C7AF8002E11C5 /* PKPlayerView.h */,
+				1861D279208C7AF8002E11C5 /* PKPlayerManager.m */,
+				1861D27A208C7AF8002E11C5 /* PKFullScreenPlayerViewController.m */,
+				1861D27B208C7AF8002E11C5 /* PKChatMessagePlayerView.m */,
+				1861D27C208C7AF8002E11C5 /* PKColorConversion.m */,
+				1861D27D208C7AF8002E11C5 /* PKVideoDecoder.m */,
+			);
+			path = PKShortVideoPlayer;
+			sourceTree = "<group>";
+		};
+		1861D27E208C7AF8002E11C5 /* PKAsset */ = {
+			isa = PBXGroup;
+			children = (
+				1861D27F208C7AF8002E11C5 /* PK_Delete@2x.png */,
+				1861D280208C7AF8002E11C5 /* PK_Camera_Turn@2x.png */,
+				1861D281208C7AF8002E11C5 /* PK_Play@2x.png */,
+			);
+			path = PKAsset;
 			sourceTree = "<group>";
 		};
 		18783F4E2079D42200D72AFF /* Model */ = {
@@ -1584,6 +1816,7 @@
 				18DC28882050DE9500D4B451 /* LRRSexViewCell.xib in Resources */,
 				18515902205667AB0006E863 /* LRRPublishLiveViewCell.xib in Resources */,
 				185158F020565E080006E863 /* LRRPublishTeamViewCell.xib in Resources */,
+				1861D253208C759B002E11C5 /* TZImagePickerController.bundle in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
 				18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */,
 				1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */,
@@ -1609,6 +1842,7 @@
 				185158EB2056460A0006E863 /* LRRPublishWorkViewCell.xib in Resources */,
 				185158562052305C0006E863 /* LRRSpecialList.plist in Resources */,
 				1851585A205230870006E863 /* LRRTeamList.plist in Resources */,
+				1861D294208C7AF9002E11C5 /* PK_Play@2x.png in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
 				1851584B20522CAD0006E863 /* LRRAvatarViewCell.xib in Resources */,
 				1851583E2051310E0006E863 /* LRRCityViewCell.xib in Resources */,
@@ -1619,7 +1853,9 @@
 				18A123642043E53800C6F9E2 /* LRRLoginViewController.xib in Resources */,
 				18A76658204FBE5D00F2F063 /* LRRUserDetailedViewCell.xib in Resources */,
 				1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */,
+				1861D293208C7AF9002E11C5 /* PK_Camera_Turn@2x.png in Resources */,
 				18515846205228BE0006E863 /* LRRNationalViewCell.xib in Resources */,
+				1861D292208C7AF9002E11C5 /* PK_Delete@2x.png in Resources */,
 				1851591420577CD30006E863 /* LRRPublishintroductionViewCell.xib in Resources */,
 				18515858205230750006E863 /* LRRAgeList.plist in Resources */,
 			);
@@ -1700,6 +1936,7 @@
 				18783F512079D44600D72AFF /* LRRRongCloudModel.m in Sources */,
 				18515909205776B50006E863 /* LRRPublishMarkViewCell.m in Sources */,
 				188EAF9A20159D100012855E /* LRRSegmentBarConfig.m in Sources */,
+				1861D285208C7AF9002E11C5 /* PKShortVideoRecorder.m in Sources */,
 				18515845205228BE0006E863 /* LRRNationalViewCell.m in Sources */,
 				188EAF9920159D0C0012855E /* LRRSegmentBarVC.m in Sources */,
 				185158FC205665630006E863 /* LRRPublishTimeViewCell.m in Sources */,
@@ -1707,7 +1944,9 @@
 				18DC288B2050E2BA00D4B451 /* UITextField+LRRExtension.m in Sources */,
 				18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */,
 				185158672052359A0006E863 /* LRRWorkViewCell.m in Sources */,
+				1861D28E208C7AF9002E11C5 /* PKFullScreenPlayerViewController.m in Sources */,
 				1851587620523F170006E863 /* LRRNameViewCell.m in Sources */,
+				1861D256208C759B002E11C5 /* TZPhotoPreviewCell.m in Sources */,
 				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
 				18783FA2207A124B00D72AFF /* LRRReportParam.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
@@ -1715,8 +1954,11 @@
 				18515885205282F00006E863 /* LRRPublishedWorkViewController.m in Sources */,
 				180F8855200EE71B002A9B0C /* LRRConst.m in Sources */,
 				18FC9403200C5F7000269FAB /* main.m in Sources */,
+				1861D255208C759B002E11C5 /* TZPhotoPickerController.m in Sources */,
+				1861D251208C759B002E11C5 /* UIView+Layout.m in Sources */,
 				18515863205235270006E863 /* LRRTeamField.m in Sources */,
 				1804328A20622E7A006AE7ED /* LRRLoginRequestManager.m in Sources */,
+				1861D28F208C7AF9002E11C5 /* PKChatMessagePlayerView.m in Sources */,
 				180F887B200F46AD002A9B0C /* LRRMeHeaderView.m in Sources */,
 				1831923120144BA70032B8C7 /* LRRTabBarButton.m in Sources */,
 				18515898205625370006E863 /* LRRSlideSwitchView.m in Sources */,
@@ -1725,12 +1967,16 @@
 				1851583D2051310E0006E863 /* LRRCityViewCell.m in Sources */,
 				18783F64207A021600D72AFF /* LRRLocationHelper.m in Sources */,
 				18515860205234C60006E863 /* LRRAgeField.m in Sources */,
+				1861D24E208C759B002E11C5 /* TZVideoPlayerController.m in Sources */,
 				180F8872200F378A002A9B0C /* NSBundle+LRRExtension.m in Sources */,
 				185158E22056387C0006E863 /* LRRPublishPackViewController.m in Sources */,
+				1861D284208C7AF9002E11C5 /* PKShortVideoProgressBar.m in Sources */,
 				1851585D2052343D0006E863 /* LRRWorkField.m in Sources */,
 				18DC28872050DE9500D4B451 /* LRRSexViewCell.m in Sources */,
+				1861D289208C7AF9002E11C5 /* GPUImageFramebuffer.m in Sources */,
 				18FC93F5200C5F7000269FAB /* AppDelegate.mm in Sources */,
 				180F885F200F2E08002A9B0C /* LRRHomeViewController.m in Sources */,
+				1861D287208C7AF9002E11C5 /* GPUImageContext.m in Sources */,
 				180F886E200F3708002A9B0C /* AppDelegate+LRRGuide.m in Sources */,
 				18515871205235BD0006E863 /* LRRTeamViewCell.m in Sources */,
 				180F8859200EF855002A9B0C /* UIColor+DLExtension.m in Sources */,
@@ -1738,14 +1984,18 @@
 				1851582D2051216E0006E863 /* LRRBirthdayField.m in Sources */,
 				18783FA7207A187B00D72AFF /* LRRReceiveOrderRequestManager.m in Sources */,
 				180F8868200F2E34002A9B0C /* LRRMeViewController.m in Sources */,
+				1861D250208C759B002E11C5 /* NSBundle+TZImagePicker.m in Sources */,
 				18486C2E2058FDF80009519E /* LRRSystemMessageViewController.m in Sources */,
 				18783F9F207A122200D72AFF /* LRRReportRequestManager.m in Sources */,
 				1855EAC6204D17990039405B /* UIViewController+DismissKeyboard.m in Sources */,
+				1861D233208C5DEC002E11C5 /* LRREditMesssParam.m in Sources */,
+				1861D290208C7AF9002E11C5 /* PKColorConversion.m in Sources */,
 				1851588F20528D020006E863 /* WMMenuCell.m in Sources */,
 				1804327E206226CC006AE7ED /* LRRHTTPSessionManager.m in Sources */,
 				1851589B2056277A0006E863 /* LRRDefineButton.m in Sources */,
 				18783F612079FD7400D72AFF /* LRRPublishOrderRequestManager.m in Sources */,
 				18A76650204FB41400F2F063 /* LRRUserDetailedViewController.m in Sources */,
+				1861D24D208C759B002E11C5 /* TZAssetCell.m in Sources */,
 				1831922B2014465E0032B8C7 /* UIView+LRRExtension.m in Sources */,
 				185159202057ACB40006E863 /* LRRRefreshFooter.m in Sources */,
 				185158DF2056386A0006E863 /* LRRPublishPointViewController.m in Sources */,
@@ -1753,9 +2003,12 @@
 				18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */,
 				1855EACE204D2DBF0039405B /* SUNSlideSwitchView.m in Sources */,
 				180F8875200F38B7002A9B0C /* NSUserDefaults+LRRExtension.m in Sources */,
+				1861D28C208C7AF9002E11C5 /* PKFullScreenPlayerView.m in Sources */,
 				1804328D20622EAD006AE7ED /* LRRLoginParam.m in Sources */,
+				1861D286208C7AF9002E11C5 /* UIImage+PKShortVideoPlayer.m in Sources */,
 				180F886B200F2E88002A9B0C /* LRRFoundViewController.m in Sources */,
 				185158EA2056460A0006E863 /* LRRPublishWorkViewCell.m in Sources */,
+				1861D252208C759B002E11C5 /* TZPhotoPreviewController.m in Sources */,
 				18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */,
 				1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
@@ -1764,13 +2017,18 @@
 				1851588C205283FC0006E863 /* WMDropDownView.m in Sources */,
 				18783F562079F8E900D72AFF /* LRROrderDetailsModel.m in Sources */,
 				188EAFA12016E9460012855E /* LRROrderDetailTableViewCell.m in Sources */,
+				1861D28D208C7AF9002E11C5 /* PKPlayerManager.m in Sources */,
 				1832AD78204F9952006BB3BD /* LRRLRRServiceCenterHeaderCell.m in Sources */,
 				1851583920512F4E0006E863 /* LRRCityField.m in Sources */,
+				1861D24F208C759B002E11C5 /* TZAssetModel.m in Sources */,
 				18486C282058CE260009519E /* LRRSettingClearCacheViewCell.m in Sources */,
+				1861D257208C759B002E11C5 /* TZImagePickerController.m in Sources */,
 				1851590520566E690006E863 /* LRRPublishFooterView.m in Sources */,
+				1861D297208C7B86002E11C5 /* UIView+XCExtension.m in Sources */,
 				180F8865200F2E2A002A9B0C /* LRRLookViewController.m in Sources */,
 				18515841205228100006E863 /* LRRNationalField.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
+				1861D283208C7AF9002E11C5 /* PKRecordShortVideoViewController.m in Sources */,
 				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
 				1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */,
 				185158F4205660290006E863 /* LRRPublishWriteViewCell.m in Sources */,
@@ -1781,11 +2039,14 @@
 				18486C3A205908980009519E /* LRRHomeReportViewCell.m in Sources */,
 				1831921F2011AE840032B8C7 /* LRRHomeCollectionReusableView.m in Sources */,
 				18FC9427200C62D800269FAB /* LRRBaseViewController.m in Sources */,
+				1861D288208C7AF9002E11C5 /* GLProgram.m in Sources */,
 				18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */,
+				1861D291208C7AF9002E11C5 /* PKVideoDecoder.m in Sources */,
 				1804328220622990006AE7ED /* LRRUserManager.m in Sources */,
 				1851591D2057AC7E0006E863 /* LRRRefreshHeader.m in Sources */,
 				180F8862200F2E1B002A9B0C /* LRRFriendViewController.m in Sources */,
 				1832AD62204F7D3B006BB3BD /* LRRChooseIDViewController.m in Sources */,
+				1861D236208C62DB002E11C5 /* LRREditUserRequestManager.m in Sources */,
 				185159172057A8F90006E863 /* UIView+LRRHUD.m in Sources */,
 				18FC942D200C634E00269FAB /* LRRBaseTabBarController.m in Sources */,
 				18A123632043E53800C6F9E2 /* LRRLoginViewController.m in Sources */,
@@ -1798,12 +2059,14 @@
 				185158F8205663750006E863 /* LRRChooseTimeField.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
 				1851591320577CD30006E863 /* LRRPublishintroductionViewCell.m in Sources */,
+				1861D28B208C7AF9002E11C5 /* PKPlayerView.m in Sources */,
 				18515831205122640006E863 /* LRRBirthdayCell.m in Sources */,
 				18783F5E2079FB7F00D72AFF /* LRRPublishOrderParam.m in Sources */,
 				180F887F200F4C08002A9B0C /* LRRMeTableViewCell.m in Sources */,
 				1831923520145EFF0032B8C7 /* LRRLookTableViewCell.m in Sources */,
 				18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */,
 				1855EAD7204D357C0039405B /* LRRMyBaseOrderViewController.m in Sources */,
+				1861D28A208C7AF9002E11C5 /* GPUImageFramebufferCache.m in Sources */,
 				1855EAC2204CE2010039405B /* LRRRealNameViewController.m in Sources */,
 				1855EADA204D360C0039405B /* LRRMyOrderListViewController.m in Sources */,
 				18486C322058FEA00009519E /* LRRSystemMessageViewCell.m in Sources */,
@@ -1816,9 +2079,11 @@
 				18486C36205908560009519E /* LRRHomeReportViewController.m in Sources */,
 				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
 				1804328520622B69006AE7ED /* LRRUserObj.m in Sources */,
+				1861D254208C759B002E11C5 /* TZImageManager.m in Sources */,
 				18A76657204FBE5D00F2F063 /* LRRUserDetailedViewCell.m in Sources */,
 				18515901205667AB0006E863 /* LRRPublishLiveViewCell.m in Sources */,
 				18319213201092810032B8C7 /* LRRSettingViewCell.m in Sources */,
+				1861D282208C7AF9002E11C5 /* PKShortVideoSession.m in Sources */,
 				18FC942A200C631000269FAB /* LRRBaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
