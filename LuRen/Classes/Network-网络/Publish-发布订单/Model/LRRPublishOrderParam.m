@@ -18,11 +18,11 @@
                           Days:(NSUInteger )days
                      UnitPrice:(double )unitPrice
                           Fare:(double )fare
-                      IsSeting:(NSUInteger)isSeting
+                      IsSiting:(NSUInteger)isSiting
                    ProjectDesc:(NSString *)projectDesc
                    WorkEndTime:(NSString *)workEndTime
                 WorkDevingTime:(NSString *)workDevingTime
-                    WorkAmount:(NSString *)workAmount
+                    WorkAmount:(NSUInteger )workAmount
                         Remark:(NSString *)remark
                  WorkStartTime:(NSString *)workStartTime
                    LastPayTime:(NSString *)lastPayTime
@@ -44,7 +44,7 @@
         self.days = days;
         self.unitPrice = unitPrice;
         self.fare = fare;
-        self.isSeting = isSeting;
+        self.isSiting = isSiting;
         self.projectDesc = projectDesc;
         self.workEndTime = workEndTime;
         self.workDevingTime = workDevingTime;
@@ -71,11 +71,11 @@
                            Days:(NSUInteger )days
                       UnitPrice:(double )unitPrice
                            Fare:(double )fare
-                       IsSeting:(NSUInteger)isSeting
+                       IsSiting:(NSUInteger)isSiting
                     ProjectDesc:(NSString *)projectDesc
                     WorkEndTime:(NSString *)workEndTime
                  WorkDevingTime:(NSString *)workDevingTime
-                     WorkAmount:(NSString *)workAmount
+                     WorkAmount:(NSUInteger )workAmount
                          Remark:(NSString *)remark
                   WorkStartTime:(NSString *)workStartTime
                     LastPayTime:(NSString *)lastPayTime
@@ -94,7 +94,7 @@
                                   Days:days
                              UnitPrice:unitPrice
                                   Fare:fare
-                              IsSeting:isSeting
+                              IsSiting:isSiting
                            ProjectDesc:projectDesc
                            WorkEndTime:workEndTime
                         WorkDevingTime:workDevingTime

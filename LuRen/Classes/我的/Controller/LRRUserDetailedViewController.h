@@ -7,9 +7,22 @@
 //
 
 #import "LRRBaseViewController.h"
+#import "LRRUserMessageModel.h"
+
+
+
+typedef void(^ChangeUserMesage)(void);
 
 @interface LRRUserDetailedViewController : LRRBaseViewController
 
 @property (nonatomic, strong) NSString *navTitle;
+
+@property (nonatomic, copy) ChangeUserMesage changeBackLock;
+
+/** 从其他页面跳入 */
+@property (nonatomic, strong) LRRUserMessageModel *userMessageModel;
+
+/** 从我的页面跳入为1 其他的都是2 */
+@property (nonatomic, assign) NSUInteger isUser;
 
 @end

@@ -8,6 +8,10 @@
 
 #import "LRRBaseViewController.h"
 
+typedef void(^SettingBackLock)(void);
+
 @interface LRRSettingViewController : LRRBaseViewController
+
+@property (nonatomic, copy) SettingBackLock backBlock;
 
 @end

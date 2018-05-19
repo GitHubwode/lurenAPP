@@ -10,7 +10,7 @@
 
 @interface AppDelegate (LRRRongCloud)
 
-- (void)setUpRongCloud;
-- (void)updateBadgeValueForTabBarItem;
+//- (void)setUpRongCloud;
+//- (void)updateBadgeValueForTabBarItem;
 
 @end

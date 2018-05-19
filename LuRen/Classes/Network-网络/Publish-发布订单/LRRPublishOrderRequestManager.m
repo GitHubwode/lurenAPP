@@ -67,4 +67,34 @@
     } aboveView:view inCaller:caller];
 }
 
+/**
+ 发布发现工人
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
+ @param caller 方法调用者
+ */
+
++ (void)publishLookWorkerPageNum:(NSUInteger )pageNum Rows:(NSUInteger )rows Type:(NSString *)type completion:(void(^)(NSArray<LRRUserMessageModel *>*responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;{
+    NSString *url = LRRURL(@"/api/user/findUserList");
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
+    dic[@"page"] = @(pageNum);
+    dic[@"rows"] = @(rows);
+    dic[@"type"] = type;
+    [self postFormDataWithUrl:url form:dic completion:^(LRRResponseObj *responseObj) {
+        NSMutableArray *array;
+        if (!responseObj) {
+            
+        }else if (responseObj.code != LRRSuccessCode){
+            [view showHint:responseObj.message];
+        }
+        if (completionHandler) {
+            NSArray *recordList = [responseObj.data objectForKey:@"recordList"];
+            LRRLog(@"%@",recordList);
+            array = [LRRUserMessageModel mj_objectArrayWithKeyValuesArray:recordList];
+            LRRLog(@"%@",responseObj.data);
+            completionHandler(array);
+        }
+        
+    } aboveView:nil inCaller:self];
+}
+
 @end

@@ -46,24 +46,38 @@
 
 - (void)setupChildViewControllers{
     
-    LRRMyOrderListViewController *firstVC = [[LRRMyOrderListViewController alloc]init];
-    firstVC.requestType = LRRReceiveRecivedOrderRequestType;
-    [self addChildViewController:firstVC];
-    
-    LRRMyOrderListViewController *secondVC = [[LRRMyOrderListViewController alloc]init];
-    secondVC.requestType = LRRReceiveCompleteOrderRequestType;
-    [self addChildViewController:secondVC];
-    
-    LRRMyOrderListViewController *threeVC = [[LRRMyOrderListViewController alloc]init];
-//    threeVC.requestType = 1;//未写
-    [self addChildViewController:threeVC];
-    
-//    LRRMyOrderListViewController *fourVC = [[LRRMyOrderListViewController alloc]init];
-//    //    checked.requestType = 1;
-//    [self addChildViewController:fourVC];
-    
-    
-    _titles = @[@"已接单",@"已付款",@"已取消"];
+    NSString *IdString = [NSUserDefaults objectForKey:LRRUserType];
+    if ([IdString isEqualToString:@"WORKER"]) {
+        LRRMyOrderListViewController *firstVC = [[LRRMyOrderListViewController alloc]init];
+        firstVC.requestType = LRRReceiveNotAcceptOrderRequestType;//获取我发布的未接单
+        [self addChildViewController:firstVC];
+        
+        LRRMyOrderListViewController *secondVC = [[LRRMyOrderListViewController alloc]init];
+        secondVC.requestType = LRRReceiveCompleteOrderRequestType;//获取我的已完成订单  已接单就算完成
+        [self addChildViewController:secondVC];
+        
+        //        LRRMyOrderListViewController *threeVC = [[LRRMyOrderListViewController alloc]init];
+        //        threeVC.requestType = LRRReceiveCompleteOrderRequestType;//已完成
+        //        [self addChildViewController:threeVC];
+        
+        _titles = @[@"未接单",@"已完成"];
+        
+    }else{
+      
+        LRRMyOrderListViewController *firstVC = [[LRRMyOrderListViewController alloc]init];
+        firstVC.requestType = LRRReceiveNotAcceptOrderRequestType;//获取我发布的未接单
+        [self addChildViewController:firstVC];
+        
+        LRRMyOrderListViewController *secondVC = [[LRRMyOrderListViewController alloc]init];
+        secondVC.requestType = LRRReceiveCompleteOrderRequestType;//获取我的已完成订单  已接单就算完成
+        [self addChildViewController:secondVC];
+        
+//        LRRMyOrderListViewController *threeVC = [[LRRMyOrderListViewController alloc]init];
+//        threeVC.requestType = LRRReceiveCompleteOrderRequestType;//已完成
+//        [self addChildViewController:threeVC];
+        
+        _titles = @[@"未接单",@"已完成"];
+    }
 }
 
 

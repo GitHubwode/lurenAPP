@@ -12,6 +12,8 @@
 
 /** 订单id */
 @property (nonatomic,assign) NSUInteger  orderId;
+/** 点工还是点包 */
+@property (nonatomic, copy) NSString *workType;
 /** 用户id */
 @property (nonatomic,assign) NSUInteger  userId;
 /** 订单名称 */
@@ -32,7 +34,7 @@
 @property (nonatomic,copy) NSString *longitude;
 /** 维度 */
 @property (nonatomic,copy) NSString *latitude;
-/** 状态 */
+/** 状态 1点工 2点包 */
 @property (nonatomic,assign) NSUInteger status;
 /** 项目地址 */
 @property (nonatomic,copy) NSString *address;
@@ -85,7 +87,7 @@
 /** 工地简介 */
 @property (nonatomic, copy) NSString *projectDesc;
 /** 是否住工地 0否 1是 */
-@property (nonatomic, assign) NSUInteger isSeting;
+@property (nonatomic, assign) NSUInteger isSiting;
 /** 工程量 包活的有用*/
 @property (nonatomic, copy) NSString *workAmount;
 /** 支付时间 */

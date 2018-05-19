@@ -38,7 +38,7 @@ static NSString *LRRNationalCellIdfy = @"LRRNationalCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     self.textField.placeholder = infoItem.placeholder;
-    self.textField.text = infoItem.subtitle;
+    self.textField.text = [LRRUserManager sharedUserManager].currentUser.nation;
     self.indicatorImageView.hidden = infoItem.hidenIndicator;
     self.lineView.hidden = infoItem.hidenLine;
 }

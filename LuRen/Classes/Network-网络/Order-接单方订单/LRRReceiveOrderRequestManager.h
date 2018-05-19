@@ -9,10 +9,13 @@
 #import "LRRHTTPSessionManager.h"
 #import "LRROrderDetailsModel.h"
 
+//[@"未接单",@"已接单",@"已取消"];
 typedef NS_ENUM(NSUInteger, LRRReceiveOrderRequestType) {
     LRRReceiveALLOrderRequestType,//接单方显示所有未接订单
-    LRRReceiveCompleteOrderRequestType, // 我已完成的订单
-    LRRReceiveRecivedOrderRequestType,//获取我的已接订单
+    LRRReceiveNotAcceptOrderRequestType, //获取我的未完成订单
+//    LRRReceiveRecivedOrderRequestType,//获取我的已接订单
+//    LRRReceiveCancelOrderRequestType,//获取我的已取消的订单
+    LRRReceiveCompleteOrderRequestType,//获取我的已完成订单  已接单就算完成
 };
 
 @interface LRRReceiveOrderRequestManager : LRRHTTPSessionManager
@@ -34,5 +37,10 @@ typedef NS_ENUM(NSUInteger, LRRReceiveOrderRequestType) {
  
  */
 + (void)searchOrderListType:(LRRReceiveOrderRequestType)type Page:(NSUInteger )page Longitude:(CGFloat )longitude Latitude:(CGFloat )latitude completion:(void(^)(NSArray<LRROrderDetailsModel *>*response))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
+
+/**
+
+ */
+
 
 @end

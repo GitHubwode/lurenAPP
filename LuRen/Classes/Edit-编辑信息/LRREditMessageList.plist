@@ -20,6 +20,8 @@
 			<true/>
 			<key>hidenLine</key>
 			<true/>
+			<key>enabled</key>
+			<true/>
 		</dict>
 	</array>
 	<array>
@@ -172,62 +174,6 @@
 			<true/>
 			<key>hidenLine</key>
 			<true/>
-		</dict>
-	</array>
-	<array>
-		<dict>
-			<key>title</key>
-			<string>自我介绍</string>
-			<key>subtitle</key>
-			<string></string>
-			<key>keyboardType</key>
-			<integer>0</integer>
-			<key>maxTextLength</key>
-			<integer>0</integer>
-			<key>placeholder</key>
-			<string>请填写自我介绍</string>
-			<key>propertyKey</key>
-			<string>introduce</string>
-			<key>editabled</key>
-			<true/>
-			<key>required</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>团队介绍</string>
-			<key>subtitle</key>
-			<string></string>
-			<key>keyboardType</key>
-			<integer>0</integer>
-			<key>maxTextLength</key>
-			<integer>0</integer>
-			<key>placeholder</key>
-			<string>请填写团队介绍</string>
-			<key>propertyKey</key>
-			<string>teamIntroduce</string>
-			<key>editabled</key>
-			<true/>
-			<key>required</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>title</key>
-			<string>项目经验</string>
-			<key>subtitle</key>
-			<string></string>
-			<key>keyboardType</key>
-			<integer>0</integer>
-			<key>maxTextLength</key>
-			<integer>0</integer>
-			<key>placeholder</key>
-			<string>请填写合作的工地</string>
-			<key>propertyKey</key>
-			<string>experience</string>
-			<key>editabled</key>
-			<true/>
-			<key>required</key>
-			<false/>
 		</dict>
 	</array>
 </array>

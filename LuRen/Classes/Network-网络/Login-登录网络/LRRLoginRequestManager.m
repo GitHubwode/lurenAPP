@@ -51,14 +51,17 @@
         if (!responseObj) return;
         
         if (responseObj.code == LRRSuccessCode) {
+            
             if (completionHandler) {
+                [[LRRUserManager sharedUserManager] logout];
                 LRRUserInfo *userInfo = [LRRUserInfo mj_objectWithKeyValues:responseObj.data];
                 LRRLog(@"%@",userInfo);
                 userInfo.userInfo.token = userInfo.token;
                 [[LRRUserManager sharedUserManager]loginWithCurrentUser:userInfo.userInfo];
                 [[LRRUserManager sharedUserManager] autoLogin];
+                [LRRNotificationCenter postNotificationName:LRRUserLoginNotifacation object:nil];
                 completionHandler(responseObj);
-                [LRRRongCloudModel lrr_initRongCloudLogin];
+//                [LRRRongCloudModel lrr_initRongCloudLogin];
             }
             
         }else if (responseObj.code != LRRSuccessCode){
@@ -93,13 +96,13 @@
             [view showHint:responseObj.message];
             return;
         }
-        
         if (completionHandler) {
             LRRUserInfo *userInfo = [LRRUserInfo mj_objectWithKeyValues:responseObj.data];
             LRRLog(@"%@",userInfo);
             userInfo.userInfo.token = userInfo.token;
             [[LRRUserManager sharedUserManager]loginWithCurrentUser:userInfo.userInfo];
             [[LRRUserManager sharedUserManager] autoLogin];
+            [LRRNotificationCenter postNotificationName:LRRUserLoginNotifacation object:nil];
             completionHandler(userInfo);
         }
         
@@ -162,7 +165,7 @@
     // 清除内存和本地保存的用户信息
     [[LRRUserManager sharedUserManager] logout];
     // 解除第三方的授权
-    [[RCIM sharedRCIM] disconnect:NO];
+//    [[RCIM sharedRCIM] disconnect:NO];
     // 退出融云
     [LRRNotificationCenter postNotificationName:LRRUserLogoutNotifacation object:nil];
 }

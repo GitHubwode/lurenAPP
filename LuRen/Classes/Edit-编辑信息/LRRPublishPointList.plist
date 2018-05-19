@@ -163,7 +163,7 @@
 			<key>keyboardType</key>
 			<integer>0</integer>
 			<key>maxTextLength</key>
-			<integer>0</integer>
+			<integer>60</integer>
 			<key>placeholder</key>
 			<string>请填写备注内容</string>
 			<key>propertyKey</key>
@@ -185,7 +185,7 @@
 			<key>keyboardType</key>
 			<integer>0</integer>
 			<key>maxTextLength</key>
-			<integer>0</integer>
+			<integer>60</integer>
 			<key>placeholder</key>
 			<string>请填写工程简介</string>
 			<key>propertyKey</key>

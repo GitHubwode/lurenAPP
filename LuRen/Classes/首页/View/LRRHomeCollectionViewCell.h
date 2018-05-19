@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class LRRUserMessageModel;
 @interface LRRHomeCollectionViewCell : UICollectionViewCell
-
+@property (nonatomic, strong) LRRUserMessageModel *model;
 + (NSString *)homeCollectionIdentifier;
 
 @end

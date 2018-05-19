@@ -39,16 +39,10 @@ static NSString *LRRNameCellIdfy = @"LRRNameCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     self.textField.placeholder = infoItem.placeholder;
-    self.textField.text = infoItem.subtitle;
+    self.textField.text = [LRRUserManager sharedUserManager].currentUser.nickname;
     self.indicatorImageView.hidden = infoItem.hidenIndicator;
     self.lineView.hidden = infoItem.hidenLine;
 }
-
-//- (void)ensureButtonClicked{
-//    if (self.infoItem.editabled) {
-//        self.infoItem.subtitle = self.textField.text;
-//    }
-//}
 
 #pragma mark - UITextFieldDelegate
 - (void)textFieldDidBeginEditing:(UITextField *)textField

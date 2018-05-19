@@ -232,7 +232,7 @@
     NSUInteger userId = [[LRRUserManager sharedUserManager].currentUser.userId integerValue];
     NSString *avatarURL = [LRRUserManager sharedUserManager].currentUser.avatarUrl;
 
-    LRRPublishOrderParam *param = [[LRRPublishOrderParam alloc]initWithUserId:userId Name:self.contacts Type:self.type WorkType:self.workType Number:self.number Days:self.days UnitPrice:self.unitPrice Fare:self.fare IsSeting:self.isSeting ProjectDesc:self.projectDesc WorkEndTime:self.workEndTime WorkDevingTime:self.workDevingTime WorkAmount:@"" Remark:self.remark WorkStartTime:self.workStartTime LastPayTime:self.lastPayTime Longitude:0 Latitude:0 Address:self.address AvatarUrl:avatarURL WhenLong:nil Contacts:self.contacts ContactsPhone:self.contactsPhone];
+    LRRPublishOrderParam *param = [[LRRPublishOrderParam alloc]initWithUserId:userId Name:self.contacts Type:self.type WorkType:self.workType Number:self.number Days:self.days UnitPrice:self.unitPrice Fare:self.fare IsSiting:self.isSeting ProjectDesc:self.projectDesc WorkEndTime:self.workEndTime WorkDevingTime:self.workDevingTime WorkAmount:nil Remark:self.remark WorkStartTime:self.workStartTime LastPayTime:self.lastPayTime Longitude:0 Latitude:0 Address:self.address AvatarUrl:avatarURL WhenLong:nil Contacts:self.contacts ContactsPhone:self.contactsPhone];
     
     [LRRPublishOrderRequestManager publishCreatOrderParam:param completion:^(LRRResponseObj *responseObj) {
         if (responseObj.code == LRRSuccessCode) {

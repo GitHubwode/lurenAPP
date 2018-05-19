@@ -7,6 +7,8 @@
 //
 
 #import "LRRUserDetailedView.h"
+#import "LRRUserMessageModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface  LRRUserDetailedView ()
 
@@ -24,9 +26,21 @@
 @property (nonatomic, strong) UILabel *teamNumLabel;
 @property (nonatomic, strong) UIButton *focusButton;
 
+
+@property (nonatomic, copy)NSString *nickName;
+@property (nonatomic, copy)NSString *sexString;
+@property (nonatomic, copy)NSString *national;//民族
+@property (nonatomic, copy)NSString *ageString;//年龄
+@property (nonatomic, copy)NSString *workType;//工种
+@property (nonatomic, copy)NSString *workAge;
+@property (nonatomic, copy)NSString *cityString;//籍贯
+@property (nonatomic, copy)NSString *teamString;//团队规模
+@property (nonatomic, copy)NSString *totalString;
+
 @end
 
 @implementation LRRUserDetailedView
+
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -45,25 +59,87 @@
     [self creatUIView];
 }
 
+- (void)setUserMessageModel:(LRRUserMessageModel *)userMessageModel
+{
+    _userMessageModel = userMessageModel;
+    self.nickName = self.userMessageModel.nickname;
+    self.sexString = self.userMessageModel.sex;
+    self.national = self.userMessageModel.nation;
+    self.ageString = self.userMessageModel.birthday;
+    self.workType = self.userMessageModel.workType;
+    self.workAge = [NSString stringWithFormat:@"%@年",self.userMessageModel.workAge];
+    self.cityString = self.userMessageModel.hometown;
+    self.teamString = [NSString stringWithFormat:@"%@人",self.userMessageModel.teamGroup];
+    self.totalString = [NSString stringWithFormat:@"%@  %@  %@",self.sexString,self.national,self.ageString];
+    
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:userMessageModel.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+
+    self.nameLabel.text = self.nickName;
+    self.subTitleLabel.text = self.totalString;
+    //工种
+    self.workTypeNameLabel.text =self.workType;
+    //工龄
+    self.workAgeNumLabel.text =self.workAge;
+    //籍贯
+    self.cityNameLabel.text = self.cityString;
+    //团队规模
+    self.teamNumLabel.text = self.teamString;
+}
+
+- (void)lrr_ChangeuUpdateUserMessage
+{
+    self.nickName = [LRRUserManager sharedUserManager].currentUser.nickname;
+    self.sexString = [LRRUserManager sharedUserManager].currentUser.sexName;
+    self.national = [LRRUserManager sharedUserManager].currentUser.nation;
+    self.ageString = [LRRUserManager sharedUserManager].currentUser.birthday;
+    self.workType = [LRRUserManager sharedUserManager].currentUser.workType;
+    self.workAge = [NSString stringWithFormat:@"%@",[LRRUserManager sharedUserManager].currentUser.workAge];
+    self.cityString = [LRRUserManager sharedUserManager].currentUser.hometown;
+    self.teamString = [NSString stringWithFormat:@"%@人",[LRRUserManager sharedUserManager].currentUser.teamGroup];
+    self.totalString = [NSString stringWithFormat:@"%@  %@  %@",self.sexString,self.national,self.ageString];
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+    self.nameLabel.text = self.nickName;
+    self.subTitleLabel.text = self.totalString;
+     //工种
+    self.workTypeNameLabel.text =self.workType;
+    //工龄
+    self.workAgeNumLabel.text =self.workAge;
+    //籍贯
+    self.cityNameLabel.text = self.cityString;
+    //团队规模
+    self.teamNumLabel.text = self.teamString;
+}
+
+
 - (void)creatMessageLabel
 {
     self.backgroundColor = UIColorHex(0xffffff);
     [self addSubview:self.avatarImageView];
     [self addSubview:self.typeImageView];
-    self.nameLabel = [self creatUserDetailedMessageText:@"左雷婵" Font:15.f TextColor:UIColorHex(0x444444)];
-    self.subTitleLabel = [self creatUserDetailedMessageText:@"男  汉族  26岁" Font:14.f TextColor:UIColorHex(0x777777)];
+    self.nickName = [LRRUserManager sharedUserManager].currentUser.nickname;
+    self.sexString = [LRRUserManager sharedUserManager].currentUser.sexName;
+    self.national = [LRRUserManager sharedUserManager].currentUser.nation;
+    self.ageString = [LRRUserManager sharedUserManager].currentUser.birthday;
+    self.workType = [LRRUserManager sharedUserManager].currentUser.workType;
+    self.workAge = [NSString stringWithFormat:@"%@年",[LRRUserManager sharedUserManager].currentUser.workAge];
+    self.cityString = [LRRUserManager sharedUserManager].currentUser.hometown;
+    self.teamString = [NSString stringWithFormat:@"%@人",[LRRUserManager sharedUserManager].currentUser.teamGroup];
+    self.totalString = [NSString stringWithFormat:@"%@  %@  %@",self.sexString,self.national,self.ageString];
+     [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+    self.nameLabel = [self creatUserDetailedMessageText:self.nickName Font:15.f TextColor:UIColorHex(0x444444)];
+    self.subTitleLabel = [self creatUserDetailedMessageText:self.totalString Font:14.f TextColor:UIColorHex(0x777777)];
     //工种
     self.workTypeLabel = [self creatUserDetailedMessageText:@"工种:" Font:14.f TextColor:UIColorHex(0x444444)];
-    self.workTypeNameLabel = [self creatUserDetailedMessageText:@"木工" Font:14.f TextColor:UIColorHex(0x777777)];
+    self.workTypeNameLabel = [self creatUserDetailedMessageText:self.workType Font:14.f TextColor:UIColorHex(0x777777)];
     //工龄
     self.workAgeLabel = [self creatUserDetailedMessageText:@"工龄:" Font:14.f TextColor:UIColorHex(0x444444)];
-    self.workAgeNumLabel = [self creatUserDetailedMessageText:@"2年" Font:14.f TextColor:UIColorHex(0x777777)];
+    self.workAgeNumLabel = [self creatUserDetailedMessageText:self.workAge Font:14.f TextColor:UIColorHex(0x777777)];
     //籍贯
     self.cityLabel = [self creatUserDetailedMessageText:@"籍贯:" Font:14.f TextColor:UIColorHex(0x444444)];
-    self.cityNameLabel = [self creatUserDetailedMessageText:@"湖北" Font:14.f TextColor:UIColorHex(0x777777)];
+    self.cityNameLabel = [self creatUserDetailedMessageText:self.cityString Font:14.f TextColor:UIColorHex(0x777777)];
     //团队规模
     self.teamLabel = [self creatUserDetailedMessageText:@"团队规模:" Font:14.f TextColor:UIColorHex(0x444444)];
-    self.teamNumLabel = [self creatUserDetailedMessageText:@"20人" Font:14.f TextColor:UIColorHex(0x777777)];
+    self.teamNumLabel = [self creatUserDetailedMessageText:self.teamString Font:14.f TextColor:UIColorHex(0x777777)];
 }
 
 
@@ -153,7 +229,6 @@
         make.centerY.equalTo(weakself.teamLabel.mas_centerY);
         make.left.equalTo(weakself.teamLabel.mas_right).offset(5);
     }];
-    
 }
 
 - (void)forusOnButtonClick:(UIButton *)sender
@@ -178,7 +253,6 @@
         _avatarImageView = [[UIImageView alloc]init];
         _avatarImageView.layer.masksToBounds = YES;
         _avatarImageView.layer.cornerRadius = 5.f;
-        _avatarImageView.image = [UIImage imageNamed:@"pic_touxiang"];
     }
     return _avatarImageView;
 }
@@ -203,6 +277,5 @@
     }
     return _focusButton;
 }
-
 
 @end

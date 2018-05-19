@@ -40,7 +40,7 @@ static NSString *LRRBirthdayCellIdfy = @"LRRBirthdayCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     self.textField.placeholder = infoItem.placeholder;
-    self.textField.text = infoItem.subtitle;
+    self.textField.text = [LRRUserManager sharedUserManager].currentUser.birthday;
     self.indicatorImageView.hidden = infoItem.hidenIndicator;
     self.lineView.hidden = infoItem.hidenLine;
 }

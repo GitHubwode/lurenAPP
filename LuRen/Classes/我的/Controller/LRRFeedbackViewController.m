@@ -102,7 +102,7 @@
     NSString *phoneId = [LRRUserManager sharedUserManager].currentUser.phone;
     
     if ([self.titleString isEqualToString:@"举报"]) {
-        LRRReportParam *param = [[LRRReportParam alloc]initWithReportId:1 OrderNo:userId ReportContent:self.remarkString ReportedPhone:self.reportedPhone ReportPhone:phoneId];
+        LRRReportParam *param = [[LRRReportParam alloc]initWithReportId:[userId integerValue] OrderNo:self.orderNo ReportContent:self.remarkString ReportedPhone:self.reportedPhone ReportPhone:phoneId];
         [LRRReportRequestManager reportOrderParam:param completion:^(LRRResponseObj *responseObj) {
             if (responseObj.code == LRRSuccessCode) {
                 [self.view showHint:@"您的举报对我们很重要谢谢"];
@@ -112,10 +112,17 @@
             }
             LRRLog(@"举报信息");
         } aboveView:self.view inCaller:self];
+    }else{
+        [LRRReportRequestManager freedBackOrderContent:self.remarkString completion:^(LRRResponseObj *responseObj) {
+            if (responseObj.code == LRRSuccessCode) {
+                [self.view showHint:@"您的意见对我们很重要谢谢"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
+            }
+        } aboveView:self.view inCaller:self];
     }
-
 }
-
 
 #pragma mark - UITextViewDelegate
 - (void)textViewDidChange:(UITextView *)textView{

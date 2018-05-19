@@ -44,21 +44,44 @@
     NSString *url;
     NSMutableDictionary *dic = [[NSMutableDictionary alloc]init];
     NSString * userId = [LRRUserManager sharedUserManager].currentUser.userId;
-    switch (type) {
-        case LRRReceiveALLOrderRequestType: // 所有未完成订单
-            url = LRRURL(@"/api/order/getAllOrder");
-            dic[@"page"] = @(page);
-            break;
-        case LRRReceiveCompleteOrderRequestType: // 我已完成的订单
-            url = LRRURL(@"/api/order/getMyAcceptComplete");
-            dic[@"page"] = @(page);
-            break;
-        case LRRReceiveRecivedOrderRequestType: //我已接的订单
-            url = LRRURL(@"/api/order/getMyAcceptUnComplete");
-            dic[@"page"] = @(page);
-            dic[@"acceptUser"] = userId;
-        default:
-            break;
+    
+    NSString *IdString = [NSUserDefaults objectForKey:LRRUserType];
+    if ([IdString isEqualToString:@"WORKER"]) {
+        switch (type) {
+            case LRRReceiveALLOrderRequestType: // 所有未完成订单
+                url = LRRURL(@"/api/order/getAllOrder");
+                dic[@"page"] = @(page);
+                break;
+            case LRRReceiveCompleteOrderRequestType: // 我已完成的订单 getMyAcceptComplete  获取我的已完成订单  已接单就算完成
+                url = LRRURL(@"/api/order/getUnCompleteNoPay");
+                dic[@"page"] = @(page);
+                dic[@"acceptUser"] = userId;
+                break;
+            case LRRReceiveNotAcceptOrderRequestType://获取我的未接单订单
+                url = LRRURL(@"/api/order/getUnComplete");
+                dic[@"page"] = @(page);
+                dic[@"userId"] = userId;
+            default:
+                break;
+        }
+    }else{
+        switch (type) {
+            case LRRReceiveALLOrderRequestType: // 所有未完成订单
+                url = LRRURL(@"/api/order/getAllOrder");
+                dic[@"page"] = @(page);
+                break;
+            case LRRReceiveCompleteOrderRequestType: // 我已完成的订单 getMyAcceptComplete  获取我的已完成订单  已接单就算完成
+                url = LRRURL(@"/api/order/getUnCompleteNoPay");
+                dic[@"page"] = @(page);
+                dic[@"userId"] = userId;
+                break;
+            case LRRReceiveNotAcceptOrderRequestType://获取我的未接单订单
+                url = LRRURL(@"/api/order/getUnComplete");
+                dic[@"page"] = @(page);
+                dic[@"userId"] = userId;
+            default:
+                break;
+        }
     }
     
     [self requestWithURL:url httpMethod:GETHttpMethod params:dic progress:nil completion:^(LRRResponseObj *responseObj) {

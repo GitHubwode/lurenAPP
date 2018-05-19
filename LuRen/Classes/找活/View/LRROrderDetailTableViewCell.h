@@ -21,6 +21,8 @@
 @interface LRROrderDetailTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) id<LRROrderDetailTableViewCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *sureButton;
 
 @property (nonatomic, strong) LRROrderDetailsModel *orderModel;
 + (NSString *)orderDetailIdentifier;

@@ -8,6 +8,11 @@
 
 #import "LRRBaseViewController.h"
 
+typedef void(^ChangeUserMessageSuccess)(void);
+
 @interface LRRMyEditViewController : LRRBaseViewController
+
+@property (nonatomic, strong) ChangeUserMessageSuccess backBlock;
+
 
 @end

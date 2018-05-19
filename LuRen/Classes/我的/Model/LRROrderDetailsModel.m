@@ -27,11 +27,12 @@
     _remark = _remark.length == 0 ? @"没有特殊要求":_remark;
     _remark = [_remark stringByReplacingOccurrencesOfString:@"null" withString:@""];
     
-    if (_status == 0) {
-        _statusImage = @"pic_daijie";
+    if ([_workType isEqualToString:@"点工"]) {
+        _status = 1;
     }else{
-        _statusImage = @"pic_yijie";
+        _status = 2;
     }
+    
     
     //    人数
     if (_fare == 0) {
@@ -46,7 +47,7 @@
         _totalAmount = _number *_unitPrice*_days + _fare*_days*_carNum;
         _orderDetailsList = [NSString stringWithFormat:@"%lu人*%.f元*%lu天+%.f元*%lu辆*%lu天=%.f元",(unsigned long)_number,_unitPrice,(unsigned long)_days,_fare,(unsigned long)_days,(unsigned long)_carNum,_totalAmount];
     }
-    if (_isSeting == 0) {
+    if (_isSiting == 0) {
         _isLive = @"不住";
     }else{
         _isLive = @"住";

@@ -10,8 +10,14 @@
 
 @class LRROrderDetailsModel;
 
+typedef void(^AcceptOrder)(void);
+
 @interface LRROrderDetailViewController : LRRBaseViewController
 
 @property (nonatomic, strong) LRROrderDetailsModel *orderModel;
+
+@property (nonatomic, copy) NSString *IdString;
+
+@property (nonatomic, copy) AcceptOrder blockOrder;
 
 @end

@@ -39,7 +39,7 @@ static NSString *LRRTeamCellIdfy = @"LRRTeamCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     self.textField.placeholder = infoItem.placeholder;
-    self.textField.text = infoItem.subtitle;
+    self.textField.text =[NSString stringWithFormat:@"%@人",[LRRUserManager sharedUserManager].currentUser.teamGroup];
     self.indicatorImageView.hidden = infoItem.hidenIndicator;
     self.lineView.hidden = infoItem.hidenLine;
 }

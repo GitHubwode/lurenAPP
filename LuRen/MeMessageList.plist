@@ -24,38 +24,6 @@
 		<array>
 			<dict>
 				<key>iconString</key>
-				<string>icon_qianbao</string>
-				<key>titleString</key>
-				<string>钱包</string>
-				<key>subTitleString</key>
-				<string></string>
-				<key>statusString</key>
-				<string></string>
-				<key>linkVC</key>
-				<string></string>
-				<key>isTitle</key>
-				<true/>
-				<key>isStatus</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>iconString</key>
-				<string>icon_shiming</string>
-				<key>titleString</key>
-				<string>实名认证</string>
-				<key>subTitleString</key>
-				<string></string>
-				<key>statusString</key>
-				<string>icon_weirenzheng</string>
-				<key>linkVC</key>
-				<string>LRRRealNameViewController</string>
-				<key>isTitle</key>
-				<true/>
-				<key>isStatus</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>iconString</key>
 				<string>icon_qian</string>
 				<key>titleString</key>
 				<string>收费标准</string>

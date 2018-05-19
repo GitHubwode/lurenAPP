@@ -8,6 +8,7 @@
 
 #import "LRRHTTPSessionManager.h"
 #import "LRRPublishOrderParam.h"
+#import "LRRUserMessageModel.h"
 
 @interface LRRPublishOrderRequestManager : LRRHTTPSessionManager
 
@@ -29,5 +30,10 @@
  */
 
 + (void)publishCancelOrderId:(NSUInteger )orderId completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
-
+/**
+ 发布发现工人
+ @param completionHandler 请求完成的回调 responseObj 为LRRResponseObj
+ @param caller 方法调用者
+ */
++ (void)publishLookWorkerPageNum:(NSUInteger )pageNum Rows:(NSUInteger )rows Type:(NSString *)type completion:(void(^)(NSArray<LRRUserMessageModel *>*responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
 @end

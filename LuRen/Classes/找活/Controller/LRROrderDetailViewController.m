@@ -26,7 +26,11 @@
     [super viewDidLoad];
     self.navigationItem.title = @"详情";
     [self.view addSubview:self.tableView];
-    [self addNavi];
+    if ([self.IdString isEqualToString:@"BOSS"]) {
+        
+    }else{
+         [self addNavi];
+    }
     LRRLog(@"orderModel:%@",self.orderModel);
     [self requestLocation];
 }
@@ -64,6 +68,7 @@
     LRRFeedbackViewController *feedVC = [[LRRFeedbackViewController alloc]init];
     feedVC.titleString = @"举报";
     feedVC.reportedPhone = self.orderModel.contactsPhone;
+    feedVC.orderNo = self.orderModel.orderNo;
     [self.navigationController pushViewController:feedVC animated:YES];
 }
 
@@ -78,6 +83,11 @@
     LRRLog(@"接单按钮");
     [LRRReceiveOrderRequestManager searchReciveOrderParam:self.param completion:^(LRRResponseObj *responseObj) {
         if (responseObj.code == LRRSuccessCode) {
+            
+            if (self.blockOrder) {
+                self.blockOrder();
+            }
+            
             [self.navigationController popViewControllerAnimated:YES];
         }else{
             [self.view showHint:responseObj.message];
@@ -109,6 +119,11 @@
     LRROrderDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRROrderDetailTableViewCell orderDetailIdentifier] forIndexPath:indexPath];
     cell.delegate = self;
     cell.orderModel = self.orderModel;
+    
+    if ([self.IdString isEqualToString:@"BOSS"]) {
+        cell.sureButton.hidden = YES;
+    }
+    
     return cell;
 }
 

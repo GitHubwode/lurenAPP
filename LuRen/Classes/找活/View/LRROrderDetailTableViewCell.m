@@ -12,7 +12,6 @@
 @interface LRROrderDetailTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIButton *statusButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *peopleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderTimeLabel;
@@ -51,6 +50,7 @@ static  NSString *const orderDetailTableViewCell = @"orderDetailTableViewCell";
     self.lineView7.contentMode = LRROnePixelHeight;
     self.statusButton.layer.masksToBounds = YES;
     self.statusButton.layer.cornerRadius = 5.f;
+    self.distanceLabel.hidden = YES;
 }
 
 - (void)setOrderModel:(LRROrderDetailsModel *)orderModel

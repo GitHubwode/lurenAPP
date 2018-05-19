@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>少于3年</string>
-	<string>3-5年</string>
+	<string>3年</string>
+	<string>5年</string>
 	<string>6年</string>
 	<string>7年</string>
 	<string>8年</string>

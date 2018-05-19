@@ -202,13 +202,6 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *currentDateStr = [dateFormatter stringFromDate:date];
     return currentDateStr;
-    
-    
-//    NSString *timeString = [NSString stringWithFormat:@"%0.f",timeInter];//转为字符型
-//    return timeString;
-    
-    
-    
 }
 
 

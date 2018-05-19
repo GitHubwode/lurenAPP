@@ -110,11 +110,10 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
             return YES;
         }else{
             LRRLog(@"字数");
-            [self.contentView showHint:@"输入的字符为50~60"];
+//            [self.contentView showHint:@"输入的字符为50~60"];
             return YES;
         }
     }
-    
     return YES;
 }
 
@@ -122,30 +121,34 @@ static NSString *LRRPublishMarkCellIdfy = @"LRRPublishMarkCellIdfy";
 #pragma mark - 点击按钮的选择
 
 - (IBAction)notWomanButtonClick:(UIButton *)sender {
+    
     sender.selected = !sender.selected;
     if (sender.selected) {
         self.title1 = @"不要女工，";
     }else{
         self.title1 = @"";
     }
+    self.infoItem.subtitle = [NSString stringWithFormat:@"%@%@%@%@",self.title1,self.title2,self.title3,self.textView.text];
 }
 - (IBAction)goToWorkButtonClick:(UIButton *)sender {
+   
     sender.selected = !sender.selected;
     if (sender.selected) {
         self.title2 = @"风雨无阻，";
     }else{
         self.title2 = @"";
     }
-
+    self.infoItem.subtitle = [NSString stringWithFormat:@"%@%@%@%@",self.title1,self.title2,self.title3,self.textView.text];
 }
 - (IBAction)bringToolsButtonClick:(UIButton *)sender {
+    
     sender.selected = !sender.selected;
     if (sender.selected) {
         self.title3 = @"自带工具，";
     }else{
         self.title3 = @"";
     }
-
+    self.infoItem.subtitle = [NSString stringWithFormat:@"%@%@%@%@",self.title1,self.title2,self.title3,self.textView.text];
 }
 
 - (void)dealloc{

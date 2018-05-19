@@ -40,7 +40,7 @@ static NSString *LRRSexCellIdfy = @"LRRSexCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     self.textField.placeholder = infoItem.placeholder;
-    self.textField.text = infoItem.subtitle;
+    self.textField.text = [LRRUserManager sharedUserManager].currentUser.sexName;
     self.indicatorImageView.hidden = infoItem.hidenIndicator;
     self.lineView.hidden = infoItem.hidenLine;
 }

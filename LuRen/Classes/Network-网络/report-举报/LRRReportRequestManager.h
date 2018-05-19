@@ -19,4 +19,7 @@
  @param caller 方法调用者
  */
 + (void)reportOrderParam:(LRRReportParam *)param completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
+
+/** 版本返回信息 */
++ (void)freedBackOrderContent:(NSString *)content completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller;
 @end

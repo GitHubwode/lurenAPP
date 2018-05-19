@@ -29,6 +29,7 @@
 		180F8880200F4C08002A9B0C /* LRRMeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180F887E200F4C08002A9B0C /* LRRMeTableViewCell.xib */; };
 		180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */; };
 		180F8885200F5044002A9B0C /* MeMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180F8884200F5044002A9B0C /* MeMessageList.plist */; };
+		181136582098A48C00FC107D /* LRRHomeRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 181136572098A48C00FC107D /* LRRHomeRequestManager.m */; };
 		1831920A201088D30032B8C7 /* FoundMessageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18319209201088D30032B8C7 /* FoundMessageList.plist */; };
 		1831920D20108CDC0032B8C7 /* LRRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */; };
 		1831920F20108D7B0032B8C7 /* SettingList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1831920E20108D7B0032B8C7 /* SettingList.plist */; };
@@ -164,6 +165,8 @@
 		1861D293208C7AF9002E11C5 /* PK_Camera_Turn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861D280208C7AF8002E11C5 /* PK_Camera_Turn@2x.png */; };
 		1861D294208C7AF9002E11C5 /* PK_Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1861D281208C7AF8002E11C5 /* PK_Play@2x.png */; };
 		1861D297208C7B86002E11C5 /* UIView+XCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1861D295208C7B85002E11C5 /* UIView+XCExtension.m */; };
+		18665FCD209D6BB300E812A0 /* LRRUserMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665FCC209D6BB300E812A0 /* LRRUserMessageModel.m */; };
+		18665FD2209D98A500E812A0 /* LRRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665FD1209D98A500E812A0 /* LRRWebViewController.m */; };
 		18783F4D2079D40500D72AFF /* AppDelegate+LRRRongCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F4C2079D40500D72AFF /* AppDelegate+LRRRongCloud.m */; };
 		18783F512079D44600D72AFF /* LRRRongCloudModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F502079D44600D72AFF /* LRRRongCloudModel.m */; };
 		18783F562079F8E900D72AFF /* LRROrderDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18783F552079F8E900D72AFF /* LRROrderDetailsModel.m */; };
@@ -219,6 +222,7 @@
 		18A7665F204FCB5C00F2F063 /* LRRChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A7665D204FCB5C00F2F063 /* LRRChangePhoneViewController.m */; };
 		18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */; };
 		18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */; };
+		18AEE86820AFF7AD0003C230 /* LRRSlideShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEE86720AFF7AD0003C230 /* LRRSlideShowModel.m */; };
 		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
 		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
 		18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC287B2050DBE500D4B451 /* LRRSexField.m */; };
@@ -229,6 +233,7 @@
 		18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */; };
 		18DC289A2050F6AB00D4B451 /* LRRIntroduceViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */; };
 		18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */; };
+		18DF5E5B209608F500CE53D4 /* LRRMyDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF5E5A209608F500CE53D4 /* LRRMyDetailsModel.m */; };
 		18FC93F5200C5F7000269FAB /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18FC93F4200C5F7000269FAB /* AppDelegate.mm */; };
 		18FC93FD200C5F7000269FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FC200C5F7000269FAB /* Assets.xcassets */; };
 		18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */; };
@@ -301,6 +306,8 @@
 		180F8881200F4FB4002A9B0C /* LRRMeMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMeMessageModel.h; sourceTree = "<group>"; };
 		180F8882200F4FB4002A9B0C /* LRRMeMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMeMessageModel.m; sourceTree = "<group>"; };
 		180F8884200F5044002A9B0C /* MeMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MeMessageList.plist; sourceTree = "<group>"; };
+		181136562098A48C00FC107D /* LRRHomeRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRHomeRequestManager.h; sourceTree = "<group>"; };
+		181136572098A48C00FC107D /* LRRHomeRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRHomeRequestManager.m; sourceTree = "<group>"; };
 		18319209201088D30032B8C7 /* FoundMessageList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FoundMessageList.plist; sourceTree = "<group>"; };
 		1831920B20108CDC0032B8C7 /* LRRSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSettingViewController.h; sourceTree = "<group>"; };
 		1831920C20108CDC0032B8C7 /* LRRSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSettingViewController.m; sourceTree = "<group>"; };
@@ -532,6 +539,10 @@
 		1861D281208C7AF8002E11C5 /* PK_Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PK_Play@2x.png"; sourceTree = "<group>"; };
 		1861D295208C7B85002E11C5 /* UIView+XCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCExtension.m"; sourceTree = "<group>"; };
 		1861D296208C7B86002E11C5 /* UIView+XCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCExtension.h"; sourceTree = "<group>"; };
+		18665FCB209D6BB300E812A0 /* LRRUserMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRUserMessageModel.h; sourceTree = "<group>"; };
+		18665FCC209D6BB300E812A0 /* LRRUserMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRUserMessageModel.m; sourceTree = "<group>"; };
+		18665FD0209D98A500E812A0 /* LRRWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRWebViewController.h; sourceTree = "<group>"; };
+		18665FD1209D98A500E812A0 /* LRRWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRWebViewController.m; sourceTree = "<group>"; };
 		18783F4B2079D40500D72AFF /* AppDelegate+LRRRongCloud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+LRRRongCloud.h"; sourceTree = "<group>"; };
 		18783F4C2079D40500D72AFF /* AppDelegate+LRRRongCloud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+LRRRongCloud.m"; sourceTree = "<group>"; };
 		18783F4F2079D44600D72AFF /* LRRRongCloudModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRRongCloudModel.h; sourceTree = "<group>"; };
@@ -611,6 +622,9 @@
 		18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRChangePhoneViewController.xib; sourceTree = "<group>"; };
 		18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Countdown.m"; sourceTree = "<group>"; };
 		18A76662204FCF2E00F2F063 /* UIButton+Countdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Countdown.h"; sourceTree = "<group>"; };
+		18AEE86620AFF7AD0003C230 /* LRRSlideShowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSlideShowModel.h; sourceTree = "<group>"; };
+		18AEE86720AFF7AD0003C230 /* LRRSlideShowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSlideShowModel.m; sourceTree = "<group>"; };
+		18AEE86920B00DA00003C230 /* LuRen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuRen.entitlements; sourceTree = "<group>"; };
 		18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPointWorkViewController.h; sourceTree = "<group>"; };
 		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
 		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
@@ -629,6 +643,8 @@
 		18DC28972050F6AB00D4B451 /* LRRIntroduceViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRIntroduceViewCell.h; sourceTree = "<group>"; };
 		18DC28982050F6AB00D4B451 /* LRRIntroduceViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRIntroduceViewCell.m; sourceTree = "<group>"; };
 		18DC28992050F6AB00D4B451 /* LRRIntroduceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LRRIntroduceViewCell.xib; sourceTree = "<group>"; };
+		18DF5E59209608F500CE53D4 /* LRRMyDetailsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRMyDetailsModel.h; sourceTree = "<group>"; };
+		18DF5E5A209608F500CE53D4 /* LRRMyDetailsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRMyDetailsModel.m; sourceTree = "<group>"; };
 		18FC93F0200C5F7000269FAB /* LuRen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuRen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC93F3200C5F7000269FAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18FC93F4200C5F7000269FAB /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -741,6 +757,7 @@
 		180642B8200DF5F100B20130 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18665FCE209D988D00E812A0 /* 微信公众号 */,
 				180642BD200DF5F100B20130 /* 首页 */,
 				180642C9200DF5F100B20130 /* 朋友 */,
 				18515878205243170006E863 /* 发布 */,
@@ -864,6 +881,8 @@
 		180642BF200DF5F100B20130 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18AEE86620AFF7AD0003C230 /* LRRSlideShowModel.h */,
+				18AEE86720AFF7AD0003C230 /* LRRSlideShowModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1105,6 +1124,7 @@
 			children = (
 				1804327C206226CC006AE7ED /* LRRHTTPSessionManager.h */,
 				1804327D206226CC006AE7ED /* LRRHTTPSessionManager.m */,
+				181136552098A46900FC107D /* 首页 */,
 				1861D22F208C5DC1002E11C5 /* EditMessage-编辑我的信息 */,
 				18783FA3207A182C00D72AFF /* Order-接单方订单 */,
 				18783F9C207A120300D72AFF /* report-举报 */,
@@ -1149,6 +1169,15 @@
 				185159192057A9880006E863 /* MBProgressHUD+LRRExtension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		181136552098A46900FC107D /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				181136562098A48C00FC107D /* LRRHomeRequestManager.h */,
+				181136572098A48C00FC107D /* LRRHomeRequestManager.m */,
+			);
+			path = "首页";
 			sourceTree = "<group>";
 		};
 		1851584C20522F890006E863 /* Edit-编辑信息 */ = {
@@ -1251,6 +1280,8 @@
 		1851587E2052435E0006E863 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18665FCB209D6BB300E812A0 /* LRRUserMessageModel.h */,
+				18665FCC209D6BB300E812A0 /* LRRUserMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1439,6 +1470,23 @@
 			path = PKAsset;
 			sourceTree = "<group>";
 		};
+		18665FCE209D988D00E812A0 /* 微信公众号 */ = {
+			isa = PBXGroup;
+			children = (
+				18665FCF209D988D00E812A0 /* Controller */,
+			);
+			path = "微信公众号";
+			sourceTree = "<group>";
+		};
+		18665FCF209D988D00E812A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18665FD0209D98A500E812A0 /* LRRWebViewController.h */,
+				18665FD1209D98A500E812A0 /* LRRWebViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		18783F4E2079D42200D72AFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1559,6 +1607,8 @@
 			children = (
 				18DC288C2050E39A00D4B451 /* LRRCustomInfoItem.h */,
 				18DC288D2050E39A00D4B451 /* LRRCustomInfoItem.m */,
+				18DF5E59209608F500CE53D4 /* LRRMyDetailsModel.h */,
+				18DF5E5A209608F500CE53D4 /* LRRMyDetailsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1625,6 +1675,7 @@
 		18FC93F2200C5F7000269FAB /* LuRen */ = {
 			isa = PBXGroup;
 			children = (
+				18AEE86920B00DA00003C230 /* LuRen.entitlements */,
 				180642B8200DF5F100B20130 /* Classes */,
 				18FC93FC200C5F7000269FAB /* Assets.xcassets */,
 				18FC93FE200C5F7000269FAB /* LaunchScreen.storyboard */,
@@ -1769,6 +1820,11 @@
 					18FC93EF200C5F7000269FAB = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					18FC9407200C5F7000269FAB = {
 						CreatedOnToolsVersion = 9.0;
@@ -1948,6 +2004,7 @@
 				1851587620523F170006E863 /* LRRNameViewCell.m in Sources */,
 				1861D256208C759B002E11C5 /* TZPhotoPreviewCell.m in Sources */,
 				18DC28832050DE5B00D4B451 /* LRRMyEditViewController.m in Sources */,
+				18DF5E5B209608F500CE53D4 /* LRRMyDetailsModel.m in Sources */,
 				18783FA2207A124B00D72AFF /* LRRReportParam.m in Sources */,
 				188EAF9820159D060012855E /* LRRSegmentBar.m in Sources */,
 				1832AD66204F8FD9006BB3BD /* UITextView+Placeholder.m in Sources */,
@@ -2029,6 +2086,7 @@
 				18515841205228100006E863 /* LRRNationalField.m in Sources */,
 				1831921B2011A3630032B8C7 /* LRRHomeCollectionViewCell.m in Sources */,
 				1861D283208C7AF9002E11C5 /* PKRecordShortVideoViewController.m in Sources */,
+				181136582098A48C00FC107D /* LRRHomeRequestManager.m in Sources */,
 				18A76653204FB44A00F2F063 /* LRRUserDetailedView.m in Sources */,
 				1851589320539EC50006E863 /* LRREmployingViewCell.m in Sources */,
 				185158F4205660290006E863 /* LRRPublishWriteViewCell.m in Sources */,
@@ -2057,7 +2115,9 @@
 				185158822052444D0006E863 /* LRREmployingViewController.m in Sources */,
 				188EAF9D2016E7250012855E /* LRROrderDetailViewController.m in Sources */,
 				185158F8205663750006E863 /* LRRChooseTimeField.m in Sources */,
+				18665FD2209D98A500E812A0 /* LRRWebViewController.m in Sources */,
 				18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */,
+				18665FCD209D6BB300E812A0 /* LRRUserMessageModel.m in Sources */,
 				1851591320577CD30006E863 /* LRRPublishintroductionViewCell.m in Sources */,
 				1861D28B208C7AF9002E11C5 /* PKPlayerView.m in Sources */,
 				18515831205122640006E863 /* LRRBirthdayCell.m in Sources */,
@@ -2077,6 +2137,7 @@
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
 				1851591A2057A9880006E863 /* MBProgressHUD+LRRExtension.m in Sources */,
 				18486C36205908560009519E /* LRRHomeReportViewController.m in Sources */,
+				18AEE86820AFF7AD0003C230 /* LRRSlideShowModel.m in Sources */,
 				1832AD74204F993D006BB3BD /* LRRServiceCenterHeaderView.m in Sources */,
 				1804328520622B69006AE7ED /* LRRUserObj.m in Sources */,
 				1861D254208C759B002E11C5 /* TZImageManager.m in Sources */,
@@ -2240,15 +2301,16 @@
 			baseConfigurationReference = C52D7D4CB749EEBE340AB23C /* Pods-LuRen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LuRen/LuRen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UC7R7ETD35;
+				DEVELOPMENT_TEAM = T5385VS865;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/以前文件/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kfjugong.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kfjugong.first;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2259,15 +2321,16 @@
 			baseConfigurationReference = 64493AF8506E4B24CC320C01 /* Pods-LuRen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LuRen/LuRen.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UC7R7ETD35;
+				DEVELOPMENT_TEAM = T5385VS865;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/apple/Documents/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
+				GCC_PREFIX_HEADER = "/Users/apple/Documents/以前文件/陆人网络APP/LuRen/Classes/Other-其它/LuRen.pch";
 				INFOPLIST_FILE = LuRen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kfjugong.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kfjugong.first;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

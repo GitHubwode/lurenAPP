@@ -28,9 +28,20 @@
             [view showHint:responseObj.message];
         }
         if (completionHandler) {
+            LRRUserObj *userInfo = [LRRUserObj mj_objectWithKeyValues:responseObj.data];
+            LRRLog(@"%@",userInfo);
+            
+            [[LRRUserManager sharedUserManager] updateCurrentUserSex:userInfo.sex];
+            [[LRRUserManager sharedUserManager] updateCurrentUserName:userInfo.nickname];
+            [[LRRUserManager sharedUserManager] updateCurrentUserNation:userInfo.nation];
+            [[LRRUserManager sharedUserManager] updateCurrentUserWorkAge:userInfo.workAge];
+            [[LRRUserManager sharedUserManager]updateCurrentUserBirthday:userInfo.birthday];
+            [[LRRUserManager sharedUserManager] updateCurrentUserTeamGroup:userInfo.teamGroup];
+            [[LRRUserManager sharedUserManager] updateCurrentUserHometown:userInfo.hometown];
+            [[LRRUserManager sharedUserManager] updateCurrentUserWorkType:userInfo.workType];
+            [[LRRUserManager sharedUserManager] synchronize]; 
             completionHandler(responseObj);
         }
-        
     } aboveView:view inCaller:caller];
 }
 
@@ -57,6 +68,7 @@
         }
         if (completionHandler) {
             
+            LRRLog(@"%@",responseObj.data);
             LRRUserObj *userObj = [LRRUserObj mj_objectWithKeyValues:responseObj.data];
             [[LRRUserManager sharedUserManager] updateCurrentUserAvatar:userObj.avatarUrl];
             [[LRRUserManager sharedUserManager] synchronize];

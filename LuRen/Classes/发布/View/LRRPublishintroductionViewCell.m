@@ -101,7 +101,7 @@ static NSString *LRRPublishintroductionCelldfy = @"LRRPublishintroductionCellIdf
             return YES;
         }else{
             LRRLog(@"字数");
-            [self.contentView showHint:@"输入的字符为50~60"];
+//            [self.contentView showHint:@"输入的字符为50~60"];
             return YES;
         }
     }

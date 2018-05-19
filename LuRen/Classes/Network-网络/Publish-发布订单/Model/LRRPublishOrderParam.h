@@ -27,7 +27,7 @@
 /** 车费 */
 @property (nonatomic,assign) double  fare;
 /** 是否住工地 0否 1是 */
-@property (nonatomic, assign) NSUInteger isSeting;
+@property (nonatomic, assign) NSUInteger isSiting;
 /** 经度 */
 @property (nonatomic,assign) CGFloat  longitude;
 /** 维度 */
@@ -53,7 +53,7 @@
 /** 支付时间 */
 //@property (nonatomic,copy) NSString *payTime;
 /** 工程量 */
-@property (nonatomic, copy) NSString *workAmount;
+@property (nonatomic, assign) NSUInteger workAmount;
 /** 工资支付时间 */
 @property (nonatomic,copy) NSString *lastPayTime;
 /** 头像 */
@@ -68,11 +68,11 @@
                           Days:(NSUInteger )days
                      UnitPrice:(double )unitPrice
                           Fare:(double )fare
-                      IsSeting:(NSUInteger)isSeting
+                      IsSiting:(NSUInteger)isSiting
                    ProjectDesc:(NSString *)projectDesc
                    WorkEndTime:(NSString *)workEndTime
                 WorkDevingTime:(NSString *)workDevingTime
-                    WorkAmount:(NSString *)workAmount
+                    WorkAmount:(NSUInteger )workAmount
                         Remark:(NSString *)remark
                  WorkStartTime:(NSString *)workStartTime
                    LastPayTime:(NSString *)lastPayTime
@@ -92,11 +92,11 @@
                            Days:(NSUInteger )days
                       UnitPrice:(double )unitPrice
                            Fare:(double )fare
-                       IsSeting:(NSUInteger)isSeting
+                       IsSiting:(NSUInteger)isSiting
                     ProjectDesc:(NSString *)projectDesc
                     WorkEndTime:(NSString *)workEndTime
                  WorkDevingTime:(NSString *)workDevingTime
-                     WorkAmount:(NSString *)workAmount
+                     WorkAmount:(NSUInteger )workAmount
                          Remark:(NSString *)remark
                   WorkStartTime:(NSString *)workStartTime
                     LastPayTime:(NSString *)lastPayTime

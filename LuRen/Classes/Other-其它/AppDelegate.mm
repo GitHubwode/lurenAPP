@@ -39,7 +39,7 @@
     //显示窗口
     [self.window makeKeyAndVisible];
     //链接融云
-    [self setUpRongCloud];
+//    [self setUpRongCloud];
     
     return YES;
 }

@@ -8,6 +8,7 @@
 
 #import "LRRHomeHeaderView.h"
 #import "SDCycleScrollView.h"
+#import "LRRSlideShowModel.h"
 
 static NSString *HomeFirstCollectionReusableViewIdfy = @"HomeFirstCollectionReusableViewIdfy";
 
@@ -121,16 +122,16 @@ static CGFloat headerBtnHeight = 30.f;
         make.height.equalTo(@(headerBtnHeight));
     }];
     
-    
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.bottomView.mas_centerY);
         make.left.equalTo(weakself.bottomView.mas_left).offset(13);
-        
+        make.width.equalTo(@(40));
     }];
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.bottomView.mas_centerY);
         make.left.equalTo(weakself.titleLabel.mas_right).offset(2);
+        make.width.equalTo(@(40));
     }];
     
     [self.recomLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -138,10 +139,10 @@ static CGFloat headerBtnHeight = 30.f;
         make.left.equalTo(weakself.imageView.mas_right).offset(10);
     }];
     
-    
     [self.moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.bottomView.mas_centerY);
         make.right.equalTo(weakself.bottomView.mas_right).offset(-14);
+        make.width.equalTo(@(50));
     }];
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -156,15 +157,15 @@ static CGFloat headerBtnHeight = 30.f;
         make.left.equalTo(weakself.recomLabel.mas_right).offset(8);
         make.right.equalTo(lineView.mas_left).offset(-8);
     }];
-    
-    
-    
-    NSArray *imagesURLStrings = @[
-                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
-                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
-                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
-                                  ];
-    
+}
+
+- (void)homeHeaderViewImage:(NSMutableArray *)array
+{
+    NSMutableArray *imagesURLStrings = [NSMutableArray array];
+    for (LRRSlideShowModel *model in array) {
+        [imagesURLStrings addObject:model.url];
+    }
+    LRRLog(@"%@",imagesURLStrings);
     self.cycleView.imageURLStringsGroup = imagesURLStrings;
 }
 
@@ -238,7 +239,7 @@ static CGFloat headerBtnHeight = 30.f;
 {
     if (!_messageLabel) {
         _messageLabel = [UILabel new];
-        _messageLabel.text = @"居工老周又去大保健,结果被警察抓住了";
+        _messageLabel.text = @"网工宝APP上线了,免费的用工软件";
         _messageLabel.font = LRRFont(12);
         _messageLabel.textColor = LRRTimeTextColor;
         _messageLabel.textAlignment = NSTextAlignmentLeft;
@@ -262,10 +263,9 @@ static CGFloat headerBtnHeight = 30.f;
 - (SDCycleScrollView *)cycleView
 {
     if (!_cycleView) {
-        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kMainScreenWidth, 142) delegate:self placeholderImage:[UIImage imageNamed:@"pic_lunbo1"]];
+        _cycleView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kMainScreenWidth, 142) delegate:self placeholderImage:[UIImage imageNamed:@""]];
+        _cycleView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
         _cycleView.backgroundColor = LRRViewBackgroundColor;
-//        _cycleView.currentPageDotImage = [UIImage imageNamed:@""];
-//        _cycleView.pageDotImage = [UIImage imageNamed:@""];
     }
     return _cycleView;
 }

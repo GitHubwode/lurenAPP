@@ -31,24 +31,40 @@ static NSString *lookTableViewCell = @"lookTableViewCell";
     
     self.line1View.constant = LRROnePixelHeight;
     self.line2View.constant = LRROnePixelHeight;
+    self.distanceLabel.hidden = YES;
 }
 
 - (void)setOrderModel:(LRROrderDetailsModel *)orderModel
 {
     _orderModel = orderModel;
+    
+    
+    
     self.titleLabel.text = orderModel.orderDetails;
-    self.peopleLabel.text = [NSString stringWithFormat:@"人数: %lu人",(unsigned long)orderModel.number];
-
-    NSString *unitString = [NSString stringWithFormat:@"%.f",orderModel.unitPrice];
-    NSString *string1 = [NSString stringWithFormat:@"工价: %.f元/天",orderModel.unitPrice];
-    self.singleLabel.attributedText = [self firstString:string1 SecondString:unitString];
+    if (orderModel.status==1) {
+        //点工
+        self.peopleLabel.text = [NSString stringWithFormat:@"人数: %lu人",(unsigned long)orderModel.number];
+        self.statusLabel.text = orderModel.workType;
+        NSString *unitString = [NSString stringWithFormat:@"%.f",orderModel.unitPrice];
+        NSString *string1 = [NSString stringWithFormat:@"工价: %.f元/天",orderModel.unitPrice];
+        self.singleLabel.attributedText = [self firstString:string1 SecondString:unitString];
+    }else{
+        //点包
+        self.peopleLabel.text = [NSString stringWithFormat:@"工程量: %@平米",orderModel.workAmount];
+        self.statusLabel.text = orderModel.workType;
+        NSString *unitString = [NSString stringWithFormat:@"%.f",orderModel.unitPrice];
+        NSString *string1 = [NSString stringWithFormat:@"单价: %.f元/平米",orderModel.unitPrice];
+        self.singleLabel.attributedText = [self firstString:string1 SecondString:unitString];
+    }
     
     NSString *fareString = [NSString stringWithFormat:@"%.f",orderModel.fare];
-    NSString *string2 =  [NSString stringWithFormat:@"车费: %.f/辆/天",orderModel.fare];
+    NSString *string2 =  [NSString stringWithFormat:@"车费: %.f元/辆/天",orderModel.fare];
 
     self.carLabel.attributedText = [self firstString:string2 SecondString:fareString];
     self.timeLabel.text = [NSString stringWithFormat:@"%@",orderModel.workStartTime];
     self.distanceLabel.text = [NSString stringWithFormat:@"%@",orderModel.instance];
+    
+    LRRLog(@"888%@",orderModel.type);
 }
 
 - (NSAttributedString *)firstString:(NSString *)string SecondString:(NSString *)secondString

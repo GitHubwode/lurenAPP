@@ -30,8 +30,22 @@ MJCodingImplementation
         _sexName = _sex;
     }
     
-    _avatarUrl = [NSString stringWithFormat:@"https:%@",_avatarUrl];
+    if (!_workAge.length) {
+        _workAge = @"";
+    }
+    if (!_workType.length) {
+        _workType = @"";
+    }
     
+    if (!_teamGroup.length) {
+        _teamGroup = @"";
+    }
+    
+    if ([_avatarUrl containsString:@"https:"]) {
+        
+    }else{
+       _avatarUrl = [NSString stringWithFormat:@"https:%@",_avatarUrl];
+    }
     _isLocked = [_isLock isEqualToString:@"N"] ? NO : YES;
     _isDeleted = [_isDelete isEqualToString:@"N"] ? NO : YES;
     _isRealnameed = _isRealname == nil ?NO : YES;

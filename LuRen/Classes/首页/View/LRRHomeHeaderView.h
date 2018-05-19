@@ -21,6 +21,7 @@
 @property (nonatomic, strong) SDCycleScrollView *cycleView;
 @property (nonatomic, weak) id <LRRHomeFirstCollectionReusableViewDelegate> firstDelegate;
 
+- (void)homeHeaderViewImage:(NSMutableArray *)array;
 
 + (NSString *)identifier;
 

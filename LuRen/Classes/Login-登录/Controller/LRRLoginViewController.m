@@ -142,7 +142,6 @@
 - (void)setUpRegisterManager
 {
     LRRLog(@"角色:%@",[NSUserDefaults objectForKey:LRRUserType]);
-
     LRRRegisterParam *param = [[LRRRegisterParam alloc]initWithPhone:self.phoneTextFiled.text Type:[NSUserDefaults objectForKey:LRRUserType]];
     [LRRLoginRequestManager registerWithParam:param completion:^(LRRUserInfo *user) {
         LRRLog(@"%@",user);

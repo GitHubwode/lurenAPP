@@ -14,6 +14,8 @@
 #import "LRRRealNameViewController.h"
 #import "LRRUserDetailedViewController.h"
 #import "LRRLoginViewController.h"
+#import "UIImageView+WebCache.h"
+#import "LRRSettingViewController.h"
 
 @interface LRRMeViewController ()<UITableViewDataSource,UITableViewDelegate,LRRHeaderViewDelegate>
 
@@ -33,6 +35,29 @@
     self.fd_prefersNavigationBarHidden = YES;
     self.tableView.tableHeaderView = self.headerView;
     [self.view addSubview:self.tableView];
+    [LRRNotificationCenter addObserver:self selector:@selector(loginOut:) name:LRRUserLogoutNotifacation object:nil];
+    [LRRNotificationCenter addObserver:self selector:@selector(loginOn:) name:LRRUserLoginNotifacation object:nil];
+}
+
+-(void)loginOut:(NSNotification *)obj
+{
+    if (![LRRUserManager sharedUserManager].logined) {
+        self.headerView.nameLabel.text = @"点击登录";
+    }else{
+        self.headerView.nameLabel.text = [LRRUserManager sharedUserManager].currentUser.nickname;
+    }
+     [self.headerView.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+}
+
+- (void)loginOn:(NSNotification *)obj
+{
+    if (![LRRUserManager sharedUserManager].logined) {
+        self.headerView.nameLabel.text = @"点击登录";
+    }else{
+        self.headerView.nameLabel.text = [LRRUserManager sharedUserManager].currentUser.nickname;
+        [self.headerView.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+    }
+    
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
@@ -49,6 +74,12 @@
     }else{
         LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
         userVC.navTitle = @"编辑";
+        userVC.isUser = 1;
+        
+        userVC.changeBackLock = ^{
+            self.headerView.nameLabel.text = [LRRUserManager sharedUserManager].currentUser.nickname;
+            [self.headerView.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+        };
         [self.navigationController pushViewController:userVC animated:YES];
     }
 }
@@ -112,9 +143,17 @@
         LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
         [self presentViewController:loginVC animated:YES completion:nil];
     }else{
-        LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
-        Class class = NSClassFromString(item.linkVC);
-        [self.navigationController pushViewController:[class new] animated:YES];
+        if (indexPath.section == 3){
+            LRRSettingViewController *settVC = [[LRRSettingViewController alloc]init];
+            settVC.backBlock = ^{
+                
+            };
+            [self.navigationController pushViewController:settVC animated:YES];
+        }else{
+            LRRMeMessageModel*item = self.datasource[indexPath.section][indexPath.row];
+            Class class = NSClassFromString(item.linkVC);
+            [self.navigationController pushViewController:[class new] animated:YES];
+        }
     }
 }
 

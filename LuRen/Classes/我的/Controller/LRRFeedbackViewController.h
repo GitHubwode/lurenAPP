@@ -10,7 +10,8 @@
 
 @interface LRRFeedbackViewController : LRRBaseViewController
 
-@property (nonatomic, strong) NSString *titleString;
+@property (nonatomic, copy) NSString *titleString;
+@property (nonatomic, copy) NSString *orderNo;
 /** 被举报人电话 */
 @property (nonatomic, copy) NSString *reportedPhone;
 

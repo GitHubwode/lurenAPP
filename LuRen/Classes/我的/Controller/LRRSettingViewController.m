@@ -47,14 +47,14 @@
 {
     LRRLog(@"退出登录");
     [LRRLoginRequestManager loginOutWithcompletion:^(LRRResponseObj *responseObj) {
-        
         [LRRLoginRequestManager logout];
+//        [LRRNotificationCenter postNotificationName:LRRUserLogoutNotifacation object:nil];
+        if (self.backBlock) {
+            self.backBlock();
+        }
         [self.navigationController popViewControllerAnimated:YES];
         
-    } aboveView:self.view inCaller:self];
-    
-    
-    
+    } aboveView:self.view inCaller:self]; 
 }
 
 #pragma mark - UITableViewDelegage UITableViewDatasource

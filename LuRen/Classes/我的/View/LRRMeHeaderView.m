@@ -13,10 +13,6 @@
 
 @property (nonatomic, strong) UIImageView *headerImageView;
 
-@property (nonatomic, strong) UIImageView *avatarImageView;
-
-@property (nonatomic, strong) UILabel *nameLabel;
-
 @end
 
 #define kAvatarTopHeight ([UIScreen mainScreen].bounds.size.height == 812 ? 91 : 67)
@@ -46,7 +42,14 @@
         make.height.height.equalTo(@(57));
     }];
     
-    self.nameLabel.text = @"西门吹雪";
+//    self.nameLabel.text = @"西门吹雪";
+    if (![LRRUserManager sharedUserManager].logined) {
+        self.nameLabel.text = @"点击登录";
+    }else{
+        self.nameLabel.text = [LRRUserManager sharedUserManager].currentUser.nickname;
+        [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:[LRRUserManager sharedUserManager].currentUser.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+    }
+    
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(weakself.avatarImageView.mas_centerY);
         make.left.equalTo(weakself.avatarImageView.mas_right).offset(20);
@@ -80,7 +83,7 @@
         _avatarImageView = [[UIImageView alloc]init];
         _avatarImageView.layer.masksToBounds = YES;
         _avatarImageView.image = [UIImage imageNamed:@"pic_touxiang"];
-        _avatarImageView.layer.cornerRadius = 28.5f;
+        _avatarImageView.layer.cornerRadius = 5.f;
         _avatarImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _avatarImageView;

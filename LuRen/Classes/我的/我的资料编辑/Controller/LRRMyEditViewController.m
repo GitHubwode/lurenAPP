@@ -73,7 +73,7 @@
 #pragma mark - 初始化
 - (void)LRR_InitializeString
 {
-    self.type = @"";
+    self.type = [LRRUserManager sharedUserManager].currentUser.type;
     self.nickname = @"";
     self.avatarUrl = @"";
     self.phone = @"";
@@ -127,11 +127,17 @@
             }
         }
     }
-    LRREditMesssParam *param = [[LRREditMesssParam alloc]initWithType:self.type Nickname:@"" AvatarUrl:self.avatarUrl Phone:self.phone Sex:self.sex Name:self.name Nation:self.nation Birthday:self.birthday Hometown:self.hometown TeamGroup:self.teamGroup WorkType:self.workType WorkAge:self.workAge];
+    
+    self.avatarUrl = [LRRUserManager sharedUserManager].currentUser.avatarUrl;
+    
+    LRREditMesssParam *param = [[LRREditMesssParam alloc]initWithType:self.type Nickname:self.name AvatarUrl:self.avatarUrl Phone:self.phone Sex:self.sex Name:self.name Nation:self.nation Birthday:self.birthday Hometown:self.hometown TeamGroup:self.teamGroup WorkType:self.workType WorkAge:self.workAge];
     [LRREditUserRequestManager editUserMessageParam:param completion:^(LRRResponseObj *responseObj) {
         if (responseObj.code == LRRSuccessCode) {
             [self.view showHint:@"用户信息已更新"];
-//            [self.navigationController popViewControllerAnimated:YES];
+            if (self.backBlock) {
+                self.backBlock();
+            }
+            [self.navigationController popViewControllerAnimated:YES];
         }
         
     } aboveView:self.view inCaller:self];
@@ -228,7 +234,6 @@
             cell.infoItem = item;
             return cell;
         }
-        
         
     }
     LRRIntroduceViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRIntroduceViewCell cellIdentifier]];
@@ -332,7 +337,7 @@
         if (responseObj.code == LRRSuccessCode) {
             LRRLog(@"%@",responseObj);
 //            [self userMessage];
-            [self changeUserMessage];
+//            [self changeUserMessage];
             [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
         }
     } aboveView:self.view inCaller:self];

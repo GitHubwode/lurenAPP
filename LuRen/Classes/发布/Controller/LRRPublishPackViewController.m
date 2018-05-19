@@ -16,12 +16,47 @@
 #import "LRRPublishLiveViewCell.h"
 #import "LRRPublishMarkViewCell.h"
 #import "LRRPublishintroductionViewCell.h"
+#import "LRRPublishOrderRequestManager.h"
+
 
 @interface LRRPublishPackViewController ()<UITableViewDelegate,UITableViewDataSource,LRRPublishFooterDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
 @property (nonatomic, strong) LRRPublishFooterView *footerView;
+/** 类型 */
+@property (nonatomic, copy) NSString *workType;
+/** 工种类型 */
+@property (nonatomic,copy) NSString *type;
+/** 用工单价 */
+@property (nonatomic,assign) double  unitPrice;
+/** 车费 */
+@property (nonatomic,assign) double  fare;
+/** 是否住工地 0否 1是 */
+@property (nonatomic, assign) NSUInteger isSeting;
+
+/** 项目地址 */
+@property (nonatomic,copy) NSString *address;
+/** 项目时长 */
+@property (nonatomic,copy) NSString *whenLong;
+/** 联系人名称 */
+@property (nonatomic,copy) NSString *contacts;
+/** 联系人电话 */
+@property (nonatomic,copy) NSString *contactsPhone;
+/** 备注 */
+@property (nonatomic,copy) NSString *remark;
+/** 工地简介 */
+@property (nonatomic, copy) NSString *projectDesc;
+/** 开始时间 */
+@property (nonatomic,copy) NSString *workStartTime;
+/** 工作结束时间 */
+@property (nonatomic, copy) NSString *workEndTime;
+/** 招工持续时间 */
+@property (nonatomic, copy) NSString *workDevingTime;
+/** 工程量 */
+@property (nonatomic, assign) NSUInteger workAmount;
+/** 工资支付时间 */
+@property (nonatomic,copy) NSString *lastPayTime;
 
 @end
 
@@ -30,6 +65,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
+     self.workType = @"点包";
     self.tableView.tableFooterView = self.footerView;
 }
 
@@ -113,9 +149,16 @@
         
     }else if (indexPath.section == 4){
         LRRPublishWriteViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRPublishWriteViewCell cellIdentifier] forIndexPath:indexPath];
+        if ([item.title isEqualToString:@"联系人:"]) {
+            item.subtitle = [LRRUserManager sharedUserManager].currentUser.nickname;
+        }else if ([item.title isEqualToString:@"联系电话:"]){
+            item.subtitle = [LRRUserManager sharedUserManager].currentUser.phone;
+        }
         cell.infoItem = item;
+        
         return cell;
     }
+    
     LRRPublishTimeViewCell*cell = [tableView dequeueReusableCellWithIdentifier:[LRRPublishTimeViewCell cellIdentifier] forIndexPath:indexPath];
     cell.infoItem = item;
     return cell;
@@ -138,6 +181,65 @@
 - (void)ensurePublshButtonClicked
 {
     LRRLog(@"发布");
+    
+    LRRLog(@"发布");
+    for (int i =0; i < self.datasource.count; i++) {
+        for (LRRCustomInfoItem *item in self.datasource[i]) {
+            LRRLog(@"信息%@",item.subtitle);
+            if (![item.title isEqualToString:@"工地简介"]) {
+                if (item.subtitle == nil || [item.subtitle isEqualToString:@""]) {
+                    NSString *message = [NSString stringWithFormat:@"%@信息不能为空",item.title];
+                    [self.view showHint:message];
+                    return;
+                }
+            }
+            
+            if ([item.title isEqualToString:@"工种:"]) {
+                self.type = item.subtitle;
+            }else if ([item.title isEqualToString:@"工程量:"]){
+                self.workAmount = [item.subtitle integerValue];
+            }else if ([item.title isEqualToString:@"价格:"]){
+                self.unitPrice = [item.subtitle doubleValue];
+            }else if ([item.title isEqualToString:@"车费:"]){
+                self.fare = [item.subtitle doubleValue];
+            }else if ([item.title isEqualToString:@"是否住工地:"]){
+                self.isSeting = [item.subtitle isEqualToString:@"住"] ? 1 : 0 ;
+            }else if ([item.title isEqualToString:@"开工时间:"]){
+                self.workStartTime = [NSString PublishWorkTimeStamp:item.subtitle];
+            }else if ([item.title isEqualToString:@"结束时间:"]){
+                self.workEndTime = [NSString PublishWorkTimeStamp:item.subtitle];
+            }else if ([item.title isEqualToString:@"备注信息:"]){
+                self.remark = item.subtitle;
+            }else if ([item.title isEqualToString:@"工程简介:"]){
+                self.projectDesc = item.subtitle;
+            }else if ([item.title isEqualToString:@"联系人:"]){
+                self.contacts = item.subtitle;
+            }else if ([item.title isEqualToString:@"联系电话:"]){
+                self.contactsPhone = item.subtitle;
+            }else if ([item.title isEqualToString:@"工程地址:"]){
+                self.address = item.subtitle;
+            }else if ([item.title isEqualToString:@"招工持续时间:"]){
+                self.workDevingTime = [NSString PublishWorkTimeStamp:item.subtitle];
+            }else if ([item.title isEqualToString:@"工资结算时间:"]){
+                self.lastPayTime = [NSString PublishWorkTimeStamp:item.subtitle];
+            }
+        }
+    }
+    
+    
+    
+    NSUInteger userId = [[LRRUserManager sharedUserManager].currentUser.userId integerValue];
+    NSString *avatarURL = [LRRUserManager sharedUserManager].currentUser.avatarUrl;
+    
+    LRRPublishOrderParam *param = [[LRRPublishOrderParam alloc]initWithUserId:userId Name:self.contacts Type:self.type WorkType:self.workType Number:0 Days:0 UnitPrice:self.unitPrice Fare:self.fare IsSiting:self.isSeting ProjectDesc:self.projectDesc WorkEndTime:self.workEndTime WorkDevingTime:self.workDevingTime WorkAmount:self.workAmount Remark:self.remark WorkStartTime:self.workStartTime LastPayTime:self.lastPayTime Longitude:0 Latitude:0 Address:self.address AvatarUrl:avatarURL WhenLong:nil Contacts:self.contacts ContactsPhone:self.contactsPhone];
+    
+    [LRRPublishOrderRequestManager publishCreatOrderParam:param completion:^(LRRResponseObj *responseObj) {
+        if (responseObj.code == LRRSuccessCode) {
+            [self.view showHint:@"发布成功"];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
+    } aboveView:self.view inCaller:self];
 }
 
 #pragma mark - 懒加载

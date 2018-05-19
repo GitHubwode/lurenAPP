@@ -12,5 +12,6 @@
 
 + (NSString *)userDetailedIdentifier;
 
+- (void)changeUserMessage;
 
 @end

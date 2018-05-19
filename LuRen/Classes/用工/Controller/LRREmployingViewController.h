@@ -10,4 +10,7 @@
 
 @interface LRREmployingViewController : LRRBaseViewController
 
+/** 首页进入 */
+@property (nonatomic, copy) NSString *titleType;
+
 @end

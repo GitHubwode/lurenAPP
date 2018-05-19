@@ -8,7 +8,7 @@
 
 #import "LRRMyOrderListViewController.h"
 #import "LRRLookTableViewCell.h"
-
+#import "LRROrderDetailViewController.h"
 
 @interface LRRMyOrderListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -98,6 +98,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRLog(@"点击");
+    LRROrderDetailViewController *orderVC = [[LRROrderDetailViewController alloc]init];
+    orderVC.orderModel = self.datasource[indexPath.row];
+    orderVC.IdString = @"BOSS";
+    [self.navigationController pushViewController:orderVC animated:YES];
 }
 
 #pragma mark - 懒加载

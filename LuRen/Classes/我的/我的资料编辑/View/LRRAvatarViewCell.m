@@ -31,7 +31,7 @@ static NSString *LRRAvatarCellIdfy = @"LRRAvatarCellIdfy";
     _infoItem = infoItem;
     self.titleLabel.text = infoItem.title;
     NSString *avatar = [LRRUserManager sharedUserManager].currentUser.avatarUrl;
-    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:@"logo_me"]];
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:avatar] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
 }
 
 + (NSString *)cellIdentifier

@@ -9,11 +9,13 @@
 #import "LRRFoundViewController.h"
 #import "LRRMeTableViewCell.h"
 #import "LRRMeMessageModel.h"
+#import "LRRPublishOrderRequestManager.h"
 
 @interface LRRFoundViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *datasource;
+@property (nonatomic, assign) NSUInteger pageNum;
 
 @end
 
@@ -23,7 +25,30 @@
     [super viewDidLoad];
     self.navigationItem.title = @"发现";
     [self.view addSubview:self.tableView];
+    self.tableView.mj_header = [LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(orderListRefreshRequest)];
+    self.tableView.mj_footer = [LRRRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(orderListLoadRequest)];
+    [self.tableView.mj_header beginRefreshing];
 }
+#pragma mark - 获取数据
+- (void)orderListRefreshRequest
+{
+    self.pageNum = 1;
+    [self orderListRequest:YES];
+}
+
+- (void)orderListLoadRequest
+{
+    [self orderListRequest:NO];
+}
+
+- (void)orderListRequest:(BOOL)refresh
+{
+
+}
+
+
+
+
 
 #pragma mark - UITableViewDelegage UITableViewDatasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -617,7 +617,7 @@ Cg
             <connections>
                 <outlet property="addressLabel" destination="5He-xp-iON" id="8Pj-wI-p5o"/>
                 <outlet property="carLabel" destination="DXa-qL-eNC" id="QTq-5D-T1g"/>
-                <outlet property="distanceLabel" destination="Kjp-tw-yaa" id="E6d-ix-7ar"/>
+                <outlet property="distanceLabel" destination="Kjp-tw-yaa" id="Sz8-ah-iRE"/>
                 <outlet property="introduceLabel" destination="vVc-oB-cLZ" id="3sC-1T-grd"/>
                 <outlet property="lineView1" destination="bcF-Tl-VmK" id="RiM-EK-doq"/>
                 <outlet property="lineView2" destination="aU6-yh-MhW" id="6m1-F3-i55"/>
@@ -635,6 +635,7 @@ Cg
                 <outlet property="peopleLabel" destination="Opm-Kz-JKl" id="lwi-Wk-rma"/>
                 <outlet property="startLabel" destination="F8f-ap-oDm" id="mct-5r-6oT"/>
                 <outlet property="statusButton" destination="wa5-Vp-11b" id="u6g-QH-74f"/>
+                <outlet property="sureButton" destination="HM1-YF-hWq" id="jKx-l3-Uep"/>
                 <outlet property="titleLabel" destination="ZXv-RU-EpQ" id="JQc-RX-HzM"/>
                 <outlet property="totalLabel" destination="nes-kS-yW5" id="gvP-Q6-cFX"/>
             </connections>

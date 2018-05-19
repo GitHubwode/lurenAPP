@@ -25,6 +25,14 @@ static NSString * userDetailedViewCell = @"userDetailedViewCell";
     [UILabel changeLineSpaceForLabel:self.subTitleLabel WithSpace:5.f];
 }
 
+- (void)changeUserMessage
+{
+//    if () {
+//        <#statements#>
+//    }
+
+}
+
 + (NSString *)userDetailedIdentifier
 {
     return userDetailedViewCell;

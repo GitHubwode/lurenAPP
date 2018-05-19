@@ -18,5 +18,8 @@
 
 @property (nonatomic, weak) id<LRRHeaderViewDelegate> delegate;
 
+@property (nonatomic, strong) UIImageView *avatarImageView;
+
+@property (nonatomic, strong) UILabel *nameLabel;
 
 @end

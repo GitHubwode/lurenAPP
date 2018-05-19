@@ -1,4 +1,4 @@
-//
+///
 //  LRRHomeViewController.m
 //  LuRen
 //
@@ -12,6 +12,13 @@
 #import "LRRHomeCollectionReusableView.h"
 #import "LRRUserDetailedViewController.h"
 #import "LRRSystemMessageViewController.h"
+#import "LRRHomeRequestManager.h"
+#import "LRRPublishOrderRequestManager.h"
+#import "LRRUserMessageModel.h"
+#import "LRREmployingViewController.h"
+#import "LRRWebViewController.h"
+#import "LRRSlideShowModel.h"
+
 //测试
 #import "LRRLoginViewController.h"
 
@@ -20,8 +27,12 @@ static CGFloat headerHeight = 232.f;
 @interface LRRHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,LRRHomeCollectionReusableViewDelegate,LRRHomeFirstCollectionReusableViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) LRRHomeHeaderView *headerView;
 @property (nonatomic, strong) NSMutableArray *datasource;
+@property (nonatomic, strong) NSMutableArray *bossArray;
+@property (nonatomic, strong) NSMutableArray *workerArray;
 @property (nonatomic, strong) LRRLocationHelper *locationHelper;
+@property (nonatomic, strong) NSMutableArray *imageArray;
 
 
 @end
@@ -36,7 +47,18 @@ static CGFloat headerHeight = 232.f;
     [self addNavi];
     self.collectionView.mj_header =[LRRRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(dropDownRefreshRequest)];
     [self.collectionView.mj_header beginRefreshing];
+    
 }
+
+- (void)lrr_topScrollviewImage
+{
+    [LRRHomeRequestManager homeTopScrollViewCompletion:^(LRRResponseObj *response) {
+        LRRLog(@"%@",response);
+        self.imageArray = [LRRSlideShowModel mj_objectArrayWithKeyValuesArray:response.data];
+        [self.headerView homeHeaderViewImage:self.imageArray];
+    } aboveView:self.view inCaller:self];
+}
+
 
 - (void)dropDownRefreshRequest
 {
@@ -68,19 +90,49 @@ static CGFloat headerHeight = 232.f;
 #pragma mark - 获取经纬度
 - (void)setupUserLongitude:(CGFloat )longitude Latitude:(CGFloat)latitude Refresh:(BOOL)refresh
 {
-    
-    
+    [LRRPublishOrderRequestManager publishLookWorkerPageNum:1 Rows:4 Type:@"BOSS" completion:^(NSArray<LRRUserMessageModel *> *responseObj) {
+        
+        if (!responseObj) {
+             [self.collectionView.mj_header endRefreshing];
+        }else{ //有数据
+            [self.collectionView.mj_header endRefreshing];
+            [self.bossArray removeAllObjects];
+            [self.bossArray addObjectsFromArray:responseObj];
+            [self.datasource addObject:self.bossArray];
+        }
+        [self setUpWorker];
+        
+    } aboveView:self.view inCaller:self];
+}
+
+#pragma mark - 获取工人的信息
+- (void)setUpWorker
+{
+    [LRRPublishOrderRequestManager publishLookWorkerPageNum:1 Rows:4 Type:@"WORKER" completion:^(NSArray<LRRUserMessageModel *> *responseObj) {
+        
+        if (!responseObj) {
+            [self.collectionView.mj_header endRefreshing];
+        }else{ //有数据
+            [self.collectionView.mj_header endRefreshing];
+            [self.workerArray removeAllObjects];
+            [self.workerArray addObjectsFromArray:responseObj];
+            [self.datasource addObject:self.workerArray];
+        }
+        [self.collectionView reloadData];
+        [self lrr_topScrollviewImage];
+        
+    } aboveView:self.view inCaller:self];
 }
 
 #pragma mark - UICollectionViewDelegate or Datasource;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 4;
+    return [self.datasource[section] count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return self.datasource.count;
 }
 
 // 设置section头视图的参考大小，与tableheaderview类似
@@ -97,14 +149,19 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    LRRUserMessageModel *model = self.datasource[indexPath.section][indexPath.row];
     LRRHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[LRRHomeCollectionViewCell homeCollectionIdentifier] forIndexPath:indexPath];
+    cell.model = model;
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRLog(@"%ld",indexPath.item);
+    LRRUserMessageModel *model = self.datasource[indexPath.section][indexPath.row];
     LRRUserDetailedViewController *userVC = [[LRRUserDetailedViewController alloc]init];
+    userVC.userMessageModel = model;
+    userVC.isUser = 2;
     [self.navigationController pushViewController:userVC animated:YES];
 }
 
@@ -129,11 +186,10 @@ referenceSizeForHeaderInSection:(NSInteger)section {
             
             return headerSection;
         }else{
-            LRRHomeHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeHeaderView identifier] forIndexPath:indexPath];
-            headerView.firstDelegate = self;
-            return headerView;
+            self.headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[LRRHomeHeaderView identifier] forIndexPath:indexPath];
+            self.headerView.firstDelegate = self;
+            return self.headerView;
         }
-
     }else{
         return nil;
     }
@@ -152,9 +208,10 @@ referenceSizeForHeaderInSection:(NSInteger)section {
     if (![LRRUserManager sharedUserManager].logined) {
         LRRLoginViewController *loginVC = [[LRRLoginViewController alloc]initWithNibName:NSStringFromClass([LRRLoginViewController class]) bundle:nil];
         [self presentViewController:loginVC animated:YES completion:nil];
-    }else{
-        LRRSystemMessageViewController *systemVC = [[LRRSystemMessageViewController alloc]init];
-        [self.navigationController pushViewController:systemVC animated:YES];
+    }else{        
+        LRRWebViewController *webVC = [[LRRWebViewController alloc]init];
+        [self.navigationController pushViewController:webVC animated:YES];
+        
     }
 }
 - (void)locationAction
@@ -168,6 +225,10 @@ referenceSizeForHeaderInSection:(NSInteger)section {
 {
     LRRLog(@"%@",sender);
     LRRLog(@"优秀工人更多");
+    
+    LRREmployingViewController *employVC = [[LRREmployingViewController alloc]init];
+    employVC.titleType = @"WORKER";
+    [self.navigationController pushViewController:employVC animated:YES];
 }
 
 - (void)selectedFirstButtonClick:(UIButton *)sender
@@ -176,6 +237,9 @@ referenceSizeForHeaderInSection:(NSInteger)section {
         LRRLog(@"新闻更多");
     }else{
         LRRLog(@"优秀老板更多");
+        LRREmployingViewController *employVC = [[LRREmployingViewController alloc]init];
+        employVC.titleType = @"BOSS";
+        [self.navigationController pushViewController:employVC animated:YES];
     }
 }
 
@@ -210,6 +274,30 @@ referenceSizeForHeaderInSection:(NSInteger)section {
     LRRLogFunc;
 }
 
+- (NSMutableArray *)datasource
+{
+    if (!_datasource) {
+        _datasource = [NSMutableArray array];
+    }
+    return _datasource;
+}
+
+- (NSMutableArray *)bossArray
+{
+    if (!_bossArray) {
+        _bossArray = [NSMutableArray array];
+    }
+    return _bossArray;
+}
+
+- (NSMutableArray *)workerArray
+{
+    if (!_workerArray) {
+        _workerArray = [NSMutableArray array];
+    }
+    return _workerArray;
+}
+
 - (LRRLocationHelper *)locationHelper{
     if (!_locationHelper) {
         _locationHelper = [[LRRLocationHelper alloc] init];
@@ -217,19 +305,17 @@ referenceSizeForHeaderInSection:(NSInteger)section {
     return _locationHelper;
 }
 
+- (NSMutableArray *)imageArray
+{
+    if (!_imageArray) {
+        _imageArray = [NSMutableArray array];
+    }
+    return _imageArray;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -31,7 +31,7 @@ NSString * const LRRH5BasicURL = @"https://h5.sunvhui.net/h5";
 NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
 
 /** Itunes上的地址 */
-NSString * const LRRAppItunesURL = @"https://itunes.apple.com/app/id1176374492";
+NSString * const LRRAppItunesURL = @"https://itunes.apple.com/app/id1387118823";
 /** 储存后台分配的deviced的key */
 NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";
 /** 保存用户的类型 */

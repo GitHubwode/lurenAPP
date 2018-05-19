@@ -7,6 +7,8 @@
 //
 
 #import "LRRHomeCollectionViewCell.h"
+#import "LRRUserMessageModel.h"
+#import "UIImageView+WebCache.h"
 
 @interface LRRHomeCollectionViewCell ()
 
@@ -23,6 +25,13 @@ NSString *homeCollectionViewCell = @"homeCollectionViewCell";
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)setModel:(LRRUserMessageModel *)model
+{
+    _model = model;
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:model.avatarUrl] placeholderImage:[UIImage imageNamed:@"pic_touxiang"]];
+    self.nickNameLabel.text = model.nickname;
 }
 
 + (NSString *)homeCollectionIdentifier

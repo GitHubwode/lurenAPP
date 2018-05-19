@@ -11,7 +11,8 @@
 #import "LRRHomeViewController.h"
 #import "LRRFriendViewController.h"
 #import "LRRFoundViewController.h"
-#import "LRRLookViewController.h"
+//#import "LRRLookViewController.h"
+#import "LRRPointWorkViewController.h"
 #import "LRRMeViewController.h"
 #import "LRREmployingViewController.h"
 
@@ -130,11 +131,11 @@
     
     [self setupOneChildViewController:[[LRRHomeViewController alloc]init] title:@"首页" image:@"icon_zhuye" selectedImage:@"icon_zhuye_pressed"];
     
-    [self setupOneChildViewController:[[LRRFriendViewController alloc]init] title:@"朋友" image:@"tabbar_icon_chat" selectedImage:@"tabbar_icon_chat_pressed"];
+//    [self setupOneChildViewController:[[LRRFriendViewController alloc]init] title:@"朋友" image:@"tabbar_icon_chat" selectedImage:@"tabbar_icon_chat_pressed"];
     //带班
-    [self setupOneChildViewController:[[LRRLookViewController alloc]init] title:@"找活" image:@"icon_zhaohuo" selectedImage:@"icon_zhaohuo_pressed"];
+    [self setupOneChildViewController:[[LRRPointWorkViewController alloc]init] title:@"找活" image:@"icon_zhaohuo" selectedImage:@"icon_zhaohuo_pressed"];
     
-    [self setupOneChildViewController:[[LRRFoundViewController alloc]init] title:@"发现" image:@"icon_faxian" selectedImage:@"icon_faxian_pressed"];
+//    [self setupOneChildViewController:[[LRRFoundViewController alloc]init] title:@"发现" image:@"icon_faxian" selectedImage:@"icon_faxian_pressed"];
     
     [self setupOneChildViewController:[[LRRMeViewController alloc]init] title:@"我的" image:@"tabbar_icon_wode" selectedImage:@"tabbar_icon_wode_pressed"];
 }

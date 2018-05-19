@@ -25,7 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"详细信息";
+    
+    LRRLog(@"%@%lu",self.userMessageModel,(unsigned long)self.isUser);
     self.tableView.tableHeaderView = self.headerView;
+    self.headerView.userMessageModel = self.userMessageModel;
+    self.headerView.isUser = self.isUser;
+    if (self.isUser == 1) {
+       [self.headerView lrr_ChangeuUpdateUserMessage];
+    }
+    
     [self.view addSubview:self.tableView];
     //创建导航栏按钮
     [self addNavi];
@@ -47,8 +55,22 @@
 //        feedVC.titleString = self.navTitle;
 //        [self.navigationController pushViewController:feedVC animated:YES];
     }else{
+        weakSelf(self);
         LRRMyEditViewController *editVC = [[LRRMyEditViewController alloc]init];
+        editVC.backBlock = ^{
+            [self.headerView lrr_ChangeuUpdateUserMessage];
+            [self.tableView reloadData];
+            [weakself changeUserMessage];
+        };
         [self.navigationController pushViewController:editVC animated:YES];
+    }
+}
+
+#pragma mark - 回调我的页面
+- (void)changeUserMessage
+{
+    if (self.changeBackLock) {
+        self.changeBackLock();
     }
 }
 
@@ -60,12 +82,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LRRUserDetailedViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[LRRUserDetailedViewCell userDetailedIdentifier] forIndexPath:indexPath];
+//    [cell changeUserMessage];
     return cell;
 }
 
@@ -90,6 +113,7 @@
 {
     if (!_headerView) {
         _headerView = [[LRRUserDetailedView alloc]initWithFrame:CGRectMake(0, 0, kMainScreenWidth, 241)];
+       
     }
     return _headerView;
 }
@@ -99,6 +123,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (LRRUserMessageModel *)userMessageModel
+{
+    if (!_userMessageModel) {
+        _userMessageModel = [[LRRUserMessageModel alloc]init];
+    }
+    return _userMessageModel;
+}
+
 
 /*
 #pragma mark - Navigation

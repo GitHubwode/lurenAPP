@@ -34,7 +34,7 @@ static NSInteger const LRRTabBarTag = 12000;
     //UITabBarItem保存按钮上的图片
     for (int i =0 ; i<items.count; i++) {
         UITabBarItem *item = items[i];
-        if (i == 2) {
+        if (i == 1) {
             LRRTabBarBigButton *btn = [LRRTabBarBigButton buttonWithType:UIButtonTypeCustom];
             
             btn.tag = self.subviews.count + LRRTabBarTag;
@@ -145,7 +145,7 @@ static NSInteger const LRRTabBarTag = 12000;
         
         x = i * w;
         
-        if (i == 2) {
+        if (i == 1) {
             y = -12;
             h += 12;
         }

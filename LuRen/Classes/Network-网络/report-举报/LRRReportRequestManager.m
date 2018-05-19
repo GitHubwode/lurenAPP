@@ -34,4 +34,24 @@
     } aboveView:view inCaller:caller];
 }
 
+/** 版本返回信息 */
++ (void)freedBackOrderContent:(NSString *)content completion:(void(^)(LRRResponseObj *responseObj))completionHandler aboveView:(UIView *)view inCaller:(id)caller
+{
+    NSString *url = LRRURL(@"/api/version/addFeedBack");
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"content"] = content;
+    param[@"userId"] = [LRRUserManager sharedUserManager].currentUser.userId;
+    [self requestWithURL:url httpMethod:GETHttpMethod params:param progress:nil completion:^(LRRResponseObj *responseObj) {
+        if (!responseObj) {
+            
+        }else if (responseObj.code != LRRSuccessCode){
+            [view showHint:responseObj.message];
+        }
+        if (completionHandler) {
+            completionHandler(responseObj);
+        }
+        
+    } aboveView:view inCaller:caller];
+}
+
 @end
