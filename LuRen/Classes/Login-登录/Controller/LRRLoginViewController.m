@@ -191,7 +191,7 @@
     
     UITextField *textField = (UITextField *)noti.object;
     
-if ((textField == self.codeTextField && self.codeTextField.text.length == 6) ) {
+if (textField == self.codeTextField) {
     self.loginButton.enabled = YES;
     [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [self.loginButton setTitleColor:UIColorHex(0xffffff) forState:UIControlStateNormal];

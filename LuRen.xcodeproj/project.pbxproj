@@ -223,6 +223,11 @@
 		18A76660204FCB5C00F2F063 /* LRRChangePhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A7665E204FCB5C00F2F063 /* LRRChangePhoneViewController.xib */; };
 		18A76663204FCF2E00F2F063 /* UIButton+Countdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A76661204FCF2E00F2F063 /* UIButton+Countdown.m */; };
 		18AEE86820AFF7AD0003C230 /* LRRSlideShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEE86720AFF7AD0003C230 /* LRRSlideShowModel.m */; };
+		18AEE86D20B0259C0003C230 /* guide1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18AEE86A20B0259B0003C230 /* guide1.jpg */; };
+		18AEE86E20B0259C0003C230 /* guide2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18AEE86B20B0259B0003C230 /* guide2.jpg */; };
+		18AEE86F20B0259C0003C230 /* guide3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18AEE86C20B0259C0003C230 /* guide3.jpg */; };
+		18AEE87520B026B30003C230 /* KGGNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEE87120B026B30003C230 /* KGGNewFeatureViewController.m */; };
+		18AEE87620B026B30003C230 /* KGGNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AEE87420B026B30003C230 /* KGGNewFeatureCell.m */; };
 		18CA4C522015952A00F6774A /* LRRPointWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */; };
 		18CA4C552015953700F6774A /* LRRPackWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA4C542015953700F6774A /* LRRPackWorkViewController.m */; };
 		18DC287C2050DBE500D4B451 /* LRRSexField.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC287B2050DBE500D4B451 /* LRRSexField.m */; };
@@ -625,6 +630,13 @@
 		18AEE86620AFF7AD0003C230 /* LRRSlideShowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRSlideShowModel.h; sourceTree = "<group>"; };
 		18AEE86720AFF7AD0003C230 /* LRRSlideShowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRSlideShowModel.m; sourceTree = "<group>"; };
 		18AEE86920B00DA00003C230 /* LuRen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuRen.entitlements; sourceTree = "<group>"; };
+		18AEE86A20B0259B0003C230 /* guide1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide1.jpg; sourceTree = "<group>"; };
+		18AEE86B20B0259B0003C230 /* guide2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide2.jpg; sourceTree = "<group>"; };
+		18AEE86C20B0259C0003C230 /* guide3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guide3.jpg; sourceTree = "<group>"; };
+		18AEE87120B026B30003C230 /* KGGNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGNewFeatureViewController.m; sourceTree = "<group>"; };
+		18AEE87220B026B30003C230 /* KGGNewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGNewFeatureCell.h; sourceTree = "<group>"; };
+		18AEE87320B026B30003C230 /* KGGNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGGNewFeatureViewController.h; sourceTree = "<group>"; };
+		18AEE87420B026B30003C230 /* KGGNewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGGNewFeatureCell.m; sourceTree = "<group>"; };
 		18CA4C502015952A00F6774A /* LRRPointWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPointWorkViewController.h; sourceTree = "<group>"; };
 		18CA4C512015952A00F6774A /* LRRPointWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRRPointWorkViewController.m; sourceTree = "<group>"; };
 		18CA4C532015953700F6774A /* LRRPackWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRRPackWorkViewController.h; sourceTree = "<group>"; };
@@ -757,6 +769,7 @@
 		180642B8200DF5F100B20130 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18AEE87020B026B30003C230 /* 引导页 */,
 				18665FCE209D988D00E812A0 /* 微信公众号 */,
 				180642BD200DF5F100B20130 /* 首页 */,
 				180642C9200DF5F100B20130 /* 朋友 */,
@@ -1183,6 +1196,9 @@
 		1851584C20522F890006E863 /* Edit-编辑信息 */ = {
 			isa = PBXGroup;
 			children = (
+				18AEE86A20B0259B0003C230 /* guide1.jpg */,
+				18AEE86B20B0259B0003C230 /* guide2.jpg */,
+				18AEE86C20B0259C0003C230 /* guide3.jpg */,
 				1851584E20522FCD0006E863 /* CityList.plist */,
 				1851584F20522FCD0006E863 /* LRREditMessageList.plist */,
 				1851584D20522FCD0006E863 /* NationalList.plist */,
@@ -1556,6 +1572,18 @@
 			path = LRRSegment;
 			sourceTree = "<group>";
 		};
+		18AEE87020B026B30003C230 /* 引导页 */ = {
+			isa = PBXGroup;
+			children = (
+				18AEE87320B026B30003C230 /* KGGNewFeatureViewController.h */,
+				18AEE87120B026B30003C230 /* KGGNewFeatureViewController.m */,
+				18AEE87220B026B30003C230 /* KGGNewFeatureCell.h */,
+				18AEE87420B026B30003C230 /* KGGNewFeatureCell.m */,
+			);
+			name = "引导页";
+			path = "../../../kuaigongAPP/kuaigong/Classes/引导页";
+			sourceTree = "<group>";
+		};
 		18DC28792050DBA100D4B451 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1875,6 +1903,7 @@
 				1861D253208C759B002E11C5 /* TZImagePickerController.bundle in Resources */,
 				18FC9400200C5F7000269FAB /* LaunchScreen.storyboard in Resources */,
 				18DC289B2050F6AB00D4B451 /* LRRIntroduceViewCell.xib in Resources */,
+				18AEE86D20B0259C0003C230 /* guide1.jpg in Resources */,
 				1851585220522FCD0006E863 /* LRREditMessageList.plist in Resources */,
 				18515872205235BD0006E863 /* LRRTeamViewCell.xib in Resources */,
 				18515854205230290006E863 /* LRRWorkList.plist in Resources */,
@@ -1900,6 +1929,7 @@
 				1851585A205230870006E863 /* LRRTeamList.plist in Resources */,
 				1861D294208C7AF9002E11C5 /* PK_Play@2x.png in Resources */,
 				1831923620145EFF0032B8C7 /* LRRLookTableViewCell.xib in Resources */,
+				18AEE86F20B0259C0003C230 /* guide3.jpg in Resources */,
 				1851584B20522CAD0006E863 /* LRRAvatarViewCell.xib in Resources */,
 				1851583E2051310E0006E863 /* LRRCityViewCell.xib in Resources */,
 				1851587720523F170006E863 /* LRRNameViewCell.xib in Resources */,
@@ -1914,6 +1944,7 @@
 				1861D292208C7AF9002E11C5 /* PK_Delete@2x.png in Resources */,
 				1851591420577CD30006E863 /* LRRPublishintroductionViewCell.xib in Resources */,
 				18515858205230750006E863 /* LRRAgeList.plist in Resources */,
+				18AEE86E20B0259C0003C230 /* guide2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2069,6 +2100,7 @@
 				18A7664C204FA5D300F2F063 /* LRRAboutMeViewController.m in Sources */,
 				1832AD69204F9024006BB3BD /* LRRFeedbackViewController.m in Sources */,
 				180F885C200EF97A002A9B0C /* NSString+XCExtension.m in Sources */,
+				18AEE87620B026B30003C230 /* KGGNewFeatureCell.m in Sources */,
 				180F8878200F3F98002A9B0C /* UIBarButtonItem+LRRExtension.m in Sources */,
 				18DC288E2050E39A00D4B451 /* LRRCustomInfoItem.m in Sources */,
 				1851588C205283FC0006E863 /* WMDropDownView.m in Sources */,
@@ -2133,6 +2165,7 @@
 				18A123692044021000C6F9E2 /* UIImage+LRRExtension.m in Sources */,
 				1832AD6F204F9712006BB3BD /* LRRServiceCenterModel.m in Sources */,
 				18486C2B2058E44E0009519E /* LRROrderModel.m in Sources */,
+				18AEE87520B026B30003C230 /* KGGNewFeatureViewController.m in Sources */,
 				180F8883200F4FB4002A9B0C /* LRRMeMessageModel.m in Sources */,
 				18319228201444700032B8C7 /* LRRTabBarBigButton.m in Sources */,
 				1851591A2057A9880006E863 /* MBProgressHUD+LRRExtension.m in Sources */,

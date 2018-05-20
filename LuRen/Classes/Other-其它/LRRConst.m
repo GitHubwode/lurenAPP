@@ -10,25 +10,13 @@
 
 @implementation LRRConst
 
-#ifdef DEBUG
-//NSString * const LRRBasicURL = @"http://10.205.96.11:8080";
 NSString * const LRRBasicURL = @"http://kfjugong.com";
 
-
-NSString * const LRRH5BasicURL = @"https://h5test.sunvhui.net/h5";
-
-#else
-NSString * const LRRBasicURL = @"https://service.sunvhui.net";
-
-NSString * const LRRH5BasicURL = @"https://h5.sunvhui.net/h5";
-#endif
-
-
 /** 正式环境储存后台分配的aesKey的key */
-//NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
+NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
 
 /** 测试环境环境储存后台分配的aesKey的key */
-NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
+//NSString * const LRRAesKey = @"USGzksAv^4yjMOsiiH#hN^KTS@ir%cg7MpOrA#xBAhHzSKUQXdtF^vRx&AkdRIdj";
 
 /** Itunes上的地址 */
 NSString * const LRRAppItunesURL = @"https://itunes.apple.com/app/id1387118823";
@@ -38,9 +26,9 @@ NSString * const LRRDeviceIdKey = @"LRRDeviceIdKey";
 NSString * const LRRUserType = @"LRRUserType";
 
 /** 测试 融云的appkey */
-NSString *const LRRRongCloudAppKey = @"bmdehs6pbrrbs";
+//NSString *const LRRRongCloudAppKey = @"bmdehs6pbrrbs";
 /** 正式 融云的appkey */
-//NSString *const LRRRongCloudAppKey = @"uwd1c0sxuvrc1";
+NSString *const LRRRongCloudAppKey = @"uwd1c0sxuvrc1";
 
 /** 手机号码最大长度 */
 NSUInteger const LRRCellphoneMaxLength = 11;
